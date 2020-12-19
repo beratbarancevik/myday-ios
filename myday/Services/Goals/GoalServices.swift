@@ -13,4 +13,8 @@ class GoalServices {
     static func getGoals(completion: @escaping (Result<GetGoalsResponse, Error>) -> Void) {
         FirestoreManager.sendFirestoreRequest(GetGoalsRequest(), GetGoalsResponse.self, completion: completion)
     }
+    
+    static func deleteGoal(goal: Goal, completion: @escaping (Result<DeleteGoalResponse, Error>) -> Void) {
+        FirestoreManager.deleteDocument(request: DeleteGoalRequest(goal: goal), responseType: DeleteGoalResponse.self, completion: completion)
+    }
 }

@@ -15,8 +15,6 @@ class FirestoreManager {
     // MARK: - Init
     private init() {}
     
-    var g: Goal?
-    
     // MARK: - Firestore Request
     static func sendFirestoreRequest<Req: Request, Res>(_ request: Req, _ responseType: Res.Type, completion: @escaping (Result<Res, Error>) -> Void) {
         switch request.method {
@@ -39,13 +37,18 @@ class FirestoreManager {
                 switch request.collection {
                 case .goals:
                     let goals = snapshot.documents.compactMap { querySnapshot -> Goal? in
-                        return try? querySnapshot.data(as: Goal.self)
+                        var goal = try? querySnapshot.data(as: Goal.self)
+                        goal?.id = querySnapshot.documentID
+                        return goal
                     }
-                    print("Golazo: \(goals.count)")
                     completion(Result.success(goals as! Res))
                 }
             }
         }
+    }
+    
+    static func deleteDocument<Req: DeleteRequest, Res: DeleteResponse>(request: Req, responseType: DeleteResponse.Type, completion: @escaping (Result<Res, Error>) -> Void) {
+        db.collection(request.collection.rawValue).document(request.id).delete()
     }
 }
 
@@ -54,7 +57,6 @@ enum Method: String {
     case getAll
     case post
     case put
-    case delete
 }
 
 // MARK: - Collection

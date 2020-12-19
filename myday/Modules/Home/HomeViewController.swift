@@ -12,7 +12,8 @@ class HomeViewController: BaseViewController {
     // MARK: - Properties
     private var viewModel: HomeViewModel
     
-    private var goalsTableView = UITableView()
+    private let goalsTableView = UITableView()
+    private let refreshControl = UIRefreshControl()
     
     // MARK: - Init
     init(viewModel: HomeViewModel) {
@@ -36,6 +37,13 @@ class HomeViewController: BaseViewController {
     }
 }
 
+// MARK: - Private Functions
+private extension HomeViewController {
+    @objc func didRefresh() {
+        viewModel.getGoals()
+    }
+}
+
 // MARK: - Setup
 extension HomeViewController: Setup {
     func setUpUI() {
@@ -45,6 +53,7 @@ extension HomeViewController: Setup {
     
     func addSubviews() {
         view.addSubview(goalsTableView)
+        goalsTableView.addSubview(refreshControl)
     }
     
     func addConstraints() {
@@ -54,9 +63,10 @@ extension HomeViewController: Setup {
     }
     
     func addObservers() {
+        refreshControl.addTarget(self, action: #selector(didRefresh), for: .valueChanged)
+        
         cancellables.insert(viewModel.loadingSubject.sink { [weak self] value in
-            print(value)
-            self?.goalsTableView.reloadData()
+            value ? self?.refreshControl.beginRefreshing() : self?.refreshControl.endRefreshing()
         })
         
         cancellables.insert(viewModel.goalsSubject.sink(receiveCompletion: { error in
@@ -70,7 +80,6 @@ extension HomeViewController: Setup {
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(viewModel.goals.count)
         return viewModel.goals.count
     }
     
@@ -78,5 +87,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.textLabel?.text = viewModel.goals[indexPath.row].title
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            viewModel.deleteGoal(at: indexPath.row)
+        }
     }
 }

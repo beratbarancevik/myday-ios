@@ -10,3 +10,11 @@ protocol Request {
     var method: Method { get }
     var query: String? { get }
 }
+
+// MARK: - Delete
+protocol DeleteRequest {
+    var collection: FirestoreCollection { get }
+    var id: String { get }
+}
+
+protocol DeleteResponse {}

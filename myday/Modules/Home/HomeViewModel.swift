@@ -29,4 +29,10 @@ class HomeViewModel: BaseViewModel {
             }
         }
     }
+    
+    func deleteGoal(at index: Int) {
+        let goal = goals.remove(at: index)
+        GoalServices.deleteGoal(goal: goal) { _ in }
+        goalsSubject.send(goals)
+    }
 }

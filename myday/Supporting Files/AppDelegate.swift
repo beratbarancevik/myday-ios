@@ -26,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // MARK: - Private Functions
 private extension AppDelegate {
     func configureApp() {
+        FirebaseConfiguration.shared.setLoggerLevel(.min)
         FirebaseApp.configure()
     }
     

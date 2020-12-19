@@ -6,14 +6,17 @@
 //
 
 struct Goal: Codable {
+    var id: String
     let title: String?
     
     private enum CodingKeys: String, CodingKey {
+        case id
         case title
     }
     
     init(from decoder: Decoder) throws {
         let container = try? decoder.container(keyedBy: CodingKeys.self)
+        id = (try? container?.decode(String.self, forKey: CodingKeys.id)) ?? ""
         title = try? container?.decode(String.self, forKey: CodingKeys.title)
     }
 }
