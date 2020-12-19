@@ -42,6 +42,7 @@
 		F400A507258E6FC30081CCD8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A506258E6FC30081CCD8 /* BaseView.swift */; };
 		F400A50C258E6FCB0081CCD8 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A50B258E6FCB0081CCD8 /* BaseTableCell.swift */; };
 		F400A514258E71440081CCD8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A513258E71440081CCD8 /* GoalCell.swift */; };
+		F41CE19C258E74B800D0F36E /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */; };
 		F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */; };
 		F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */; };
 		F46F3551258E271B007CD3E4 /* GoalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */; };
@@ -130,6 +131,7 @@
 		F400A506258E6FC30081CCD8 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F400A50B258E6FCB0081CCD8 /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		F400A513258E71440081CCD8 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Release.plist"; sourceTree = "<group>"; };
 		F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailCoordinator.swift; sourceTree = "<group>"; };
 		F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewController.swift; sourceTree = "<group>"; };
 		F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewModel.swift; sourceTree = "<group>"; };
@@ -517,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */,
+				F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */,
 			);
 			path = Keys;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				F4975033258E035E00259DAC /* Sources */,
 				F4975034258E035E00259DAC /* Frameworks */,
 				F4975035258E035E00259DAC /* Resources */,
+				F41CE1BF258E785500D0F36E /* SwiftLint */,
 				F4AE2F46258E1A10005E77AB /* Firebase */,
 				F4AE2F47258E1A32005E77AB /* Crashlytics */,
 				5B84124A39CA7A8DBDC1D3B7 /* [CP] Embed Pods Frameworks */,
@@ -652,6 +656,7 @@
 				F400A4A4258E6DE00081CCD8 /* Montserrat-ExtraLight.ttf in Resources */,
 				F400A4A5258E6DE00081CCD8 /* Montserrat-Regular.ttf in Resources */,
 				F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */,
+				F41CE19C258E74B800D0F36E /* GoogleService-Info-Release.plist in Resources */,
 				F400A4AA258E6DE00081CCD8 /* Montserrat-SemiBold.ttf in Resources */,
 				F400A495258E6D310081CCD8 /* Colors.xcassets in Resources */,
 				F400A4AB258E6DE00081CCD8 /* Montserrat-ExtraBold.ttf in Resources */,
@@ -778,6 +783,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myday-mydayUITests/Pods-myday-mydayUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		F41CE1BF258E785500D0F36E /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		F4AE2F46258E1A10005E77AB /* Firebase */ = {
 			isa = PBXShellScriptBuildPhase;

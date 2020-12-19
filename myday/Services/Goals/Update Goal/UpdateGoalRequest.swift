@@ -9,7 +9,7 @@ class UpdateGoalRequest: UpdateRequest {
     // MARK: - Properties
     var collection: FirestoreCollection
     var id: String
-    var body: [String : Any]
+    var body: [String: Any]
     
     // MARK: - Init
     init(goal: Goal) {

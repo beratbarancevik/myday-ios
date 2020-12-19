@@ -74,8 +74,7 @@ extension HomeViewController: Setup {
             value ? self?.refreshControl.beginRefreshing() : self?.refreshControl.endRefreshing()
         })
         
-        cancellables.insert(viewModel.goalsSubject.sink(receiveCompletion: { error in
-            
+        cancellables.insert(viewModel.goalsSubject.sink(receiveCompletion: { _ in
         }, receiveValue: { [weak self] _ in
             self?.goalsTableView.reloadData()
         }))

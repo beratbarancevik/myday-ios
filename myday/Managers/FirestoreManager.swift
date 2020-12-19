@@ -25,7 +25,7 @@ class FirestoreManager {
     }
     
     static func getDocuments<Req: GetRequest, Res>(_ request: Req, _ responseType: Res.Type, completion: @escaping (Result<Res, Error>) -> Void) {
-        db.collection(request.collection.rawValue).getDocuments() { snapshot, error in
+        db.collection(request.collection.rawValue).getDocuments { snapshot, error in
             if let error = error {
                 completion(Result.failure(error))
                 return
