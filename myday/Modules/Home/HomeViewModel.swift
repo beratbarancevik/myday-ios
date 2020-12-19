@@ -11,6 +11,9 @@ import Foundation
 class HomeViewModel: BaseViewModel {
     // MARK: - Properties
     var loadingSubject = PassthroughSubject<Bool, Never>()
+    var goalsSubject = PassthroughSubject<[Goal], Error>()
+    
+    var goals = [Goal]()
     
     // MARK: - Service Requests
     func getGoals() {
@@ -19,9 +22,10 @@ class HomeViewModel: BaseViewModel {
             self?.loadingSubject.send(false)
             switch result {
             case .success(let response):
-                NotificationCenter.default.post(name: .requestDidSucceed, object: response)
+                self?.goals = response
+                self?.goalsSubject.send(response)
             case .failure(let error):
-                NotificationCenter.default.post(name: .requestDidFail, object: error)
+                self?.goalsSubject.send(completion: Subscribers.Completion.failure(error))
             }
         }
     }

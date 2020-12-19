@@ -6,6 +6,7 @@
 //
 
 import Firebase
+import FirebaseFirestoreSwift
 
 class FirestoreManager {
     // MARK: - Properties
@@ -14,10 +15,12 @@ class FirestoreManager {
     // MARK: - Init
     private init() {}
     
+    var g: Goal?
+    
     // MARK: - Firestore Request
-    static func sendFirestoreRequest<Req: Request, Res: Response>(_ request: Req, _ responseType: Res.Type, completion: @escaping (Result<Res, Error>) -> Void) {
+    static func sendFirestoreRequest<Req: Request, Res>(_ request: Req, _ responseType: Res.Type, completion: @escaping (Result<Res, Error>) -> Void) {
         switch request.method {
-        case .get:
+        case .getAll:
             getDocuments(request, responseType, completion: completion)
         default:
             break
@@ -25,13 +28,21 @@ class FirestoreManager {
     }
     
     // MARK: - Firestore Queries
-    static func getDocuments<Req: Request, Res: Response>(_ request: Req, _ responseType: Res.Type, completion: @escaping (Result<Res, Error>) -> Void) {
-        db.collection(request.path).getDocuments() { snapshot, error in
+    static func getDocuments<Req: Request, Res>(_ request: Req, _ responseType: Res.Type, completion: @escaping (Result<Res, Error>) -> Void) {
+        db.collection(request.collection.rawValue).getDocuments() { snapshot, error in
             if let error = error {
                 completion(Result.failure(error))
-            } else {
-                for document in snapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
+                return
+            }
+            
+            if let snapshot = snapshot {
+                switch request.collection {
+                case .goals:
+                    let goals = snapshot.documents.compactMap { querySnapshot -> Goal? in
+                        return try? querySnapshot.data(as: Goal.self)
+                    }
+                    print("Golazo: \(goals.count)")
+                    completion(Result.success(goals as! Res))
                 }
             }
         }
@@ -40,8 +51,13 @@ class FirestoreManager {
 
 // MARK: - Method
 enum Method: String {
-    case get
+    case getAll
     case post
     case put
     case delete
+}
+
+// MARK: - Collection
+enum FirestoreCollection: String {
+    case goals
 }

@@ -18,7 +18,6 @@
 		F46F3566258E2907007CD3E4 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3565258E2907007CD3E4 /* BaseService.swift */; };
 		F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F356B258E29CF007CD3E4 /* GetGoalsRequest.swift */; };
 		F46F3571258E29E2007CD3E4 /* GetGoalsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3570258E29E2007CD3E4 /* GetGoalsResponse.swift */; };
-		F46F3577258E2B5F007CD3E4 /* FirestoreConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3576258E2B5F007CD3E4 /* FirestoreConstants.swift */; };
 		F4964300258E3899000BD9CA /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49642FF258E3898000BD9CA /* Notification+Extensions.swift */; };
 		F497503B258E035E00259DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497503A258E035E00259DAC /* AppDelegate.swift */; };
 		F4975044258E035F00259DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4975043258E035F00259DAC /* Assets.xcassets */; };
@@ -73,7 +72,6 @@
 		F46F3565258E2907007CD3E4 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		F46F356B258E29CF007CD3E4 /* GetGoalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoalsRequest.swift; sourceTree = "<group>"; };
 		F46F3570258E29E2007CD3E4 /* GetGoalsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoalsResponse.swift; sourceTree = "<group>"; };
-		F46F3576258E2B5F007CD3E4 /* FirestoreConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreConstants.swift; sourceTree = "<group>"; };
 		F49642FF258E3898000BD9CA /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
 		F4975037258E035E00259DAC /* My Day Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Day Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F497503A258E035E00259DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -204,7 +202,6 @@
 		F46F3575258E2B4D007CD3E4 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				F46F3576258E2B5F007CD3E4 /* FirestoreConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -289,8 +286,8 @@
 		F49880A4258E1C7D00C3EF2D /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				F46F355F258E281D007CD3E4 /* Goals */,
 				F46F3565258E2907007CD3E4 /* BaseService.swift */,
+				F46F355F258E281D007CD3E4 /* Goals */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -637,7 +634,6 @@
 			files = (
 				F49880CF258E1DD800C3EF2D /* BaseNavigationController.swift in Sources */,
 				F46F355B258E2807007CD3E4 /* FirestoreManager.swift in Sources */,
-				F46F3577258E2B5F007CD3E4 /* FirestoreConstants.swift in Sources */,
 				F46F3571258E29E2007CD3E4 /* GetGoalsResponse.swift in Sources */,
 				F46F3561258E282D007CD3E4 /* GoalServices.swift in Sources */,
 				F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */,
@@ -915,7 +911,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E35A29D38C531DBA5A5E11D7 /* Pods-myday-mydayUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3978A7VN36;
 				INFOPLIST_FILE = mydayUITests/Info.plist;
@@ -936,7 +932,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B19ACCDC52E43B2651D4DE0 /* Pods-myday-mydayUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3978A7VN36;
 				INFOPLIST_FILE = mydayUITests/Info.plist;

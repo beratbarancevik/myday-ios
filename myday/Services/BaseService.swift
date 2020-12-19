@@ -6,12 +6,7 @@
 //
 
 protocol Request {
-    var path: String { get }
+    var collection: FirestoreCollection { get }
     var method: Method { get }
     var query: String? { get }
-}
-
-protocol Response: Codable {
-    associatedtype T
-    var data: T { get }
 }

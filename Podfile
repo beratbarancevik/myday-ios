@@ -10,6 +10,7 @@ target 'myday' do
   pod 'Firebase/Auth', '7.3.0'
   pod 'Firebase/Crashlytics', '7.3.0'
   pod 'Firebase/Firestore', '7.3.0'
+  pod 'FirebaseFirestoreSwift', '7.3.0-beta'
   pod 'Firebase/Performance', '7.3.0'
 
   target 'mydayTests' do

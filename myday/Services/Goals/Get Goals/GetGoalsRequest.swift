@@ -7,13 +7,13 @@
 
 class GetGoalsRequest: Request {
     // MARK: - Properties
-    var path: String
+    var collection: FirestoreCollection
     var method: Method
     var query: String?
     
     // MARK: - Init
     init() {
-        path = FirestoreConstants.goals.rawValue
-        method = .get
+        collection = .goals
+        method = .getAll
     }
 }

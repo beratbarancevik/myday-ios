@@ -280,6 +280,8 @@ PODS:
     - "gRPC-C++ (~> 1.28.0)"
     - leveldb-library (~> 1.22)
     - nanopb (~> 2.30906.0)
+  - FirebaseFirestoreSwift (7.3.0-beta):
+    - FirebaseFirestore (~> 7.0)
   - FirebaseInstallations (7.3.0):
     - FirebaseCore (~> 7.0)
     - GoogleUtilities/Environment (~> 7.0)
@@ -376,6 +378,7 @@ DEPENDENCIES:
   - Firebase/Crashlytics (= 7.3.0)
   - Firebase/Firestore (= 7.3.0)
   - Firebase/Performance (= 7.3.0)
+  - FirebaseFirestoreSwift (= 7.3.0-beta)
 
 SPEC REPOS:
   trunk:
@@ -389,6 +392,7 @@ SPEC REPOS:
     - FirebaseCoreDiagnostics
     - FirebaseCrashlytics
     - FirebaseFirestore
+    - FirebaseFirestoreSwift
     - FirebaseInstallations
     - FirebasePerformance
     - FirebaseRemoteConfig
@@ -415,6 +419,7 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnostics: d50e11039e5984d92c8a512be2395f13df747350
   FirebaseCrashlytics: d31325312c92e2cb2f0386d589b9aa44e303d99b
   FirebaseFirestore: 1906bf163afdb7c432d2e3b5c40ceb9dd2df5820
+  FirebaseFirestoreSwift: 55ff644e91dead0338afccb733e63a1ed4c33c74
   FirebaseInstallations: 971df89b48ae5ee4cc2bf6935f3857a525d28550
   FirebasePerformance: 7915b7dfc8258030d5fac9544d7fa6b55fbe3e57
   FirebaseRemoteConfig: 826fad8bec5ce1912ef97a124d6ec0ce4dcf6ec1
@@ -430,6 +435,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   Protobuf: 0cde852566359049847168e51bd1c690e0f70056
 
-PODFILE CHECKSUM: 98a52cc675d9619f6595d122d0e6a1483e78ce5b
+PODFILE CHECKSUM: efed7dc9c5ac6feb86e30e376076bb4435a87121
 
 COCOAPODS: 1.10.0
