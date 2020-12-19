@@ -1,5 +1,5 @@
 //
-//  GoalDetailViewController.swift
+//  SettingsViewController.swift
 //  myday
 //
 //  Created by Berat Cevik on 12/19/20.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class GoalDetailViewController: BaseViewController {
+class SettingsViewController: BaseViewController {
     // MARK: - Properties
-    private var viewModel: GoalDetailViewModel
+    private var viewModel: SettingsViewModel
     
     // MARK: - Init
-    init(viewModel: GoalDetailViewModel) {
+    init(viewModel: SettingsViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -32,12 +32,12 @@ class GoalDetailViewController: BaseViewController {
 }
 
 // MARK: - Private Functions
-private extension GoalDetailViewController {
+private extension SettingsViewController {
     
 }
 
 // MARK: - Setup
-extension GoalDetailViewController: Setup {
+extension SettingsViewController: Setup {
     func setUpUI() {
         
     }

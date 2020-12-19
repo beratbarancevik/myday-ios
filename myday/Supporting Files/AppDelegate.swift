@@ -28,6 +28,7 @@ private extension AppDelegate {
     func configureApp() {
         FirebaseConfiguration.shared.setLoggerLevel(.min)
         FirebaseApp.configure()
+        Theme.configureTheme()
     }
     
     func startApp() {

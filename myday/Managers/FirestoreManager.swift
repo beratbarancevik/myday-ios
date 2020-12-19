@@ -15,18 +15,16 @@ class FirestoreManager {
     // MARK: - Init
     private init() {}
     
-    // MARK: - Firestore Request
-    static func sendFirestoreRequest<Req: Request, Res>(_ request: Req, _ responseType: Res.Type, completion: @escaping (Result<Res, Error>) -> Void) {
-        switch request.method {
-        case .getAll:
-            getDocuments(request, responseType, completion: completion)
-        default:
-            break
-        }
+    // MARK: - Requests
+    static func createDocument<Req: CreateRequest, Res: CreateResponse>(request: Req, responseType: CreateResponse.Type, completion: @escaping (Result<Res, Error>) -> Void) {
+        db.collection(request.collection.rawValue).addDocument(data: request.body)
     }
     
-    // MARK: - Firestore Queries
-    static func getDocuments<Req: Request, Res>(_ request: Req, _ responseType: Res.Type, completion: @escaping (Result<Res, Error>) -> Void) {
+    static func deleteDocument<Req: DeleteRequest, Res: DeleteResponse>(request: Req, responseType: DeleteResponse.Type, completion: @escaping (Result<Res, Error>) -> Void) {
+        db.collection(request.collection.rawValue).document(request.id).delete()
+    }
+    
+    static func getDocuments<Req: GetRequest, Res>(_ request: Req, _ responseType: Res.Type, completion: @escaping (Result<Res, Error>) -> Void) {
         db.collection(request.collection.rawValue).getDocuments() { snapshot, error in
             if let error = error {
                 completion(Result.failure(error))
@@ -47,16 +45,9 @@ class FirestoreManager {
         }
     }
     
-    static func deleteDocument<Req: DeleteRequest, Res: DeleteResponse>(request: Req, responseType: DeleteResponse.Type, completion: @escaping (Result<Res, Error>) -> Void) {
-        db.collection(request.collection.rawValue).document(request.id).delete()
+    static func updateDocument<Req: UpdateRequest, Res: UpdateResponse>(request: Req, responseType: UpdateResponse.Type, completion: @escaping (Result<Res, Error>) -> Void) {
+        db.collection(request.collection.rawValue).document(request.id).setData(request.body, merge: true)
     }
-}
-
-// MARK: - Method
-enum Method: String {
-    case getAll
-    case post
-    case put
 }
 
 // MARK: - Collection

@@ -5,16 +5,36 @@
 //  Created by Berat Cevik on 12/19/20.
 //
 
+// MARK: - Root
 protocol Request {
     var collection: FirestoreCollection { get }
-    var method: Method { get }
-    var query: String? { get }
 }
 
+protocol Response {}
+
+// MARK: - Create
+protocol CreateRequest: Request {
+    var body: [String: Any] { get }
+}
+
+protocol CreateResponse: Response {}
+
 // MARK: - Delete
-protocol DeleteRequest {
-    var collection: FirestoreCollection { get }
+protocol DeleteRequest: Request {
     var id: String { get }
 }
 
-protocol DeleteResponse {}
+protocol DeleteResponse: Response {}
+
+// MARK: - Get
+protocol GetRequest: Request {}
+
+protocol GetResponse: Response {}
+
+// MARK: - Update
+protocol UpdateRequest: Request {
+    var id: String { get }
+    var body: [String: Any] { get }
+}
+
+protocol UpdateResponse: Response {}

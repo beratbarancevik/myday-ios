@@ -10,6 +10,38 @@
 		609BF1661A630C98B3274BF6 /* Pods_myday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F963C95BFFC6F87A88CE6732 /* Pods_myday.framework */; };
 		63D9AA0B2A54CB21AAA1EF97 /* Pods_mydayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B29447E01BA36477AD421 /* Pods_mydayTests.framework */; };
 		F400A42C258E65670081CCD8 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A42B258E65670081CCD8 /* SplashCoordinator.swift */; };
+		F400A431258E65EC0081CCD8 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A430258E65EC0081CCD8 /* SplashViewController.swift */; };
+		F400A436258E65F70081CCD8 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A435258E65F70081CCD8 /* SplashViewModel.swift */; };
+		F400A43C258E663D0081CCD8 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A43B258E663D0081CCD8 /* SettingsCoordinator.swift */; };
+		F400A444258E66490081CCD8 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A443258E66490081CCD8 /* SettingsViewController.swift */; };
+		F400A449258E66520081CCD8 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A448258E66520081CCD8 /* SettingsViewModel.swift */; };
+		F400A44F258E67DF0081CCD8 /* CreateGoalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A44E258E67DF0081CCD8 /* CreateGoalRequest.swift */; };
+		F400A457258E67E70081CCD8 /* CreateGoalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A456258E67E70081CCD8 /* CreateGoalResponse.swift */; };
+		F400A45C258E699E0081CCD8 /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A45B258E699E0081CCD8 /* Encodable+Extensions.swift */; };
+		F400A462258E6AD70081CCD8 /* UpdateGoalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A461258E6AD70081CCD8 /* UpdateGoalRequest.swift */; };
+		F400A467258E6AE00081CCD8 /* UpdateGoalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A466258E6AE00081CCD8 /* UpdateGoalResponse.swift */; };
+		F400A46C258E6C160081CCD8 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A46B258E6C160081CCD8 /* String+Extensions.swift */; };
+		F400A471258E6C400081CCD8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A470258E6C400081CCD8 /* UIView+Extensions.swift */; };
+		F400A476258E6C4D0081CCD8 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A475258E6C4D0081CCD8 /* UIColor+Extensions.swift */; };
+		F400A47B258E6C830081CCD8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A47A258E6C830081CCD8 /* Constants.swift */; };
+		F400A483258E6C980081CCD8 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A482258E6C980081CCD8 /* Images.swift */; };
+		F400A488258E6CC40081CCD8 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A487258E6CC40081CCD8 /* Theme.swift */; };
+		F400A490258E6D080081CCD8 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A48F258E6D080081CCD8 /* Utility.swift */; };
+		F400A495258E6D310081CCD8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F400A494258E6D310081CCD8 /* Colors.xcassets */; };
+		F400A4A3258E6DE00081CCD8 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F400A49A258E6DE00081CCD8 /* Montserrat-Thin.ttf */; };
+		F400A4A4258E6DE00081CCD8 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F400A49B258E6DE00081CCD8 /* Montserrat-ExtraLight.ttf */; };
+		F400A4A5258E6DE00081CCD8 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F400A49C258E6DE00081CCD8 /* Montserrat-Regular.ttf */; };
+		F400A4A6258E6DE00081CCD8 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F400A49D258E6DE00081CCD8 /* Montserrat-Black.ttf */; };
+		F400A4A7258E6DE00081CCD8 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F400A49E258E6DE00081CCD8 /* Montserrat-Medium.ttf */; };
+		F400A4A8258E6DE00081CCD8 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F400A49F258E6DE00081CCD8 /* Montserrat-Light.ttf */; };
+		F400A4A9258E6DE00081CCD8 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F400A4A0258E6DE00081CCD8 /* Montserrat-Bold.ttf */; };
+		F400A4AA258E6DE00081CCD8 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F400A4A1258E6DE00081CCD8 /* Montserrat-SemiBold.ttf */; };
+		F400A4AB258E6DE00081CCD8 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F400A4A2258E6DE00081CCD8 /* Montserrat-ExtraBold.ttf */; };
+		F400A4D6258E6EF60081CCD8 /* ExternalNavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A4D5258E6EF60081CCD8 /* ExternalNavigationManager.swift */; };
+		F400A502258E6F9C0081CCD8 /* ZeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A501258E6F9C0081CCD8 /* ZeroView.swift */; };
+		F400A507258E6FC30081CCD8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A506258E6FC30081CCD8 /* BaseView.swift */; };
+		F400A50C258E6FCB0081CCD8 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A50B258E6FCB0081CCD8 /* BaseTableCell.swift */; };
+		F400A514258E71440081CCD8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A513258E71440081CCD8 /* GoalCell.swift */; };
 		F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */; };
 		F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */; };
 		F46F3551258E271B007CD3E4 /* GoalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */; };
@@ -66,6 +98,38 @@
 		DEBABB0E249420B171A03A90 /* Pods-mydayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mydayTests.release.xcconfig"; path = "Target Support Files/Pods-mydayTests/Pods-mydayTests.release.xcconfig"; sourceTree = "<group>"; };
 		E35A29D38C531DBA5A5E11D7 /* Pods-myday-mydayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myday-mydayUITests.debug.xcconfig"; path = "Target Support Files/Pods-myday-mydayUITests/Pods-myday-mydayUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F400A42B258E65670081CCD8 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
+		F400A430258E65EC0081CCD8 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		F400A435258E65F70081CCD8 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		F400A43B258E663D0081CCD8 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		F400A443258E66490081CCD8 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F400A448258E66520081CCD8 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		F400A44E258E67DF0081CCD8 /* CreateGoalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalRequest.swift; sourceTree = "<group>"; };
+		F400A456258E67E70081CCD8 /* CreateGoalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalResponse.swift; sourceTree = "<group>"; };
+		F400A45B258E699E0081CCD8 /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
+		F400A461258E6AD70081CCD8 /* UpdateGoalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateGoalRequest.swift; sourceTree = "<group>"; };
+		F400A466258E6AE00081CCD8 /* UpdateGoalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateGoalResponse.swift; sourceTree = "<group>"; };
+		F400A46B258E6C160081CCD8 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		F400A470258E6C400081CCD8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		F400A475258E6C4D0081CCD8 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		F400A47A258E6C830081CCD8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F400A482258E6C980081CCD8 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		F400A487258E6CC40081CCD8 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		F400A48F258E6D080081CCD8 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		F400A494258E6D310081CCD8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		F400A49A258E6DE00081CCD8 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		F400A49B258E6DE00081CCD8 /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F400A49C258E6DE00081CCD8 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		F400A49D258E6DE00081CCD8 /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		F400A49E258E6DE00081CCD8 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		F400A49F258E6DE00081CCD8 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		F400A4A0258E6DE00081CCD8 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		F400A4A1258E6DE00081CCD8 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		F400A4A2258E6DE00081CCD8 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F400A4D5258E6EF60081CCD8 /* ExternalNavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalNavigationManager.swift; sourceTree = "<group>"; };
+		F400A501258E6F9C0081CCD8 /* ZeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroView.swift; sourceTree = "<group>"; };
+		F400A506258E6FC30081CCD8 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		F400A50B258E6FCB0081CCD8 /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
+		F400A513258E71440081CCD8 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailCoordinator.swift; sourceTree = "<group>"; };
 		F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewController.swift; sourceTree = "<group>"; };
 		F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewModel.swift; sourceTree = "<group>"; };
@@ -157,8 +221,89 @@
 			isa = PBXGroup;
 			children = (
 				F400A42B258E65670081CCD8 /* SplashCoordinator.swift */,
+				F400A430258E65EC0081CCD8 /* SplashViewController.swift */,
+				F400A435258E65F70081CCD8 /* SplashViewModel.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		F400A43A258E662E0081CCD8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F400A43B258E663D0081CCD8 /* SettingsCoordinator.swift */,
+				F400A443258E66490081CCD8 /* SettingsViewController.swift */,
+				F400A448258E66520081CCD8 /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F400A44D258E67C90081CCD8 /* Create Goal */ = {
+			isa = PBXGroup;
+			children = (
+				F400A44E258E67DF0081CCD8 /* CreateGoalRequest.swift */,
+				F400A456258E67E70081CCD8 /* CreateGoalResponse.swift */,
+			);
+			path = "Create Goal";
+			sourceTree = "<group>";
+		};
+		F400A460258E6AC80081CCD8 /* Update Goal */ = {
+			isa = PBXGroup;
+			children = (
+				F400A461258E6AD70081CCD8 /* UpdateGoalRequest.swift */,
+				F400A466258E6AE00081CCD8 /* UpdateGoalResponse.swift */,
+			);
+			path = "Update Goal";
+			sourceTree = "<group>";
+		};
+		F400A499258E6DB50081CCD8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F400A49D258E6DE00081CCD8 /* Montserrat-Black.ttf */,
+				F400A4A0258E6DE00081CCD8 /* Montserrat-Bold.ttf */,
+				F400A4A2258E6DE00081CCD8 /* Montserrat-ExtraBold.ttf */,
+				F400A49B258E6DE00081CCD8 /* Montserrat-ExtraLight.ttf */,
+				F400A49F258E6DE00081CCD8 /* Montserrat-Light.ttf */,
+				F400A49E258E6DE00081CCD8 /* Montserrat-Medium.ttf */,
+				F400A49C258E6DE00081CCD8 /* Montserrat-Regular.ttf */,
+				F400A4A1258E6DE00081CCD8 /* Montserrat-SemiBold.ttf */,
+				F400A49A258E6DE00081CCD8 /* Montserrat-Thin.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F400A4FD258E6F680081CCD8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F400A4FE258E6F760081CCD8 /* Base */,
+				F400A500258E6F8B0081CCD8 /* Custom */,
+				F400A4FF258E6F7B0081CCD8 /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F400A4FE258E6F760081CCD8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F400A50B258E6FCB0081CCD8 /* BaseTableCell.swift */,
+				F400A506258E6FC30081CCD8 /* BaseView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		F400A4FF258E6F7B0081CCD8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F400A513258E71440081CCD8 /* GoalCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F400A500258E6F8B0081CCD8 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				F400A501258E6F9C0081CCD8 /* ZeroView.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		F43BA108258E139A009BFF93 /* Supporting Files */ = {
@@ -179,6 +324,8 @@
 			isa = PBXGroup;
 			children = (
 				F4975043258E035F00259DAC /* Assets.xcassets */,
+				F400A494258E6D310081CCD8 /* Colors.xcassets */,
+				F400A499258E6DB50081CCD8 /* Fonts */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -197,8 +344,10 @@
 			isa = PBXGroup;
 			children = (
 				F46F3560258E282D007CD3E4 /* GoalServices.swift */,
-				F46F356A258E29B4007CD3E4 /* Get Goals */,
+				F400A44D258E67C90081CCD8 /* Create Goal */,
 				F4BD2906258E5DBD00691D68 /* Delete Goal */,
+				F46F356A258E29B4007CD3E4 /* Get Goals */,
+				F400A460258E6AC80081CCD8 /* Update Goal */,
 			);
 			path = Goals;
 			sourceTree = "<group>";
@@ -215,6 +364,7 @@
 		F46F3575258E2B4D007CD3E4 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				F400A47A258E6C830081CCD8 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -245,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				F49880A5258E1C8D00C3EF2D /* Models */,
+				F400A4FD258E6F680081CCD8 /* Views */,
 				F49880A6258E1CD500C3EF2D /* Modules */,
 				F49880A4258E1C7D00C3EF2D /* Services */,
 				F49880A3258E1C7500C3EF2D /* Managers */,
@@ -276,6 +427,9 @@
 		F49880A1258E1C4400C3EF2D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F400A482258E6C980081CCD8 /* Images.swift */,
+				F400A487258E6CC40081CCD8 /* Theme.swift */,
+				F400A48F258E6D080081CCD8 /* Utility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -283,6 +437,10 @@
 		F49880A2258E1C6C00C3EF2D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F400A45B258E699E0081CCD8 /* Encodable+Extensions.swift */,
+				F400A46B258E6C160081CCD8 /* String+Extensions.swift */,
+				F400A475258E6C4D0081CCD8 /* UIColor+Extensions.swift */,
+				F400A470258E6C400081CCD8 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -290,6 +448,7 @@
 		F49880A3258E1C7500C3EF2D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				F400A4D5258E6EF60081CCD8 /* ExternalNavigationManager.swift */,
 				F46F355A258E2807007CD3E4 /* FirestoreManager.swift */,
 			);
 			path = Managers;
@@ -319,6 +478,7 @@
 				F49880BE258E1DAF00C3EF2D /* Base */,
 				F46F3545258E26C2007CD3E4 /* Goal Detail */,
 				F49880AB258E1D8B00C3EF2D /* Home */,
+				F400A43A258E662E0081CCD8 /* Settings */,
 				F400A42A258E65580081CCD8 /* Splash */,
 			);
 			path = Modules;
@@ -486,8 +646,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F400A4A8258E6DE00081CCD8 /* Montserrat-Light.ttf in Resources */,
+				F400A4A3258E6DE00081CCD8 /* Montserrat-Thin.ttf in Resources */,
+				F400A4A6258E6DE00081CCD8 /* Montserrat-Black.ttf in Resources */,
+				F400A4A4258E6DE00081CCD8 /* Montserrat-ExtraLight.ttf in Resources */,
+				F400A4A5258E6DE00081CCD8 /* Montserrat-Regular.ttf in Resources */,
 				F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */,
+				F400A4AA258E6DE00081CCD8 /* Montserrat-SemiBold.ttf in Resources */,
+				F400A495258E6D310081CCD8 /* Colors.xcassets in Resources */,
+				F400A4AB258E6DE00081CCD8 /* Montserrat-ExtraBold.ttf in Resources */,
 				F4975044258E035F00259DAC /* Assets.xcassets in Resources */,
+				F400A4A7258E6DE00081CCD8 /* Montserrat-Medium.ttf in Resources */,
+				F400A4A9258E6DE00081CCD8 /* Montserrat-Bold.ttf in Resources */,
 				F4AE2F42258E1996005E77AB /* GoogleService-Info-Debug.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,26 +825,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				F49880CF258E1DD800C3EF2D /* BaseNavigationController.swift in Sources */,
+				F400A43C258E663D0081CCD8 /* SettingsCoordinator.swift in Sources */,
 				F46F355B258E2807007CD3E4 /* FirestoreManager.swift in Sources */,
 				F4BD2908258E5DD000691D68 /* DeleteGoalRequest.swift in Sources */,
+				F400A502258E6F9C0081CCD8 /* ZeroView.swift in Sources */,
+				F400A46C258E6C160081CCD8 /* String+Extensions.swift in Sources */,
 				F46F3571258E29E2007CD3E4 /* GetGoalsResponse.swift in Sources */,
+				F400A490258E6D080081CCD8 /* Utility.swift in Sources */,
+				F400A457258E67E70081CCD8 /* CreateGoalResponse.swift in Sources */,
 				F46F3561258E282D007CD3E4 /* GoalServices.swift in Sources */,
 				F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */,
 				F49880B0258E1D9800C3EF2D /* HomeViewController.swift in Sources */,
+				F400A444258E66490081CCD8 /* SettingsViewController.swift in Sources */,
+				F400A44F258E67DF0081CCD8 /* CreateGoalRequest.swift in Sources */,
 				F46F3551258E271B007CD3E4 /* GoalDetailViewModel.swift in Sources */,
+				F400A483258E6C980081CCD8 /* Images.swift in Sources */,
 				F4BD2910258E5DD800691D68 /* DeleteGoalResponse.swift in Sources */,
+				F400A462258E6AD70081CCD8 /* UpdateGoalRequest.swift in Sources */,
+				F400A476258E6C4D0081CCD8 /* UIColor+Extensions.swift in Sources */,
+				F400A50C258E6FCB0081CCD8 /* BaseTableCell.swift in Sources */,
+				F400A507258E6FC30081CCD8 /* BaseView.swift in Sources */,
 				F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */,
+				F400A4D6258E6EF60081CCD8 /* ExternalNavigationManager.swift in Sources */,
+				F400A467258E6AE00081CCD8 /* UpdateGoalResponse.swift in Sources */,
 				F497503B258E035E00259DAC /* AppDelegate.swift in Sources */,
 				F49880C0258E1DB700C3EF2D /* BaseViewController.swift in Sources */,
 				F46F3566258E2907007CD3E4 /* BaseService.swift in Sources */,
 				F49880B5258E1DA000C3EF2D /* HomeCoordinator.swift in Sources */,
+				F400A471258E6C400081CCD8 /* UIView+Extensions.swift in Sources */,
 				F49880E1258E1ECE00C3EF2D /* ApplicationCoordinator.swift in Sources */,
+				F400A488258E6CC40081CCD8 /* Theme.swift in Sources */,
 				F46F3556258E272F007CD3E4 /* Goal.swift in Sources */,
+				F400A514258E71440081CCD8 /* GoalCell.swift in Sources */,
+				F400A47B258E6C830081CCD8 /* Constants.swift in Sources */,
 				F49880CA258E1DC500C3EF2D /* BaseCoordinator.swift in Sources */,
 				F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */,
 				F400A42C258E65670081CCD8 /* SplashCoordinator.swift in Sources */,
+				F400A45C258E699E0081CCD8 /* Encodable+Extensions.swift in Sources */,
+				F400A449258E66520081CCD8 /* SettingsViewModel.swift in Sources */,
 				F49880BA258E1DA800C3EF2D /* HomeViewModel.swift in Sources */,
 				F49880C5258E1DBE00C3EF2D /* BaseViewModel.swift in Sources */,
+				F400A436258E65F70081CCD8 /* SplashViewModel.swift in Sources */,
+				F400A431258E65EC0081CCD8 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
