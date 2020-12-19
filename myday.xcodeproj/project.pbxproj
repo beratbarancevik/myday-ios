@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		609BF1661A630C98B3274BF6 /* Pods_myday.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F963C95BFFC6F87A88CE6732 /* Pods_myday.framework */; };
 		63D9AA0B2A54CB21AAA1EF97 /* Pods_mydayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6B29447E01BA36477AD421 /* Pods_mydayTests.framework */; };
+		F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */; };
+		F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */; };
+		F46F3551258E271B007CD3E4 /* GoalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */; };
+		F46F3556258E272F007CD3E4 /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3555258E272F007CD3E4 /* Goal.swift */; };
+		F46F355B258E2807007CD3E4 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F355A258E2807007CD3E4 /* FirestoreManager.swift */; };
+		F46F3561258E282D007CD3E4 /* GoalServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3560258E282D007CD3E4 /* GoalServices.swift */; };
+		F46F3566258E2907007CD3E4 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3565258E2907007CD3E4 /* BaseService.swift */; };
+		F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F356B258E29CF007CD3E4 /* GetGoalsRequest.swift */; };
+		F46F3571258E29E2007CD3E4 /* GetGoalsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3570258E29E2007CD3E4 /* GetGoalsResponse.swift */; };
+		F46F3577258E2B5F007CD3E4 /* FirestoreConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3576258E2B5F007CD3E4 /* FirestoreConstants.swift */; };
 		F497503B258E035E00259DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497503A258E035E00259DAC /* AppDelegate.swift */; };
 		F4975044258E035F00259DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4975043258E035F00259DAC /* Assets.xcassets */; };
 		F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4975045258E035F00259DAC /* LaunchScreen.storyboard */; };
@@ -53,6 +63,16 @@
 		CD751E2600EEE72C74363E81 /* Pods-myday.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myday.release.xcconfig"; path = "Target Support Files/Pods-myday/Pods-myday.release.xcconfig"; sourceTree = "<group>"; };
 		DEBABB0E249420B171A03A90 /* Pods-mydayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mydayTests.release.xcconfig"; path = "Target Support Files/Pods-mydayTests/Pods-mydayTests.release.xcconfig"; sourceTree = "<group>"; };
 		E35A29D38C531DBA5A5E11D7 /* Pods-myday-mydayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myday-mydayUITests.debug.xcconfig"; path = "Target Support Files/Pods-myday-mydayUITests/Pods-myday-mydayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailCoordinator.swift; sourceTree = "<group>"; };
+		F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewController.swift; sourceTree = "<group>"; };
+		F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewModel.swift; sourceTree = "<group>"; };
+		F46F3555258E272F007CD3E4 /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
+		F46F355A258E2807007CD3E4 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		F46F3560258E282D007CD3E4 /* GoalServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalServices.swift; sourceTree = "<group>"; };
+		F46F3565258E2907007CD3E4 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		F46F356B258E29CF007CD3E4 /* GetGoalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoalsRequest.swift; sourceTree = "<group>"; };
+		F46F3570258E29E2007CD3E4 /* GetGoalsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoalsResponse.swift; sourceTree = "<group>"; };
+		F46F3576258E2B5F007CD3E4 /* FirestoreConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreConstants.swift; sourceTree = "<group>"; };
 		F4975037258E035E00259DAC /* My Day Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Day Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F497503A258E035E00259DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4975043258E035F00259DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +157,7 @@
 				F4AE2F30258E155F005E77AB /* Info-Debug.plist */,
 				F4AE2F31258E155F005E77AB /* Info-Release.plist */,
 				F444B7F3258E151D00AEFC85 /* Assets */,
+				F46F3575258E2B4D007CD3E4 /* Constants */,
 				F4AE2F40258E197D005E77AB /* Keys */,
 			);
 			path = "Supporting Files";
@@ -148,6 +169,42 @@
 				F4975043258E035F00259DAC /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		F46F3545258E26C2007CD3E4 /* Goal Detail */ = {
+			isa = PBXGroup;
+			children = (
+				F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */,
+				F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */,
+				F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */,
+			);
+			path = "Goal Detail";
+			sourceTree = "<group>";
+		};
+		F46F355F258E281D007CD3E4 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				F46F3560258E282D007CD3E4 /* GoalServices.swift */,
+				F46F356A258E29B4007CD3E4 /* Get Goals */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		F46F356A258E29B4007CD3E4 /* Get Goals */ = {
+			isa = PBXGroup;
+			children = (
+				F46F356B258E29CF007CD3E4 /* GetGoalsRequest.swift */,
+				F46F3570258E29E2007CD3E4 /* GetGoalsResponse.swift */,
+			);
+			path = "Get Goals";
+			sourceTree = "<group>";
+		};
+		F46F3575258E2B4D007CD3E4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F46F3576258E2B5F007CD3E4 /* FirestoreConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		F497502E258E035E00259DAC = {
@@ -221,6 +278,7 @@
 		F49880A3258E1C7500C3EF2D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				F46F355A258E2807007CD3E4 /* FirestoreManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -228,6 +286,8 @@
 		F49880A4258E1C7D00C3EF2D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F46F355F258E281D007CD3E4 /* Goals */,
+				F46F3565258E2907007CD3E4 /* BaseService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -235,6 +295,7 @@
 		F49880A5258E1C8D00C3EF2D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F46F3555258E272F007CD3E4 /* Goal.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,6 +305,7 @@
 			children = (
 				F49880DF258E1EC100C3EF2D /* Application */,
 				F49880BE258E1DAF00C3EF2D /* Base */,
+				F46F3545258E26C2007CD3E4 /* Goal Detail */,
 				F49880AB258E1D8B00C3EF2D /* Home */,
 			);
 			path = Modules;
@@ -571,12 +633,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				F49880CF258E1DD800C3EF2D /* BaseNavigationController.swift in Sources */,
+				F46F355B258E2807007CD3E4 /* FirestoreManager.swift in Sources */,
+				F46F3577258E2B5F007CD3E4 /* FirestoreConstants.swift in Sources */,
+				F46F3571258E29E2007CD3E4 /* GetGoalsResponse.swift in Sources */,
+				F46F3561258E282D007CD3E4 /* GoalServices.swift in Sources */,
+				F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */,
 				F49880B0258E1D9800C3EF2D /* HomeViewController.swift in Sources */,
+				F46F3551258E271B007CD3E4 /* GoalDetailViewModel.swift in Sources */,
+				F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */,
 				F497503B258E035E00259DAC /* AppDelegate.swift in Sources */,
 				F49880C0258E1DB700C3EF2D /* BaseViewController.swift in Sources */,
+				F46F3566258E2907007CD3E4 /* BaseService.swift in Sources */,
 				F49880B5258E1DA000C3EF2D /* HomeCoordinator.swift in Sources */,
 				F49880E1258E1ECE00C3EF2D /* ApplicationCoordinator.swift in Sources */,
+				F46F3556258E272F007CD3E4 /* Goal.swift in Sources */,
 				F49880CA258E1DC500C3EF2D /* BaseCoordinator.swift in Sources */,
+				F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */,
 				F49880BA258E1DA800C3EF2D /* HomeViewModel.swift in Sources */,
 				F49880C5258E1DBE00C3EF2D /* BaseViewModel.swift in Sources */,
 			);

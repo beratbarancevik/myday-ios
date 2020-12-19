@@ -13,7 +13,7 @@ class HomeCoordinator: BaseCoordinator {
     // MARK: - Init
     init(presenter: BaseNavigationController) {
         self.presenter = presenter
-        homeViewController = HomeViewController()
+        homeViewController = HomeViewController(viewModel: HomeViewModel())
     }
     
     // MARK: - Coordinator
