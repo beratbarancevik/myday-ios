@@ -6,5 +6,6 @@
 //
 
 protocol BaseCoordinator {
+    var navigationController: BaseNavigationController { get }
     func start()
 }

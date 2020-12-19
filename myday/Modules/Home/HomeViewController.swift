@@ -24,6 +24,18 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
+        
+        addObservers()
+        
         viewModel.getGoals()
+    }
+}
+
+// MARK: - Setup
+extension HomeViewController: Setup {
+    func addObservers() {
+        cancellables.insert(viewModel.loadingSubject.sink { [weak self] value in
+            print(value)
+        })
     }
 }

@@ -9,20 +9,21 @@ import UIKit
 
 class ApplicationCoordinator: BaseCoordinator {
     // MARK: - Properties
+    var navigationController: BaseNavigationController
+    
     private let window: UIWindow
-    private let rootViewController: BaseNavigationController
     private let homeCoordinator: HomeCoordinator
     
     // MARK: - Init
     init(window: UIWindow) {
         self.window = window
-        rootViewController = BaseNavigationController()
-        homeCoordinator = HomeCoordinator(presenter: rootViewController)
+        navigationController = BaseNavigationController()
+        homeCoordinator = HomeCoordinator(presenter: navigationController)
     }
     
     // MARK: - Coordinator
     func start() {
-        window.rootViewController = rootViewController
+        window.rootViewController = navigationController
         homeCoordinator.start()
         window.makeKeyAndVisible()
     }

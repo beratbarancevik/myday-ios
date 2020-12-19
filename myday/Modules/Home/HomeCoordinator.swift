@@ -7,17 +7,18 @@
 
 class HomeCoordinator: BaseCoordinator {
     // MARK: - Properties
-    private let presenter: BaseNavigationController
+    var navigationController: BaseNavigationController
+    
     private let homeViewController: HomeViewController
     
     // MARK: - Init
     init(presenter: BaseNavigationController) {
-        self.presenter = presenter
+        navigationController = presenter
         homeViewController = HomeViewController(viewModel: HomeViewModel())
     }
     
     // MARK: - Coordinator
     func start() {
-        presenter.pushViewController(homeViewController, animated: true)
+        navigationController.pushViewController(homeViewController, animated: true)
     }
 }

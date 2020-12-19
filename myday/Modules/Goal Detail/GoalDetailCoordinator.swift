@@ -6,6 +6,14 @@
 //
 
 class GoalDetailCoordinator: BaseCoordinator {
+    // MARK: - Properties
+    var navigationController: BaseNavigationController
+    
+    // MARK: - Init
+    init(presenter: BaseNavigationController) {
+        navigationController = presenter
+    }
+    
     // MARK: - Coordinator
     func start() {}
 }
