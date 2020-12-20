@@ -5,7 +5,6 @@
 //  Created by Berat Cevik on 12/19/20.
 //
 
-import Combine
 import UIKit
 
 class SplashViewController: BaseViewController {
@@ -17,8 +16,6 @@ class SplashViewController: BaseViewController {
         $0.accessibilityLabel = "splash_logo_image_view".localized
         return $0
     }(UIImageView().style(Theme.Image.primary))
-    
-    
     
     // MARK: - Init
     init(viewModel: SplashViewModel) {
@@ -39,13 +36,7 @@ class SplashViewController: BaseViewController {
         super.viewDidLoad()
         addSubviews()
         addConstraints()
-        addObservers()
     }
-}
-
-// MARK: - Private Functions
-private extension SplashViewController {
-    
 }
 
 // MARK: - Setup
@@ -59,11 +50,5 @@ extension SplashViewController: Setup {
             maker.center.equalTo(safeArea)
             maker.width.height.equalTo(128)
         }
-    }
-    
-    func addObservers() {
-        cancellables.insert(AuthenticationManager.shared.authDidCompleteSubject.sink(receiveValue: { [weak self] _ in
-            
-        }))
     }
 }
