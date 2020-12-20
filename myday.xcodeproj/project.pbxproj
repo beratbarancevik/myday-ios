@@ -52,6 +52,7 @@
 		F46F3566258E2907007CD3E4 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3565258E2907007CD3E4 /* BaseService.swift */; };
 		F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F356B258E29CF007CD3E4 /* GetGoalsRequest.swift */; };
 		F46F3571258E29E2007CD3E4 /* GetGoalsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3570258E29E2007CD3E4 /* GetGoalsResponse.swift */; };
+		F473E535258F4DD600FB36F8 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F473E534258F4DD600FB36F8 /* AuthenticationManager.swift */; };
 		F497503B258E035E00259DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497503A258E035E00259DAC /* AppDelegate.swift */; };
 		F4975044258E035F00259DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4975043258E035F00259DAC /* Assets.xcassets */; };
 		F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4975045258E035F00259DAC /* LaunchScreen.storyboard */; };
@@ -141,6 +142,7 @@
 		F46F3565258E2907007CD3E4 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
 		F46F356B258E29CF007CD3E4 /* GetGoalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoalsRequest.swift; sourceTree = "<group>"; };
 		F46F3570258E29E2007CD3E4 /* GetGoalsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoalsResponse.swift; sourceTree = "<group>"; };
+		F473E534258F4DD600FB36F8 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		F4975037258E035E00259DAC /* My Day Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Day Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F497503A258E035E00259DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4975043258E035F00259DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -450,6 +452,7 @@
 		F49880A3258E1C7500C3EF2D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				F473E534258F4DD600FB36F8 /* AuthenticationManager.swift */,
 				F400A4D5258E6EF60081CCD8 /* ExternalNavigationManager.swift */,
 				F46F355A258E2807007CD3E4 /* FirestoreManager.swift */,
 			);
@@ -860,6 +863,7 @@
 				F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */,
 				F49880B0258E1D9800C3EF2D /* HomeViewController.swift in Sources */,
 				F400A444258E66490081CCD8 /* SettingsViewController.swift in Sources */,
+				F473E535258F4DD600FB36F8 /* AuthenticationManager.swift in Sources */,
 				F400A44F258E67DF0081CCD8 /* CreateGoalRequest.swift in Sources */,
 				F46F3551258E271B007CD3E4 /* GoalDetailViewModel.swift in Sources */,
 				F400A483258E6C980081CCD8 /* Images.swift in Sources */,
@@ -1056,8 +1060,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77521F906AAD5B43E3372E9D /* Pods-myday.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Debug";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3978A7VN36;
@@ -1080,8 +1084,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD751E2600EEE72C74363E81 /* Pods-myday.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Release";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3978A7VN36;
 				INFOPLIST_FILE = "$(SRCROOT)/myday/Supporting Files/Info-Release.plist";
