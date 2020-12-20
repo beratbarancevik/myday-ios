@@ -10,11 +10,13 @@ class HomeCoordinator: BaseCoordinator {
     var navigationController: BaseNavigationController
     
     private let homeViewController: HomeViewController
+    private let homeViewModel: HomeViewModel
     
     // MARK: - Init
-    init(presenter: BaseNavigationController) {
-        navigationController = presenter
-        homeViewController = HomeViewController(viewModel: HomeViewModel())
+    init(navigationController: BaseNavigationController) {
+        self.navigationController = navigationController
+        homeViewModel = HomeViewModel()
+        homeViewController = HomeViewController(viewModel: homeViewModel)
     }
     
     // MARK: - Coordinator

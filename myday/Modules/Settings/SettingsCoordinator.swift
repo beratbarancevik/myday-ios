@@ -9,9 +9,14 @@ class SettingsCoordinator: BaseCoordinator {
     // MARK: - Properties
     var navigationController: BaseNavigationController
     
+    private let settingsViewController: SettingsViewController
+    private let settingsViewModel: SettingsViewModel
+    
     // MARK: - Init
-    init(presenter: BaseNavigationController) {
-        navigationController = presenter
+    init(navigationController: BaseNavigationController) {
+        self.navigationController = navigationController
+        settingsViewModel = SettingsViewModel()
+        settingsViewController = SettingsViewController(viewModel: settingsViewModel)
     }
     
     // MARK: - Functions

@@ -9,9 +9,14 @@ class GoalDetailCoordinator: BaseCoordinator {
     // MARK: - Properties
     var navigationController: BaseNavigationController
     
+    private let goalDetailViewController: GoalDetailViewController
+    private let goalDetailViewModel: GoalDetailViewModel
+    
     // MARK: - Init
-    init(presenter: BaseNavigationController) {
-        navigationController = presenter
+    init(navigationController: BaseNavigationController) {
+        self.navigationController = navigationController
+        goalDetailViewModel = GoalDetailViewModel()
+        goalDetailViewController = GoalDetailViewController(viewModel: goalDetailViewModel)
     }
     
     // MARK: - Coordinator

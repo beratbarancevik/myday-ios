@@ -39,7 +39,7 @@ private extension SplashViewController {
 // MARK: - Setup
 extension SplashViewController: Setup {
     func setUpUI() {
-        
+        view.backgroundColor = .systemBlue
     }
     
     func addSubviews() {
