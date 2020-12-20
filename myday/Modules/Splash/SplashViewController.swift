@@ -13,7 +13,6 @@ class SplashViewController: BaseViewController {
     
     private let logoImageView: UIImageView = {
         $0.image = Images.logo.image
-        $0.accessibilityLabel = "splash_logo_image_view".localized
         return $0
     }(UIImageView().style(Theme.Image.primary))
     
@@ -36,7 +35,7 @@ class SplashViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        /// Authentication is configured here, so that splash controller appears on the screen
+        // Authentication is configured here, so that splash controller appears on the screen
         AuthenticationManager.shared.setUpAuthentication()
     }
 }

@@ -14,7 +14,7 @@ class AuthenticationManager {
     
     private var authStateDidChangeListenerHandle: AuthStateDidChangeListenerHandle?
     
-    var authDidCompleteSubject = PassthroughSubject<Bool, Never>()
+    let authDidCompleteSubject = PassthroughSubject<Bool, Never>()
     
     var authState: AuthState {
         guard let user = Auth.auth().currentUser else {

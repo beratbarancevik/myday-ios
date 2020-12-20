@@ -10,10 +10,15 @@ import Foundation
 
 class HomeViewModel: BaseViewModel {
     // MARK: - Properties
-    var loadingSubject = PassthroughSubject<Bool, Never>()
-    var goalsSubject = PassthroughSubject<[Goal], Error>()
+    let loadingSubject = PassthroughSubject<Bool, Never>()
+    let goalsSubject = PassthroughSubject<[Goal], Error>()
     
     var goals = [Goal]()
+    
+    // MARK: - Init
+    init() {
+        addObservers()
+    }
     
     // MARK: - Service Requests
     func getGoals() {
@@ -34,5 +39,16 @@ class HomeViewModel: BaseViewModel {
         let goal = goals.remove(at: index)
         GoalServices.deleteGoal(goal: goal) { _ in }
         goalsSubject.send(goals)
+    }
+}
+
+// MARK: - Private Functions
+private extension HomeViewModel {
+    func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(didSaveGoal), name: .didSaveGoal, object: nil)
+    }
+    
+    @objc func didSaveGoal() {
+        getGoals()
     }
 }

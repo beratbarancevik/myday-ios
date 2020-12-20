@@ -27,6 +27,6 @@ class GoalDetailCoordinator: BaseCoordinator {
     
     // MARK: - Coordinator
     func start() {
-        navigationController.present(goalDetailViewController, animated: true)
+        navigationController.present(BaseNavigationController(rootViewController: goalDetailViewController), animated: true)
     }
 }

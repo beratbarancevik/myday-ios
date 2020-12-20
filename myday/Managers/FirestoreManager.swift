@@ -16,15 +16,27 @@ class FirestoreManager {
     private init() {}
     
     // MARK: - Requests
-    static func createDocument<Req: CreateRequest, Res: CreateResponse>(request: Req, responseType: CreateResponse.Type, completion: @escaping (Result<Res, Error>) -> Void) {
-        db.collection(request.collection.rawValue).addDocument(data: request.body)
+    static func createDocument<Req: CreateRequest>(request: Req, completion: @escaping (Result<Void, Error>) -> Void) {
+        db.collection(request.collection.rawValue).addDocument(data: request.body) { error in
+            if let error = error {
+                completion(Result.failure(error))
+                return
+            }
+            completion(Result.success(()))
+        }
     }
     
-    static func deleteDocument<Req: DeleteRequest, Res: DeleteResponse>(request: Req, responseType: DeleteResponse.Type, completion: @escaping (Result<Res, Error>) -> Void) {
-        db.collection(request.collection.rawValue).document(request.id).delete()
+    static func deleteDocument<Req: DeleteRequest>(request: Req, completion: @escaping (Result<Void, Error>) -> Void) {
+        db.collection(request.collection.rawValue).document(request.id).delete { error in
+            if let error = error {
+                completion(Result.failure(error))
+                return
+            }
+            completion(Result.success(()))
+        }
     }
     
-    static func getDocuments<Req: GetRequest, Res>(_ request: Req, _ responseType: Res.Type, completion: @escaping (Result<Res, Error>) -> Void) {
+    static func getDocuments<Req: GetRequest, Res>(_ request: Req, completion: @escaping (Result<Res, Error>) -> Void) {
         db.collection(request.collection.rawValue).getDocuments { snapshot, error in
             if let error = error {
                 completion(Result.failure(error))
@@ -45,8 +57,14 @@ class FirestoreManager {
         }
     }
     
-    static func updateDocument<Req: UpdateRequest, Res: UpdateResponse>(request: Req, responseType: UpdateResponse.Type, completion: @escaping (Result<Res, Error>) -> Void) {
-        db.collection(request.collection.rawValue).document(request.id).setData(request.body, merge: true)
+    static func updateDocument<Req: UpdateRequest>(request: Req, completion: @escaping (Result<Void, Error>) -> Void) {
+        db.collection(request.collection.rawValue).document(request.id).setData(request.body, merge: true) { error in
+            if let error = error {
+                completion(Result.failure(error))
+                return
+            }
+            completion(Result.success(()))
+        }
     }
 }
 

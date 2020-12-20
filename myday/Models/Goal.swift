@@ -8,7 +8,7 @@
 struct Goal: Codable {
     // MARK: - Properties
     var id: String
-    let title: String?
+    var title: String?
     
     private enum CodingKeys: String, CodingKey {
         case id

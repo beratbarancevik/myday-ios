@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Foundation
 
 class HomeCoordinator: BaseCoordinator {
     // MARK: - Properties
@@ -43,5 +44,15 @@ class HomeCoordinator: BaseCoordinator {
             self.goalDetailCoordinator = GoalDetailCoordinator(navigationController: self.navigationController)
             self.goalDetailCoordinator?.start()
         })
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(didSaveGoal), name: .didSaveGoal, object: nil)
+    }
+}
+
+// MARK: - Private Functions
+private extension HomeCoordinator {
+    @objc func didSaveGoal() {
+        goalDetailCoordinator?.navigationController.dismiss(animated: true)
+        goalDetailCoordinator = nil
     }
 }
