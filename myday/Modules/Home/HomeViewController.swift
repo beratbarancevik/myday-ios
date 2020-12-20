@@ -12,6 +12,7 @@ class HomeViewController: BaseViewController {
     // MARK: - Properties
     private var viewModel: HomeViewModel
     
+    private let addBarButtonItem = UIBarButtonItem(image: Images.add.image, style: .plain, target: nil, action: nil)
     private let goalsTableView: UITableView = {
         $0.style(Theme.Table.primary)
         $0.register(GoalCell.self, forCellReuseIdentifier: GoalCell.identifier)
@@ -67,6 +68,11 @@ private extension HomeViewController {
 extension HomeViewController: Setup {
     func setUpUI() {
         navigationItem.title = "Home"
+        
+        addBarButtonItem.target = self
+        addBarButtonItem.accessibilityLabel = "add".localized
+        navigationItem.rightBarButtonItem = addBarButtonItem
+        
         goalsTableView.delegate = self
         goalsTableView.dataSource = self
     }
@@ -90,6 +96,7 @@ extension HomeViewController: Setup {
     
     func addObservers() {
         refreshControl.addTarget(self, action: #selector(didRefresh), for: .valueChanged)
+        addBarButtonItem.action = #selector(addDidTap)
         
         zeroView.mainButtonDidTap = { [weak self] in
             self?.addDidTap()
