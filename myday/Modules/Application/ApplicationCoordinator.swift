@@ -14,7 +14,7 @@ class ApplicationCoordinator: BaseCoordinator {
     
     private let window: UIWindow
     private let homeCoordinator: HomeCoordinator
-    private let splashCoordinator: SplashCoordinator
+    private var splashCoordinator: SplashCoordinator?
     
     private var cancellable: AnyCancellable?
     
@@ -29,20 +29,20 @@ class ApplicationCoordinator: BaseCoordinator {
     
     // MARK: - Coordinator
     func start() {
-        splashCoordinator.start()
+        splashCoordinator?.start()
         window.makeKeyAndVisible()
     }
     
     func showHome() {
         window.rootViewController = navigationController
         homeCoordinator.start()
+        splashCoordinator = nil
     }
 }
 
 // MARK: - Private Functions
 private extension ApplicationCoordinator {
     func addAuthenticationObserver() {
-        AuthenticationManager.shared.setUpAuthentication()
         cancellable = AuthenticationManager.shared.authDidCompleteSubject.sink { [weak self] _ in
             self?.showHome()
         }

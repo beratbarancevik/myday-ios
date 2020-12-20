@@ -39,7 +39,7 @@ private extension GoalDetailViewController {
 // MARK: - Setup
 extension GoalDetailViewController: Setup {
     func setUpUI() {
-        
+        navigationItem.title = "Goal"
     }
     
     func addSubviews() {

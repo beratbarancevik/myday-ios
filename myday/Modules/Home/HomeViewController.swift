@@ -18,6 +18,10 @@ class HomeViewController: BaseViewController {
         return $0
     }(UITableView())
     private let refreshControl = UIRefreshControl().style(Theme.RefreshControl.primary)
+    private let zeroView = ZeroView(labelText: "You don't have any goals. Let's start by adding your first one.", buttonTitle: "Add Subscription")
+    
+    let didSelectGoal = PassthroughSubject<Goal, Never>()
+    let addGoal = PassthroughSubject<Bool, Never>()
     
     // MARK: - Init
     init(viewModel: HomeViewModel) {
@@ -36,15 +40,26 @@ class HomeViewController: BaseViewController {
         addSubviews()
         addConstraints()
         addObservers()
-        
         viewModel.getGoals()
     }
 }
 
 // MARK: - Private Functions
 private extension HomeViewController {
+    func updateUI() {
+        let isGoalsEmpty = viewModel.goals.isEmpty
+        goalsTableView.setHidden(isGoalsEmpty)
+        zeroView.setHidden(!isGoalsEmpty)
+        goalsTableView.reloadData()
+    }
+    
     @objc func didRefresh() {
         viewModel.getGoals()
+    }
+    
+    @objc func addDidTap() {
+        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
+        addGoal.send(true)
     }
 }
 
@@ -59,16 +74,26 @@ extension HomeViewController: Setup {
     func addSubviews() {
         view.addSubview(goalsTableView)
         goalsTableView.addSubview(refreshControl)
+        view.addSubview(zeroView)
     }
     
     func addConstraints() {
         goalsTableView.snp.makeConstraints { maker in
             maker.edges.equalTo(safeArea)
         }
+        
+        zeroView.snp.makeConstraints { maker in
+            maker.leading.trailing.equalTo(safeArea).inset(32)
+            maker.bottom.equalTo(safeArea.snp.centerY)
+        }
     }
     
     func addObservers() {
         refreshControl.addTarget(self, action: #selector(didRefresh), for: .valueChanged)
+        
+        zeroView.mainButtonDidTap = { [weak self] in
+            self?.addDidTap()
+        }
         
         cancellables.insert(viewModel.loadingSubject.sink { [weak self] value in
             value ? self?.refreshControl.beginRefreshing() : self?.refreshControl.endRefreshing()
@@ -76,13 +101,18 @@ extension HomeViewController: Setup {
         
         cancellables.insert(viewModel.goalsSubject.sink(receiveCompletion: { _ in
         }, receiveValue: { [weak self] _ in
-            self?.goalsTableView.reloadData()
+            self?.updateUI()
         }))
     }
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        UIImpactFeedbackGenerator(style: .light).impactOccurred()
+        didSelectGoal.send(viewModel.goals[indexPath.row])
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.goals.count
     }

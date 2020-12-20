@@ -27,15 +27,17 @@ class SplashViewController: BaseViewController {
         fatalError()
     }
     
-    deinit {
-        print("SplashViewController deinited")
-    }
-    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubviews()
         addConstraints()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        /// Authentication is configured here, so that splash controller appears on the screen
+        AuthenticationManager.shared.setUpAuthentication()
     }
 }
 

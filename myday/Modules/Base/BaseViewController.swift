@@ -22,4 +22,10 @@ class BaseViewController: UIViewController {
     var safeArea: UILayoutGuide {
         return view.safeAreaLayoutGuide
     }
+    
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.style(Theme.View.primary)
+    }
 }

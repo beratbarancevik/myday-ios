@@ -19,6 +19,14 @@ class GoalDetailCoordinator: BaseCoordinator {
         goalDetailViewController = GoalDetailViewController(viewModel: goalDetailViewModel)
     }
     
+    init(navigationController: BaseNavigationController, goal: Goal) {
+        self.navigationController = navigationController
+        goalDetailViewModel = GoalDetailViewModel(goal: goal)
+        goalDetailViewController = GoalDetailViewController(viewModel: goalDetailViewModel)
+    }
+    
     // MARK: - Coordinator
-    func start() {}
+    func start() {
+        navigationController.present(goalDetailViewController, animated: true)
+    }
 }
