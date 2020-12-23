@@ -35,6 +35,10 @@ class HomeViewModel: BaseViewModel {
         }
     }
     
+    func updateGoal(goal: Goal) {
+        GoalServices.updateGoal(goal: goal) { _ in }
+    }
+    
     func deleteGoal(at index: Int) {
         let goal = goals.remove(at: index)
         GoalServices.deleteGoal(goal: goal) { _ in }

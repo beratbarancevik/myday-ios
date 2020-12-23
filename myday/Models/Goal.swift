@@ -34,4 +34,19 @@ struct Goal: Codable {
         self.target = target
         self.achieved = achieved
     }
+    
+    // MARK: - Functions
+    mutating func incrementAchieved() {
+        guard let target = target else { return }
+        
+        guard var achieved = achieved else {
+            self.achieved = 1
+            return
+        }
+        
+        if achieved < target {
+            achieved += 1
+            self.achieved = achieved
+        }
+    }
 }

@@ -127,7 +127,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: GoalCell.identifier, for: indexPath) as? GoalCell else { return UITableViewCell() }
+        cell.index = indexPath.row
         cell.goal = viewModel.goals[indexPath.row]
+        cell.delegate = self
         return cell
     }
     
@@ -135,5 +137,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         if editingStyle == .delete {
             viewModel.deleteGoal(at: indexPath.row)
         }
+    }
+}
+
+// MARK: - GoalCellDelegate
+extension HomeViewController: GoalCellDelegate {
+    func targetDidTap(_ index: Int) {
+        viewModel.goals[index].incrementAchieved()
+        viewModel.updateGoal(goal: viewModel.goals[index])
+        updateUI()
     }
 }

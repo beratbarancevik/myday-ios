@@ -36,14 +36,14 @@ class GoalDetailViewModel: BaseViewModel {
     // MARK: - Service Requests
     func saveSubscription() {
         if isDataValid() {
-            goal.id.isEmpty ? createSubscription() : updateSubscription()
+            goal.id.isEmpty ? createGoal() : updateGoal()
         }
     }
 }
 
 // MARK: - Private Functions
 private extension GoalDetailViewModel {
-    func createSubscription() {
+    func createGoal() {
         GoalServices.createGoal(goal: goal) { [weak self] result in
             switch result {
             case .success:
@@ -54,7 +54,7 @@ private extension GoalDetailViewModel {
         }
     }
     
-    func updateSubscription() {
+    func updateGoal() {
         GoalServices.updateGoal(goal: goal) { [weak self] result in
             switch result {
             case .success:
