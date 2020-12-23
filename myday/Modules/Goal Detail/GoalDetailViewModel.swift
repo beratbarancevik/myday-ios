@@ -13,6 +13,15 @@ class GoalDetailViewModel: BaseViewModel {
     
     let didSaveSubject = PassthroughSubject<Bool, Error>()
     
+    let goalDetails = [
+        [
+            GoalDetail.title
+        ],
+        [
+            GoalDetail.target
+        ]
+    ]
+    
     // MARK: - Init
     init() {
         goal = Goal()
@@ -24,7 +33,9 @@ class GoalDetailViewModel: BaseViewModel {
     
     // MARK: - Service Requests
     func saveSubscription() {
-        goal.id.isEmpty ? createSubscription() : updateSubscription()
+        if isDataValid() {
+            goal.id.isEmpty ? createSubscription() : updateSubscription()
+        }
     }
 }
 
@@ -51,16 +62,35 @@ private extension GoalDetailViewModel {
             }
         }
     }
+    
+    func isDataValid() -> Bool {
+        guard let title = goal.title, title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            
+            return false
+        }
+        
+        if let target = goal.target {
+            guard target > 0 else {
+                
+                return false
+            }
+        }
+        
+        return true
+    }
 }
 
 // MARK: - GoalDetail
 enum GoalDetail: String, CaseIterable {
     case title
+    case target
     
     var placeholder: String {
         switch self {
         case .title:
             return "Title"
+        case .target:
+            return "Target"
         }
     }
 }

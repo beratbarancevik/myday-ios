@@ -82,16 +82,22 @@ extension GoalDetailViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.goalDetails.count
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return GoalDetail.allCases.count
+        return viewModel.goalDetails[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldCell.identifier, for: indexPath) as? TextFieldCell else { return UITableViewCell() }
         cell.delegate = self
-        switch GoalDetail.allCases[indexPath.row] {
+        switch viewModel.goalDetails[indexPath.section][indexPath.row] {
         case .title:
             cell.updateUI(.title, text: viewModel.goal.title)
+        case .target:
+            cell.updateUI(.target, text: viewModel.goal.target)
         }
         return cell
     }
@@ -103,6 +109,10 @@ extension GoalDetailViewController: TextFieldCellDelegate {
         switch type {
         case .title:
             viewModel.goal.title = text
+        case .target:
+            if let target = Int(text) {
+                viewModel.goal.target = target
+            }
         }
     }
 }

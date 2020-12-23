@@ -18,7 +18,6 @@ class TextFieldCell: BaseTableCell {
     weak var delegate: TextFieldCellDelegate?
     
     private var type = GoalDetail.title
-    private var value: String?
     
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -40,14 +39,18 @@ class TextFieldCell: BaseTableCell {
     // MARK: - Functions
     func updateUI(_ type: GoalDetail, text: String?) {
         self.type = type
-        textField.text = value
         textField.placeholder = type.placeholder
         textField.text = text
-        
-        switch type {
-        case .title:
-            textField.keyboardType = .default
+        setKeyboardType()
+    }
+    
+    func updateUI(_ type: GoalDetail, text: Int?) {
+        self.type = type
+        textField.placeholder = type.placeholder
+        if let value = text {
+            textField.text = String(value)
         }
+        setKeyboardType()
     }
 }
 
@@ -56,6 +59,15 @@ private extension TextFieldCell {
     @objc func textFieldDidChange(_ textField: UITextField) {
         guard let text = textField.text else { return }
         delegate?.textFieldDidChange(type, text)
+    }
+    
+    func setKeyboardType() {
+        switch type {
+        case .title:
+            textField.keyboardType = .default
+        case .target:
+            textField.keyboardType = .numberPad
+        }
     }
 }
 
