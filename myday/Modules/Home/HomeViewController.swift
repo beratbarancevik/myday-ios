@@ -12,6 +12,7 @@ class HomeViewController: BaseViewController {
     // MARK: - Properties
     private var viewModel: HomeViewModel
     
+    private let calendarBarButtonItem = UIBarButtonItem(image: Images.calendar.image, style: .plain, target: nil, action: nil)
     private let addBarButtonItem = UIBarButtonItem(image: Images.add.image, style: .plain, target: nil, action: nil)
     private let goalsTableView: UITableView = {
         $0.style(Theme.Table.primary)
@@ -21,6 +22,7 @@ class HomeViewController: BaseViewController {
     private let refreshControl = UIRefreshControl().style(Theme.RefreshControl.primary)
     private let zeroView = ZeroView(labelText: "You don't have any goals. Let's start by adding your first one.", buttonTitle: "Add Subscription")
     
+    let didTapCalendar = PassthroughSubject<Bool, Never>()
     let didSelectGoal = PassthroughSubject<Goal, Never>()
     let addGoal = PassthroughSubject<Bool, Never>()
     
@@ -58,6 +60,10 @@ private extension HomeViewController {
         viewModel.getGoals()
     }
     
+    @objc func calendarDidTap() {
+        didTapCalendar.send(true)
+    }
+    
     @objc func addDidTap() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         addGoal.send(true)
@@ -68,6 +74,10 @@ private extension HomeViewController {
 extension HomeViewController: Setup {
     func setUpUI() {
         navigationItem.title = "Home"
+        
+        calendarBarButtonItem.target = self
+        calendarBarButtonItem.accessibilityLabel = "calendar".localized
+        navigationItem.leftBarButtonItem = calendarBarButtonItem
         
         addBarButtonItem.target = self
         addBarButtonItem.accessibilityLabel = "add".localized
@@ -95,8 +105,10 @@ extension HomeViewController: Setup {
     }
     
     func addObservers() {
-        refreshControl.addTarget(self, action: #selector(didRefresh), for: .valueChanged)
+        calendarBarButtonItem.action = #selector(calendarDidTap)
         addBarButtonItem.action = #selector(addDidTap)
+        
+        refreshControl.addTarget(self, action: #selector(didRefresh), for: .valueChanged)
         
         zeroView.mainButtonDidTap = { [weak self] in
             self?.addDidTap()

@@ -15,6 +15,7 @@ class HomeCoordinator: BaseCoordinator {
     private let homeViewController: HomeViewController
     private let homeViewModel: HomeViewModel
     
+    private var calendarCoordinator: CalendarCoordinator?
     private var goalDetailCoordinator: GoalDetailCoordinator?
     
     private var cancellables = Set<AnyCancellable>()
@@ -33,6 +34,12 @@ class HomeCoordinator: BaseCoordinator {
     }
     
     func observe() {
+        cancellables.insert(homeViewController.didTapCalendar.sink { [weak self] goal in
+            guard let self = self else { return }
+            self.calendarCoordinator = CalendarCoordinator(navigationController: self.navigationController)
+            self.calendarCoordinator?.start()
+        })
+        
         cancellables.insert(homeViewController.didSelectGoal.sink { [weak self] goal in
             guard let self = self else { return }
             self.goalDetailCoordinator = GoalDetailCoordinator(navigationController: self.navigationController, goal: goal)

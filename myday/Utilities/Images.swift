@@ -11,6 +11,7 @@ import UIKit
 
 enum Images: String, CaseIterable {
     case add
+    case calendar
     case logo
     
     var image: UIImage {

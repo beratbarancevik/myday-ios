@@ -44,6 +44,9 @@
 		F400A514258E71440081CCD8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A513258E71440081CCD8 /* GoalCell.swift */; };
 		F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = F41845212593B3DA00E7F0A0 /* SwiftMessages */; };
 		F41845272593BE7D00E7F0A0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845262593BE7D00E7F0A0 /* Enums.swift */; };
+		F41845302593D5BF00E7F0A0 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418452F2593D5BF00E7F0A0 /* CalendarViewController.swift */; };
+		F41845352593D5CB00E7F0A0 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845342593D5CB00E7F0A0 /* CalendarViewModel.swift */; };
+		F418453A2593D5D700E7F0A0 /* CalendarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845392593D5D700E7F0A0 /* CalendarCoordinator.swift */; };
 		F41CE19C258E74B800D0F36E /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */; };
 		F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */; };
 		F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */; };
@@ -137,6 +140,9 @@
 		F400A50B258E6FCB0081CCD8 /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		F400A513258E71440081CCD8 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		F41845262593BE7D00E7F0A0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		F418452F2593D5BF00E7F0A0 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		F41845342593D5CB00E7F0A0 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		F41845392593D5D700E7F0A0 /* CalendarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCoordinator.swift; sourceTree = "<group>"; };
 		F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Release.plist"; sourceTree = "<group>"; };
 		F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailCoordinator.swift; sourceTree = "<group>"; };
 		F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewController.swift; sourceTree = "<group>"; };
@@ -319,6 +325,16 @@
 			path = Custom;
 			sourceTree = "<group>";
 		};
+		F418452E2593D5AF00E7F0A0 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				F41845392593D5D700E7F0A0 /* CalendarCoordinator.swift */,
+				F418452F2593D5BF00E7F0A0 /* CalendarViewController.swift */,
+				F41845342593D5CB00E7F0A0 /* CalendarViewModel.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
 		F43BA108258E139A009BFF93 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -492,6 +508,7 @@
 			children = (
 				F49880DF258E1EC100C3EF2D /* Application */,
 				F49880BE258E1DAF00C3EF2D /* Base */,
+				F418452E2593D5AF00E7F0A0 /* Calendar */,
 				F46F3545258E26C2007CD3E4 /* Goal Detail */,
 				F49880AB258E1D8B00C3EF2D /* Home */,
 				F400A43A258E662E0081CCD8 /* Settings */,
@@ -863,6 +880,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F41845302593D5BF00E7F0A0 /* CalendarViewController.swift in Sources */,
 				F49880CF258E1DD800C3EF2D /* BaseNavigationController.swift in Sources */,
 				F400A43C258E663D0081CCD8 /* SettingsCoordinator.swift in Sources */,
 				F46F355B258E2807007CD3E4 /* FirestoreManager.swift in Sources */,
@@ -875,6 +893,8 @@
 				F46F3561258E282D007CD3E4 /* GoalServices.swift in Sources */,
 				F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */,
 				F49880B0258E1D9800C3EF2D /* HomeViewController.swift in Sources */,
+				F41845352593D5CB00E7F0A0 /* CalendarViewModel.swift in Sources */,
+				F418453A2593D5D700E7F0A0 /* CalendarCoordinator.swift in Sources */,
 				F400A444258E66490081CCD8 /* SettingsViewController.swift in Sources */,
 				F473E535258F4DD600FB36F8 /* AuthenticationManager.swift in Sources */,
 				F4BEE74F258F8C4E0027028E /* TextFieldCell.swift in Sources */,
