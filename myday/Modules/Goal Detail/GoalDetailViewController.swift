@@ -69,10 +69,13 @@ extension GoalDetailViewController: Setup {
     func addObservers() {
         saveBarButtonItem.action = #selector(saveDidTap)
         
-        cancellables.insert(viewModel.didSaveSubject.sink(receiveCompletion: { _ in
-        }, receiveValue: { _ in
+        cancellables.insert(viewModel.didSaveSubject.sink { _ in
             NotificationCenter.default.post(name: .didSaveGoal, object: nil)
-        }))
+        })
+        
+        cancellables.insert(viewModel.didFailSubject.sink { [weak self] error in
+            self?.showError(error)
+        })
     }
 }
 

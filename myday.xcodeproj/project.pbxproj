@@ -43,6 +43,7 @@
 		F400A50C258E6FCB0081CCD8 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A50B258E6FCB0081CCD8 /* BaseTableCell.swift */; };
 		F400A514258E71440081CCD8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A513258E71440081CCD8 /* GoalCell.swift */; };
 		F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = F41845212593B3DA00E7F0A0 /* SwiftMessages */; };
+		F41845272593BE7D00E7F0A0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845262593BE7D00E7F0A0 /* Enums.swift */; };
 		F41CE19C258E74B800D0F36E /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */; };
 		F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */; };
 		F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */; };
@@ -135,6 +136,7 @@
 		F400A506258E6FC30081CCD8 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F400A50B258E6FCB0081CCD8 /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		F400A513258E71440081CCD8 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		F41845262593BE7D00E7F0A0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Release.plist"; sourceTree = "<group>"; };
 		F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailCoordinator.swift; sourceTree = "<group>"; };
 		F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewController.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 		F49880A1258E1C4400C3EF2D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F41845262593BE7D00E7F0A0 /* Enums.swift */,
 				F400A482258E6C980081CCD8 /* Images.swift */,
 				F400A487258E6CC40081CCD8 /* Theme.swift */,
 				F400A48F258E6D080081CCD8 /* Utility.swift */,
@@ -880,6 +883,7 @@
 				F400A483258E6C980081CCD8 /* Images.swift in Sources */,
 				F4BEE763258F97A80027028E /* Notification+Extensions.swift in Sources */,
 				F4BD2910258E5DD800691D68 /* DeleteGoalResponse.swift in Sources */,
+				F41845272593BE7D00E7F0A0 /* Enums.swift in Sources */,
 				F400A462258E6AD70081CCD8 /* UpdateGoalRequest.swift in Sources */,
 				F400A476258E6C4D0081CCD8 /* UIColor+Extensions.swift in Sources */,
 				F400A50C258E6FCB0081CCD8 /* BaseTableCell.swift in Sources */,

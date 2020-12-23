@@ -6,12 +6,14 @@
 //
 
 import Combine
+import Foundation
 
 class GoalDetailViewModel: BaseViewModel {
     // MARK: - Properties
     var goal: Goal
     
-    let didSaveSubject = PassthroughSubject<Bool, Error>()
+    let didSaveSubject = PassthroughSubject<Bool, Never>()
+    let didFailSubject = PassthroughSubject<Error, Never>()
     
     let goalDetails = [
         [
@@ -47,7 +49,7 @@ private extension GoalDetailViewModel {
             case .success:
                 self?.didSaveSubject.send(true)
             case .failure(let error):
-                self?.didSaveSubject.send(completion: Subscribers.Completion.failure(error))
+                self?.didFailSubject.send(error)
             }
         }
     }
@@ -58,20 +60,20 @@ private extension GoalDetailViewModel {
             case .success:
                 self?.didSaveSubject.send(true)
             case .failure(let error):
-                self?.didSaveSubject.send(completion: Subscribers.Completion.failure(error))
+                self?.didFailSubject.send(error)
             }
         }
     }
     
     func isDataValid() -> Bool {
-        guard let title = goal.title, title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
-            
+        guard let title = goal.title, !title.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            didFailSubject.send(ValidationError.enterTitle)
             return false
         }
         
         if let target = goal.target {
             guard target > 0 else {
-                
+                didFailSubject.send(ValidationError.enterValidTarget)
                 return false
             }
         }
@@ -91,6 +93,21 @@ enum GoalDetail: String, CaseIterable {
             return "Title"
         case .target:
             return "Target"
+        }
+    }
+}
+
+// MARK: - ValidationError
+enum ValidationError: String, Error, LocalizedError {
+    case enterTitle
+    case enterValidTarget
+    
+    var errorDescription: String? {
+        switch self {
+        case .enterTitle:
+            return "Please enter a title"
+        case .enterValidTarget:
+            return "Target must be greater than 0"
         }
     }
 }
