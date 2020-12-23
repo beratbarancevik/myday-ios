@@ -42,6 +42,7 @@
 		F400A507258E6FC30081CCD8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A506258E6FC30081CCD8 /* BaseView.swift */; };
 		F400A50C258E6FCB0081CCD8 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A50B258E6FCB0081CCD8 /* BaseTableCell.swift */; };
 		F400A514258E71440081CCD8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A513258E71440081CCD8 /* GoalCell.swift */; };
+		F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = F41845212593B3DA00E7F0A0 /* SwiftMessages */; };
 		F41CE19C258E74B800D0F36E /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */; };
 		F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */; };
 		F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */; };
@@ -179,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */,
+				F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */,
 				609BF1661A630C98B3274BF6 /* Pods_myday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +567,7 @@
 			name = myday;
 			packageProductDependencies = (
 				F4AE2F49258E1A7C005E77AB /* SnapKit */,
+				F41845212593B3DA00E7F0A0 /* SwiftMessages */,
 			);
 			productName = myday;
 			productReference = F4975037258E035E00259DAC /* My Day Dev.app */;
@@ -642,6 +645,7 @@
 			mainGroup = F497502E258E035E00259DAC;
 			packageReferences = (
 				F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 			);
 			productRefGroup = F4975038258E035E00259DAC /* Products */;
 			projectDirPath = "";
@@ -1242,6 +1246,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
+			requirement = {
+				kind = exactVersion;
+				version = 8.0.5;
+			};
+		};
 		F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -1253,6 +1265,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F41845212593B3DA00E7F0A0 /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
+		};
 		F4AE2F49258E1A7C005E77AB /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */;
