@@ -44,7 +44,7 @@
 		F400A514258E71440081CCD8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A513258E71440081CCD8 /* GoalCell.swift */; };
 		F401588F25945E3A006F3CF4 /* GoalProgressBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401588E25945E3A006F3CF4 /* GoalProgressBarCell.swift */; };
 		F401589825945F3D006F3CF4 /* HorizontalProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401589725945F3D006F3CF4 /* HorizontalProgressBar.swift */; };
-		F41845222593B3DA00E7F0A0 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = F41845212593B3DA00E7F0A0 /* SwiftPackageProductDependency */; };
+		F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = F41845212593B3DA00E7F0A0 /* SwiftMessages */; };
 		F41845272593BE7D00E7F0A0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845262593BE7D00E7F0A0 /* Enums.swift */; };
 		F41845302593D5BF00E7F0A0 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418452F2593D5BF00E7F0A0 /* CalendarViewController.swift */; };
 		F41845352593D5CB00E7F0A0 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845342593D5CB00E7F0A0 /* CalendarViewModel.swift */; };
@@ -54,6 +54,9 @@
 		F418456A2593DF4E00E7F0A0 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845692593DF4E00E7F0A0 /* BaseCollectionCell.swift */; };
 		F41CE19C258E74B800D0F36E /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */; };
 		F41F2DE025951E1C004C0C54 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */; };
+		F45B8FB9259523B300E6D679 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FB8259523B300E6D679 /* FacebookCore */; };
+		F45B8FBB259523B300E6D679 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FBA259523B300E6D679 /* FacebookLogin */; };
+		F45B8FBD259523B300E6D679 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FBC259523B300E6D679 /* FacebookShare */; };
 		F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */; };
 		F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */; };
 		F46F3551258E271B007CD3E4 /* GoalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */; };
@@ -89,7 +92,7 @@
 		F49880CF258E1DD800C3EF2D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880CE258E1DD800C3EF2D /* BaseNavigationController.swift */; };
 		F49880E1258E1ECE00C3EF2D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880E0258E1ECE00C3EF2D /* ApplicationCoordinator.swift */; };
 		F4AE2F42258E1996005E77AB /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */; };
-		F4AE2F4A258E1A7C005E77AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = F4AE2F49258E1A7C005E77AB /* SwiftPackageProductDependency */; };
+		F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4AE2F49258E1A7C005E77AB /* SnapKit */; };
 		F4BD2908258E5DD000691D68 /* DeleteGoalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD2907258E5DD000691D68 /* DeleteGoalRequest.swift */; };
 		F4BD2910258E5DD800691D68 /* DeleteGoalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD290F258E5DD800691D68 /* DeleteGoalResponse.swift */; };
 		F4BEE74F258F8C4E0027028E /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE74E258F8C4E0027028E /* TextFieldCell.swift */; };
@@ -221,9 +224,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4AE2F4A258E1A7C005E77AB /* BuildFile in Frameworks */,
-				F41845222593B3DA00E7F0A0 /* BuildFile in Frameworks */,
+				F45B8FBB259523B300E6D679 /* FacebookLogin in Frameworks */,
+				F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */,
+				F45B8FBD259523B300E6D679 /* FacebookShare in Frameworks */,
+				F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */,
 				609BF1661A630C98B3274BF6 /* Pods_myday.framework in Frameworks */,
+				F45B8FB9259523B300E6D679 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -662,8 +668,11 @@
 			);
 			name = myday;
 			packageProductDependencies = (
-				F4AE2F49258E1A7C005E77AB /* SwiftPackageProductDependency */,
-				F41845212593B3DA00E7F0A0 /* SwiftPackageProductDependency */,
+				F4AE2F49258E1A7C005E77AB /* SnapKit */,
+				F41845212593B3DA00E7F0A0 /* SwiftMessages */,
+				F45B8FB8259523B300E6D679 /* FacebookCore */,
+				F45B8FBA259523B300E6D679 /* FacebookLogin */,
+				F45B8FBC259523B300E6D679 /* FacebookShare */,
 			);
 			productName = myday;
 			productReference = F4975037258E035E00259DAC /* My Day Dev.app */;
@@ -741,8 +750,9 @@
 			);
 			mainGroup = F497502E258E035E00259DAC;
 			packageReferences = (
-				F4AE2F48258E1A7C005E77AB /* RemoteSwiftPackageReference */,
-				F41845202593B3DA00E7F0A0 /* RemoteSwiftPackageReference */,
+				F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */,
+				F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
+				F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = F4975038258E035E00259DAC /* Products */;
 			projectDirPath = "";
@@ -1398,7 +1408,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F41845202593B3DA00E7F0A0 /* RemoteSwiftPackageReference */ = {
+		F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
 			requirement = {
@@ -1406,7 +1416,15 @@
 				version = 8.0.5;
 			};
 		};
-		F4AE2F48258E1A7C005E77AB /* RemoteSwiftPackageReference */ = {
+		F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 8.2.0;
+			};
+		};
+		F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -1417,14 +1435,29 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F41845212593B3DA00E7F0A0 /* SwiftPackageProductDependency */ = {
+		F41845212593B3DA00E7F0A0 /* SwiftMessages */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F41845202593B3DA00E7F0A0 /* RemoteSwiftPackageReference */;
+			package = F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
 			productName = SwiftMessages;
 		};
-		F4AE2F49258E1A7C005E77AB /* SwiftPackageProductDependency */ = {
+		F45B8FB8259523B300E6D679 /* FacebookCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F4AE2F48258E1A7C005E77AB /* RemoteSwiftPackageReference */;
+			package = F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		F45B8FBA259523B300E6D679 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		F45B8FBC259523B300E6D679 /* FacebookShare */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookShare;
+		};
+		F4AE2F49258E1A7C005E77AB /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
