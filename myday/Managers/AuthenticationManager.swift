@@ -41,6 +41,7 @@ private extension AuthenticationManager {
     // MARK: - Auth Handlers
     func registerAuthenticationListeners() {
         authStateDidChangeListenerHandle = Auth.auth().addStateDidChangeListener { [weak self] _, user in
+            AnalyticsManager.shared.updateUserProperties()
             if let user = user {
                 print("\nUser ID: \(user.uid)\nEmail: \(user.email ?? "No email found")\n")
                 self?.authDidCompleteSubject.send(true)

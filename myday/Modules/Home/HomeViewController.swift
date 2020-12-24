@@ -48,6 +48,7 @@ class HomeViewController: BaseViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        AnalyticsManager.shared.logEvent(.APP_OPENED)
         setUpUI()
         addSubviews()
         addConstraints()

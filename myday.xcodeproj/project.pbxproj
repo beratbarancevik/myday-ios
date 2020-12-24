@@ -53,6 +53,7 @@
 		F41845622593DEDF00E7F0A0 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845612593DEDF00E7F0A0 /* DayCell.swift */; };
 		F418456A2593DF4E00E7F0A0 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845692593DF4E00E7F0A0 /* BaseCollectionCell.swift */; };
 		F41CE19C258E74B800D0F36E /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */; };
+		F41F2DE025951E1C004C0C54 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */; };
 		F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */; };
 		F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */; };
 		F46F3551258E271B007CD3E4 /* GoalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */; };
@@ -165,6 +166,7 @@
 		F41845612593DEDF00E7F0A0 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		F41845692593DF4E00E7F0A0 /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
 		F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Release.plist"; sourceTree = "<group>"; };
+		F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailCoordinator.swift; sourceTree = "<group>"; };
 		F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewController.swift; sourceTree = "<group>"; };
 		F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewModel.swift; sourceTree = "<group>"; };
@@ -548,6 +550,7 @@
 		F49880A3258E1C7500C3EF2D /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */,
 				F473E534258F4DD600FB36F8 /* AuthenticationManager.swift */,
 				F400A4D5258E6EF60081CCD8 /* ExternalNavigationManager.swift */,
 				F46F355A258E2807007CD3E4 /* FirestoreManager.swift */,
@@ -1000,6 +1003,7 @@
 				F484BB9C2594F6EC0021E7DD /* ProfileViewModel.swift in Sources */,
 				F400A471258E6C400081CCD8 /* UIView+Extensions.swift in Sources */,
 				F49880E1258E1ECE00C3EF2D /* ApplicationCoordinator.swift in Sources */,
+				F41F2DE025951E1C004C0C54 /* AnalyticsManager.swift in Sources */,
 				F400A488258E6CC40081CCD8 /* Theme.swift in Sources */,
 				F46F3556258E272F007CD3E4 /* Goal.swift in Sources */,
 				F400A514258E71440081CCD8 /* GoalCell.swift in Sources */,
