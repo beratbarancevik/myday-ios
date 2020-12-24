@@ -44,7 +44,7 @@
 		F400A514258E71440081CCD8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A513258E71440081CCD8 /* GoalCell.swift */; };
 		F401588F25945E3A006F3CF4 /* GoalProgressBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401588E25945E3A006F3CF4 /* GoalProgressBarCell.swift */; };
 		F401589825945F3D006F3CF4 /* HorizontalProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401589725945F3D006F3CF4 /* HorizontalProgressBar.swift */; };
-		F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = F41845212593B3DA00E7F0A0 /* SwiftMessages */; };
+		F41845222593B3DA00E7F0A0 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = F41845212593B3DA00E7F0A0 /* SwiftPackageProductDependency */; };
 		F41845272593BE7D00E7F0A0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845262593BE7D00E7F0A0 /* Enums.swift */; };
 		F41845302593D5BF00E7F0A0 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418452F2593D5BF00E7F0A0 /* CalendarViewController.swift */; };
 		F41845352593D5CB00E7F0A0 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845342593D5CB00E7F0A0 /* CalendarViewModel.swift */; };
@@ -89,7 +89,7 @@
 		F49880CF258E1DD800C3EF2D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880CE258E1DD800C3EF2D /* BaseNavigationController.swift */; };
 		F49880E1258E1ECE00C3EF2D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880E0258E1ECE00C3EF2D /* ApplicationCoordinator.swift */; };
 		F4AE2F42258E1996005E77AB /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */; };
-		F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4AE2F49258E1A7C005E77AB /* SnapKit */; };
+		F4AE2F4A258E1A7C005E77AB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = F4AE2F49258E1A7C005E77AB /* SwiftPackageProductDependency */; };
 		F4BD2908258E5DD000691D68 /* DeleteGoalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD2907258E5DD000691D68 /* DeleteGoalRequest.swift */; };
 		F4BD2910258E5DD800691D68 /* DeleteGoalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD290F258E5DD800691D68 /* DeleteGoalResponse.swift */; };
 		F4BEE74F258F8C4E0027028E /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE74E258F8C4E0027028E /* TextFieldCell.swift */; };
@@ -221,8 +221,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */,
-				F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */,
+				F4AE2F4A258E1A7C005E77AB /* BuildFile in Frameworks */,
+				F41845222593B3DA00E7F0A0 /* BuildFile in Frameworks */,
 				609BF1661A630C98B3274BF6 /* Pods_myday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -654,6 +654,7 @@
 				F4AE2F46258E1A10005E77AB /* Firebase */,
 				F4AE2F47258E1A32005E77AB /* Crashlytics */,
 				5B84124A39CA7A8DBDC1D3B7 /* [CP] Embed Pods Frameworks */,
+				8175E2A02B4D6BF10143FEA3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -661,8 +662,8 @@
 			);
 			name = myday;
 			packageProductDependencies = (
-				F4AE2F49258E1A7C005E77AB /* SnapKit */,
-				F41845212593B3DA00E7F0A0 /* SwiftMessages */,
+				F4AE2F49258E1A7C005E77AB /* SwiftPackageProductDependency */,
+				F41845212593B3DA00E7F0A0 /* SwiftPackageProductDependency */,
 			);
 			productName = myday;
 			productReference = F4975037258E035E00259DAC /* My Day Dev.app */;
@@ -696,6 +697,7 @@
 				F4975055258E035F00259DAC /* Frameworks */,
 				F4975056258E035F00259DAC /* Resources */,
 				E0051DC6966C25C5996BD5E4 /* [CP] Embed Pods Frameworks */,
+				00C20528FEEF57EB587D8F70 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -739,8 +741,8 @@
 			);
 			mainGroup = F497502E258E035E00259DAC;
 			packageReferences = (
-				F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */,
-				F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
+				F4AE2F48258E1A7C005E77AB /* RemoteSwiftPackageReference */,
+				F41845202593B3DA00E7F0A0 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = F4975038258E035E00259DAC /* Products */;
 			projectDirPath = "";
@@ -792,6 +794,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00C20528FEEF57EB587D8F70 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myday-mydayUITests/Pods-myday-mydayUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myday-mydayUITests/Pods-myday-mydayUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myday-mydayUITests/Pods-myday-mydayUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5B84124A39CA7A8DBDC1D3B7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -807,6 +826,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myday/Pods-myday-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8175E2A02B4D6BF10143FEA3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myday/Pods-myday-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-myday/Pods-myday-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myday/Pods-myday-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		89C0B1FFFD958D8AB60DCBAB /* [CP] Check Pods Manifest.lock */ = {
@@ -1362,7 +1398,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+		F41845202593B3DA00E7F0A0 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
 			requirement = {
@@ -1370,7 +1406,7 @@
 				version = 8.0.5;
 			};
 		};
-		F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		F4AE2F48258E1A7C005E77AB /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -1381,14 +1417,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F41845212593B3DA00E7F0A0 /* SwiftMessages */ = {
+		F41845212593B3DA00E7F0A0 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			package = F41845202593B3DA00E7F0A0 /* RemoteSwiftPackageReference */;
 			productName = SwiftMessages;
 		};
-		F4AE2F49258E1A7C005E77AB /* SnapKit */ = {
+		F4AE2F49258E1A7C005E77AB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = F4AE2F48258E1A7C005E77AB /* RemoteSwiftPackageReference */;
 			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */

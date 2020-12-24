@@ -14,6 +14,8 @@ target 'myday' do
   pod 'Firebase/Performance', '7.3.0'
   pod 'Firebase/Storage', '7.3.0'
 
+  pod 'GoogleSignIn'
+
   target 'mydayTests' do
     inherit! :search_paths
     # Pods for testing
