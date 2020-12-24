@@ -19,6 +19,12 @@ class ColorCell: BaseTableCell {
         return $0
     }(UIView())
     
+    var title: String? {
+        didSet {
+            titleLabel.text = title
+        }
+    }
+    
     var color: UIColor? {
         didSet {
             colorView.backgroundColor = color

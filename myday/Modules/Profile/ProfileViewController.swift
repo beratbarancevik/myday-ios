@@ -14,7 +14,7 @@ class ProfileViewController: BaseViewController {
     
     private let settingsBarButtonItem = UIBarButtonItem(image: Image.settings.image, style: .plain, target: nil, action: nil)
     
-    let didTapSettings = PassthroughSubject<Bool, Never>()
+    let didTapSettingsSubject = PassthroughSubject<Bool, Never>()
     
     // MARK: - Init
     init(viewModel: ProfileViewModel) {
@@ -39,7 +39,7 @@ class ProfileViewController: BaseViewController {
 // MARK: - Private Functions
 private extension ProfileViewController {
     @objc func settingsDidTap() {
-        didTapSettings.send(true)
+        didTapSettingsSubject.send(true)
     }
 }
 

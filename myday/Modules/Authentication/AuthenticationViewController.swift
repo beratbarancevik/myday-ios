@@ -89,12 +89,12 @@ class AuthenticationViewController: BaseViewController {
         return $0
     }(UIButton(type: .system))
     
-    let didTapSettings = PassthroughSubject<Bool, Never>()
-    let didTapGoogle = PassthroughSubject<Bool, Never>()
-    let didTapFacebook = PassthroughSubject<Bool, Never>()
-    let didTapApple = PassthroughSubject<Bool, Never>()
-    let didTapTerms = PassthroughSubject<Bool, Never>()
-    let didTapPrivacy = PassthroughSubject<Bool, Never>()
+    let didTapSettingsSubject = PassthroughSubject<Bool, Never>()
+    let didTapGoogleSubject = PassthroughSubject<Bool, Never>()
+    let didTapFacebookSubject = PassthroughSubject<Bool, Never>()
+    let didTapAppleSubject = PassthroughSubject<Bool, Never>()
+    let didTapTermsSubject = PassthroughSubject<Bool, Never>()
+    let didTapPrivacySubject = PassthroughSubject<Bool, Never>()
     
     // MARK: - Init
     init(viewModel: AuthenticationViewModel) {
@@ -119,30 +119,30 @@ class AuthenticationViewController: BaseViewController {
 // MARK: - Private Functions
 private extension AuthenticationViewController {
     @objc func settingsDidTap() {
-        didTapSettings.send(true)
+        didTapSettingsSubject.send(true)
     }
     
     @objc func appleDidTap() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-        didTapApple.send(true)
+        didTapAppleSubject.send(true)
     }
     
     @objc func facebookDidTap() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-        didTapFacebook.send(true)
+        didTapFacebookSubject.send(true)
     }
     
     @objc func googleDidTap() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-        didTapGoogle.send(true)
+        didTapGoogleSubject.send(true)
     }
     
     @objc func termsDidTap() {
-        didTapTerms.send(true)
+        didTapTermsSubject.send(true)
     }
     
     @objc func privacyDidTap() {
-        didTapPrivacy.send(true)
+        didTapPrivacySubject.send(true)
     }
 }
 

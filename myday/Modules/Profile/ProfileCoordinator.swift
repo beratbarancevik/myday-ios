@@ -35,7 +35,7 @@ class ProfileCoordinator: BaseCoordinator {
     }
     
     func observe() {
-        cancellables.insert(profileViewController.didTapSettings.sink { [weak self] _ in
+        cancellables.insert(profileViewController.didTapSettingsSubject.sink { [weak self] _ in
             guard let self = self else { return }
             self.settingsCoordinator = SettingsCoordinator(navigationController: self.navigationController)
             self.settingsCoordinator?.start()

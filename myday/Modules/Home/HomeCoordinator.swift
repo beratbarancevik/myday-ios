@@ -36,14 +36,14 @@ class HomeCoordinator: BaseCoordinator {
     }
     
     func observe() {
-        cancellables.insert(homeViewController.didTapCalendar.sink { [weak self] _ in
+        cancellables.insert(homeViewController.didTapCalendarSubject.sink { [weak self] _ in
             guard let self = self else { return }
             let calendarNavigationController = BaseNavigationController()
             self.calendarCoordinator = CalendarCoordinator(presentingNavigationController: self.navigationController, navigationController: calendarNavigationController)
             self.calendarCoordinator?.start()
         })
         
-        cancellables.insert(homeViewController.didTapProfile.sink { [weak self] _ in
+        cancellables.insert(homeViewController.didTapProfileSubject.sink { [weak self] _ in
             guard let self = self else { return }
             let profileNavigationController = BaseNavigationController()
             if AuthenticationManager.shared.authState == .account {
@@ -55,14 +55,14 @@ class HomeCoordinator: BaseCoordinator {
             }
         })
         
-        cancellables.insert(homeViewController.didSelectGoal.sink { [weak self] goal in
+        cancellables.insert(homeViewController.didSelectGoalSubject.sink { [weak self] goal in
             guard let self = self else { return }
             let goalDetailNavigationController = BaseNavigationController()
             self.goalDetailCoordinator = GoalDetailCoordinator(presentingNavigationController: self.navigationController, navigationController: goalDetailNavigationController, goal: goal)
             self.goalDetailCoordinator?.start()
         })
         
-        cancellables.insert(homeViewController.addGoal.sink { [weak self] _ in
+        cancellables.insert(homeViewController.didTapAddGoalSubject.sink { [weak self] _ in
             guard let self = self else { return }
             let goalDetailNavigationController = BaseNavigationController()
             self.goalDetailCoordinator = GoalDetailCoordinator(presentingNavigationController: self.navigationController, navigationController: goalDetailNavigationController)

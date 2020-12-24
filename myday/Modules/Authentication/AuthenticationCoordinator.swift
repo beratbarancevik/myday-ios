@@ -35,7 +35,7 @@ class AuthenticationCoordinator: BaseCoordinator {
     }
     
     func observe() {
-        cancellables.insert(authenticationViewController.didTapSettings.sink { [weak self] _ in
+        cancellables.insert(authenticationViewController.didTapSettingsSubject.sink { [weak self] _ in
             guard let self = self else { return }
             self.settingsCoordinator = SettingsCoordinator(navigationController: self.navigationController)
             self.settingsCoordinator?.start()

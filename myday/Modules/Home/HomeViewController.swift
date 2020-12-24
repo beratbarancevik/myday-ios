@@ -30,10 +30,10 @@ class HomeViewController: BaseViewController {
         return $0
     }(UIButton(type: .system))
     
-    let didTapCalendar = PassthroughSubject<Bool, Never>()
-    let didTapProfile = PassthroughSubject<Bool, Never>()
-    let didSelectGoal = PassthroughSubject<Goal, Never>()
-    let addGoal = PassthroughSubject<Bool, Never>()
+    let didTapCalendarSubject = PassthroughSubject<Bool, Never>()
+    let didTapProfileSubject = PassthroughSubject<Bool, Never>()
+    let didSelectGoalSubject = PassthroughSubject<Goal, Never>()
+    let didTapAddGoalSubject = PassthroughSubject<Bool, Never>()
     
     // MARK: - Init
     init(viewModel: HomeViewModel) {
@@ -70,16 +70,16 @@ private extension HomeViewController {
     }
     
     @objc func calendarDidTap() {
-        didTapCalendar.send(true)
+        didTapCalendarSubject.send(true)
     }
     
     @objc func profileDidTap() {
-        didTapProfile.send(true)
+        didTapProfileSubject.send(true)
     }
     
     @objc func addDidTap() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-        addGoal.send(true)
+        didTapAddGoalSubject.send(true)
     }
 }
 
@@ -150,7 +150,7 @@ extension HomeViewController: Setup {
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
-        didSelectGoal.send(viewModel.goals[indexPath.row])
+        didSelectGoalSubject.send(viewModel.goals[indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
