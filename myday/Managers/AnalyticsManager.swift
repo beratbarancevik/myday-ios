@@ -18,12 +18,15 @@ class AnalyticsManager {
     // MARK: - User Properties
     func updateUserProperties() {
         guard let userId = Auth.auth().currentUser?.uid else { return }
+        let authState = AuthenticationManager.shared.authState == .account ? "account" : "anonymous"
         
         // Firebase
         Analytics.setUserID(userId)
+        Analytics.setUserProperty(authState, forName: AnalyticsUserProperties.AUTH_STATE.rawValue)
         
         // Facebook
         AppEvents.userID = userId
+        AppEvents.setUserData(authState, forType: AppEvents.UserDataType(AnalyticsUserProperties.AUTH_STATE.rawValue))
     }
     
     // MARK: - Event Logging
@@ -41,6 +44,9 @@ enum AnalyticsEvent: String {
     case APP_OPENED
     
     case CREATED_GOAL
+    case COMPLETED_GOAL
+    case UPDATED_GOAL
+    case DELETED_GOAL
     
     var name: String {
         return self.rawValue.lowercased()
@@ -49,7 +55,7 @@ enum AnalyticsEvent: String {
 
 // MARK: - User Properties
 enum AnalyticsUserProperties: String {
-    case LOGGED_IN
+    case AUTH_STATE
     
     var name: String {
         return self.rawValue.lowercased()
