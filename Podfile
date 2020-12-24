@@ -12,6 +12,7 @@ target 'myday' do
   pod 'Firebase/Firestore', '7.3.0'
   pod 'FirebaseFirestoreSwift', '7.3.0-beta'
   pod 'Firebase/Performance', '7.3.0'
+  pod 'Firebase/Storage', '7.3.0'
 
   target 'mydayTests' do
     inherit! :search_paths
