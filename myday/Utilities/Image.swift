@@ -1,5 +1,5 @@
 //
-//  Images.swift
+//  Image.swift
 //  myday
 //
 //  Created by Berat Cevik on 12/19/20.
@@ -9,10 +9,13 @@
 
 import UIKit
 
-enum Images: String, CaseIterable {
+enum Image: String, CaseIterable {
     case add
     case addLarge = "add-large"
+    case apple
     case calendar
+    case facebook
+    case google
     case logo
     case profile
     case settings

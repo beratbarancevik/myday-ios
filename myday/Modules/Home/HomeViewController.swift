@@ -12,8 +12,8 @@ class HomeViewController: BaseViewController {
     // MARK: - Properties
     private var viewModel: HomeViewModel
     
-    private let calendarBarButtonItem = UIBarButtonItem(image: Images.calendar.image, style: .plain, target: nil, action: nil)
-    private let profileBarButtonItem = UIBarButtonItem(image: Images.profile.image, style: .plain, target: nil, action: nil)
+    private let calendarBarButtonItem = UIBarButtonItem(image: Image.calendar.image, style: .plain, target: nil, action: nil)
+    private let profileBarButtonItem = UIBarButtonItem(image: Image.profile.image, style: .plain, target: nil, action: nil)
     private let goalsTableView: UITableView = {
         $0.style(Theme.Table.primary)
         $0.register(GoalCell.self, forCellReuseIdentifier: GoalCell.identifier)
@@ -23,7 +23,7 @@ class HomeViewController: BaseViewController {
     private let refreshControl = UIRefreshControl().style(Theme.RefreshControl.primary)
     private let zeroView = ZeroView(labelText: "You don't have any goals. Let's start by adding your first one.", buttonTitle: "Add Subscription")
     private let addButton: UIButton = {
-        $0.setImage(Images.addLarge.image, for: .normal)
+        $0.setImage(Image.addLarge.image, for: .normal)
         $0.tintColor = .systemBackground
         $0.backgroundColor = .label
         $0.layer.cornerRadius = 24

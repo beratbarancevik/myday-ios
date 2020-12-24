@@ -24,7 +24,7 @@
 		F400A471258E6C400081CCD8 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A470258E6C400081CCD8 /* UIView+Extensions.swift */; };
 		F400A476258E6C4D0081CCD8 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A475258E6C4D0081CCD8 /* UIColor+Extensions.swift */; };
 		F400A47B258E6C830081CCD8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A47A258E6C830081CCD8 /* Constants.swift */; };
-		F400A483258E6C980081CCD8 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A482258E6C980081CCD8 /* Images.swift */; };
+		F400A483258E6C980081CCD8 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A482258E6C980081CCD8 /* Image.swift */; };
 		F400A488258E6CC40081CCD8 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A487258E6CC40081CCD8 /* Theme.swift */; };
 		F400A490258E6D080081CCD8 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A48F258E6D080081CCD8 /* Utility.swift */; };
 		F400A495258E6D310081CCD8 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F400A494258E6D310081CCD8 /* Colors.xcassets */; };
@@ -69,6 +69,7 @@
 		F484BBAA259501B10021E7DD /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBA9259501B10021E7DD /* AuthenticationCoordinator.swift */; };
 		F484BBB2259502090021E7DD /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBB1259502090021E7DD /* AuthenticationViewController.swift */; };
 		F484BBB7259502330021E7DD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBB6259502330021E7DD /* AuthenticationViewModel.swift */; };
+		F484BBBC259506560021E7DD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBBB259506560021E7DD /* Color.swift */; };
 		F497503B258E035E00259DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497503A258E035E00259DAC /* AppDelegate.swift */; };
 		F4975044258E035F00259DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4975043258E035F00259DAC /* Assets.xcassets */; };
 		F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4975045258E035F00259DAC /* LaunchScreen.storyboard */; };
@@ -132,7 +133,7 @@
 		F400A470258E6C400081CCD8 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		F400A475258E6C4D0081CCD8 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		F400A47A258E6C830081CCD8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		F400A482258E6C980081CCD8 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		F400A482258E6C980081CCD8 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		F400A487258E6CC40081CCD8 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		F400A48F258E6D080081CCD8 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		F400A494258E6D310081CCD8 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -176,6 +177,7 @@
 		F484BBA9259501B10021E7DD /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
 		F484BBB1259502090021E7DD /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		F484BBB6259502330021E7DD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		F484BBBB259506560021E7DD /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F4975037258E035E00259DAC /* My Day Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Day Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F497503A258E035E00259DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4975043258E035F00259DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -502,8 +504,9 @@
 		F49880A1258E1C4400C3EF2D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F484BBBB259506560021E7DD /* Color.swift */,
 				F41845262593BE7D00E7F0A0 /* Enums.swift */,
-				F400A482258E6C980081CCD8 /* Images.swift */,
+				F400A482258E6C980081CCD8 /* Image.swift */,
 				F400A487258E6CC40081CCD8 /* Theme.swift */,
 				F400A48F258E6D080081CCD8 /* Utility.swift */,
 			);
@@ -934,6 +937,7 @@
 				F400A43C258E663D0081CCD8 /* SettingsCoordinator.swift in Sources */,
 				F46F355B258E2807007CD3E4 /* FirestoreManager.swift in Sources */,
 				F4BD2908258E5DD000691D68 /* DeleteGoalRequest.swift in Sources */,
+				F484BBBC259506560021E7DD /* Color.swift in Sources */,
 				F400A502258E6F9C0081CCD8 /* ZeroView.swift in Sources */,
 				F400A46C258E6C160081CCD8 /* String+Extensions.swift in Sources */,
 				F46F3571258E29E2007CD3E4 /* GetGoalsResponse.swift in Sources */,
@@ -952,7 +956,7 @@
 				F4BEE74F258F8C4E0027028E /* TextFieldCell.swift in Sources */,
 				F400A44F258E67DF0081CCD8 /* CreateGoalRequest.swift in Sources */,
 				F46F3551258E271B007CD3E4 /* GoalDetailViewModel.swift in Sources */,
-				F400A483258E6C980081CCD8 /* Images.swift in Sources */,
+				F400A483258E6C980081CCD8 /* Image.swift in Sources */,
 				F4BEE763258F97A80027028E /* Notification+Extensions.swift in Sources */,
 				F4BD2910258E5DD800691D68 /* DeleteGoalResponse.swift in Sources */,
 				F41845272593BE7D00E7F0A0 /* Enums.swift in Sources */,

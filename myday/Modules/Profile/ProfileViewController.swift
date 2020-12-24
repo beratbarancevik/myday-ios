@@ -12,7 +12,7 @@ class ProfileViewController: BaseViewController {
     // MARK: - Properties
     private var viewModel: ProfileViewModel
     
-    private let settingsBarButtonItem = UIBarButtonItem(image: Images.settings.image, style: .plain, target: nil, action: nil)
+    private let settingsBarButtonItem = UIBarButtonItem(image: Image.settings.image, style: .plain, target: nil, action: nil)
     
     let didTapSettings = PassthroughSubject<Bool, Never>()
     

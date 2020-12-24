@@ -47,17 +47,29 @@ enum Theme {
     }
     
     enum Label {
+        enum Tiny {
+            static let primary = Style<UILabel> {
+                $0.textColor = .label
+                $0.font = Montserrat.regular.font(size: 11)
+            }
+        }
+        
+        enum Small {
+            static let primary = Style<UILabel> {
+                $0.textColor = .label
+                $0.font = Montserrat.regular.font(size: 14)
+            }
+        }
+        
         enum Regular {
             static let primary = Style<UILabel> {
                 $0.textColor = .label
                 $0.font = Montserrat.regular.font(size: 17)
-                $0.numberOfLines = 1
             }
             
             static let tint = Style<UILabel> {
                 $0.textColor = .tintColor
                 $0.font = Montserrat.regular.font(size: 17)
-                $0.numberOfLines = 1
             }
         }
         
@@ -65,7 +77,6 @@ enum Theme {
             static let primary = Style<UILabel> {
                 $0.textColor = .label
                 $0.font = Montserrat.regular.font(size: 20)
-                $0.numberOfLines = 1
             }
         }
     }

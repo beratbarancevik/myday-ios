@@ -12,7 +12,7 @@ class SplashViewController: BaseViewController {
     private var viewModel: SplashViewModel
     
     private let logoImageView: UIImageView = {
-        $0.image = Images.logo.image
+        $0.image = Image.logo.image
         return $0
     }(UIImageView().style(Theme.Image.primary))
     
