@@ -5,6 +5,7 @@
 //  Created by Berat Cevik on 12/19/20.
 //
 
+import Combine
 import UIKit
 
 class GoalDetailViewController: BaseViewController {
@@ -13,9 +14,12 @@ class GoalDetailViewController: BaseViewController {
     
     private let saveBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: nil, action: nil)
     private let detailsTableView: UITableView = {
+        $0.register(ColorCell.self, forCellReuseIdentifier: ColorCell.identifier)
         $0.register(TextFieldCell.self, forCellReuseIdentifier: TextFieldCell.identifier)
         return $0
     }(UITableView(frame: .zero, style: .grouped).style(Theme.Table.primary))
+    
+    let didTapColorSubject = PassthroughSubject<Bool, Never>()
     
     // MARK: - Init
     init(viewModel: GoalDetailViewModel) {
@@ -82,6 +86,9 @@ extension GoalDetailViewController: Setup {
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension GoalDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if viewModel.goalDetails[indexPath.section][indexPath.row] == .color {
+            didTapColorSubject.send(true)
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -94,15 +101,22 @@ extension GoalDetailViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldCell.identifier, for: indexPath) as? TextFieldCell else { return UITableViewCell() }
-        cell.delegate = self
         switch viewModel.goalDetails[indexPath.section][indexPath.row] {
         case .title:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldCell.identifier, for: indexPath) as? TextFieldCell else { return UITableViewCell() }
+            cell.delegate = self
             cell.updateUI(.title, text: viewModel.goal.title)
+            return cell
+        case .color:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ColorCell.identifier, for: indexPath) as? ColorCell else { return UITableViewCell() }
+            cell.color = .red
+            return cell
         case .target:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldCell.identifier, for: indexPath) as? TextFieldCell else { return UITableViewCell() }
+            cell.delegate = self
             cell.updateUI(.target, text: viewModel.goal.target)
+            return cell
         }
-        return cell
     }
 }
 
@@ -116,6 +130,8 @@ extension GoalDetailViewController: TextFieldCellDelegate {
             if let target = Int(text) {
                 viewModel.goal.target = target
             }
+        default:
+            break
         }
     }
 }

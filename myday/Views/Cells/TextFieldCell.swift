@@ -67,6 +67,8 @@ private extension TextFieldCell {
             textField.keyboardType = .default
         case .target:
             textField.keyboardType = .numberPad
+        default:
+            break
         }
     }
 }

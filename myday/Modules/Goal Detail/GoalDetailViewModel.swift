@@ -20,6 +20,9 @@ class GoalDetailViewModel: BaseViewModel {
             GoalDetail.title
         ],
         [
+            GoalDetail.color
+        ],
+        [
             GoalDetail.target
         ]
     ]
@@ -85,6 +88,7 @@ private extension GoalDetailViewModel {
 // MARK: - GoalDetail
 enum GoalDetail: String, CaseIterable {
     case title
+    case color
     case target
     
     var placeholder: String {
@@ -93,6 +97,8 @@ enum GoalDetail: String, CaseIterable {
             return "Title"
         case .target:
             return "Target"
+        default:
+            return ""
         }
     }
 }

@@ -70,6 +70,10 @@
 		F484BBB2259502090021E7DD /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBB1259502090021E7DD /* AuthenticationViewController.swift */; };
 		F484BBB7259502330021E7DD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBB6259502330021E7DD /* AuthenticationViewModel.swift */; };
 		F484BBBC259506560021E7DD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBBB259506560021E7DD /* Color.swift */; };
+		F484BBCB25950E000021E7DD /* ColorPickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBCA25950E000021E7DD /* ColorPickerCoordinator.swift */; };
+		F484BBD325950E0B0021E7DD /* ColorPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBD225950E0B0021E7DD /* ColorPickerViewController.swift */; };
+		F484BBD825950E180021E7DD /* ColorPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBD725950E180021E7DD /* ColorPickerViewModel.swift */; };
+		F484BBE025950F270021E7DD /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBDF25950F270021E7DD /* ColorCell.swift */; };
 		F497503B258E035E00259DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497503A258E035E00259DAC /* AppDelegate.swift */; };
 		F4975044258E035F00259DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4975043258E035F00259DAC /* Assets.xcassets */; };
 		F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4975045258E035F00259DAC /* LaunchScreen.storyboard */; };
@@ -178,6 +182,10 @@
 		F484BBB1259502090021E7DD /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		F484BBB6259502330021E7DD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		F484BBBB259506560021E7DD /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		F484BBCA25950E000021E7DD /* ColorPickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerCoordinator.swift; sourceTree = "<group>"; };
+		F484BBD225950E0B0021E7DD /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
+		F484BBD725950E180021E7DD /* ColorPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewModel.swift; sourceTree = "<group>"; };
+		F484BBDF25950F270021E7DD /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		F4975037258E035E00259DAC /* My Day Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Day Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F497503A258E035E00259DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4975043258E035F00259DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -336,6 +344,7 @@
 		F400A4FF258E6F7B0081CCD8 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F484BBDF25950F270021E7DD /* ColorCell.swift */,
 				F41845612593DEDF00E7F0A0 /* DayCell.swift */,
 				F400A513258E71440081CCD8 /* GoalCell.swift */,
 				F401588E25945E3A006F3CF4 /* GoalProgressBarCell.swift */,
@@ -444,6 +453,16 @@
 				F484BBB6259502330021E7DD /* AuthenticationViewModel.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F484BBC925950DEA0021E7DD /* Color PIcker */ = {
+			isa = PBXGroup;
+			children = (
+				F484BBCA25950E000021E7DD /* ColorPickerCoordinator.swift */,
+				F484BBD225950E0B0021E7DD /* ColorPickerViewController.swift */,
+				F484BBD725950E180021E7DD /* ColorPickerViewModel.swift */,
+			);
+			path = "Color PIcker";
 			sourceTree = "<group>";
 		};
 		F497502E258E035E00259DAC = {
@@ -560,6 +579,7 @@
 				F484BBA82595019E0021E7DD /* Authentication */,
 				F49880BE258E1DAF00C3EF2D /* Base */,
 				F418452E2593D5AF00E7F0A0 /* Calendar */,
+				F484BBC925950DEA0021E7DD /* Color PIcker */,
 				F46F3545258E26C2007CD3E4 /* Goal Detail */,
 				F49880AB258E1D8B00C3EF2D /* Home */,
 				F484BB922594F6CF0021E7DD /* Profile */,
@@ -933,14 +953,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41845302593D5BF00E7F0A0 /* CalendarViewController.swift in Sources */,
+				F484BBD825950E180021E7DD /* ColorPickerViewModel.swift in Sources */,
 				F49880CF258E1DD800C3EF2D /* BaseNavigationController.swift in Sources */,
 				F400A43C258E663D0081CCD8 /* SettingsCoordinator.swift in Sources */,
+				F484BBCB25950E000021E7DD /* ColorPickerCoordinator.swift in Sources */,
 				F46F355B258E2807007CD3E4 /* FirestoreManager.swift in Sources */,
 				F4BD2908258E5DD000691D68 /* DeleteGoalRequest.swift in Sources */,
 				F484BBBC259506560021E7DD /* Color.swift in Sources */,
 				F400A502258E6F9C0081CCD8 /* ZeroView.swift in Sources */,
 				F400A46C258E6C160081CCD8 /* String+Extensions.swift in Sources */,
 				F46F3571258E29E2007CD3E4 /* GetGoalsResponse.swift in Sources */,
+				F484BBE025950F270021E7DD /* ColorCell.swift in Sources */,
 				F484BBA12594F6FB0021E7DD /* ProfileCoordinator.swift in Sources */,
 				F418455A2593DBDF00E7F0A0 /* Date+Extensions.swift in Sources */,
 				F400A490258E6D080081CCD8 /* Utility.swift in Sources */,
@@ -981,6 +1004,7 @@
 				F46F3556258E272F007CD3E4 /* Goal.swift in Sources */,
 				F400A514258E71440081CCD8 /* GoalCell.swift in Sources */,
 				F400A47B258E6C830081CCD8 /* Constants.swift in Sources */,
+				F484BBD325950E0B0021E7DD /* ColorPickerViewController.swift in Sources */,
 				F49880CA258E1DC500C3EF2D /* BaseCoordinator.swift in Sources */,
 				F484BB942594F6E10021E7DD /* ProfileViewController.swift in Sources */,
 				F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */,
