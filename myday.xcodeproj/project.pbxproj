@@ -63,6 +63,9 @@
 		F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F356B258E29CF007CD3E4 /* GetGoalsRequest.swift */; };
 		F46F3571258E29E2007CD3E4 /* GetGoalsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3570258E29E2007CD3E4 /* GetGoalsResponse.swift */; };
 		F473E535258F4DD600FB36F8 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F473E534258F4DD600FB36F8 /* AuthenticationManager.swift */; };
+		F484BB942594F6E10021E7DD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BB932594F6E10021E7DD /* ProfileViewController.swift */; };
+		F484BB9C2594F6EC0021E7DD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BB9B2594F6EC0021E7DD /* ProfileViewModel.swift */; };
+		F484BBA12594F6FB0021E7DD /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBA02594F6FB0021E7DD /* ProfileCoordinator.swift */; };
 		F497503B258E035E00259DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497503A258E035E00259DAC /* AppDelegate.swift */; };
 		F4975044258E035F00259DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4975043258E035F00259DAC /* Assets.xcassets */; };
 		F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4975045258E035F00259DAC /* LaunchScreen.storyboard */; };
@@ -164,6 +167,9 @@
 		F46F356B258E29CF007CD3E4 /* GetGoalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoalsRequest.swift; sourceTree = "<group>"; };
 		F46F3570258E29E2007CD3E4 /* GetGoalsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoalsResponse.swift; sourceTree = "<group>"; };
 		F473E534258F4DD600FB36F8 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		F484BB932594F6E10021E7DD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F484BB9B2594F6EC0021E7DD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		F484BBA02594F6FB0021E7DD /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		F4975037258E035E00259DAC /* My Day Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Day Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F497503A258E035E00259DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4975043258E035F00259DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -412,6 +418,16 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		F484BB922594F6CF0021E7DD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				F484BBA02594F6FB0021E7DD /* ProfileCoordinator.swift */,
+				F484BB932594F6E10021E7DD /* ProfileViewController.swift */,
+				F484BB9B2594F6EC0021E7DD /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		F497502E258E035E00259DAC = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +542,7 @@
 				F418452E2593D5AF00E7F0A0 /* Calendar */,
 				F46F3545258E26C2007CD3E4 /* Goal Detail */,
 				F49880AB258E1D8B00C3EF2D /* Home */,
+				F484BB922594F6CF0021E7DD /* Profile */,
 				F400A43A258E662E0081CCD8 /* Settings */,
 				F400A42A258E65580081CCD8 /* Splash */,
 			);
@@ -903,6 +920,7 @@
 				F400A502258E6F9C0081CCD8 /* ZeroView.swift in Sources */,
 				F400A46C258E6C160081CCD8 /* String+Extensions.swift in Sources */,
 				F46F3571258E29E2007CD3E4 /* GetGoalsResponse.swift in Sources */,
+				F484BBA12594F6FB0021E7DD /* ProfileCoordinator.swift in Sources */,
 				F418455A2593DBDF00E7F0A0 /* Date+Extensions.swift in Sources */,
 				F400A490258E6D080081CCD8 /* Utility.swift in Sources */,
 				F400A457258E67E70081CCD8 /* CreateGoalResponse.swift in Sources */,
@@ -934,6 +952,7 @@
 				F49880C0258E1DB700C3EF2D /* BaseViewController.swift in Sources */,
 				F46F3566258E2907007CD3E4 /* BaseService.swift in Sources */,
 				F49880B5258E1DA000C3EF2D /* HomeCoordinator.swift in Sources */,
+				F484BB9C2594F6EC0021E7DD /* ProfileViewModel.swift in Sources */,
 				F400A471258E6C400081CCD8 /* UIView+Extensions.swift in Sources */,
 				F49880E1258E1ECE00C3EF2D /* ApplicationCoordinator.swift in Sources */,
 				F400A488258E6CC40081CCD8 /* Theme.swift in Sources */,
@@ -941,6 +960,7 @@
 				F400A514258E71440081CCD8 /* GoalCell.swift in Sources */,
 				F400A47B258E6C830081CCD8 /* Constants.swift in Sources */,
 				F49880CA258E1DC500C3EF2D /* BaseCoordinator.swift in Sources */,
+				F484BB942594F6E10021E7DD /* ProfileViewController.swift in Sources */,
 				F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */,
 				F400A42C258E65670081CCD8 /* SplashCoordinator.swift in Sources */,
 				F400A45C258E699E0081CCD8 /* Encodable+Extensions.swift in Sources */,

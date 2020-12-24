@@ -13,7 +13,7 @@ class HomeViewController: BaseViewController {
     private var viewModel: HomeViewModel
     
     private let calendarBarButtonItem = UIBarButtonItem(image: Images.calendar.image, style: .plain, target: nil, action: nil)
-    private let addBarButtonItem = UIBarButtonItem(image: Images.add.image, style: .plain, target: nil, action: nil)
+    private let profileBarButtonItem = UIBarButtonItem(image: Images.profile.image, style: .plain, target: nil, action: nil)
     private let goalsTableView: UITableView = {
         $0.style(Theme.Table.primary)
         $0.register(GoalCell.self, forCellReuseIdentifier: GoalCell.identifier)
@@ -22,8 +22,16 @@ class HomeViewController: BaseViewController {
     }(UITableView())
     private let refreshControl = UIRefreshControl().style(Theme.RefreshControl.primary)
     private let zeroView = ZeroView(labelText: "You don't have any goals. Let's start by adding your first one.", buttonTitle: "Add Subscription")
+    private let addButton: UIButton = {
+        $0.setImage(Images.addLarge.image, for: .normal)
+        $0.tintColor = .systemBackground
+        $0.backgroundColor = .label
+        $0.layer.cornerRadius = 24
+        return $0
+    }(UIButton(type: .system))
     
     let didTapCalendar = PassthroughSubject<Bool, Never>()
+    let didTapProfile = PassthroughSubject<Bool, Never>()
     let didSelectGoal = PassthroughSubject<Goal, Never>()
     let addGoal = PassthroughSubject<Bool, Never>()
     
@@ -65,6 +73,10 @@ private extension HomeViewController {
         didTapCalendar.send(true)
     }
     
+    @objc func profileDidTap() {
+        didTapProfile.send(true)
+    }
+    
     @objc func addDidTap() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         addGoal.send(true)
@@ -80,9 +92,9 @@ extension HomeViewController: Setup {
         calendarBarButtonItem.accessibilityLabel = "calendar".localized
         navigationItem.leftBarButtonItem = calendarBarButtonItem
         
-        addBarButtonItem.target = self
-        addBarButtonItem.accessibilityLabel = "add".localized
-        navigationItem.rightBarButtonItem = addBarButtonItem
+        profileBarButtonItem.target = self
+        profileBarButtonItem.accessibilityLabel = "profile".localized
+        navigationItem.rightBarButtonItem = profileBarButtonItem
         
         goalsTableView.delegate = self
         goalsTableView.dataSource = self
@@ -92,6 +104,7 @@ extension HomeViewController: Setup {
         view.addSubview(goalsTableView)
         goalsTableView.addSubview(refreshControl)
         view.addSubview(zeroView)
+        view.addSubview(addButton)
     }
     
     func addConstraints() {
@@ -103,17 +116,24 @@ extension HomeViewController: Setup {
             maker.leading.trailing.equalTo(safeArea).inset(32)
             maker.bottom.equalTo(safeArea.snp.centerY)
         }
+        
+        addButton.snp.makeConstraints { maker in
+            maker.trailing.bottom.equalTo(safeArea).inset(24)
+            maker.width.height.equalTo(48)
+        }
     }
     
     func addObservers() {
         calendarBarButtonItem.action = #selector(calendarDidTap)
-        addBarButtonItem.action = #selector(addDidTap)
+        profileBarButtonItem.action = #selector(profileDidTap)
         
         refreshControl.addTarget(self, action: #selector(didRefresh), for: .valueChanged)
         
         zeroView.mainButtonDidTap = { [weak self] in
             self?.addDidTap()
         }
+        
+        addButton.addTarget(self, action: #selector(addDidTap), for: .touchUpInside)
         
         cancellables.insert(viewModel.loadingSubject.sink { [weak self] value in
             value ? self?.refreshControl.beginRefreshing() : self?.refreshControl.endRefreshing()

@@ -11,8 +11,10 @@ import UIKit
 
 enum Images: String, CaseIterable {
     case add
+    case addLarge = "add-large"
     case calendar
     case logo
+    case profile
     
     var image: UIImage {
         return UIImage(named: self.rawValue)!
