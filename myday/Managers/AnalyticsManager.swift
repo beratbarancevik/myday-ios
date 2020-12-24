@@ -5,7 +5,7 @@
 //  Created by Berat Cevik on 12/24/20.
 //
 
-//import FBSDKCoreKit
+import FBSDKCoreKit
 import Firebase
 
 class AnalyticsManager {
@@ -23,12 +23,7 @@ class AnalyticsManager {
         Analytics.setUserID(userId)
         
         // Facebook
-//        AppEvents.userID = userId
-//        AppEvents.updateUserProperties([
-//
-//        ]) { graphRequestConnection, result, error in
-//
-//        }
+        AppEvents.userID = userId
     }
     
     // MARK: - Event Logging
@@ -37,7 +32,7 @@ class AnalyticsManager {
         Analytics.logEvent(event.name, parameters: nil)
         
         // Facebook
-//        AppEvents.logEvent(AppEvents.Name(rawValue: event.name))
+        AppEvents.logEvent(AppEvents.Name(rawValue: event.name))
     }
 }
 
