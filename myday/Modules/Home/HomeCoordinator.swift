@@ -37,25 +37,29 @@ class HomeCoordinator: BaseCoordinator {
     func observe() {
         cancellables.insert(homeViewController.didTapCalendar.sink { [weak self] _ in
             guard let self = self else { return }
-            self.calendarCoordinator = CalendarCoordinator(navigationController: self.navigationController)
+            let calendarNavigationController = BaseNavigationController()
+            self.calendarCoordinator = CalendarCoordinator(presentingNavigationController: self.navigationController, navigationController: calendarNavigationController)
             self.calendarCoordinator?.start()
         })
         
         cancellables.insert(homeViewController.didTapProfile.sink { [weak self] _ in
             guard let self = self else { return }
-            self.profileCoordinator = ProfileCoordinator(navigationController: self.navigationController)
+            let profileNavigationController = BaseNavigationController()
+            self.profileCoordinator = ProfileCoordinator(presentingNavigationController: self.navigationController, navigationController: profileNavigationController)
             self.profileCoordinator?.start()
         })
         
         cancellables.insert(homeViewController.didSelectGoal.sink { [weak self] goal in
             guard let self = self else { return }
-            self.goalDetailCoordinator = GoalDetailCoordinator(navigationController: self.navigationController, goal: goal)
+            let goalDetailNavigationController = BaseNavigationController()
+            self.goalDetailCoordinator = GoalDetailCoordinator(presentingNavigationController: self.navigationController, navigationController: goalDetailNavigationController, goal: goal)
             self.goalDetailCoordinator?.start()
         })
         
         cancellables.insert(homeViewController.addGoal.sink { [weak self] _ in
             guard let self = self else { return }
-            self.goalDetailCoordinator = GoalDetailCoordinator(navigationController: self.navigationController)
+            let goalDetailNavigationController = BaseNavigationController()
+            self.goalDetailCoordinator = GoalDetailCoordinator(presentingNavigationController: self.navigationController, navigationController: goalDetailNavigationController)
             self.goalDetailCoordinator?.start()
         })
         

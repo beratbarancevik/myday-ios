@@ -20,5 +20,7 @@ class SettingsCoordinator: BaseCoordinator {
     }
     
     // MARK: - Functions
-    func start() {}
+    func start() {
+        navigationController.pushViewController(settingsViewController, animated: true)
+    }
 }

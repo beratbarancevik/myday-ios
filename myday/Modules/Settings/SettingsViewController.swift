@@ -39,7 +39,7 @@ private extension SettingsViewController {
 // MARK: - Setup
 extension SettingsViewController: Setup {
     func setUpUI() {
-        
+        navigationItem.title = "Settings"
     }
     
     func addSubviews() {

@@ -15,6 +15,7 @@ enum Images: String, CaseIterable {
     case calendar
     case logo
     case profile
+    case settings
     
     var image: UIImage {
         return UIImage(named: self.rawValue)!

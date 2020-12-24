@@ -7,19 +7,22 @@
 
 class GoalDetailCoordinator: BaseCoordinator {
     // MARK: - Properties
+    private var presentingNavigationController: BaseNavigationController
     var navigationController: BaseNavigationController
     
     private let goalDetailViewController: GoalDetailViewController
     private let goalDetailViewModel: GoalDetailViewModel
     
     // MARK: - Init
-    init(navigationController: BaseNavigationController) {
+    init(presentingNavigationController: BaseNavigationController, navigationController: BaseNavigationController) {
+        self.presentingNavigationController = presentingNavigationController
         self.navigationController = navigationController
         goalDetailViewModel = GoalDetailViewModel()
         goalDetailViewController = GoalDetailViewController(viewModel: goalDetailViewModel)
     }
     
-    init(navigationController: BaseNavigationController, goal: Goal) {
+    init(presentingNavigationController: BaseNavigationController, navigationController: BaseNavigationController, goal: Goal) {
+        self.presentingNavigationController = presentingNavigationController
         self.navigationController = navigationController
         goalDetailViewModel = GoalDetailViewModel(goal: goal)
         goalDetailViewController = GoalDetailViewController(viewModel: goalDetailViewModel)
@@ -27,6 +30,7 @@ class GoalDetailCoordinator: BaseCoordinator {
     
     // MARK: - Coordinator
     func start() {
-        navigationController.present(BaseNavigationController(rootViewController: goalDetailViewController), animated: true)
+        navigationController.pushViewController(goalDetailViewController, animated: false)
+        presentingNavigationController.present(navigationController, animated: true)
     }
 }
