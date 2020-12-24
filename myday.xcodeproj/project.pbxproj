@@ -42,6 +42,8 @@
 		F400A507258E6FC30081CCD8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A506258E6FC30081CCD8 /* BaseView.swift */; };
 		F400A50C258E6FCB0081CCD8 /* BaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A50B258E6FCB0081CCD8 /* BaseTableCell.swift */; };
 		F400A514258E71440081CCD8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A513258E71440081CCD8 /* GoalCell.swift */; };
+		F401588F25945E3A006F3CF4 /* GoalProgressBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401588E25945E3A006F3CF4 /* GoalProgressBarCell.swift */; };
+		F401589825945F3D006F3CF4 /* HorizontalProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401589725945F3D006F3CF4 /* HorizontalProgressBar.swift */; };
 		F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = F41845212593B3DA00E7F0A0 /* SwiftMessages */; };
 		F41845272593BE7D00E7F0A0 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845262593BE7D00E7F0A0 /* Enums.swift */; };
 		F41845302593D5BF00E7F0A0 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418452F2593D5BF00E7F0A0 /* CalendarViewController.swift */; };
@@ -142,6 +144,8 @@
 		F400A506258E6FC30081CCD8 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		F400A50B258E6FCB0081CCD8 /* BaseTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableCell.swift; sourceTree = "<group>"; };
 		F400A513258E71440081CCD8 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
+		F401588E25945E3A006F3CF4 /* GoalProgressBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalProgressBarCell.swift; sourceTree = "<group>"; };
+		F401589725945F3D006F3CF4 /* HorizontalProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalProgressBar.swift; sourceTree = "<group>"; };
 		F41845262593BE7D00E7F0A0 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		F418452F2593D5BF00E7F0A0 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		F41845342593D5CB00E7F0A0 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
@@ -320,6 +324,7 @@
 			children = (
 				F41845612593DEDF00E7F0A0 /* DayCell.swift */,
 				F400A513258E71440081CCD8 /* GoalCell.swift */,
+				F401588E25945E3A006F3CF4 /* GoalProgressBarCell.swift */,
 				F4BEE74E258F8C4E0027028E /* TextFieldCell.swift */,
 			);
 			path = Cells;
@@ -328,6 +333,7 @@
 		F400A500258E6F8B0081CCD8 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
+				F401589725945F3D006F3CF4 /* HorizontalProgressBar.swift */,
 				F400A501258E6F9C0081CCD8 /* ZeroView.swift */,
 			);
 			path = Custom;
@@ -918,7 +924,9 @@
 				F400A476258E6C4D0081CCD8 /* UIColor+Extensions.swift in Sources */,
 				F400A50C258E6FCB0081CCD8 /* BaseTableCell.swift in Sources */,
 				F400A507258E6FC30081CCD8 /* BaseView.swift in Sources */,
+				F401588F25945E3A006F3CF4 /* GoalProgressBarCell.swift in Sources */,
 				F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */,
+				F401589825945F3D006F3CF4 /* HorizontalProgressBar.swift in Sources */,
 				F41845622593DEDF00E7F0A0 /* DayCell.swift in Sources */,
 				F400A4D6258E6EF60081CCD8 /* ExternalNavigationManager.swift in Sources */,
 				F400A467258E6AE00081CCD8 /* UpdateGoalResponse.swift in Sources */,

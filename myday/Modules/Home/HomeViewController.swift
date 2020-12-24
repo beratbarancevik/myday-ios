@@ -17,6 +17,7 @@ class HomeViewController: BaseViewController {
     private let goalsTableView: UITableView = {
         $0.style(Theme.Table.primary)
         $0.register(GoalCell.self, forCellReuseIdentifier: GoalCell.identifier)
+        $0.register(GoalProgressBarCell.self, forCellReuseIdentifier: GoalProgressBarCell.identifier)
         return $0
     }(UITableView())
     private let refreshControl = UIRefreshControl().style(Theme.RefreshControl.primary)
@@ -138,11 +139,20 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: GoalCell.identifier, for: indexPath) as? GoalCell else { return UITableViewCell() }
-        cell.index = indexPath.row
-        cell.goal = viewModel.goals[indexPath.row]
-        cell.delegate = self
-        return cell
+        let goal = viewModel.goals[indexPath.row]
+        if goal.target == nil {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: GoalCell.identifier, for: indexPath) as? GoalCell else { return UITableViewCell() }
+            cell.index = indexPath.row
+            cell.goal = viewModel.goals[indexPath.row]
+            cell.delegate = self
+            return cell
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: GoalProgressBarCell.identifier, for: indexPath) as? GoalProgressBarCell else { return UITableViewCell() }
+            cell.index = indexPath.row
+            cell.goal = viewModel.goals[indexPath.row]
+            cell.delegate = self
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
