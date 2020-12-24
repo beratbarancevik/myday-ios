@@ -66,6 +66,9 @@
 		F484BB942594F6E10021E7DD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BB932594F6E10021E7DD /* ProfileViewController.swift */; };
 		F484BB9C2594F6EC0021E7DD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BB9B2594F6EC0021E7DD /* ProfileViewModel.swift */; };
 		F484BBA12594F6FB0021E7DD /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBA02594F6FB0021E7DD /* ProfileCoordinator.swift */; };
+		F484BBAA259501B10021E7DD /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBA9259501B10021E7DD /* AuthenticationCoordinator.swift */; };
+		F484BBB2259502090021E7DD /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBB1259502090021E7DD /* AuthenticationViewController.swift */; };
+		F484BBB7259502330021E7DD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBB6259502330021E7DD /* AuthenticationViewModel.swift */; };
 		F497503B258E035E00259DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497503A258E035E00259DAC /* AppDelegate.swift */; };
 		F4975044258E035F00259DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4975043258E035F00259DAC /* Assets.xcassets */; };
 		F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4975045258E035F00259DAC /* LaunchScreen.storyboard */; };
@@ -170,6 +173,9 @@
 		F484BB932594F6E10021E7DD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F484BB9B2594F6EC0021E7DD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		F484BBA02594F6FB0021E7DD /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		F484BBA9259501B10021E7DD /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
+		F484BBB1259502090021E7DD /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		F484BBB6259502330021E7DD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		F4975037258E035E00259DAC /* My Day Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Day Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F497503A258E035E00259DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4975043258E035F00259DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -428,6 +434,16 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		F484BBA82595019E0021E7DD /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				F484BBA9259501B10021E7DD /* AuthenticationCoordinator.swift */,
+				F484BBB1259502090021E7DD /* AuthenticationViewController.swift */,
+				F484BBB6259502330021E7DD /* AuthenticationViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		F497502E258E035E00259DAC = {
 			isa = PBXGroup;
 			children = (
@@ -538,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				F49880DF258E1EC100C3EF2D /* Application */,
+				F484BBA82595019E0021E7DD /* Authentication */,
 				F49880BE258E1DAF00C3EF2D /* Base */,
 				F418452E2593D5AF00E7F0A0 /* Calendar */,
 				F46F3545258E26C2007CD3E4 /* Goal Detail */,
@@ -928,6 +945,7 @@
 				F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */,
 				F49880B0258E1D9800C3EF2D /* HomeViewController.swift in Sources */,
 				F41845352593D5CB00E7F0A0 /* CalendarViewModel.swift in Sources */,
+				F484BBB7259502330021E7DD /* AuthenticationViewModel.swift in Sources */,
 				F418453A2593D5D700E7F0A0 /* CalendarCoordinator.swift in Sources */,
 				F400A444258E66490081CCD8 /* SettingsViewController.swift in Sources */,
 				F473E535258F4DD600FB36F8 /* AuthenticationManager.swift in Sources */,
@@ -963,6 +981,8 @@
 				F484BB942594F6E10021E7DD /* ProfileViewController.swift in Sources */,
 				F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */,
 				F400A42C258E65670081CCD8 /* SplashCoordinator.swift in Sources */,
+				F484BBAA259501B10021E7DD /* AuthenticationCoordinator.swift in Sources */,
+				F484BBB2259502090021E7DD /* AuthenticationViewController.swift in Sources */,
 				F400A45C258E699E0081CCD8 /* Encodable+Extensions.swift in Sources */,
 				F418456A2593DF4E00E7F0A0 /* BaseCollectionCell.swift in Sources */,
 				F400A449258E66520081CCD8 /* SettingsViewModel.swift in Sources */,

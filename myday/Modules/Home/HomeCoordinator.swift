@@ -17,6 +17,7 @@ class HomeCoordinator: BaseCoordinator {
     
     private var calendarCoordinator: CalendarCoordinator?
     private var profileCoordinator: ProfileCoordinator?
+    private var authenticationCoordinator: AuthenticationCoordinator?
     private var goalDetailCoordinator: GoalDetailCoordinator?
     
     private var cancellables = Set<AnyCancellable>()
@@ -45,8 +46,13 @@ class HomeCoordinator: BaseCoordinator {
         cancellables.insert(homeViewController.didTapProfile.sink { [weak self] _ in
             guard let self = self else { return }
             let profileNavigationController = BaseNavigationController()
-            self.profileCoordinator = ProfileCoordinator(presentingNavigationController: self.navigationController, navigationController: profileNavigationController)
-            self.profileCoordinator?.start()
+            if AuthenticationManager.shared.authState == .account {
+                self.profileCoordinator = ProfileCoordinator(presentingNavigationController: self.navigationController, navigationController: profileNavigationController)
+                self.profileCoordinator?.start()
+            } else {
+                self.authenticationCoordinator = AuthenticationCoordinator(presentingNavigationController: self.navigationController, navigationController: profileNavigationController)
+                self.authenticationCoordinator?.start()
+            }
         })
         
         cancellables.insert(homeViewController.didSelectGoal.sink { [weak self] goal in
