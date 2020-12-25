@@ -43,10 +43,10 @@ class AnalyticsManager {
 enum AnalyticsEvent: String {
     case APP_OPENED
     
-    case CREATED_GOAL
     case COMPLETED_GOAL
-    case UPDATED_GOAL
+    case CREATED_GOAL
     case DELETED_GOAL
+    case UPDATED_GOAL
     
     var name: String {
         return self.rawValue.lowercased()

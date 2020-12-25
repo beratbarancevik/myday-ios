@@ -57,6 +57,8 @@
 		F45B8FB9259523B300E6D679 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FB8259523B300E6D679 /* FacebookCore */; };
 		F45B8FBB259523B300E6D679 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FBA259523B300E6D679 /* FacebookLogin */; };
 		F45B8FBD259523B300E6D679 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FBC259523B300E6D679 /* FacebookShare */; };
+		F45B8FC22595268500E6D679 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B8FC12595268500E6D679 /* User.swift */; };
+		F45B8FC72595294B00E6D679 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B8FC62595294B00E6D679 /* SettingCell.swift */; };
 		F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */; };
 		F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */; };
 		F46F3551258E271B007CD3E4 /* GoalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */; };
@@ -97,6 +99,8 @@
 		F4BD2910258E5DD800691D68 /* DeleteGoalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD290F258E5DD800691D68 /* DeleteGoalResponse.swift */; };
 		F4BEE74F258F8C4E0027028E /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE74E258F8C4E0027028E /* TextFieldCell.swift */; };
 		F4BEE763258F97A80027028E /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE762258F97A80027028E /* Notification+Extensions.swift */; };
+		F4F664032595A48F0037F9E9 /* VersionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F664022595A48F0037F9E9 /* VersionFooterView.swift */; };
+		F4F6640B2595A6560037F9E9 /* BaseTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F6640A2595A6560037F9E9 /* BaseTableHeaderFooterView.swift */; };
 		FDB8F020C964F9BB4F090BD0 /* Pods_myday_mydayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E137BA18A37B3B1506E958A /* Pods_myday_mydayUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -170,6 +174,8 @@
 		F41845692593DF4E00E7F0A0 /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
 		F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Release.plist"; sourceTree = "<group>"; };
 		F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		F45B8FC12595268500E6D679 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		F45B8FC62595294B00E6D679 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailCoordinator.swift; sourceTree = "<group>"; };
 		F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewController.swift; sourceTree = "<group>"; };
 		F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewModel.swift; sourceTree = "<group>"; };
@@ -216,6 +222,8 @@
 		F4BD290F258E5DD800691D68 /* DeleteGoalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGoalResponse.swift; sourceTree = "<group>"; };
 		F4BEE74E258F8C4E0027028E /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		F4BEE762258F97A80027028E /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
+		F4F664022595A48F0037F9E9 /* VersionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionFooterView.swift; sourceTree = "<group>"; };
+		F4F6640A2595A6560037F9E9 /* BaseTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableHeaderFooterView.swift; sourceTree = "<group>"; };
 		F963C95BFFC6F87A88CE6732 /* Pods_myday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -344,6 +352,7 @@
 			children = (
 				F41845692593DF4E00E7F0A0 /* BaseCollectionCell.swift */,
 				F400A50B258E6FCB0081CCD8 /* BaseTableCell.swift */,
+				F4F6640A2595A6560037F9E9 /* BaseTableHeaderFooterView.swift */,
 				F400A506258E6FC30081CCD8 /* BaseView.swift */,
 			);
 			path = Base;
@@ -356,6 +365,7 @@
 				F41845612593DEDF00E7F0A0 /* DayCell.swift */,
 				F400A513258E71440081CCD8 /* GoalCell.swift */,
 				F401588E25945E3A006F3CF4 /* GoalProgressBarCell.swift */,
+				F45B8FC62595294B00E6D679 /* SettingCell.swift */,
 				F4BEE74E258F8C4E0027028E /* TextFieldCell.swift */,
 			);
 			path = Cells;
@@ -365,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				F401589725945F3D006F3CF4 /* HorizontalProgressBar.swift */,
+				F4F664022595A48F0037F9E9 /* VersionFooterView.swift */,
 				F400A501258E6F9C0081CCD8 /* ZeroView.swift */,
 			);
 			path = Custom;
@@ -577,6 +588,7 @@
 			isa = PBXGroup;
 			children = (
 				F46F3555258E272F007CD3E4 /* Goal.swift */,
+				F45B8FC12595268500E6D679 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1024,7 +1036,9 @@
 				F484BBB7259502330021E7DD /* AuthenticationViewModel.swift in Sources */,
 				F418453A2593D5D700E7F0A0 /* CalendarCoordinator.swift in Sources */,
 				F400A444258E66490081CCD8 /* SettingsViewController.swift in Sources */,
+				F45B8FC72595294B00E6D679 /* SettingCell.swift in Sources */,
 				F473E535258F4DD600FB36F8 /* AuthenticationManager.swift in Sources */,
+				F45B8FC22595268500E6D679 /* User.swift in Sources */,
 				F4BEE74F258F8C4E0027028E /* TextFieldCell.swift in Sources */,
 				F400A44F258E67DF0081CCD8 /* CreateGoalRequest.swift in Sources */,
 				F46F3551258E271B007CD3E4 /* GoalDetailViewModel.swift in Sources */,
@@ -1039,6 +1053,7 @@
 				F401588F25945E3A006F3CF4 /* GoalProgressBarCell.swift in Sources */,
 				F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */,
 				F401589825945F3D006F3CF4 /* HorizontalProgressBar.swift in Sources */,
+				F4F664032595A48F0037F9E9 /* VersionFooterView.swift in Sources */,
 				F41845622593DEDF00E7F0A0 /* DayCell.swift in Sources */,
 				F400A4D6258E6EF60081CCD8 /* ExternalNavigationManager.swift in Sources */,
 				F400A467258E6AE00081CCD8 /* UpdateGoalResponse.swift in Sources */,
@@ -1056,6 +1071,7 @@
 				F400A47B258E6C830081CCD8 /* Constants.swift in Sources */,
 				F484BBD325950E0B0021E7DD /* ColorPickerViewController.swift in Sources */,
 				F49880CA258E1DC500C3EF2D /* BaseCoordinator.swift in Sources */,
+				F4F6640B2595A6560037F9E9 /* BaseTableHeaderFooterView.swift in Sources */,
 				F484BB942594F6E10021E7DD /* ProfileViewController.swift in Sources */,
 				F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */,
 				F400A42C258E65670081CCD8 /* SplashCoordinator.swift in Sources */,

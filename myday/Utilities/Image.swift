@@ -14,11 +14,19 @@ enum Image: String, CaseIterable {
     case addLarge = "add-large"
     case apple
     case calendar
+    case deleteAccount = "delete-account"
+    case email
     case facebook
     case google
     case logo
+    case logOut = "log-out"
+    case myData = "my-data"
+    case privacy
     case profile
+    case rate
     case settings
+    case share
+    case terms
     
     var image: UIImage {
         return UIImage(named: self.rawValue)!
