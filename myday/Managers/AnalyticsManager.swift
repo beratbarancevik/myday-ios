@@ -26,7 +26,6 @@ class AnalyticsManager {
         
         // Facebook
         AppEvents.userID = userId
-        AppEvents.setUserData(authState, forType: AppEvents.UserDataType(AnalyticsUserProperties.AUTH_STATE.rawValue))
     }
     
     // MARK: - Event Logging

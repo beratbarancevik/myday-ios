@@ -5,6 +5,7 @@
 //  Created by Berat Cevik on 12/19/20.
 //
 
+import FBSDKCoreKit
 import Firebase
 import SnapKit
 import UIKit
@@ -15,19 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     private var applicationCoordinator: ApplicationCoordinator?
     
-    // MARK: - App Delegate Functions
+    // MARK: - UIApplicationDelegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        configureApp()
+        configureApp(application, with: launchOptions)
         startApp()
         return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        AppEvents.activateApp()
     }
 }
 
 // MARK: - Private Functions
 private extension AppDelegate {
-    func configureApp() {
+    func configureApp(_ application: UIApplication, with launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         FirebaseConfiguration.shared.setLoggerLevel(.min)
         FirebaseApp.configure()
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         Theme.configureTheme()
     }
     
