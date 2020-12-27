@@ -16,6 +16,7 @@ class ColorCell: BaseTableCell {
     }(UILabel())
     private let colorView: UIView = {
         $0.layer.cornerRadius = 12
+        $0.backgroundColor = .systemGreen
         return $0
     }(UIView())
     
@@ -25,9 +26,16 @@ class ColorCell: BaseTableCell {
         }
     }
     
-    var color: UIColor? {
+    var colorName: String? {
         didSet {
-            colorView.backgroundColor = color
+            guard let colorName = colorName else { return }
+            colorView.backgroundColor = GoalColor(colorName).color
+        }
+    }
+    
+    var goalColor: GoalColor? {
+        didSet {
+            colorView.backgroundColor = goalColor?.color
         }
     }
     

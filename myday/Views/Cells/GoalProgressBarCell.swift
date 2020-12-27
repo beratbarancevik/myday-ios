@@ -36,6 +36,7 @@ class GoalProgressBarCell: BaseTableCell {
                 let targetFloat = Float(target)
                 let progress = achievedFloat / targetFloat
                 progressBar.progress = progress
+                progressBar.progressBarTintColor = (GoalColor(goal.color)).color
             }
         }
     }

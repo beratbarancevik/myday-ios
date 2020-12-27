@@ -10,20 +10,17 @@ import UIKit
 @IBDesignable
 class HorizontalProgressBar: UIView {
     // MARK: - Properties
-    @IBInspectable var viewBackgroundColor: UIColor = .clear {
-        didSet { setNeedsDisplay() }
-    }
-    
-    @IBInspectable var progressBarBackgroundColor: UIColor = .lightGray {
-        didSet { setNeedsDisplay() }
-    }
-    
     @IBInspectable var progressBarTintColor: UIColor = .systemGreen {
-        didSet { setNeedsDisplay() }
+        didSet {
+            tintColor = progressBarTintColor
+            tintColorDidChange()
+        }
     }
     
     @IBInspectable var progress: Float = 0 {
-        didSet { setNeedsDisplay() }
+        didSet {
+            setNeedsDisplay()
+        }
     }
     
     private let progressLayer = CALayer()
@@ -32,28 +29,32 @@ class HorizontalProgressBar: UIView {
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupLayers()
+        configureLayers(frame: .zero)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupLayers()
+        configureLayers(frame: .zero)
     }
     
     override func draw(_ rect: CGRect) {
         backgroundLayer.path = UIBezierPath(roundedRect: rect, cornerRadius: rect.height / 2).cgPath
         layer.mask = backgroundLayer
 
-        let progressRect = CGRect(origin: .zero, size: CGSize(width: rect.width * CGFloat(progress), height: rect.height))
-        progressLayer.frame = progressRect
-        progressLayer.backgroundColor = progressBarTintColor.cgColor
+        let progressFrame = CGRect(origin: .zero, size: CGSize(width: rect.width * CGFloat(progress), height: rect.height))
+        progressLayer.frame = progressFrame
+    }
+    
+    override func tintColorDidChange() {
+        super.tintColorDidChange()
+        progressLayer.backgroundColor = tintColor.cgColor
+        backgroundColor = tintColor.withAlphaComponent(0.2)
     }
 }
 
 // MARK: - Private Functions
 private extension HorizontalProgressBar {
-    func setupLayers() {
-        backgroundColor = progressBarTintColor.withAlphaComponent(0.2)
+    func configureLayers(frame: CGRect) {
         layer.addSublayer(progressLayer)
     }
 }

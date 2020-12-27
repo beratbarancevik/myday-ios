@@ -11,12 +11,14 @@ struct Goal: Codable {
     var title: String?
     var target: Int?
     var achieved: Int?
+    var color: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
         case title
         case target
         case achieved
+        case color
     }
     
     // MARK: - Init
@@ -26,13 +28,15 @@ struct Goal: Codable {
         title = try? container?.decode(String.self, forKey: CodingKeys.title)
         target = try? container?.decode(Int.self, forKey: CodingKeys.target)
         achieved = try? container?.decode(Int.self, forKey: CodingKeys.achieved)
+        color = try? container?.decode(String.self, forKey: CodingKeys.color)
     }
     
-    init(id: String? = nil, title: String? = nil, target: Int? = nil, achieved: Int? = nil) {
+    init(id: String? = nil, title: String? = nil, target: Int? = nil, achieved: Int? = nil, color: String? = nil) {
         self.id = id ?? ""
         self.title = title
         self.target = target
         self.achieved = achieved
+        self.color = color
     }
     
     // MARK: - Functions

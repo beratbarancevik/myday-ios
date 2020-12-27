@@ -109,7 +109,7 @@ extension GoalDetailViewController: UITableViewDelegate, UITableViewDataSource {
             return cell
         case .color:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ColorCell.identifier, for: indexPath) as? ColorCell else { return UITableViewCell() }
-            cell.color = .red
+            cell.colorName = viewModel.goal.color
             return cell
         case .target:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldCell.identifier, for: indexPath) as? TextFieldCell else { return UITableViewCell() }

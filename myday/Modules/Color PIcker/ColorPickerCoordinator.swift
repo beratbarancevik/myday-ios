@@ -17,10 +17,17 @@ class ColorPickerCoordinator: BaseCoordinator {
         self.navigationController = navigationController
         colorPickerViewModel = ColorPickerViewModel()
         colorPickerViewController = ColorPickerViewController(viewModel: colorPickerViewModel)
+        observe()
     }
     
     // MARK: - Functions
     func start() {
         navigationController.pushViewController(colorPickerViewController, animated: true)
+    }
+    
+    func observe() {
+        colorPickerViewController.didPickColorSubject.sink { color in
+            
+        }
     }
 }

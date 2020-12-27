@@ -72,7 +72,7 @@ extension ColorPickerViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: ColorCell.identifier, for: indexPath) as? ColorCell else { return UITableViewCell() }
         cell.title = viewModel.colors[indexPath.row].name
-        cell.color = viewModel.colors[indexPath.row].color
+        cell.goalColor = viewModel.colors[indexPath.row]
         return cell
     }
 }

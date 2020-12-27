@@ -5,7 +5,7 @@
 //  Created by Berat Cevik on 12/24/20.
 //
 
-// swiftlint:disable force_unwrapping
+// swiftlint:disable force_unwrapping cyclomatic_complexity
 
 import UIKit
 
@@ -29,6 +29,36 @@ enum GoalColor: String, CaseIterable {
     case purple
     case teal
     case yellow
+    
+    init(_ value: String?) {
+        guard let value = value else {
+            self = GoalColor.green
+            return
+        }
+        
+        switch value {
+        case "blue":
+            self = GoalColor.blue
+        case "red":
+            self = GoalColor.red
+        case "green":
+            self = GoalColor.green
+        case "orange":
+            self = GoalColor.orange
+        case "indigo":
+            self = GoalColor.indigo
+        case "pink":
+            self = GoalColor.pink
+        case "purple":
+            self = GoalColor.purple
+        case "teal":
+            self = GoalColor.teal
+        case "yellow":
+            self = GoalColor.yellow
+        default:
+            self = GoalColor.green
+        }
+    }
     
     var color: UIColor {
         switch self {
