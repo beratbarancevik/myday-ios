@@ -39,6 +39,12 @@ class GoalDetailViewController: BaseViewController {
         addConstraints()
         addObservers()
     }
+    
+    // MARK: - Functions
+    func didPickColor(_ color: GoalColor) {
+        viewModel.goal.color = color.lowercaseName
+        detailsTableView.reloadData()
+    }
 }
 
 // MARK: - Private Functions

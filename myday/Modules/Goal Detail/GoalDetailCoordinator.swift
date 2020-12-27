@@ -46,7 +46,15 @@ class GoalDetailCoordinator: BaseCoordinator {
         cancellables.insert(goalDetailViewController.didTapColorSubject.sink { [weak self] _ in
             guard let self = self else { return }
             self.colorPickerCoordinator = ColorPickerCoordinator(navigationController: self.navigationController)
+            self.colorPickerCoordinator?.delegate = self
             self.colorPickerCoordinator?.start()
         })
+    }
+}
+
+// MARK: - ColorPickerCoordinatorDelegate
+extension GoalDetailCoordinator: ColorPickerCoordinatorDelegate {
+    func didPickColor(_ color: GoalColor) {
+        goalDetailViewController.didPickColor(color)
     }
 }

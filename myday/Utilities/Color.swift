@@ -86,4 +86,8 @@ enum GoalColor: String, CaseIterable {
     var name: String {
         return self.rawValue.firstLetterCapitalized
     }
+    
+    var lowercaseName: String {
+        return self.rawValue
+    }
 }
