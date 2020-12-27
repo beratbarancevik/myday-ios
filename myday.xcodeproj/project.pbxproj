@@ -1256,7 +1256,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = myday/myday.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3978A7VN36;
 				INFOPLIST_FILE = "$(SRCROOT)/myday/Supporting Files/Info-Debug.plist";
@@ -1265,7 +1265,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beratbarancevik.myday.debug;
 				PRODUCT_MODULE_NAME = myday;
 				PRODUCT_NAME = "My Day Dev";
@@ -1283,7 +1283,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = myday/myday.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 3978A7VN36;
 				INFOPLIST_FILE = "$(SRCROOT)/myday/Supporting Files/Info-Release.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1291,7 +1291,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.beratbarancevik.myday;
 				PRODUCT_MODULE_NAME = myday;
 				PRODUCT_NAME = "My Day";
