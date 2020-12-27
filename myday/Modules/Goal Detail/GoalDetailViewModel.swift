@@ -23,7 +23,8 @@ class GoalDetailViewModel: BaseViewModel {
             GoalDetail.color
         ],
         [
-            GoalDetail.target
+            GoalDetail.target,
+            GoalDetail.achieved
         ]
     ]
     
@@ -81,6 +82,13 @@ private extension GoalDetailViewModel {
             }
         }
         
+        if let achieved = goal.achieved {
+            guard achieved <= goal.target ?? 0 else {
+                didFailSubject.send(ValidationError.achievedMustBeSmaller)
+                return false
+            }
+        }
+        
         return true
     }
 }
@@ -90,6 +98,7 @@ enum GoalDetail: String, CaseIterable {
     case title
     case color
     case target
+    case achieved
     
     var placeholder: String {
         switch self {
@@ -97,6 +106,8 @@ enum GoalDetail: String, CaseIterable {
             return "Title"
         case .target:
             return "Target"
+        case .achieved:
+            return "Achieved"
         default:
             return ""
         }
@@ -105,11 +116,14 @@ enum GoalDetail: String, CaseIterable {
 
 // MARK: - ValidationError
 enum ValidationError: String, Error, LocalizedError {
+    case achievedMustBeSmaller
     case enterTitle
     case enterValidTarget
     
     var errorDescription: String? {
         switch self {
+        case .achievedMustBeSmaller:
+            return "Achieved cannot be larger than target"
         case .enterTitle:
             return "Please enter a title"
         case .enterValidTarget:

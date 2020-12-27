@@ -122,6 +122,11 @@ extension GoalDetailViewController: UITableViewDelegate, UITableViewDataSource {
             cell.delegate = self
             cell.updateUI(.target, text: viewModel.goal.target)
             return cell
+        case .achieved:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldCell.identifier, for: indexPath) as? TextFieldCell else { return UITableViewCell() }
+            cell.delegate = self
+            cell.updateUI(.achieved, text: viewModel.goal.achieved)
+            return cell
         }
     }
 }
@@ -135,6 +140,10 @@ extension GoalDetailViewController: TextFieldCellDelegate {
         case .target:
             if let target = Int(text) {
                 viewModel.goal.target = target
+            }
+        case .achieved:
+            if let achieved = Int(text) {
+                viewModel.goal.achieved = achieved
             }
         default:
             break
