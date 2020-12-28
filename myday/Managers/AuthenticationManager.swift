@@ -5,8 +5,10 @@
 //  Created by Berat Cevik on 12/20/20.
 //
 
+import FBSDKLoginKit
 import Combine
 import Firebase
+import GoogleSignIn
 
 class AuthenticationManager {
     // MARK: - Properties
@@ -70,11 +72,30 @@ private extension AuthenticationManager {
             }
         }
     }
+    
+    // MARK: - Sign In
+    
+    
+    
+    // MARK: - Account Linking
+    
+    
+    
+    // MARK: - Log Out
+    
 }
 
-// MARK: - AuthState
+// MARK: - Auth State
 enum AuthState: CaseIterable {
     case unknown
     case anonymous
     case account
+}
+
+// MARK: - Auth Type
+enum AuthType: String {
+    case anonymous
+    case apple
+    case facebook
+    case google
 }

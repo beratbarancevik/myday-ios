@@ -5,6 +5,7 @@
 //  Created by Berat Cevik on 12/24/20.
 //
 
+import AuthenticationServices
 import Combine
 import UIKit
 
@@ -92,7 +93,6 @@ class AuthenticationViewController: BaseViewController {
     let didTapSettingsSubject = PassthroughSubject<Bool, Never>()
     let didTapGoogleSubject = PassthroughSubject<Bool, Never>()
     let didTapFacebookSubject = PassthroughSubject<Bool, Never>()
-    let didTapAppleSubject = PassthroughSubject<Bool, Never>()
     let didTapTermsSubject = PassthroughSubject<Bool, Never>()
     let didTapPrivacySubject = PassthroughSubject<Bool, Never>()
     
@@ -124,7 +124,9 @@ private extension AuthenticationViewController {
     
     @objc func appleDidTap() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-        didTapAppleSubject.send(true)
+        let appleAuthManager = AppleAuthManager()
+        appleAuthManager.delegate = self
+        appleAuthManager.handleAppleAuth()
     }
     
     @objc func facebookDidTap() {
@@ -211,5 +213,16 @@ extension AuthenticationViewController: Setup {
         googleButton.addTarget(self, action: #selector(googleDidTap), for: .touchUpInside)
         termsButton.addTarget(self, action: #selector(termsDidTap), for: .touchUpInside)
         privacyButton.addTarget(self, action: #selector(privacyDidTap), for: .touchUpInside)
+    }
+}
+
+// MARK: - AppleAuthManagerDelegate
+extension AuthenticationViewController: AppleAuthManagerDelegate {
+    func appleSignInDidSucceed(with credential: ASAuthorizationAppleIDCredential) {
+        
+    }
+    
+    func appleSignInDidFail(with error: Error) {
+        
     }
 }
