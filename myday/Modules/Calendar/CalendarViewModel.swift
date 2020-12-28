@@ -5,4 +5,43 @@
 //  Created by Berat Cevik on 12/23/20.
 //
 
-class CalendarViewModel: BaseViewModel {}
+import Combine
+import Foundation
+
+class CalendarViewModel: BaseViewModel {
+    // MARK: - Properties
+    var dayViewModels = [DayViewModel]()
+    
+    // MARK: - Properties
+    let loadingSubject = PassthroughSubject<Bool, Never>()
+    let goalsSubject = PassthroughSubject<[Goal], Error>()
+    
+    var goals = [Goal]()
+    
+    // MARK: - Init
+    init() {
+        fetchDays()
+    }
+    
+    // MARK: - Service Requests
+    func getGoals() {
+        loadingSubject.send(true)
+        GoalServices.getGoals { [weak self] result in
+            self?.loadingSubject.send(false)
+            switch result {
+            case .success(let response):
+                self?.goals = response
+                self?.goalsSubject.send(response)
+            case .failure(let error):
+                self?.goalsSubject.send(completion: Subscribers.Completion.failure(error))
+            }
+        }
+    }
+}
+
+// MARK: - Private Functions
+private extension CalendarViewModel {
+    func fetchDays() {
+        dayViewModels = Date().getLast(number: 10).map { DayViewModel(date: $0) }
+    }
+}

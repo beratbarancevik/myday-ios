@@ -59,6 +59,7 @@
 		F45B8FBD259523B300E6D679 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FBC259523B300E6D679 /* FacebookShare */; };
 		F45B8FC22595268500E6D679 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B8FC12595268500E6D679 /* User.swift */; };
 		F45B8FC72595294B00E6D679 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B8FC62595294B00E6D679 /* SettingCell.swift */; };
+		F469CA062599965500A35FFB /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469CA052599965500A35FFB /* DayViewModel.swift */; };
 		F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */; };
 		F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */; };
 		F46F3551258E271B007CD3E4 /* GoalDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */; };
@@ -176,6 +177,7 @@
 		F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		F45B8FC12595268500E6D679 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F45B8FC62595294B00E6D679 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		F469CA052599965500A35FFB /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
 		F46F3546258E26D4007CD3E4 /* GoalDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailCoordinator.swift; sourceTree = "<group>"; };
 		F46F354B258E26F1007CD3E4 /* GoalDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewController.swift; sourceTree = "<group>"; };
 		F46F3550258E271B007CD3E4 /* GoalDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalDetailViewModel.swift; sourceTree = "<group>"; };
@@ -416,6 +418,14 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		F469CA042599964100A35FFB /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				F469CA052599965500A35FFB /* DayViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		F46F3545258E26C2007CD3E4 /* Goal Detail */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +522,7 @@
 			children = (
 				F4D5291E2598EEFD00AB79CF /* myday.entitlements */,
 				F49880A5258E1C8D00C3EF2D /* Models */,
+				F469CA042599964100A35FFB /* View Models */,
 				F400A4FD258E6F680081CCD8 /* Views */,
 				F49880A6258E1CD500C3EF2D /* Modules */,
 				F49880A4258E1C7D00C3EF2D /* Services */,
@@ -1062,6 +1073,7 @@
 				F497503B258E035E00259DAC /* AppDelegate.swift in Sources */,
 				F49880C0258E1DB700C3EF2D /* BaseViewController.swift in Sources */,
 				F46F3566258E2907007CD3E4 /* BaseService.swift in Sources */,
+				F469CA062599965500A35FFB /* DayViewModel.swift in Sources */,
 				F49880B5258E1DA000C3EF2D /* HomeCoordinator.swift in Sources */,
 				F484BB9C2594F6EC0021E7DD /* ProfileViewModel.swift in Sources */,
 				F400A471258E6C400081CCD8 /* UIView+Extensions.swift in Sources */,

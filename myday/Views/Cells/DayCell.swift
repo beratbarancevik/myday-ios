@@ -17,14 +17,14 @@ class DayCell: BaseCollectionCell {
     private let dayLabel = UILabel().style(Theme.Label.Regular.primary)
     private let dayOfWeekLabel = UILabel().style(Theme.Label.Regular.primary)
     
-//    var dayViewModel: DayViewModel? {
-//        didSet {
-//            guard let viewModel = dayViewModel else { return }
-//            dayLabelCircleView.backgroundColor = viewModel.isSelected ? .red : .clear
-//            dayLabel.text = viewModel.dayText
-//            dayOfWeekLabel.text = viewModel.dayOfWeek
-//        }
-//    }
+    var dayViewModel: DayViewModel? {
+        didSet {
+            guard let viewModel = dayViewModel else { return }
+            dayLabelCircleView.backgroundColor = viewModel.isSelected ? .red : .clear
+            dayLabel.text = viewModel.dayText
+            dayOfWeekLabel.text = viewModel.dayOfWeek
+        }
+    }
     
     // MARK: - Init
     override init(frame: CGRect) {

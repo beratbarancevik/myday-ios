@@ -41,7 +41,7 @@ class GoalProgressBarCell: BaseTableCell {
         }
     }
     
-    weak var delegate: GoalCellDelegate?
+    weak var delegate: GoalProgressBarCellDelegate?
     
     // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

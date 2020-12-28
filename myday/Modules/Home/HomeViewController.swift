@@ -165,7 +165,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: GoalCell.identifier, for: indexPath) as? GoalCell else { return UITableViewCell() }
             cell.index = indexPath.row
             cell.goal = viewModel.goals[indexPath.row]
-            cell.delegate = self
             return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: GoalProgressBarCell.identifier, for: indexPath) as? GoalProgressBarCell else { return UITableViewCell() }
@@ -184,7 +183,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 // MARK: - GoalCellDelegate
-extension HomeViewController: GoalCellDelegate {
+extension HomeViewController: GoalProgressBarCellDelegate {
     func targetDidTap(_ index: Int) {
         viewModel.goals[index].incrementAchieved()
         viewModel.updateGoal(goal: viewModel.goals[index])
