@@ -10,8 +10,8 @@ class UserServices {
     private init() {}
     
     // MARK: - Requests
-    static func getUser(completion: @escaping (Result<GetGoalsResponse, Error>) -> Void) {
-        FirestoreManager.getDocuments(GetGoalsRequest(), completion: completion)
+    static func getUser(user: User, completion: @escaping (Result<GetUserResponse, Error>) -> Void) {
+        FirestoreManager.getSingleDocument(GetUserRequest(id: user.id), completion: completion)
     }
     
     static func updateUser(user: User, completion: @escaping (Result<Void, Error>) -> Void) {

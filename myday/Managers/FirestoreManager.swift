@@ -36,6 +36,29 @@ class FirestoreManager {
         }
     }
     
+    static func getSingleDocument<Req: SingleGetRequest, Res>(_ request: Req, completion: @escaping (Result<Res, Error>) -> Void) {
+        db.collection(request.collection.rawValue).document(request.id).getDocument { snapshot, error in
+            if let error = error {
+                completion(Result.failure(error))
+                return
+            }
+            
+            if let snapshot = snapshot {
+                switch request.collection {
+                case .users:
+                    guard var user = try? snapshot.data(as: User.self) else {
+                        completion(Result.failure(GenericError.userDoesNotExist))
+                        return
+                    }
+                    user.id = snapshot.documentID
+                    completion(Result.success(user as! Res))
+                default:
+                    completion(Result.failure(GenericError.default))
+                }
+            }
+        }
+    }
+    
     static func getDocuments<Req: GetRequest, Res>(_ request: Req, completion: @escaping (Result<Res, Error>) -> Void) {
         db.collection(request.collection.rawValue).getDocuments { snapshot, error in
             if let error = error {

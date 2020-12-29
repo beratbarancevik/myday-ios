@@ -26,6 +26,13 @@ protocol DeleteRequest: Request {
 
 protocol DeleteResponse: Response {}
 
+// MARK: - Single Get
+protocol SingleGetRequest: Request {
+    var id: String { get }
+}
+
+protocol SingleGetResponse: Response {}
+
 // MARK: - Get
 protocol GetRequest: Request {}
 
