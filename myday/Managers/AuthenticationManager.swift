@@ -50,7 +50,7 @@ class AuthenticationManager {
                 switch errorCode {
                 case .accountExistsWithDifferentCredential, .credentialAlreadyInUse, .emailAlreadyInUse: // login not sign up
                     print("\(authType.rawValue): signing in instead")
-                    self?.signInWithCredential(credential: credential, authType: authType) { error in
+                    self?.signIn(with: credential, authType: authType) { error in
                         completion(error)
                     }
                 default:
@@ -82,6 +82,7 @@ class AuthenticationManager {
             try Auth.auth().signOut()
             LoginManager().logOut()
             GIDSignIn.sharedInstance()?.signOut()
+            NotificationCenter.default.post(name: .didLogOut, object: nil)
         } catch {
             Crashlytics.crashlytics().record(error: error)
         }
@@ -124,7 +125,7 @@ private extension AuthenticationManager {
     }
     
     // MARK: - Sign In
-    func signInWithCredential(credential: AuthCredential, authType: AuthType, completion: @escaping (Error?) -> Void) {
+    func signIn(with credential: AuthCredential, authType: AuthType, completion: @escaping (Error?) -> Void) {
         Auth.auth().signIn(with: credential) { authResult, error in
             if let error = error {
                 print("🍎 Sign in with credential (\(authType.rawValue)) error: \(error.localizedDescription)")

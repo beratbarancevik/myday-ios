@@ -34,6 +34,10 @@ class ProfileCoordinator: BaseCoordinator {
         presentingNavigationController.present(navigationController, animated: true)
     }
     
+    func replace() {
+        navigationController.setViewControllers([profileViewController], animated: true)
+    }
+    
     func observe() {
         cancellables.insert(profileViewController.didTapSettingsSubject.sink { [weak self] _ in
             guard let self = self else { return }

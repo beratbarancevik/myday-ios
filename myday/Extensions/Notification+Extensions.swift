@@ -8,5 +8,7 @@
 import Foundation
 
 extension Notification.Name {
+    static let didLogOut = Notification.Name("didLogOut")
     static let didSaveGoal = Notification.Name("didSaveGoal")
+    static let didSignIn = Notification.Name("didSignIn")
 }
