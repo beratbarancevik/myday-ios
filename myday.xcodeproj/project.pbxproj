@@ -45,6 +45,7 @@
 		F401588F25945E3A006F3CF4 /* GoalProgressBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401588E25945E3A006F3CF4 /* GoalProgressBarCell.swift */; };
 		F401589825945F3D006F3CF4 /* HorizontalProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401589725945F3D006F3CF4 /* HorizontalProgressBar.swift */; };
 		F40A03AF259B89CD00BE6F5D /* FacebookAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A03AE259B89CD00BE6F5D /* FacebookAuthManager.swift */; };
+		F40A03B8259B95D900BE6F5D /* ActiveLabel in Frameworks */ = {isa = PBXBuildFile; productRef = F40A03B7259B95D900BE6F5D /* ActiveLabel */; };
 		F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = F41845212593B3DA00E7F0A0 /* SwiftMessages */; };
 		F41845272593BE7D00E7F0A0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845262593BE7D00E7F0A0 /* Error.swift */; };
 		F41845302593D5BF00E7F0A0 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418452F2593D5BF00E7F0A0 /* CalendarViewController.swift */; };
@@ -255,6 +256,7 @@
 				F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */,
 				F45B8FBD259523B300E6D679 /* FacebookShare in Frameworks */,
 				F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */,
+				F40A03B8259B95D900BE6F5D /* ActiveLabel in Frameworks */,
 				609BF1661A630C98B3274BF6 /* Pods_myday.framework in Frameworks */,
 				F45B8FB9259523B300E6D679 /* FacebookCore in Frameworks */,
 			);
@@ -746,6 +748,7 @@
 				F45B8FB8259523B300E6D679 /* FacebookCore */,
 				F45B8FBA259523B300E6D679 /* FacebookLogin */,
 				F45B8FBC259523B300E6D679 /* FacebookShare */,
+				F40A03B7259B95D900BE6F5D /* ActiveLabel */,
 			);
 			productName = myday;
 			productReference = F4975037258E035E00259DAC /* My Day Dev.app */;
@@ -826,6 +829,7 @@
 				F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */,
 				F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 				F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				F40A03B6259B95D900BE6F5D /* XCRemoteSwiftPackageReference "ActiveLabel" */,
 			);
 			productRefGroup = F4975038258E035E00259DAC /* Products */;
 			projectDirPath = "";
@@ -1500,6 +1504,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F40A03B6259B95D900BE6F5D /* XCRemoteSwiftPackageReference "ActiveLabel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/optonaut/ActiveLabel.swift";
+			requirement = {
+				kind = exactVersion;
+				version = 1.1.5;
+			};
+		};
 		F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
@@ -1527,6 +1539,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F40A03B7259B95D900BE6F5D /* ActiveLabel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F40A03B6259B95D900BE6F5D /* XCRemoteSwiftPackageReference "ActiveLabel" */;
+			productName = ActiveLabel;
+		};
 		F41845212593B3DA00E7F0A0 /* SwiftMessages */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
