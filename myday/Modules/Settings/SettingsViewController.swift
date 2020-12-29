@@ -63,6 +63,8 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch viewModel.settings[indexPath.section][indexPath.row] {
+        case .logOut:
+            logOut()
         default:
             break
         }
@@ -88,5 +90,12 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
             return versionFooterView
         }
         return nil
+    }
+}
+
+// MARK: - Settings Actions
+private extension SettingsViewController {
+    func logOut() {
+        AuthenticationManager.shared.logUserOut()
     }
 }

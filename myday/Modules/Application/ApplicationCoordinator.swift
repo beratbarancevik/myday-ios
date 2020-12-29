@@ -45,6 +45,7 @@ private extension ApplicationCoordinator {
     func addAuthenticationObserver() {
         cancellable = AuthenticationManager.shared.authDidCompleteSubject.sink { [weak self] _ in
             self?.showHome()
+            self?.cancellable?.cancel()
         }
     }
 }
