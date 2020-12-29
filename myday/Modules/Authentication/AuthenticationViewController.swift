@@ -218,11 +218,11 @@ extension AuthenticationViewController: Setup {
 
 // MARK: - AppleAuthManagerDelegate
 extension AuthenticationViewController: AppleAuthManagerDelegate {
-    func appleSignInDidSucceed(with credential: ASAuthorizationAppleIDCredential) {
+    func appleSignInDidSucceed() {
         
     }
     
     func appleSignInDidFail(with error: Error) {
-        
+        showError(error)
     }
 }

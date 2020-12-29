@@ -7,9 +7,10 @@
 
 import AuthenticationServices
 import CryptoKit
+import Firebase
 
 protocol AppleAuthManagerDelegate: AnyObject {
-    func appleSignInDidSucceed(with credential: ASAuthorizationAppleIDCredential)
+    func appleSignInDidSucceed()
     func appleSignInDidFail(with error: Error)
 }
 
@@ -72,6 +73,23 @@ private extension AppleAuthManager {
         let hashString = hashedData.compactMap { return String(format: "%02x", $0) }.joined()
         return hashString
     }
+    
+    func handleFirebaseAuth(with appleIDCredential: ASAuthorizationAppleIDCredential) {
+        guard let nonce = currentNonce, let appleIDToken = appleIDCredential.identityToken, let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
+            delegate?.appleSignInDidFail(with: GenericError.default)
+            return
+        }
+        
+        let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce)
+        AuthenticationManager.shared.authenticate(with: credential, authType: .apple) { [weak self] error in
+            if let error = error {
+                self?.delegate?.appleSignInDidFail(with: error)
+                return
+            }
+            
+            self?.delegate?.appleSignInDidSucceed()
+        }
+    }
 }
 
 // MARK: - ASAuthorizationControllerDelegate
@@ -79,9 +97,9 @@ extension AppleAuthManager: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {
         case let appleIDCredential as ASAuthorizationAppleIDCredential:
-            delegate?.appleSignInDidSucceed(with: appleIDCredential)
+            handleFirebaseAuth(with: appleIDCredential)
         default:
-            break
+            delegate?.appleSignInDidFail(with: GenericError.default)
         }
     }
     
