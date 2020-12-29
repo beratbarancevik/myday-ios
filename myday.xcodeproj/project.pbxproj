@@ -108,6 +108,7 @@
 		F4F72D7D259AE68400CFA3D0 /* UpdateUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F72D7C259AE68400CFA3D0 /* UpdateUserResponse.swift */; };
 		F4F72D83259AEA8B00CFA3D0 /* GetUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F72D82259AEA8B00CFA3D0 /* GetUserRequest.swift */; };
 		F4F72D8B259AEA9300CFA3D0 /* GetUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F72D8A259AEA9300CFA3D0 /* GetUserResponse.swift */; };
+		F4F72D90259AFAF400CFA3D0 /* GoogleAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F72D8F259AFAF400CFA3D0 /* GoogleAuthManager.swift */; };
 		FDB8F020C964F9BB4F090BD0 /* Pods_myday_mydayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E137BA18A37B3B1506E958A /* Pods_myday_mydayUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -239,6 +240,7 @@
 		F4F72D7C259AE68400CFA3D0 /* UpdateUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserResponse.swift; sourceTree = "<group>"; };
 		F4F72D82259AEA8B00CFA3D0 /* GetUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserRequest.swift; sourceTree = "<group>"; };
 		F4F72D8A259AEA9300CFA3D0 /* GetUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserResponse.swift; sourceTree = "<group>"; };
+		F4F72D8F259AFAF400CFA3D0 /* GoogleAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthManager.swift; sourceTree = "<group>"; };
 		F963C95BFFC6F87A88CE6732 /* Pods_myday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -597,6 +599,7 @@
 				F473E534258F4DD600FB36F8 /* AuthenticationManager.swift */,
 				F400A4D5258E6EF60081CCD8 /* ExternalNavigationManager.swift */,
 				F46F355A258E2807007CD3E4 /* FirestoreManager.swift */,
+				F4F72D8F259AFAF400CFA3D0 /* GoogleAuthManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1085,6 +1088,7 @@
 				F400A490258E6D080081CCD8 /* Utility.swift in Sources */,
 				F400A457258E67E70081CCD8 /* CreateGoalResponse.swift in Sources */,
 				F46F3561258E282D007CD3E4 /* GoalServices.swift in Sources */,
+				F4F72D90259AFAF400CFA3D0 /* GoogleAuthManager.swift in Sources */,
 				F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */,
 				F49880B0258E1D9800C3EF2D /* HomeViewController.swift in Sources */,
 				F41845352593D5CB00E7F0A0 /* CalendarViewModel.swift in Sources */,

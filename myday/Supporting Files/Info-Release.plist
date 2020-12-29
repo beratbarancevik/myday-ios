@@ -18,6 +18,21 @@
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb137593491467140</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.707620773759-e6rg2c4erjatmg381bh0u40in7lukoks</string>
+			</array>
+		</dict>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
@@ -54,15 +69,6 @@
 		<string>Montserrat-Bold.ttf</string>
 		<string>Montserrat-ExtraBold.ttf</string>
 		<string>Montserrat-Black.ttf</string>
-	</array>
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>fb137593491467140</string>
-			</array>
-		</dict>
 	</array>
 	<key>FacebookAppID</key>
 	<string>137593491467140</string>
