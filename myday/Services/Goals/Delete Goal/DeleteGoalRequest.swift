@@ -12,7 +12,7 @@ class DeleteGoalRequest: DeleteRequest {
     
     // MARK: - Init
     init(goal: Goal) {
-        collection = .goals
+        collection = .goal
         id = goal.id
     }
 }

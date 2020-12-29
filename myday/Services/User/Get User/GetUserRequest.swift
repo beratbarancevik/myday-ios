@@ -12,7 +12,7 @@ class GetUserRequest: SingleGetRequest {
     
     // MARK: - Init
     init(id: String) {
-        collection = .users
+        collection = .user
         self.id = id
     }
 }

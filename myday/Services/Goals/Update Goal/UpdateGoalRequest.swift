@@ -13,7 +13,7 @@ class UpdateGoalRequest: UpdateRequest {
     
     // MARK: - Init
     init(goal: Goal) {
-        collection = .goals
+        collection = .goal
         id = goal.id
         body = goal.dictionary ?? [:]
     }

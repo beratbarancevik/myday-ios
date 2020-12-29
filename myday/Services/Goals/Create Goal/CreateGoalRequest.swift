@@ -12,7 +12,7 @@ class CreateGoalRequest: CreateRequest {
     
     // MARK: - Init
     init(goal: Goal) {
-        collection = .goals
+        collection = .goal
         body = goal.dictionary ?? [:]
     }
 }

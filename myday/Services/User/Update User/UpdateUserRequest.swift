@@ -13,7 +13,7 @@ class UpdateUserRequest: UpdateRequest {
     
     // MARK: - Init
     init(user: User) {
-        collection = .users
+        collection = .user
         id = user.id
         body = user.dictionary ?? [:]
     }

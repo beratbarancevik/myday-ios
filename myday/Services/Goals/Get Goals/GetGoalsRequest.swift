@@ -12,7 +12,7 @@ class GetGoalsRequest: GetRequest {
     
     // MARK: - Init
     init() {
-        collection = .goals
+        collection = .goal
         userId = AuthenticationManager.shared.userId
     }
 }

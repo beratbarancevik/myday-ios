@@ -40,7 +40,7 @@ struct Goal: Codable {
         self.title = title
         self.target = target
         self.achieved = achieved
-        self.color = color
+        self.color = color ?? "green"
     }
     
     // MARK: - Functions

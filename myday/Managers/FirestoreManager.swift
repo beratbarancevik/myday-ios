@@ -17,7 +17,10 @@ class FirestoreManager {
     
     // MARK: - Requests
     static func createDocument<Req: CreateRequest>(request: Req, completion: @escaping (Result<Void, Error>) -> Void) {
-        db.collection(request.collection.rawValue).addDocument(data: request.body) { error in
+        var body = request.body
+        body[FirestoreField.createdAt.rawValue] = FieldValue.serverTimestamp()
+        body[FirestoreField.updatedAt.rawValue] = FieldValue.serverTimestamp()
+        db.collection(request.collection.rawValue).addDocument(data: body) { error in
             if let error = error {
                 completion(Result.failure(error))
                 return
@@ -45,7 +48,7 @@ class FirestoreManager {
             
             if let snapshot = snapshot {
                 switch request.collection {
-                case .users:
+                case .user:
                     guard var user = try? snapshot.data(as: User.self) else {
                         completion(Result.failure(AuthError.userDoesNotExist))
                         return
@@ -68,7 +71,7 @@ class FirestoreManager {
             
             if let snapshot = snapshot {
                 switch request.collection {
-                case .goals:
+                case .goal:
                     let goals = snapshot.documents.compactMap { querySnapshot -> Goal? in
                         var goal = try? querySnapshot.data(as: Goal.self)
                         goal?.id = querySnapshot.documentID
@@ -83,7 +86,9 @@ class FirestoreManager {
     }
     
     static func updateDocument<Req: UpdateRequest>(request: Req, completion: @escaping (Result<Void, Error>) -> Void) {
-        db.collection(request.collection.rawValue).document(request.id).setData(request.body, merge: true) { error in
+        var body = request.body
+        body[FirestoreField.updatedAt.rawValue] = FieldValue.serverTimestamp()
+        db.collection(request.collection.rawValue).document(request.id).setData(body, merge: true) { error in
             if let error = error {
                 completion(Result.failure(error))
                 return
@@ -95,11 +100,13 @@ class FirestoreManager {
 
 // MARK: - Collection
 enum FirestoreCollection: String {
-    case goals
-    case users
+    case goal
+    case user
 }
 
 // MARK: - Field
 enum FirestoreField: String {
+    case createdAt
+    case updatedAt
     case userId
 }
