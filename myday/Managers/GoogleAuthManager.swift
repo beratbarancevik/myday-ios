@@ -9,6 +9,7 @@ import Firebase
 import GoogleSignIn
 
 protocol GoogleAuthManagerDelegate: AnyObject {
+    func googleSignInDidCancel()
     func googleSignInDidSucceed()
     func googleSignInDidFail(with error: Error)
 }
@@ -51,15 +52,15 @@ private extension GoogleAuthManager {
 extension GoogleAuthManager: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
-            print("🍎 Google Sign In error: \(error.localizedDescription)")
+            GIDSignIn.sharedInstance()?.signOut()
             let errorCode = GIDSignInErrorCode(rawValue: error._code)
             switch errorCode {
             case .canceled?:
-                return
+                delegate?.googleSignInDidCancel()
             default:
                 delegate?.googleSignInDidFail(with: error)
-                return
             }
+            return
         }
         
         handleFirebaseAuth(with: user)

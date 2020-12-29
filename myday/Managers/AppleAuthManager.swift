@@ -10,6 +10,7 @@ import CryptoKit
 import Firebase
 
 protocol AppleAuthManagerDelegate: AnyObject {
+    func appleSignInDidCancel()
     func appleSignInDidSucceed()
     func appleSignInDidFail(with error: Error)
 }
@@ -107,7 +108,7 @@ extension AppleAuthManager: ASAuthorizationControllerDelegate {
         if let error = error as? ASAuthorizationError {
             switch error.code {
             case .canceled:
-                break
+                delegate?.appleSignInDidCancel()
             default:
                 delegate?.appleSignInDidFail(with: error)
             }

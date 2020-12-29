@@ -91,10 +91,10 @@ class AuthenticationViewController: BaseViewController {
     }(UIButton(type: .system))
     
     private let appleAuthManager = AppleAuthManager()
+    private let facebookAuthManager = FacebookAuthManager()
     private let googleAuthManager = GoogleAuthManager()
     
     let didTapSettingsSubject = PassthroughSubject<Bool, Never>()
-    let didTapFacebookSubject = PassthroughSubject<Bool, Never>()
     let didTapTermsSubject = PassthroughSubject<Bool, Never>()
     let didTapPrivacySubject = PassthroughSubject<Bool, Never>()
     
@@ -132,7 +132,8 @@ private extension AuthenticationViewController {
     
     @objc func facebookDidTap() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-        didTapFacebookSubject.send(true)
+        facebookAuthManager.delegate = self
+        facebookAuthManager.handleFacebookAuth(from: self)
     }
     
     @objc func googleDidTap() {
@@ -220,6 +221,8 @@ extension AuthenticationViewController: Setup {
 
 // MARK: - AppleAuthManagerDelegate
 extension AuthenticationViewController: AppleAuthManagerDelegate {
+    func appleSignInDidCancel() {}
+    
     func appleSignInDidSucceed() {
         
     }
@@ -229,8 +232,23 @@ extension AuthenticationViewController: AppleAuthManagerDelegate {
     }
 }
 
+// MARK: - FacebookAuthManagerDelegate
+extension AuthenticationViewController: FacebookAuthManagerDelegate {
+    func facebookSignInDidCancel() {}
+    
+    func facebookSignInDidSucceed() {
+        
+    }
+    
+    func facebookSignInDidFail(with error: Error) {
+        showError(error)
+    }
+}
+
 // MARK: - GoogleAuthManagerDelegate
 extension AuthenticationViewController: GoogleAuthManagerDelegate {
+    func googleSignInDidCancel() {}
+    
     func googleSignInDidSucceed() {
         
     }

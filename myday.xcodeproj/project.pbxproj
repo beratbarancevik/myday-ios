@@ -44,6 +44,7 @@
 		F400A514258E71440081CCD8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A513258E71440081CCD8 /* GoalCell.swift */; };
 		F401588F25945E3A006F3CF4 /* GoalProgressBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401588E25945E3A006F3CF4 /* GoalProgressBarCell.swift */; };
 		F401589825945F3D006F3CF4 /* HorizontalProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401589725945F3D006F3CF4 /* HorizontalProgressBar.swift */; };
+		F40A03AF259B89CD00BE6F5D /* FacebookAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A03AE259B89CD00BE6F5D /* FacebookAuthManager.swift */; };
 		F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = F41845212593B3DA00E7F0A0 /* SwiftMessages */; };
 		F41845272593BE7D00E7F0A0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845262593BE7D00E7F0A0 /* Error.swift */; };
 		F41845302593D5BF00E7F0A0 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418452F2593D5BF00E7F0A0 /* CalendarViewController.swift */; };
@@ -173,6 +174,7 @@
 		F400A513258E71440081CCD8 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		F401588E25945E3A006F3CF4 /* GoalProgressBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalProgressBarCell.swift; sourceTree = "<group>"; };
 		F401589725945F3D006F3CF4 /* HorizontalProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalProgressBar.swift; sourceTree = "<group>"; };
+		F40A03AE259B89CD00BE6F5D /* FacebookAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthManager.swift; sourceTree = "<group>"; };
 		F41845262593BE7D00E7F0A0 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		F418452F2593D5BF00E7F0A0 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		F41845342593D5CB00E7F0A0 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
@@ -598,6 +600,7 @@
 				F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */,
 				F473E534258F4DD600FB36F8 /* AuthenticationManager.swift */,
 				F400A4D5258E6EF60081CCD8 /* ExternalNavigationManager.swift */,
+				F40A03AE259B89CD00BE6F5D /* FacebookAuthManager.swift */,
 				F46F355A258E2807007CD3E4 /* FirestoreManager.swift */,
 				F4F72D8F259AFAF400CFA3D0 /* GoogleAuthManager.swift */,
 			);
@@ -1114,6 +1117,7 @@
 				F46F3547258E26D4007CD3E4 /* GoalDetailCoordinator.swift in Sources */,
 				F401589825945F3D006F3CF4 /* HorizontalProgressBar.swift in Sources */,
 				F4F664032595A48F0037F9E9 /* VersionFooterView.swift in Sources */,
+				F40A03AF259B89CD00BE6F5D /* FacebookAuthManager.swift in Sources */,
 				F41845622593DEDF00E7F0A0 /* DayCell.swift in Sources */,
 				F400A4D6258E6EF60081CCD8 /* ExternalNavigationManager.swift in Sources */,
 				F400A467258E6AE00081CCD8 /* UpdateGoalResponse.swift in Sources */,

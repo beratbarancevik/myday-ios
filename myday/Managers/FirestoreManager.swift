@@ -47,7 +47,7 @@ class FirestoreManager {
                 switch request.collection {
                 case .users:
                     guard var user = try? snapshot.data(as: User.self) else {
-                        completion(Result.failure(GenericError.userDoesNotExist))
+                        completion(Result.failure(AuthError.userDoesNotExist))
                         return
                     }
                     user.id = snapshot.documentID

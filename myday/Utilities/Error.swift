@@ -11,7 +11,6 @@ import Foundation
 enum GenericError: String, Error, LocalizedError {
     case `default`
     case internet
-    case userDoesNotExist
     
     var errorDescription: String? {
         switch self {
@@ -19,6 +18,19 @@ enum GenericError: String, Error, LocalizedError {
             return "An error occurred"
         case .internet:
             return "Check your internet connection"
+        }
+    }
+}
+
+// MARK: - Auth Error
+enum AuthError: String, Error, LocalizedError {
+    case emailPermission
+    case userDoesNotExist
+    
+    var errorDescription: String? {
+        switch self {
+        case .emailPermission:
+            return "Please give email permission"
         case .userDoesNotExist:
             return "User doesn't exist"
         }
