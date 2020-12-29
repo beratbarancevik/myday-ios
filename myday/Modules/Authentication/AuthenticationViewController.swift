@@ -90,6 +90,8 @@ class AuthenticationViewController: BaseViewController {
         return $0
     }(UIButton(type: .system))
     
+    private let appleAuthManager = AppleAuthManager()
+    
     let didTapSettingsSubject = PassthroughSubject<Bool, Never>()
     let didTapGoogleSubject = PassthroughSubject<Bool, Never>()
     let didTapFacebookSubject = PassthroughSubject<Bool, Never>()
@@ -124,7 +126,6 @@ private extension AuthenticationViewController {
     
     @objc func appleDidTap() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-        let appleAuthManager = AppleAuthManager()
         appleAuthManager.delegate = self
         appleAuthManager.handleAppleAuth()
     }
