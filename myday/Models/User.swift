@@ -15,7 +15,7 @@ struct User: Codable {
     var authType: Int?
     
     private enum CodingKeys: String, CodingKey {
-        case id = "userId"
+        case id
         case email
         case name
         case username

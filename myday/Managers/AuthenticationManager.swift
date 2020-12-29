@@ -25,6 +25,10 @@ class AuthenticationManager {
         return user.isAnonymous ? .anonymous : .account
     }
     
+    var userId: String {
+        return Auth.auth().currentUser?.uid ?? ""
+    }
+    
     // MARK: - Init
     private init() {}
     

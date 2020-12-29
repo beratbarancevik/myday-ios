@@ -60,7 +60,7 @@ class FirestoreManager {
     }
     
     static func getDocuments<Req: GetRequest, Res>(_ request: Req, completion: @escaping (Result<Res, Error>) -> Void) {
-        db.collection(request.collection.rawValue).getDocuments { snapshot, error in
+        db.collection(request.collection.rawValue).whereField(FirestoreField.userId.rawValue, isEqualTo: request.userId).getDocuments { snapshot, error in
             if let error = error {
                 completion(Result.failure(error))
                 return
@@ -97,4 +97,9 @@ class FirestoreManager {
 enum FirestoreCollection: String {
     case goals
     case users
+}
+
+// MARK: - Field
+enum FirestoreField: String {
+    case userId
 }

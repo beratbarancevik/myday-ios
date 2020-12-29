@@ -8,9 +8,11 @@
 class GetGoalsRequest: GetRequest {
     // MARK: - Properties
     var collection: FirestoreCollection
+    var userId: String
     
     // MARK: - Init
     init() {
         collection = .goals
+        userId = AuthenticationManager.shared.userId
     }
 }

@@ -34,7 +34,9 @@ protocol SingleGetRequest: Request {
 protocol SingleGetResponse: Response {}
 
 // MARK: - Get
-protocol GetRequest: Request {}
+protocol GetRequest: Request {
+    var userId: String { get }
+}
 
 protocol GetResponse: Response {}
 
