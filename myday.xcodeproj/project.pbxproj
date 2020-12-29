@@ -103,6 +103,9 @@
 		F4BEE763258F97A80027028E /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE762258F97A80027028E /* Notification+Extensions.swift */; };
 		F4F664032595A48F0037F9E9 /* VersionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F664022595A48F0037F9E9 /* VersionFooterView.swift */; };
 		F4F6640B2595A6560037F9E9 /* BaseTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F6640A2595A6560037F9E9 /* BaseTableHeaderFooterView.swift */; };
+		F4F72D6C259AE65600CFA3D0 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F72D6B259AE65600CFA3D0 /* UserServices.swift */; };
+		F4F72D75259AE67100CFA3D0 /* UpdateUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F72D74259AE67100CFA3D0 /* UpdateUserRequest.swift */; };
+		F4F72D7D259AE68400CFA3D0 /* UpdateUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F72D7C259AE68400CFA3D0 /* UpdateUserResponse.swift */; };
 		FDB8F020C964F9BB4F090BD0 /* Pods_myday_mydayUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E137BA18A37B3B1506E958A /* Pods_myday_mydayUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -229,6 +232,9 @@
 		F4D5291E2598EEFD00AB79CF /* myday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myday.entitlements; sourceTree = "<group>"; };
 		F4F664022595A48F0037F9E9 /* VersionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionFooterView.swift; sourceTree = "<group>"; };
 		F4F6640A2595A6560037F9E9 /* BaseTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableHeaderFooterView.swift; sourceTree = "<group>"; };
+		F4F72D6B259AE65600CFA3D0 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
+		F4F72D74259AE67100CFA3D0 /* UpdateUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserRequest.swift; sourceTree = "<group>"; };
+		F4F72D7C259AE68400CFA3D0 /* UpdateUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserResponse.swift; sourceTree = "<group>"; };
 		F963C95BFFC6F87A88CE6732 /* Pods_myday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -596,6 +602,7 @@
 			children = (
 				F46F3565258E2907007CD3E4 /* BaseService.swift */,
 				F46F355F258E281D007CD3E4 /* Goals */,
+				F4F72D6A259AE64700CFA3D0 /* User */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -671,6 +678,24 @@
 				F4BD290F258E5DD800691D68 /* DeleteGoalResponse.swift */,
 			);
 			path = "Delete Goal";
+			sourceTree = "<group>";
+		};
+		F4F72D6A259AE64700CFA3D0 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				F4F72D6B259AE65600CFA3D0 /* UserServices.swift */,
+				F4F72D73259AE65900CFA3D0 /* Update User */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		F4F72D73259AE65900CFA3D0 /* Update User */ = {
+			isa = PBXGroup;
+			children = (
+				F4F72D74259AE67100CFA3D0 /* UpdateUserRequest.swift */,
+				F4F72D7C259AE68400CFA3D0 /* UpdateUserResponse.swift */,
+			);
+			path = "Update User";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1085,12 +1110,15 @@
 				F41F2DE025951E1C004C0C54 /* AnalyticsManager.swift in Sources */,
 				F400A488258E6CC40081CCD8 /* Theme.swift in Sources */,
 				F46F3556258E272F007CD3E4 /* Goal.swift in Sources */,
+				F4F72D7D259AE68400CFA3D0 /* UpdateUserResponse.swift in Sources */,
 				F400A514258E71440081CCD8 /* GoalCell.swift in Sources */,
 				F400A47B258E6C830081CCD8 /* Constants.swift in Sources */,
+				F4F72D75259AE67100CFA3D0 /* UpdateUserRequest.swift in Sources */,
 				F484BBD325950E0B0021E7DD /* ColorPickerViewController.swift in Sources */,
 				F49880CA258E1DC500C3EF2D /* BaseCoordinator.swift in Sources */,
 				F4F6640B2595A6560037F9E9 /* BaseTableHeaderFooterView.swift in Sources */,
 				F484BB942594F6E10021E7DD /* ProfileViewController.swift in Sources */,
+				F4F72D6C259AE65600CFA3D0 /* UserServices.swift in Sources */,
 				F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */,
 				F400A42C258E65670081CCD8 /* SplashCoordinator.swift in Sources */,
 				F484BBAA259501B10021E7DD /* AuthenticationCoordinator.swift in Sources */,

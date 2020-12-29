@@ -52,6 +52,8 @@ class FirestoreManager {
                         return goal
                     }
                     completion(Result.success(goals as! Res))
+                default:
+                    completion(Result.failure(GenericError.default))
                 }
             }
         }
@@ -71,4 +73,5 @@ class FirestoreManager {
 // MARK: - Collection
 enum FirestoreCollection: String {
     case goals
+    case users
 }

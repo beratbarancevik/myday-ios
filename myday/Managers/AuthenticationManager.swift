@@ -5,8 +5,8 @@
 //  Created by Berat Cevik on 12/20/20.
 //
 
-import FBSDKLoginKit
 import Combine
+import FBSDKLoginKit
 import Firebase
 import GoogleSignIn
 
@@ -74,15 +74,71 @@ private extension AuthenticationManager {
     }
     
     // MARK: - Sign In
-    
-    
+    func signInWithCredential(credential: AuthCredential, authType: AuthType, completion: @escaping (Error?) -> Void) {
+        Auth.auth().signIn(with: credential) { authResult, error in
+            if let error = error {
+                print("🍎 Sign in with credential (\(authType.rawValue)) error: \(error.localizedDescription)")
+                Crashlytics.crashlytics().record(error: error)
+                completion(error)
+            }
+            
+            if authResult != nil {
+                AnalyticsManager.shared.logAuthEvent(.LOGGED_IN, authType: authType)
+                
+                completion(nil)
+            }
+        }
+    }
     
     // MARK: - Account Linking
-    
-    
+    func authenticate(credential: AuthCredential, authType: AuthType, completion: @escaping (Error?) -> Void) {
+        guard let user = Auth.auth().currentUser else {
+            completion(GenericError.default)
+            return
+        }
+        
+        user.link(with: credential) { [weak self] authResult, error in
+            if let error = error {
+                let errorCode = AuthErrorCode(rawValue: error._code)
+                switch errorCode {
+                case .accountExistsWithDifferentCredential, .credentialAlreadyInUse, .emailAlreadyInUse: // login not sign up
+                    print("\(authType.rawValue): signing in instead")
+                    self?.signInWithCredential(credential: credential, authType: authType) { error in
+                        completion(error)
+                    }
+                default:
+                    Crashlytics.crashlytics().record(error: error)
+                    completion(error)
+                }
+            }
+            
+            if let user = authResult?.user {
+                let user = User(id: user.uid, email: user.email, name: user.displayName, photoUrl: user.photoURL?.absoluteString, authType: authType.number)
+                UserServices.updateUser(user: user) { result in
+                    switch result {
+                    case .success:
+                        AnalyticsManager.shared.logAuthEvent(.SIGNED_UP, authType: authType)
+                        
+                        completion(nil)
+                    case .failure(let error):
+                        Crashlytics.crashlytics().record(error: error)
+                        completion(error)
+                    }
+                }
+            }
+        }
+    }
     
     // MARK: - Log Out
-    
+    func logUserOut() {
+        do {
+            try Auth.auth().signOut()
+            LoginManager().logOut()
+            GIDSignIn.sharedInstance()?.signOut()
+        } catch {
+            Crashlytics.crashlytics().record(error: error)
+        }
+    }
 }
 
 // MARK: - Auth State
@@ -98,4 +154,17 @@ enum AuthType: String {
     case apple
     case facebook
     case google
+    
+    var number: Int {
+        switch self {
+        case .anonymous:
+            return 0
+        case .apple:
+            return 1
+        case .facebook:
+            return 2
+        case .google:
+            return 3
+        }
+    }
 }

@@ -29,10 +29,22 @@ class AnalyticsManager {
     }
     
     // MARK: - Event Logging
-    func logEvent(_ event: AnalyticsEvent) {
+    func logEvent(_ event: AnalyticsEvent, with parameters: [String: Any]? = nil) {
         // Firebase
-        Analytics.logEvent(event.name, parameters: nil)
+        Analytics.logEvent(event.name, parameters: parameters)
         
+        // Facebook
+        AppEvents.logEvent(AppEvents.Name(rawValue: event.name))
+    }
+    
+    func logAuthEvent(_ event: AnalyticsEvent, authType: AuthType) {
+        let parameters = [
+            "authType": authType.number
+        ]
+        
+        // Firebase
+        Analytics.logEvent(event.name, parameters: parameters)
+
         // Facebook
         AppEvents.logEvent(AppEvents.Name(rawValue: event.name))
     }
@@ -46,6 +58,9 @@ enum AnalyticsEvent: String {
     case CREATED_GOAL
     case DELETED_GOAL
     case UPDATED_GOAL
+    
+    case LOGGED_IN
+    case SIGNED_UP
     
     var name: String {
         return self.rawValue.lowercased()
