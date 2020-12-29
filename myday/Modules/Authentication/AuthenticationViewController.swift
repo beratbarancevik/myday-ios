@@ -5,6 +5,7 @@
 //  Created by Berat Cevik on 12/24/20.
 //
 
+import ActiveLabel
 import AuthenticationServices
 import Combine
 import UIKit
@@ -61,34 +62,14 @@ class AuthenticationViewController: BaseViewController {
         $0.layer.cornerRadius = 24
         return $0
     }(UIButton(type: .system))
-    private let legalLabel: UILabel = {
+    private let activeLabel: ActiveLabel = {
         $0.style(Theme.Label.Tiny.primary)
         $0.text = "By signing up, you agree to the Terms & Conditions and the Privacy Policy."
         $0.numberOfLines = 0
+        $0.lineSpacing = 5
         $0.textAlignment = .center
         return $0
-    }(UILabel())
-    private let legalStackView: UIStackView = {
-        $0.alignment = .center
-        $0.axis = .horizontal
-        $0.distribution = .fillEqually
-        $0.spacing = 8
-        return $0
-    }(UIStackView())
-    private let termsButton: UIButton = {
-        $0.setTitle("Terms & Conditions", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 11, weight: .medium)
-        $0.backgroundColor = .clear
-        $0.setTitleColor(.label, for: .normal)
-        return $0
-    }(UIButton(type: .system))
-    private let privacyButton: UIButton = {
-        $0.setTitle("Privacy Policy", for: .normal)
-        $0.titleLabel?.font = UIFont.systemFont(ofSize: 11, weight: .medium)
-        $0.backgroundColor = .clear
-        $0.setTitleColor(.label, for: .normal)
-        return $0
-    }(UIButton(type: .system))
+    }(ActiveLabel())
     
     private let appleAuthManager = AppleAuthManager()
     private let facebookAuthManager = FacebookAuthManager()
@@ -159,6 +140,24 @@ extension AuthenticationViewController: Setup {
         settingsBarButtonItem.target = self
         settingsBarButtonItem.accessibilityLabel = "settings".localized
         navigationItem.rightBarButtonItem = settingsBarButtonItem
+        
+        activeLabel.customize { label in
+            let terms = ActiveType.custom(pattern: "\\sTerms & Conditions\\b")
+            label.customColor[terms] = UIColor.tintColor
+            
+            let privacy = ActiveType.custom(pattern: "\\sPrivacy Policy\\b")
+            label.customColor[privacy] = UIColor.tintColor
+            
+            label.enabledTypes = [terms, privacy]
+            
+            label.handleCustomTap(for: terms) { [weak self] _ in
+                self?.didTapTermsSubject.send(true)
+            }
+            
+            label.handleCustomTap(for: privacy) { [weak self] _ in
+                self?.didTapPrivacySubject.send(true)
+            }
+        }
     }
     
     func addSubviews() {
@@ -167,10 +166,7 @@ extension AuthenticationViewController: Setup {
         buttonStackView.addArrangedSubview(appleButton)
         buttonStackView.addArrangedSubview(facebookButton)
         buttonStackView.addArrangedSubview(googleButton)
-        view.addSubview(legalLabel)
-        view.addSubview(legalStackView)
-        legalStackView.addArrangedSubview(termsButton)
-        legalStackView.addArrangedSubview(privacyButton)
+        view.addSubview(activeLabel)
     }
     
     func addConstraints() {
@@ -190,22 +186,8 @@ extension AuthenticationViewController: Setup {
             }
         }
         
-        legalLabel.snp.makeConstraints { maker in
-            maker.leading.trailing.equalToSuperview().inset(8)
-        }
-        
-        legalStackView.snp.makeConstraints { maker in
-            maker.top.equalTo(legalLabel.snp.bottom).offset(8)
-            maker.leading.trailing.equalToSuperview().inset(32)
-            maker.bottom.equalTo(safeArea).inset(8)
-        }
-        
-        termsButton.snp.makeConstraints { maker in
-            maker.top.bottom.equalToSuperview()
-        }
-        
-        privacyButton.snp.makeConstraints { maker in
-            maker.top.bottom.equalToSuperview()
+        activeLabel.snp.makeConstraints { maker in
+            maker.leading.bottom.trailing.equalToSuperview().inset(16)
         }
     }
     
@@ -214,8 +196,6 @@ extension AuthenticationViewController: Setup {
         appleButton.addTarget(self, action: #selector(appleDidTap), for: .touchUpInside)
         facebookButton.addTarget(self, action: #selector(facebookDidTap), for: .touchUpInside)
         googleButton.addTarget(self, action: #selector(googleDidTap), for: .touchUpInside)
-        termsButton.addTarget(self, action: #selector(termsDidTap), for: .touchUpInside)
-        privacyButton.addTarget(self, action: #selector(privacyDidTap), for: .touchUpInside)
     }
 }
 
