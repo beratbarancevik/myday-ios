@@ -5,6 +5,8 @@
 //  Created by Berat Cevik on 12/29/20.
 //
 
+// swiftlint:disable implicitly_unwrapped_optional
+
 import Firebase
 import GoogleSignIn
 
@@ -51,11 +53,10 @@ private extension GoogleAuthManager {
 // MARK: - GIDSignInDelegate
 extension GoogleAuthManager: GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
+        if let error = error, let errorCode = GIDSignInErrorCode(rawValue: error._code) {
             GIDSignIn.sharedInstance()?.signOut()
-            let errorCode = GIDSignInErrorCode(rawValue: error._code)
             switch errorCode {
-            case .canceled?:
+            case .canceled:
                 delegate?.googleSignInDidCancel()
             default:
                 delegate?.googleSignInDidFail(with: error)

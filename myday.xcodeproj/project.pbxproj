@@ -56,6 +56,8 @@
 		F418456A2593DF4E00E7F0A0 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845692593DF4E00E7F0A0 /* BaseCollectionCell.swift */; };
 		F41CE19C258E74B800D0F36E /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */; };
 		F41F2DE025951E1C004C0C54 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */; };
+		F41FDCFF259C39890005502F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41FDCFE259C39890005502F /* ProfileHeaderView.swift */; };
+		F41FDD07259C39F50005502F /* BaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41FDD06259C39F50005502F /* BaseCollectionReusableView.swift */; };
 		F45B8FB9259523B300E6D679 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FB8259523B300E6D679 /* FacebookCore */; };
 		F45B8FBB259523B300E6D679 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FBA259523B300E6D679 /* FacebookLogin */; };
 		F45B8FBD259523B300E6D679 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FBC259523B300E6D679 /* FacebookShare */; };
@@ -185,6 +187,8 @@
 		F41845692593DF4E00E7F0A0 /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
 		F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Release.plist"; sourceTree = "<group>"; };
 		F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		F41FDCFE259C39890005502F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		F41FDD06259C39F50005502F /* BaseCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionReusableView.swift; sourceTree = "<group>"; };
 		F45B8FC12595268500E6D679 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F45B8FC62595294B00E6D679 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		F469CA052599965500A35FFB /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
@@ -372,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				F41845692593DF4E00E7F0A0 /* BaseCollectionCell.swift */,
+				F41FDD06259C39F50005502F /* BaseCollectionReusableView.swift */,
 				F400A50B258E6FCB0081CCD8 /* BaseTableCell.swift */,
 				F4F6640A2595A6560037F9E9 /* BaseTableHeaderFooterView.swift */,
 				F400A506258E6FC30081CCD8 /* BaseView.swift */,
@@ -396,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				F401589725945F3D006F3CF4 /* HorizontalProgressBar.swift */,
+				F41FDCFE259C39890005502F /* ProfileHeaderView.swift */,
 				F4F664022595A48F0037F9E9 /* VersionFooterView.swift */,
 				F400A501258E6F9C0081CCD8 /* ZeroView.swift */,
 			);
@@ -1096,10 +1102,12 @@
 				F400A457258E67E70081CCD8 /* CreateGoalResponse.swift in Sources */,
 				F46F3561258E282D007CD3E4 /* GoalServices.swift in Sources */,
 				F4F72D90259AFAF400CFA3D0 /* GoogleAuthManager.swift in Sources */,
+				F41FDD07259C39F50005502F /* BaseCollectionReusableView.swift in Sources */,
 				F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */,
 				F49880B0258E1D9800C3EF2D /* HomeViewController.swift in Sources */,
 				F41845352593D5CB00E7F0A0 /* CalendarViewModel.swift in Sources */,
 				F484BBB7259502330021E7DD /* AuthenticationViewModel.swift in Sources */,
+				F41FDCFF259C39890005502F /* ProfileHeaderView.swift in Sources */,
 				F418453A2593D5D700E7F0A0 /* CalendarCoordinator.swift in Sources */,
 				F400A444258E66490081CCD8 /* SettingsViewController.swift in Sources */,
 				F45B8FC72595294B00E6D679 /* SettingCell.swift in Sources */,

@@ -38,6 +38,14 @@ enum Theme {
         }
     }
     
+    enum Collection {
+        static let primary = Style<UICollectionView> {
+            $0.backgroundColor = .systemBackground
+            $0.keyboardDismissMode = .onDrag
+            $0.alwaysBounceVertical = true
+        }
+    }
+    
     enum Image {
         static let primary = Style<UIImageView> {
             $0.contentMode = .scaleAspectFit
