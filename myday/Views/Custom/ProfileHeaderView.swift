@@ -14,7 +14,7 @@ class ProfileHeaderView: BaseCollectionReusableView {
     var user: User? {
         didSet {
             guard let user = user else { return }
-            nameLabel.text = user.name
+            nameLabel.text = user.name ?? "Name: -"
         }
     }
     

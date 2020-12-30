@@ -18,6 +18,7 @@ class ProfileViewController: BaseViewController {
         $0.register(ProfileHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeaderView.identifier)
         return $0
     }(UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()))
+    private let refreshControl = UIRefreshControl().style(Theme.RefreshControl.primary)
     
     let didTapSettingsSubject = PassthroughSubject<Bool, Never>()
     
@@ -38,6 +39,7 @@ class ProfileViewController: BaseViewController {
         addSubviews()
         addConstraints()
         addObservers()
+        viewModel.getUser()
     }
 }
 
@@ -45,6 +47,10 @@ class ProfileViewController: BaseViewController {
 private extension ProfileViewController {
     @objc func settingsDidTap() {
         didTapSettingsSubject.send(true)
+    }
+    
+    func updateUI() {
+        profileCollectionView.reloadData()
     }
 }
 
@@ -56,10 +62,14 @@ extension ProfileViewController: Setup {
         settingsBarButtonItem.target = self
         settingsBarButtonItem.accessibilityLabel = "settings".localized
         navigationItem.rightBarButtonItem = settingsBarButtonItem
+        
+        profileCollectionView.delegate = self
+        profileCollectionView.dataSource = self
     }
     
     func addSubviews() {
         view.addSubview(profileCollectionView)
+        profileCollectionView.addSubview(refreshControl)
     }
     
     func addConstraints() {
@@ -70,6 +80,15 @@ extension ProfileViewController: Setup {
     
     func addObservers() {
         settingsBarButtonItem.action = #selector(settingsDidTap)
+        
+        cancellables.insert(viewModel.loadingSubject.sink { [weak self] value in
+            value ? self?.refreshControl.beginRefreshing() : self?.refreshControl.endRefreshing()
+        })
+        
+        cancellables.insert(viewModel.userSubject.sink(receiveCompletion: { _ in
+        }, receiveValue: { [weak self] _ in
+            self?.updateUI()
+        }))
     }
 }
 
@@ -87,5 +106,9 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: ProfileHeaderView.identifier, for: indexPath) as? ProfileHeaderView else { return UICollectionReusableView() }
         headerView.user = viewModel.user
         return headerView
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: profileCollectionView.frame.width, height: 100)
     }
 }
