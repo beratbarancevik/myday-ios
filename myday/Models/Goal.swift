@@ -36,7 +36,7 @@ struct Goal: Codable {
     
     init(id: String? = nil, userId: String? = nil, title: String? = nil, target: Int? = nil, achieved: Int? = nil, color: String? = nil) {
         self.id = id ?? ""
-        self.userId = userId ?? ""
+        self.userId = userId ?? AuthenticationManager.shared.userId
         self.title = title
         self.target = target
         self.achieved = achieved
