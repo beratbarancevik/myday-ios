@@ -5,12 +5,19 @@
 //  Created by Berat Cevik on 12/19/20.
 //
 
+// swiftlint:disable duplicate_enum_cases
+
 enum Constants {
     // URLs
     enum Urls: String, CaseIterable {
-        case appStoreUrl = "https://apps.apple.com/us/app/sub-manager/id1540474654"
-        case privacPolicyUrl = "https://submanager-prod.web.app/privacy.html"
-        case termsOfServiceUrl = "https://submanager-prod.web.app/terms.html"
+        case appStoreUrl = "https://apps.apple.com/us/app/my-day-track-goals/id1545759967"
+        #if DEBUG
+        case privacPolicyUrl = "https://myday-development.web.app/privacy.html"
+        case termsOfServiceUrl = "https://myday-development.web.app/terms.html"
+        #else
+        case privacPolicyUrl = "https://myday-production.web.app/privacy.html"
+        case termsOfServiceUrl = "https://myday-production.web.app/terms.html"
+        #endif
     }
     
     // Email
