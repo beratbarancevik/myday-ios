@@ -101,6 +101,9 @@
 		F49880E1258E1ECE00C3EF2D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880E0258E1ECE00C3EF2D /* ApplicationCoordinator.swift */; };
 		F4AE2F42258E1996005E77AB /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */; };
 		F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4AE2F49258E1A7C005E77AB /* SnapKit */; };
+		F4B6A994259F0DC10085B08E /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B6A993259F0DC10085B08E /* SortViewController.swift */; };
+		F4B6A99C259F0DCA0085B08E /* SortCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B6A99B259F0DCA0085B08E /* SortCoordinator.swift */; };
+		F4B6A9A1259F0DD70085B08E /* SortViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B6A9A0259F0DD70085B08E /* SortViewModel.swift */; };
 		F4BD2908258E5DD000691D68 /* DeleteGoalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD2907258E5DD000691D68 /* DeleteGoalRequest.swift */; };
 		F4BD2910258E5DD800691D68 /* DeleteGoalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD290F258E5DD800691D68 /* DeleteGoalResponse.swift */; };
 		F4BEE74F258F8C4E0027028E /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE74E258F8C4E0027028E /* TextFieldCell.swift */; };
@@ -235,6 +238,9 @@
 		F4AE2F30258E155F005E77AB /* Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Debug.plist"; sourceTree = "<group>"; };
 		F4AE2F31258E155F005E77AB /* Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Release.plist"; sourceTree = "<group>"; };
 		F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Debug.plist"; sourceTree = "<group>"; };
+		F4B6A993259F0DC10085B08E /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
+		F4B6A99B259F0DCA0085B08E /* SortCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortCoordinator.swift; sourceTree = "<group>"; };
+		F4B6A9A0259F0DD70085B08E /* SortViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewModel.swift; sourceTree = "<group>"; };
 		F4BD2907258E5DD000691D68 /* DeleteGoalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGoalRequest.swift; sourceTree = "<group>"; };
 		F4BD290F258E5DD800691D68 /* DeleteGoalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGoalResponse.swift; sourceTree = "<group>"; };
 		F4BEE74E258F8C4E0027028E /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
@@ -646,6 +652,7 @@
 				F49880AB258E1D8B00C3EF2D /* Home */,
 				F484BB922594F6CF0021E7DD /* Profile */,
 				F400A43A258E662E0081CCD8 /* Settings */,
+				F4B6A992259F0DB10085B08E /* Sort */,
 				F400A42A258E65580081CCD8 /* Splash */,
 			);
 			path = Modules;
@@ -687,6 +694,16 @@
 				F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */,
 			);
 			path = Keys;
+			sourceTree = "<group>";
+		};
+		F4B6A992259F0DB10085B08E /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				F4B6A99B259F0DCA0085B08E /* SortCoordinator.swift */,
+				F4B6A993259F0DC10085B08E /* SortViewController.swift */,
+				F4B6A9A0259F0DD70085B08E /* SortViewModel.swift */,
+			);
+			path = Sort;
 			sourceTree = "<group>";
 		};
 		F4BD2906258E5DBD00691D68 /* Delete Goal */ = {
@@ -1108,6 +1125,7 @@
 				F41845352593D5CB00E7F0A0 /* CalendarViewModel.swift in Sources */,
 				F484BBB7259502330021E7DD /* AuthenticationViewModel.swift in Sources */,
 				F41FDCFF259C39890005502F /* ProfileHeaderView.swift in Sources */,
+				F4B6A99C259F0DCA0085B08E /* SortCoordinator.swift in Sources */,
 				F418453A2593D5D700E7F0A0 /* CalendarCoordinator.swift in Sources */,
 				F400A444258E66490081CCD8 /* SettingsViewController.swift in Sources */,
 				F45B8FC72595294B00E6D679 /* SettingCell.swift in Sources */,
@@ -1139,7 +1157,9 @@
 				F4F72D8B259AEA9300CFA3D0 /* GetUserResponse.swift in Sources */,
 				F469CA062599965500A35FFB /* DayViewModel.swift in Sources */,
 				F49880B5258E1DA000C3EF2D /* HomeCoordinator.swift in Sources */,
+				F4B6A994259F0DC10085B08E /* SortViewController.swift in Sources */,
 				F484BB9C2594F6EC0021E7DD /* ProfileViewModel.swift in Sources */,
+				F4B6A9A1259F0DD70085B08E /* SortViewModel.swift in Sources */,
 				F400A471258E6C400081CCD8 /* UIView+Extensions.swift in Sources */,
 				F49880E1258E1ECE00C3EF2D /* ApplicationCoordinator.swift in Sources */,
 				F41F2DE025951E1C004C0C54 /* AnalyticsManager.swift in Sources */,
