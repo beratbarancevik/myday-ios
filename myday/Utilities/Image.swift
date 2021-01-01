@@ -26,6 +26,7 @@ enum Image: String, CaseIterable {
     case rate
     case settings
     case share
+    case sort
     case terms
     
     var image: UIImage {

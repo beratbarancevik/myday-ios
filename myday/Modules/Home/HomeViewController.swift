@@ -12,7 +12,7 @@ class HomeViewController: BaseViewController {
     // MARK: - Properties
     private var viewModel: HomeViewModel
     
-    private let calendarBarButtonItem = UIBarButtonItem(image: Image.calendar.image, style: .plain, target: nil, action: nil)
+    private let sortBarButtonItem = UIBarButtonItem(image: Image.sort.image, style: .plain, target: nil, action: nil)
     private let profileBarButtonItem = UIBarButtonItem(image: Image.profile.image, style: .plain, target: nil, action: nil)
     private let goalsTableView: UITableView = {
         $0.style(Theme.Table.primary)
@@ -70,8 +70,8 @@ private extension HomeViewController {
         viewModel.getGoals()
     }
     
-    @objc func calendarDidTap() {
-        didTapCalendarSubject.send(true)
+    @objc func sortDidTap() {
+        // TODO: open sort options
     }
     
     @objc func profileDidTap() {
@@ -89,9 +89,9 @@ extension HomeViewController: Setup {
     func setUpUI() {
         navigationItem.title = "Home"
         
-        calendarBarButtonItem.target = self
-        calendarBarButtonItem.accessibilityLabel = "calendar".localized
-        navigationItem.leftBarButtonItem = calendarBarButtonItem
+        sortBarButtonItem.target = self
+        sortBarButtonItem.accessibilityLabel = "sort".localized
+        navigationItem.leftBarButtonItem = sortBarButtonItem
         
         profileBarButtonItem.target = self
         profileBarButtonItem.accessibilityLabel = "profile".localized
@@ -125,7 +125,7 @@ extension HomeViewController: Setup {
     }
     
     func addObservers() {
-        calendarBarButtonItem.action = #selector(calendarDidTap)
+        sortBarButtonItem.action = #selector(sortDidTap)
         profileBarButtonItem.action = #selector(profileDidTap)
         
         refreshControl.addTarget(self, action: #selector(didRefresh), for: .valueChanged)
