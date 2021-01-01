@@ -187,7 +187,7 @@ extension AuthenticationViewController: Setup {
         }
         
         activeLabel.snp.makeConstraints { maker in
-            maker.leading.bottom.trailing.equalToSuperview().inset(16)
+            maker.leading.trailing.bottom.equalToSuperview().inset(16)
         }
     }
     

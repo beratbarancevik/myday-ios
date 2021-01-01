@@ -9,18 +9,18 @@ class SortCoordinator: BaseCoordinator {
     // MARK: - Properties
     var navigationController: BaseNavigationController
     
-    private let sortViewController: SortViewController
+    let sortViewController: SortViewController
     private let sortViewModel: SortViewModel
     
     // MARK: - Init
-    init(navigationController: BaseNavigationController) {
+    init(navigationController: BaseNavigationController, viewController: SortViewController, viewModel: SortViewModel) {
         self.navigationController = navigationController
-        sortViewModel = SortViewModel()
-        sortViewController = SortViewController(viewModel: sortViewModel)
+        sortViewModel = viewModel
+        sortViewController = viewController
     }
     
     // MARK: - Functions
     func start() {
-        navigationController.pushViewController(sortViewController, animated: true)
+        navigationController.present(sortViewController, animated: true)
     }
 }

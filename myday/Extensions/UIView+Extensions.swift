@@ -18,4 +18,10 @@ extension UIView {
     func setHidden(_ hidden: Bool) {
         self.isHidden = hidden
     }
+    
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let mask = CAShapeLayer()
+        mask.path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius)).cgPath
+        layer.mask = mask
+    }
 }

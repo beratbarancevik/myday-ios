@@ -15,7 +15,10 @@ class HomeCoordinator: BaseCoordinator {
     private let homeViewController: HomeViewController
     private let homeViewModel: HomeViewModel
     
-    private var calendarCoordinator: CalendarCoordinator?
+    private let sortViewController: SortViewController
+    private let sortViewModel: SortViewModel
+    
+    private var sortCoordinator: SortCoordinator?
     private var profileCoordinator: ProfileCoordinator?
     private var authenticationCoordinator: AuthenticationCoordinator?
     private var goalDetailCoordinator: GoalDetailCoordinator?
@@ -28,7 +31,9 @@ class HomeCoordinator: BaseCoordinator {
     init(navigationController: BaseNavigationController) {
         self.navigationController = navigationController
         homeViewModel = HomeViewModel()
-        homeViewController = HomeViewController(viewModel: homeViewModel)
+        sortViewModel = SortViewModel()
+        sortViewController = SortViewController(viewModel: sortViewModel)
+        homeViewController = HomeViewController(viewModel: homeViewModel, sortViewController: sortViewController)
         observe()
     }
     
@@ -38,11 +43,10 @@ class HomeCoordinator: BaseCoordinator {
     }
     
     func observe() {
-        cancellables.insert(homeViewController.didTapCalendarSubject.sink { [weak self] _ in
+        cancellables.insert(homeViewController.didTapSortSubject.sink { [weak self] _ in
             guard let self = self else { return }
-            let calendarNavigationController = BaseNavigationController()
-            self.calendarCoordinator = CalendarCoordinator(presentingNavigationController: self.navigationController, navigationController: calendarNavigationController)
-            self.calendarCoordinator?.start()
+            self.sortCoordinator = SortCoordinator(navigationController: self.navigationController, viewController: self.sortViewController, viewModel: self.sortViewModel)
+            self.sortCoordinator?.start()
         })
         
         cancellables.insert(homeViewController.didTapProfileSubject.sink { [weak self] _ in

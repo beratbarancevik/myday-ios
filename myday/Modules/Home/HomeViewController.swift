@@ -11,6 +11,7 @@ import UIKit
 class HomeViewController: BaseViewController {
     // MARK: - Properties
     private var viewModel: HomeViewModel
+    private var sortViewController: SortViewController
     
     private let sortBarButtonItem = UIBarButtonItem(image: Image.sort.image, style: .plain, target: nil, action: nil)
     private let profileBarButtonItem = UIBarButtonItem(image: Image.profile.image, style: .plain, target: nil, action: nil)
@@ -29,15 +30,17 @@ class HomeViewController: BaseViewController {
         $0.layer.cornerRadius = 24
         return $0
     }(UIButton(type: .system))
+    private let bottomSheetContainerView = UIView()
     
-    let didTapCalendarSubject = PassthroughSubject<Bool, Never>()
+    let didTapSortSubject = PassthroughSubject<Bool, Never>()
     let didTapProfileSubject = PassthroughSubject<Bool, Never>()
     let didSelectGoalSubject = PassthroughSubject<Goal, Never>()
     let didTapAddGoalSubject = PassthroughSubject<Bool, Never>()
     
     // MARK: - Init
-    init(viewModel: HomeViewModel) {
+    init(viewModel: HomeViewModel, sortViewController: SortViewController) {
         self.viewModel = viewModel
+        self.sortViewController = sortViewController
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -71,7 +74,16 @@ private extension HomeViewController {
     }
     
     @objc func sortDidTap() {
-        // TODO: open sort options
+//        didTapSortSubject.send(true)
+        
+        addChild(sortViewController)
+        bottomSheetContainerView.addSubview(sortViewController.view)
+        UIView.animate(withDuration: 2.0, delay: 0, options: [.curveEaseInOut]) { [weak self] in
+            guard let self = self else { return }
+            self.bottomSheetContainerView.snp.makeConstraints { maker in
+                maker.height.equalTo((48 * 6) + 24)
+            }
+        }
     }
     
     @objc func profileDidTap() {
@@ -106,6 +118,7 @@ extension HomeViewController: Setup {
         goalsTableView.addSubview(refreshControl)
         view.addSubview(zeroView)
         view.addSubview(addButton)
+        view.addSubview(bottomSheetContainerView)
     }
     
     func addConstraints() {
@@ -121,6 +134,10 @@ extension HomeViewController: Setup {
         addButton.snp.makeConstraints { maker in
             maker.trailing.bottom.equalTo(safeArea).inset(24)
             maker.width.height.equalTo(48)
+        }
+        
+        bottomSheetContainerView.snp.makeConstraints { maker in
+            maker.leading.trailing.bottom.equalToSuperview()
         }
     }
     

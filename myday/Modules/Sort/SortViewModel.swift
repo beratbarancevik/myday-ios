@@ -7,15 +7,32 @@
 
 class SortViewModel: BaseViewModel {
     // MARK: - Properties
-    var sortOptions = SortOptions.allCases
+    var sortOptions = SortOption.allCases
 }
 
 // MARK: - Sort Options
-enum SortOptions: CaseIterable {
+enum SortOption: CaseIterable {
     case alphabeticAsc
     case alphabeticDesc
     case creationDateAsc
     case creationDateDesc
-    case completionAsc
-    case completionDesc
+    case progressRateAsc
+    case progressRateDesc
+    
+    var title: String {
+        switch self {
+        case .alphabeticAsc:
+            return "A to Z"
+        case .alphabeticDesc:
+            return "Z to A"
+        case .creationDateAsc:
+            return "First created first"
+        case .creationDateDesc:
+            return "First created last"
+        case .progressRateAsc:
+            return "Completed First"
+        case .progressRateDesc:
+            return "Completed Last"
+        }
+    }
 }
