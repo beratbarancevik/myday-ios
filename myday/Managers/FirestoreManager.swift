@@ -18,8 +18,9 @@ class FirestoreManager {
     // MARK: - Requests
     static func createDocument<Req: CreateRequest>(request: Req, completion: @escaping (Result<Void, Error>) -> Void) {
         var body = request.body
-        body[FirestoreField.createdAt.rawValue] = FieldValue.serverTimestamp()
-        body[FirestoreField.updatedAt.rawValue] = FieldValue.serverTimestamp()
+        body[FirestoreField.created.rawValue] = FieldValue.serverTimestamp()
+        body[FirestoreField.date.rawValue] = FieldValue.serverTimestamp()
+        body[FirestoreField.updated.rawValue] = FieldValue.serverTimestamp()
         db.collection(request.collection.rawValue).addDocument(data: body) { error in
             if let error = error {
                 completion(Result.failure(error))
@@ -63,7 +64,11 @@ class FirestoreManager {
     }
     
     static func getDocuments<Req: GetRequest, Res>(_ request: Req, completion: @escaping (Result<Res, Error>) -> Void) {
-        db.collection(request.collection.rawValue).whereField(FirestoreField.userId.rawValue, isEqualTo: request.userId).getDocuments { snapshot, error in
+        db.collection(request.collection.rawValue)
+            .whereField(FirestoreField.userId.rawValue, isEqualTo: request.userId)
+//            .whereField(FirestoreField.date.rawValue, isLessThan: Date().tomorrow)
+//            .whereField(FirestoreField.date.rawValue, isGreaterThan: Date().yesterday)
+            .getDocuments { snapshot, error in
             if let error = error {
                 completion(Result.failure(error))
                 return
@@ -87,7 +92,7 @@ class FirestoreManager {
     
     static func updateDocument<Req: UpdateRequest>(request: Req, completion: @escaping (Result<Void, Error>) -> Void) {
         var body = request.body
-        body[FirestoreField.updatedAt.rawValue] = FieldValue.serverTimestamp()
+        body[FirestoreField.updated.rawValue] = FieldValue.serverTimestamp()
         db.collection(request.collection.rawValue).document(request.id).setData(body, merge: true) { error in
             if let error = error {
                 completion(Result.failure(error))
@@ -106,7 +111,8 @@ enum FirestoreCollection: String {
 
 // MARK: - Field
 enum FirestoreField: String {
-    case createdAt
-    case updatedAt
+    case created
+    case date
+    case updated
     case userId
 }
