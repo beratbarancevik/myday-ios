@@ -42,6 +42,7 @@ class CalendarViewModel: BaseViewModel {
 // MARK: - Private Functions
 private extension CalendarViewModel {
     func fetchDays() {
-        dayViewModels = Date().getLast(number: 10).map { DayViewModel(date: $0) }
+        dayViewModels = Date().dates(from: "01/01/2021").map { DayViewModel(date: $0) }
+        dayViewModels.last?.isSelected = true
     }
 }

@@ -10,6 +10,7 @@
 import Foundation
 
 extension Date {
+    // MARK: - Variables
     var yesterday: Date {
         return Date().dayBefore
     }
@@ -51,12 +52,50 @@ extension Date {
         return ""
     }
     
+    // MARK: - Functions
     func getLast(number days: Int) -> [Date] {
         var dates = [Date]()
         var lastAddedDate = Date().tomorrow
         for _ in 0..<days {
             dates.insert(lastAddedDate.dayBefore, at: 0)
             lastAddedDate = lastAddedDate.dayBefore
+        }
+        return dates
+    }
+    
+    func dates(from startDate: Date) -> [Date] {
+        var date = startDate
+        var dates = [Date]()
+        while date < self {
+            dates.append(date)
+            guard let newDate = Calendar.current.date(byAdding: .day, value: 1, to: date) else { break }
+            date = newDate
+        }
+        return dates
+    }
+    
+    func dates(from startDate: String, format: String = "dd/MM/yyyy") -> [Date] {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        guard var date = dateFormatter.date(from: startDate) else { return [] }
+        
+        var dates = [Date]()
+        while date < self {
+            dates.append(date)
+            guard let newDate = Calendar.current.date(byAdding: .day, value: 1, to: date) else { break }
+            date = newDate
+        }
+        return dates
+    }
+    
+    // MARK: - Static Functions
+    static func datesBetween(startDate: Date, endDate: Date) -> [Date] {
+        var date = startDate
+        var dates = [Date]()
+        while date < endDate {
+            dates.append(date)
+            guard let newDate = Calendar.current.date(byAdding: .day, value: 1, to: date) else { break }
+            date = newDate
         }
         return dates
     }

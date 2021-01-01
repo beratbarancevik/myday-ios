@@ -56,6 +56,10 @@ class CalendarViewController: BaseViewController {
         addObservers()
         viewModel.getGoals()
     }
+    
+    override func viewDidLayoutSubviews() {
+        daysCollectionView.scrollToItem(at: IndexPath(row: viewModel.dayViewModels.count - 1, section: 0), at: .right, animated: false)
+    }
 }
 
 // MARK: - Private Functions
@@ -91,7 +95,7 @@ extension CalendarViewController: Setup {
     
     func addConstraints() {
         separatorView1.snp.makeConstraints { maker in
-            maker.top.equalTo(safeArea).inset(16)
+            maker.top.equalTo(safeArea)
             maker.leading.trailing.equalTo(safeArea)
             maker.height.equalTo(1)
         }
@@ -161,7 +165,7 @@ extension CalendarViewController: UICollectionViewDelegate, UICollectionViewData
     }
 }
 
-// MARK: -
+// MARK: - UITableViewDelegate, UITableViewDataSource
 extension CalendarViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
