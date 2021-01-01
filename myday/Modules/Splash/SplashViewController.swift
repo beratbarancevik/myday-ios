@@ -13,6 +13,7 @@ class SplashViewController: BaseViewController {
     
     private let logoImageView: UIImageView = {
         $0.image = Image.logo.image
+        $0.accessibilityLabel = "splash_logo_image_view".localized
         return $0
     }(UIImageView().style(Theme.Image.primary))
     

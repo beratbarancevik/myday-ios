@@ -59,6 +59,9 @@
 		F41FDCFF259C39890005502F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41FDCFE259C39890005502F /* ProfileHeaderView.swift */; };
 		F41FDD07259C39F50005502F /* BaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41FDD06259C39F50005502F /* BaseCollectionReusableView.swift */; };
 		F458434F259F925E004856E3 /* ImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458434E259F925E004856E3 /* ImageTests.swift */; };
+		F45843B3259F9535004856E3 /* SplashControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45843B2259F9535004856E3 /* SplashControllerUITests.swift */; };
+		F4584403259F97A4004856E3 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = F4584402259F97A4004856E3 /* FacebookCore */; };
+		F458442C259F9839004856E3 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F458442B259F9839004856E3 /* FacebookLogin */; };
 		F45B8FB9259523B300E6D679 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FB8259523B300E6D679 /* FacebookCore */; };
 		F45B8FBB259523B300E6D679 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FBA259523B300E6D679 /* FacebookLogin */; };
 		F45B8FBD259523B300E6D679 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FBC259523B300E6D679 /* FacebookShare */; };
@@ -194,6 +197,7 @@
 		F41FDCFE259C39890005502F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		F41FDD06259C39F50005502F /* BaseCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionReusableView.swift; sourceTree = "<group>"; };
 		F458434E259F925E004856E3 /* ImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTests.swift; sourceTree = "<group>"; };
+		F45843B2259F9535004856E3 /* SplashControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashControllerUITests.swift; sourceTree = "<group>"; };
 		F45B8FC12595268500E6D679 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F45B8FC62595294B00E6D679 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		F469CA052599965500A35FFB /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
@@ -287,6 +291,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB8F020C964F9BB4F090BD0 /* Pods_myday_mydayUITests.framework in Frameworks */,
+				F4584403259F97A4004856E3 /* FacebookCore in Frameworks */,
+				F458442C259F9839004856E3 /* FacebookLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +594,7 @@
 			isa = PBXGroup;
 			children = (
 				F497505C258E035F00259DAC /* mydayUITests.swift */,
+				F45843B2259F9535004856E3 /* SplashControllerUITests.swift */,
 				F497505E258E035F00259DAC /* Info.plist */,
 			);
 			path = mydayUITests;
@@ -824,6 +831,10 @@
 				F497505A258E035F00259DAC /* PBXTargetDependency */,
 			);
 			name = mydayUITests;
+			packageProductDependencies = (
+				F4584402259F97A4004856E3 /* FacebookCore */,
+				F458442B259F9839004856E3 /* FacebookLogin */,
+			);
 			productName = mydayUITests;
 			productReference = F4975058258E035F00259DAC /* mydayUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -1213,6 +1224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F45843B3259F9535004856E3 /* SplashControllerUITests.swift in Sources */,
 				F497505D258E035F00259DAC /* mydayUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1588,6 +1600,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
 			productName = SwiftMessages;
+		};
+		F4584402259F97A4004856E3 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		F458442B259F9839004856E3 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
 		};
 		F45B8FB8259523B300E6D679 /* FacebookCore */ = {
 			isa = XCSwiftPackageProductDependency;
