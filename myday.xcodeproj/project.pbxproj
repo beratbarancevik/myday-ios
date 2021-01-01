@@ -60,11 +60,6 @@
 		F41FDD07259C39F50005502F /* BaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41FDD06259C39F50005502F /* BaseCollectionReusableView.swift */; };
 		F458434F259F925E004856E3 /* ImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458434E259F925E004856E3 /* ImageTests.swift */; };
 		F45843B3259F9535004856E3 /* SplashControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45843B2259F9535004856E3 /* SplashControllerUITests.swift */; };
-		F4584403259F97A4004856E3 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = F4584402259F97A4004856E3 /* FacebookCore */; };
-		F458442C259F9839004856E3 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F458442B259F9839004856E3 /* FacebookLogin */; };
-		F45B8FB9259523B300E6D679 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FB8259523B300E6D679 /* FacebookCore */; };
-		F45B8FBB259523B300E6D679 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FBA259523B300E6D679 /* FacebookLogin */; };
-		F45B8FBD259523B300E6D679 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = F45B8FBC259523B300E6D679 /* FacebookShare */; };
 		F45B8FC22595268500E6D679 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B8FC12595268500E6D679 /* User.swift */; };
 		F45B8FC72595294B00E6D679 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45B8FC62595294B00E6D679 /* SettingCell.swift */; };
 		F469CA062599965500A35FFB /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F469CA052599965500A35FFB /* DayViewModel.swift */; };
@@ -93,7 +88,6 @@
 		F497503B258E035E00259DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497503A258E035E00259DAC /* AppDelegate.swift */; };
 		F4975044258E035F00259DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4975043258E035F00259DAC /* Assets.xcassets */; };
 		F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4975045258E035F00259DAC /* LaunchScreen.storyboard */; };
-		F497505D258E035F00259DAC /* mydayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497505C258E035F00259DAC /* mydayUITests.swift */; };
 		F49880B0258E1D9800C3EF2D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880AF258E1D9800C3EF2D /* HomeViewController.swift */; };
 		F49880B5258E1DA000C3EF2D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880B4258E1DA000C3EF2D /* HomeCoordinator.swift */; };
 		F49880BA258E1DA800C3EF2D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880B9258E1DA800C3EF2D /* HomeViewModel.swift */; };
@@ -102,6 +96,7 @@
 		F49880CA258E1DC500C3EF2D /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880C9258E1DC500C3EF2D /* BaseCoordinator.swift */; };
 		F49880CF258E1DD800C3EF2D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880CE258E1DD800C3EF2D /* BaseNavigationController.swift */; };
 		F49880E1258E1ECE00C3EF2D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880E0258E1ECE00C3EF2D /* ApplicationCoordinator.swift */; };
+		F49F704C259F9C7100DDAF51 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F704B259F9C7100DDAF51 /* String+Extensions.swift */; };
 		F4AE2F42258E1996005E77AB /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */; };
 		F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4AE2F49258E1A7C005E77AB /* SnapKit */; };
 		F4B6A994259F0DC10085B08E /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B6A993259F0DC10085B08E /* SortViewController.swift */; };
@@ -230,7 +225,6 @@
 		F497504D258E035F00259DAC /* mydayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mydayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4975053258E035F00259DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4975058258E035F00259DAC /* mydayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mydayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F497505C258E035F00259DAC /* mydayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mydayUITests.swift; sourceTree = "<group>"; };
 		F497505E258E035F00259DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F49880AF258E1D9800C3EF2D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F49880B4258E1DA000C3EF2D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
@@ -240,6 +234,7 @@
 		F49880C9258E1DC500C3EF2D /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		F49880CE258E1DD800C3EF2D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		F49880E0258E1ECE00C3EF2D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		F49F704B259F9C7100DDAF51 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		F4AE2F30258E155F005E77AB /* Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Debug.plist"; sourceTree = "<group>"; };
 		F4AE2F31258E155F005E77AB /* Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Release.plist"; sourceTree = "<group>"; };
 		F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Debug.plist"; sourceTree = "<group>"; };
@@ -268,13 +263,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F45B8FBB259523B300E6D679 /* FacebookLogin in Frameworks */,
 				F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */,
-				F45B8FBD259523B300E6D679 /* FacebookShare in Frameworks */,
 				F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */,
 				F40A03B8259B95D900BE6F5D /* ActiveLabel in Frameworks */,
 				609BF1661A630C98B3274BF6 /* Pods_myday.framework in Frameworks */,
-				F45B8FB9259523B300E6D679 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,8 +283,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB8F020C964F9BB4F090BD0 /* Pods_myday_mydayUITests.framework in Frameworks */,
-				F4584403259F97A4004856E3 /* FacebookCore in Frameworks */,
-				F458442C259F9839004856E3 /* FacebookLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -593,8 +583,8 @@
 		F497505B258E035F00259DAC /* mydayUITests */ = {
 			isa = PBXGroup;
 			children = (
-				F497505C258E035F00259DAC /* mydayUITests.swift */,
 				F45843B2259F9535004856E3 /* SplashControllerUITests.swift */,
+				F49F704A259F9C4500DDAF51 /* Extensions */,
 				F497505E258E035F00259DAC /* Info.plist */,
 			);
 			path = mydayUITests;
@@ -705,6 +695,14 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
+		F49F704A259F9C4500DDAF51 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F49F704B259F9C7100DDAF51 /* String+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F4AE2F40258E197D005E77AB /* Keys */ = {
 			isa = PBXGroup;
 			children = (
@@ -786,9 +784,6 @@
 			packageProductDependencies = (
 				F4AE2F49258E1A7C005E77AB /* SnapKit */,
 				F41845212593B3DA00E7F0A0 /* SwiftMessages */,
-				F45B8FB8259523B300E6D679 /* FacebookCore */,
-				F45B8FBA259523B300E6D679 /* FacebookLogin */,
-				F45B8FBC259523B300E6D679 /* FacebookShare */,
 				F40A03B7259B95D900BE6F5D /* ActiveLabel */,
 			);
 			productName = myday;
@@ -832,8 +827,6 @@
 			);
 			name = mydayUITests;
 			packageProductDependencies = (
-				F4584402259F97A4004856E3 /* FacebookCore */,
-				F458442B259F9839004856E3 /* FacebookLogin */,
 			);
 			productName = mydayUITests;
 			productReference = F4975058258E035F00259DAC /* mydayUITests.xctest */;
@@ -873,7 +866,6 @@
 			packageReferences = (
 				F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */,
 				F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
-				F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				F40A03B6259B95D900BE6F5D /* XCRemoteSwiftPackageReference "ActiveLabel" */,
 			);
 			productRefGroup = F4975038258E035E00259DAC /* Products */;
@@ -1224,8 +1216,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F49F704C259F9C7100DDAF51 /* String+Extensions.swift in Sources */,
 				F45843B3259F9535004856E3 /* SplashControllerUITests.swift in Sources */,
-				F497505D258E035F00259DAC /* mydayUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1572,14 +1564,6 @@
 				version = 8.0.5;
 			};
 		};
-		F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
-			requirement = {
-				kind = exactVersion;
-				version = 8.2.0;
-			};
-		};
 		F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -1600,31 +1584,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
 			productName = SwiftMessages;
-		};
-		F4584402259F97A4004856E3 /* FacebookCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookCore;
-		};
-		F458442B259F9839004856E3 /* FacebookLogin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookLogin;
-		};
-		F45B8FB8259523B300E6D679 /* FacebookCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookCore;
-		};
-		F45B8FBA259523B300E6D679 /* FacebookLogin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookLogin;
-		};
-		F45B8FBC259523B300E6D679 /* FacebookShare */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F45B8FB7259523B300E6D679 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookShare;
 		};
 		F4AE2F49258E1A7C005E77AB /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
