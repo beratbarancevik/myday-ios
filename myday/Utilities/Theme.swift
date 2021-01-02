@@ -133,7 +133,7 @@ enum Theme {
 }
 
 // MARK: - Custom Font
-enum Montserrat: String {
+enum Montserrat: String, CaseIterable {
     case thin = "Montserrat-Thin"
     case extraLight = "Montserrat-ExtraLight"
     case light = "Montserrat-Light"
