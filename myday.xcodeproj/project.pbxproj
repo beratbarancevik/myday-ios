@@ -218,6 +218,8 @@
 		F484BBD225950E0B0021E7DD /* ColorPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewController.swift; sourceTree = "<group>"; };
 		F484BBD725950E180021E7DD /* ColorPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerViewModel.swift; sourceTree = "<group>"; };
 		F484BBDF25950F270021E7DD /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
+		F48E5FAB25A04AE000328CFE /* UnitTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTestPlan.xctestplan; sourceTree = "<group>"; };
+		F48E5FAF25A04B3300328CFE /* UITestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITestPlan.xctestplan; sourceTree = "<group>"; };
 		F4975037258E035E00259DAC /* My Day Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Day Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F497503A258E035E00259DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4975043258E035F00259DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -535,6 +537,8 @@
 		F497502E258E035E00259DAC = {
 			isa = PBXGroup;
 			children = (
+				F48E5FAB25A04AE000328CFE /* UnitTestPlan.xctestplan */,
+				F48E5FAF25A04B3300328CFE /* UITestPlan.xctestplan */,
 				F4975039258E035E00259DAC /* myday */,
 				F4975050258E035F00259DAC /* mydayTests */,
 				F497505B258E035F00259DAC /* mydayUITests */,

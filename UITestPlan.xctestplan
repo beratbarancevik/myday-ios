@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "25499125-8D80-40D0-A6B9-E48087A26A8B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:myday.xcodeproj",
+        "identifier" : "F4975057258E035F00259DAC",
+        "name" : "mydayUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
