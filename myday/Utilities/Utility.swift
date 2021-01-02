@@ -14,7 +14,7 @@ class Utility {
     static let shared = Utility()
     
     var appVersion: String {
-        guard let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return "-" }
+        guard let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return "" }
         return currentVersion
     }
     
