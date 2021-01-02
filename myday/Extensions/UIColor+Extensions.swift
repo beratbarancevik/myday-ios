@@ -9,9 +9,7 @@ import UIKit
 
 extension UIColor {
     // MARK: - Properties
-    static var tintColor: UIColor {
-        return .systemGreen
-    }
+    static var tintColor = UIColor.systemGreen
     
     // MARK: - RGB
     convenience init(_ red: Int, _ green: Int, _ blue: Int, _ alpha: Double = 1.0) {
