@@ -14,13 +14,6 @@ extension String {
     }
     
     var firstLetterCapitalized: String {
-        return self.capitalizingFirstLetter()
-    }
-}
-
-// MARK: - Private Functions
-private extension String {
-    func capitalizingFirstLetter() -> String {
         return prefix(1).capitalized + dropFirst()
     }
 }
