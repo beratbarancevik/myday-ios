@@ -47,6 +47,11 @@ class GoalColorTests: XCTestCase {
         }
     }
     
+    func testColorInit() {
+        XCTAssertEqual(GoalColor("blue"), sut.blue)
+        XCTAssertEqual(GoalColor("black"), sut.green) // default color is green
+    }
+    
     func testColorName() {
         XCTAssertEqual(sut.blue.name, "Blue")
     }

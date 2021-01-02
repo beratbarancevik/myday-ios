@@ -86,6 +86,7 @@
 		F484BBD825950E180021E7DD /* ColorPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBD725950E180021E7DD /* ColorPickerViewModel.swift */; };
 		F484BBE025950F270021E7DD /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBDF25950F270021E7DD /* ColorCell.swift */; };
 		F48E5FE625A04FA100328CFE /* ColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48E5FE525A04FA100328CFE /* ColorTests.swift */; };
+		F48E603C25A05BC700328CFE /* ErrorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48E603B25A05BC700328CFE /* ErrorTests.swift */; };
 		F497503B258E035E00259DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497503A258E035E00259DAC /* AppDelegate.swift */; };
 		F4975044258E035F00259DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4975043258E035F00259DAC /* Assets.xcassets */; };
 		F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4975045258E035F00259DAC /* LaunchScreen.storyboard */; };
@@ -222,6 +223,7 @@
 		F48E5FAB25A04AE000328CFE /* UnitTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UnitTestPlan.xctestplan; sourceTree = "<group>"; };
 		F48E5FAF25A04B3300328CFE /* UITestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = UITestPlan.xctestplan; sourceTree = "<group>"; };
 		F48E5FE525A04FA100328CFE /* ColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTests.swift; sourceTree = "<group>"; };
+		F48E603B25A05BC700328CFE /* ErrorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorTests.swift; sourceTree = "<group>"; };
 		F4975037258E035E00259DAC /* My Day Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Day Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F497503A258E035E00259DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4975043258E035F00259DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -455,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				F48E5FE525A04FA100328CFE /* ColorTests.swift */,
+				F48E603B25A05BC700328CFE /* ErrorTests.swift */,
 				F458434E259F925E004856E3 /* ImageTests.swift */,
 			);
 			path = "Utilities Tests";
@@ -1233,6 +1236,7 @@
 			files = (
 				F458434F259F925E004856E3 /* ImageTests.swift in Sources */,
 				F48E5FE625A04FA100328CFE /* ColorTests.swift in Sources */,
+				F48E603C25A05BC700328CFE /* ErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

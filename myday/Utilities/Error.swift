@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - Generic Error
-enum GenericError: String, Error, LocalizedError {
+enum GenericError: String, CaseIterable, Error, LocalizedError {
     case `default`
     case internet
     
@@ -23,7 +23,7 @@ enum GenericError: String, Error, LocalizedError {
 }
 
 // MARK: - Auth Error
-enum AuthError: String, Error, LocalizedError {
+enum AuthError: String, CaseIterable, Error, LocalizedError {
     case emailPermission
     case userDoesNotExist
     
