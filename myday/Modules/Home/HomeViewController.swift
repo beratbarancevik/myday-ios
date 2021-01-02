@@ -56,7 +56,7 @@ class HomeViewController: BaseViewController {
         addSubviews()
         addConstraints()
         addObservers()
-        viewModel.getGoals()
+//        viewModel.getGoals()
     }
 }
 
