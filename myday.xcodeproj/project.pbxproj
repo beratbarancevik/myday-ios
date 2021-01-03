@@ -130,6 +130,10 @@
 		F49E8F5F25A1BB3100329027 /* GetGoalsResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F5E25A1BB3100329027 /* GetGoalsResponseTests.swift */; };
 		F49E8F6425A1BB3C00329027 /* UpdateGoalRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F6325A1BB3C00329027 /* UpdateGoalRequestTests.swift */; };
 		F49E8F6925A1BB4800329027 /* UpdateGoalResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F6825A1BB4800329027 /* UpdateGoalResponseTests.swift */; };
+		F49E8F9625A1C3AE00329027 /* GoalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F9525A1C3AE00329027 /* GoalTests.swift */; };
+		F49E8F9F25A1C41500329027 /* goal.json in Resources */ = {isa = PBXBuildFile; fileRef = F49E8F9E25A1C41500329027 /* goal.json */; };
+		F49E8FA725A1C5A000329027 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8FA625A1C5A000329027 /* UserTests.swift */; };
+		F49E8FAF25A1C5CF00329027 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = F49E8FAE25A1C5CF00329027 /* user.json */; };
 		F49F704C259F9C7100DDAF51 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F704B259F9C7100DDAF51 /* String+Extensions.swift */; };
 		F4AE2F42258E1996005E77AB /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */; };
 		F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4AE2F49258E1A7C005E77AB /* SnapKit */; };
@@ -304,6 +308,10 @@
 		F49E8F5E25A1BB3100329027 /* GetGoalsResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoalsResponseTests.swift; sourceTree = "<group>"; };
 		F49E8F6325A1BB3C00329027 /* UpdateGoalRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateGoalRequestTests.swift; sourceTree = "<group>"; };
 		F49E8F6825A1BB4800329027 /* UpdateGoalResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateGoalResponseTests.swift; sourceTree = "<group>"; };
+		F49E8F9525A1C3AE00329027 /* GoalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalTests.swift; sourceTree = "<group>"; };
+		F49E8F9E25A1C41500329027 /* goal.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = goal.json; sourceTree = "<group>"; };
+		F49E8FA625A1C5A000329027 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		F49E8FAE25A1C5CF00329027 /* user.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
 		F49F704B259F9C7100DDAF51 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		F4AE2F30258E155F005E77AB /* Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Debug.plist"; sourceTree = "<group>"; };
 		F4AE2F31258E155F005E77AB /* Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Release.plist"; sourceTree = "<group>"; };
@@ -679,11 +687,13 @@
 		F4975050258E035F00259DAC /* mydayTests */ = {
 			isa = PBXGroup;
 			children = (
+				F49E8F9425A1C3A200329027 /* Models Tests */,
 				F49E8EB625A1B58700329027 /* Services Tests */,
 				F49E8E6525A1A78E00329027 /* Managers Tests */,
 				F48E609B25A09C2700328CFE /* Extensions Tests */,
 				F458434D259F924C004856E3 /* Utilities Tests */,
 				F49E8DDE25A195C800329027 /* Supporting Files Tests */,
+				F49E8F9D25A1C3F500329027 /* Mock Data */,
 				F48E5FDA25A04D0A00328CFE /* Supporting Files */,
 			);
 			path = mydayTests;
@@ -921,6 +931,24 @@
 			path = "Update User Tests";
 			sourceTree = "<group>";
 		};
+		F49E8F9425A1C3A200329027 /* Models Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F49E8F9525A1C3AE00329027 /* GoalTests.swift */,
+				F49E8FA625A1C5A000329027 /* UserTests.swift */,
+			);
+			path = "Models Tests";
+			sourceTree = "<group>";
+		};
+		F49E8F9D25A1C3F500329027 /* Mock Data */ = {
+			isa = PBXGroup;
+			children = (
+				F49E8F9E25A1C41500329027 /* goal.json */,
+				F49E8FAE25A1C5CF00329027 /* user.json */,
+			);
+			path = "Mock Data";
+			sourceTree = "<group>";
+		};
 		F49F704A259F9C4500DDAF51 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -1131,6 +1159,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F49E8FAF25A1C5CF00329027 /* user.json in Resources */,
+				F49E8F9F25A1C41500329027 /* goal.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1444,6 +1474,7 @@
 				F49E8E7E25A1A85B00329027 /* FacebookAuthManagerTests.swift in Sources */,
 				F49E8ECB25A1B60900329027 /* GoalServicesTests.swift in Sources */,
 				F49E8F5A25A1BB2400329027 /* GetGoalsRequestTests.swift in Sources */,
+				F49E8FA725A1C5A000329027 /* UserTests.swift in Sources */,
 				F49E8F4325A1BAD700329027 /* CreateGoalRequestTests.swift in Sources */,
 				F49E8EC125A1B5A700329027 /* BaseServiceTests.swift in Sources */,
 				F48E613D25A0B6D900328CFE /* Date+ExtensionsTests.swift in Sources */,
@@ -1462,6 +1493,7 @@
 				F49E8F2C25A1B99200329027 /* GetUserRequestTests.swift in Sources */,
 				F49E8E7925A1A85100329027 /* ExternalNavigationManagerTests.swift in Sources */,
 				F49E8F3425A1B9E900329027 /* GetUserResponseTests.swift in Sources */,
+				F49E8F9625A1C3AE00329027 /* GoalTests.swift in Sources */,
 				F49E8E8325A1A86400329027 /* FirestoreManagerTests.swift in Sources */,
 				F48E5FE625A04FA100328CFE /* ColorTests.swift in Sources */,
 				F49E8E6F25A1A83E00329027 /* AnalyticsManagerTests.swift in Sources */,

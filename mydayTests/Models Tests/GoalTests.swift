@@ -1,5 +1,5 @@
 //
-//  GoalsTests.swift
+//  GoalTests.swift
 //  mydayTests
 //
 //  Created by Berat Cevik on 1/3/21.
@@ -8,7 +8,7 @@
 import XCTest
 @testable import myday
 
-class GoalsTests: XCTestCase {
+class GoalTests: XCTestCase {
     var sut: Goal!
     
     override func setUp() {
@@ -21,7 +21,7 @@ class GoalsTests: XCTestCase {
     }
     
     func testInit() {
-        let path = Bundle(for: GoalsTests.self).path(forResource: "goal", ofType: "json")!
+        let path = Bundle(for: GoalTests.self).path(forResource: "goal", ofType: "json")!
         let data = try! Data(contentsOf: URL(fileURLWithPath: path))
         sut = try! JSONDecoder().decode(Goal.self, from: data)
         XCTAssertNotNil(sut)
