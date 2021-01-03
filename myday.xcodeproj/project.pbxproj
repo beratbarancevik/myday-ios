@@ -115,6 +115,21 @@
 		F49E8E7E25A1A85B00329027 /* FacebookAuthManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8E7D25A1A85B00329027 /* FacebookAuthManagerTests.swift */; };
 		F49E8E8325A1A86400329027 /* FirestoreManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8E8225A1A86400329027 /* FirestoreManagerTests.swift */; };
 		F49E8E8825A1A86C00329027 /* GoogleAuthManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8E8725A1A86C00329027 /* GoogleAuthManagerTests.swift */; };
+		F49E8EC125A1B5A700329027 /* BaseServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8EC025A1B5A700329027 /* BaseServiceTests.swift */; };
+		F49E8ECB25A1B60900329027 /* GoalServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8ECA25A1B60900329027 /* GoalServicesTests.swift */; };
+		F49E8ED325A1B61300329027 /* UserServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8ED225A1B61300329027 /* UserServicesTests.swift */; };
+		F49E8F2C25A1B99200329027 /* GetUserRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F2B25A1B99200329027 /* GetUserRequestTests.swift */; };
+		F49E8F3425A1B9E900329027 /* GetUserResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F3325A1B9E900329027 /* GetUserResponseTests.swift */; };
+		F49E8F3925A1BA1800329027 /* UpdateUserRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F3825A1BA1800329027 /* UpdateUserRequestTests.swift */; };
+		F49E8F3E25A1BA2400329027 /* UpdateUserResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F3D25A1BA2400329027 /* UpdateUserResponseTests.swift */; };
+		F49E8F4325A1BAD700329027 /* CreateGoalRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F4225A1BAD700329027 /* CreateGoalRequestTests.swift */; };
+		F49E8F4825A1BAEA00329027 /* CreateGoalResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F4725A1BAEA00329027 /* CreateGoalResponseTests.swift */; };
+		F49E8F4D25A1BB0800329027 /* DeleteGoalRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F4C25A1BB0800329027 /* DeleteGoalRequestTests.swift */; };
+		F49E8F5225A1BB1200329027 /* DeleteGoalResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F5125A1BB1200329027 /* DeleteGoalResponseTests.swift */; };
+		F49E8F5A25A1BB2400329027 /* GetGoalsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F5925A1BB2400329027 /* GetGoalsRequestTests.swift */; };
+		F49E8F5F25A1BB3100329027 /* GetGoalsResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F5E25A1BB3100329027 /* GetGoalsResponseTests.swift */; };
+		F49E8F6425A1BB3C00329027 /* UpdateGoalRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F6325A1BB3C00329027 /* UpdateGoalRequestTests.swift */; };
+		F49E8F6925A1BB4800329027 /* UpdateGoalResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8F6825A1BB4800329027 /* UpdateGoalResponseTests.swift */; };
 		F49F704C259F9C7100DDAF51 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F704B259F9C7100DDAF51 /* String+Extensions.swift */; };
 		F4AE2F42258E1996005E77AB /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */; };
 		F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4AE2F49258E1A7C005E77AB /* SnapKit */; };
@@ -274,6 +289,21 @@
 		F49E8E7D25A1A85B00329027 /* FacebookAuthManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthManagerTests.swift; sourceTree = "<group>"; };
 		F49E8E8225A1A86400329027 /* FirestoreManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManagerTests.swift; sourceTree = "<group>"; };
 		F49E8E8725A1A86C00329027 /* GoogleAuthManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthManagerTests.swift; sourceTree = "<group>"; };
+		F49E8EC025A1B5A700329027 /* BaseServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServiceTests.swift; sourceTree = "<group>"; };
+		F49E8ECA25A1B60900329027 /* GoalServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalServicesTests.swift; sourceTree = "<group>"; };
+		F49E8ED225A1B61300329027 /* UserServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServicesTests.swift; sourceTree = "<group>"; };
+		F49E8F2B25A1B99200329027 /* GetUserRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserRequestTests.swift; sourceTree = "<group>"; };
+		F49E8F3325A1B9E900329027 /* GetUserResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserResponseTests.swift; sourceTree = "<group>"; };
+		F49E8F3825A1BA1800329027 /* UpdateUserRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserRequestTests.swift; sourceTree = "<group>"; };
+		F49E8F3D25A1BA2400329027 /* UpdateUserResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserResponseTests.swift; sourceTree = "<group>"; };
+		F49E8F4225A1BAD700329027 /* CreateGoalRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalRequestTests.swift; sourceTree = "<group>"; };
+		F49E8F4725A1BAEA00329027 /* CreateGoalResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoalResponseTests.swift; sourceTree = "<group>"; };
+		F49E8F4C25A1BB0800329027 /* DeleteGoalRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGoalRequestTests.swift; sourceTree = "<group>"; };
+		F49E8F5125A1BB1200329027 /* DeleteGoalResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGoalResponseTests.swift; sourceTree = "<group>"; };
+		F49E8F5925A1BB2400329027 /* GetGoalsRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoalsRequestTests.swift; sourceTree = "<group>"; };
+		F49E8F5E25A1BB3100329027 /* GetGoalsResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoalsResponseTests.swift; sourceTree = "<group>"; };
+		F49E8F6325A1BB3C00329027 /* UpdateGoalRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateGoalRequestTests.swift; sourceTree = "<group>"; };
+		F49E8F6825A1BB4800329027 /* UpdateGoalResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateGoalResponseTests.swift; sourceTree = "<group>"; };
 		F49F704B259F9C7100DDAF51 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		F4AE2F30258E155F005E77AB /* Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Debug.plist"; sourceTree = "<group>"; };
 		F4AE2F31258E155F005E77AB /* Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Release.plist"; sourceTree = "<group>"; };
@@ -517,7 +547,7 @@
 			path = "Goal Detail";
 			sourceTree = "<group>";
 		};
-		F46F355F258E281D007CD3E4 /* Goals */ = {
+		F46F355F258E281D007CD3E4 /* Goal */ = {
 			isa = PBXGroup;
 			children = (
 				F46F3560258E282D007CD3E4 /* GoalServices.swift */,
@@ -526,7 +556,7 @@
 				F46F356A258E29B4007CD3E4 /* Get Goals */,
 				F400A460258E6AC80081CCD8 /* Update Goal */,
 			);
-			path = Goals;
+			path = Goal;
 			sourceTree = "<group>";
 		};
 		F46F356A258E29B4007CD3E4 /* Get Goals */ = {
@@ -592,7 +622,7 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F48E609B25A09C2700328CFE /* Extension Tests */ = {
+		F48E609B25A09C2700328CFE /* Extensions Tests */ = {
 			isa = PBXGroup;
 			children = (
 				F48E613C25A0B6D900328CFE /* Date+ExtensionsTests.swift */,
@@ -602,7 +632,7 @@
 				F48E60CB25A0AB2600328CFE /* UIColor+ExtensionsTests.swift */,
 				F48E609C25A09C4600328CFE /* UIView+ExtensionsTests.swift */,
 			);
-			path = "Extension Tests";
+			path = "Extensions Tests";
 			sourceTree = "<group>";
 		};
 		F497502E258E035E00259DAC = {
@@ -649,8 +679,9 @@
 		F4975050258E035F00259DAC /* mydayTests */ = {
 			isa = PBXGroup;
 			children = (
-				F49E8E6525A1A78E00329027 /* Manager Tests */,
-				F48E609B25A09C2700328CFE /* Extension Tests */,
+				F49E8EB625A1B58700329027 /* Services Tests */,
+				F49E8E6525A1A78E00329027 /* Managers Tests */,
+				F48E609B25A09C2700328CFE /* Extensions Tests */,
 				F458434D259F924C004856E3 /* Utilities Tests */,
 				F49E8DDE25A195C800329027 /* Supporting Files Tests */,
 				F48E5FDA25A04D0A00328CFE /* Supporting Files */,
@@ -711,7 +742,7 @@
 			isa = PBXGroup;
 			children = (
 				F46F3565258E2907007CD3E4 /* BaseService.swift */,
-				F46F355F258E281D007CD3E4 /* Goals */,
+				F46F355F258E281D007CD3E4 /* Goal */,
 				F4F72D6A259AE64700CFA3D0 /* User */,
 			);
 			path = Services;
@@ -790,7 +821,7 @@
 			path = "Constants Tests";
 			sourceTree = "<group>";
 		};
-		F49E8E6525A1A78E00329027 /* Manager Tests */ = {
+		F49E8E6525A1A78E00329027 /* Managers Tests */ = {
 			isa = PBXGroup;
 			children = (
 				F49E8E6625A1A7A400329027 /* AppleAuthManagerTests.swift */,
@@ -801,7 +832,93 @@
 				F49E8E8225A1A86400329027 /* FirestoreManagerTests.swift */,
 				F49E8E8725A1A86C00329027 /* GoogleAuthManagerTests.swift */,
 			);
-			path = "Manager Tests";
+			path = "Managers Tests";
+			sourceTree = "<group>";
+		};
+		F49E8EB625A1B58700329027 /* Services Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F49E8EC025A1B5A700329027 /* BaseServiceTests.swift */,
+				F49E8EC525A1B5D200329027 /* Goal Tests */,
+				F49E8EC925A1B5E700329027 /* User Tests */,
+			);
+			path = "Services Tests";
+			sourceTree = "<group>";
+		};
+		F49E8EC525A1B5D200329027 /* Goal Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F49E8ECA25A1B60900329027 /* GoalServicesTests.swift */,
+				F49E8F2525A1B93C00329027 /* Create Goal Tests */,
+				F49E8F2625A1B94800329027 /* Delete Goal Tests */,
+				F49E8F2725A1B95800329027 /* Get Goals Tests */,
+				F49E8F2825A1B96200329027 /* Update Goal Tests */,
+			);
+			path = "Goal Tests";
+			sourceTree = "<group>";
+		};
+		F49E8EC925A1B5E700329027 /* User Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F49E8ED225A1B61300329027 /* UserServicesTests.swift */,
+				F49E8F2925A1B96D00329027 /* Get User Tests */,
+				F49E8F2A25A1B97500329027 /* Update User Tests */,
+			);
+			path = "User Tests";
+			sourceTree = "<group>";
+		};
+		F49E8F2525A1B93C00329027 /* Create Goal Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F49E8F4225A1BAD700329027 /* CreateGoalRequestTests.swift */,
+				F49E8F4725A1BAEA00329027 /* CreateGoalResponseTests.swift */,
+			);
+			path = "Create Goal Tests";
+			sourceTree = "<group>";
+		};
+		F49E8F2625A1B94800329027 /* Delete Goal Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F49E8F4C25A1BB0800329027 /* DeleteGoalRequestTests.swift */,
+				F49E8F5125A1BB1200329027 /* DeleteGoalResponseTests.swift */,
+			);
+			path = "Delete Goal Tests";
+			sourceTree = "<group>";
+		};
+		F49E8F2725A1B95800329027 /* Get Goals Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F49E8F5925A1BB2400329027 /* GetGoalsRequestTests.swift */,
+				F49E8F5E25A1BB3100329027 /* GetGoalsResponseTests.swift */,
+			);
+			path = "Get Goals Tests";
+			sourceTree = "<group>";
+		};
+		F49E8F2825A1B96200329027 /* Update Goal Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F49E8F6325A1BB3C00329027 /* UpdateGoalRequestTests.swift */,
+				F49E8F6825A1BB4800329027 /* UpdateGoalResponseTests.swift */,
+			);
+			path = "Update Goal Tests";
+			sourceTree = "<group>";
+		};
+		F49E8F2925A1B96D00329027 /* Get User Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F49E8F2B25A1B99200329027 /* GetUserRequestTests.swift */,
+				F49E8F3325A1B9E900329027 /* GetUserResponseTests.swift */,
+			);
+			path = "Get User Tests";
+			sourceTree = "<group>";
+		};
+		F49E8F2A25A1B97500329027 /* Update User Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F49E8F3825A1BA1800329027 /* UpdateUserRequestTests.swift */,
+				F49E8F3D25A1BA2400329027 /* UpdateUserResponseTests.swift */,
+			);
+			path = "Update User Tests";
 			sourceTree = "<group>";
 		};
 		F49F704A259F9C4500DDAF51 /* Extensions */ = {
@@ -1319,17 +1436,32 @@
 			files = (
 				F48E607025A099CE00328CFE /* UtilityTests.swift in Sources */,
 				F458434F259F925E004856E3 /* ImageTests.swift in Sources */,
+				F49E8F6925A1BB4800329027 /* UpdateGoalResponseTests.swift in Sources */,
+				F49E8F4825A1BAEA00329027 /* CreateGoalResponseTests.swift in Sources */,
+				F49E8F3E25A1BA2400329027 /* UpdateUserResponseTests.swift in Sources */,
+				F49E8F5F25A1BB3100329027 /* GetGoalsResponseTests.swift in Sources */,
 				F49E8E7425A1A84700329027 /* AuthenticationManagerTests.swift in Sources */,
 				F49E8E7E25A1A85B00329027 /* FacebookAuthManagerTests.swift in Sources */,
+				F49E8ECB25A1B60900329027 /* GoalServicesTests.swift in Sources */,
+				F49E8F5A25A1BB2400329027 /* GetGoalsRequestTests.swift in Sources */,
+				F49E8F4325A1BAD700329027 /* CreateGoalRequestTests.swift in Sources */,
+				F49E8EC125A1B5A700329027 /* BaseServiceTests.swift in Sources */,
 				F48E613D25A0B6D900328CFE /* Date+ExtensionsTests.swift in Sources */,
 				F48E609D25A09C4600328CFE /* UIView+ExtensionsTests.swift in Sources */,
 				F49E8E6725A1A7A400329027 /* AppleAuthManagerTests.swift in Sources */,
 				F49E8DE025A195D900329027 /* AppDelegateTests.swift in Sources */,
+				F49E8ED325A1B61300329027 /* UserServicesTests.swift in Sources */,
 				F49E8E8825A1A86C00329027 /* GoogleAuthManagerTests.swift in Sources */,
 				F48E606B25A0985300328CFE /* ThemeTests.swift in Sources */,
 				F48E60D425A0AFE800328CFE /* String+ExtensionsTests.swift in Sources */,
+				F49E8F5225A1BB1200329027 /* DeleteGoalResponseTests.swift in Sources */,
 				F48E60CC25A0AB2600328CFE /* UIColor+ExtensionsTests.swift in Sources */,
+				F49E8F6425A1BB3C00329027 /* UpdateGoalRequestTests.swift in Sources */,
+				F49E8F3925A1BA1800329027 /* UpdateUserRequestTests.swift in Sources */,
+				F49E8F4D25A1BB0800329027 /* DeleteGoalRequestTests.swift in Sources */,
+				F49E8F2C25A1B99200329027 /* GetUserRequestTests.swift in Sources */,
 				F49E8E7925A1A85100329027 /* ExternalNavigationManagerTests.swift in Sources */,
+				F49E8F3425A1B9E900329027 /* GetUserResponseTests.swift in Sources */,
 				F49E8E8325A1A86400329027 /* FirestoreManagerTests.swift in Sources */,
 				F48E5FE625A04FA100328CFE /* ColorTests.swift in Sources */,
 				F49E8E6F25A1A83E00329027 /* AnalyticsManagerTests.swift in Sources */,
