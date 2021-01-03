@@ -1,0 +1,69 @@
+//
+//  GoogleAuthManager.swift
+//  myday
+//
+//  Created by Berat Cevik on 12/29/20.
+//
+
+// swiftlint:disable implicitly_unwrapped_optional
+
+import Firebase
+import GoogleSignIn
+
+protocol GoogleAuthManagerDelegate: AnyObject {
+    func googleSignInDidCancel()
+    func googleSignInDidSucceed()
+    func googleSignInDidFail(with error: Error)
+}
+
+class GoogleAuthManager: NSObject {
+    // MARK: - Properties
+    weak var delegate: GoogleAuthManagerDelegate?
+    
+    // MARK: Functions
+    func handleGoogleAuth(from controller: BaseViewController) {
+        AppDelegate.isGoogleSignIn = true
+        
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().presentingViewController = controller
+        GIDSignIn.sharedInstance().signIn()
+    }
+}
+
+// MARK: - Private Functions
+private extension GoogleAuthManager {
+    func handleFirebaseAuth(with user: GIDGoogleUser) {
+        guard let authentication = user.authentication else {
+            delegate?.googleSignInDidFail(with: GenericError.default)
+            return
+        }
+        
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+        AuthenticationManager.shared.authenticate(with: credential, authType: .google) { [weak self] error in
+            if let error = error {
+                self?.delegate?.googleSignInDidFail(with: error)
+                return
+            }
+            
+            self?.delegate?.googleSignInDidSucceed()
+        }
+    }
+}
+
+// MARK: - GIDSignInDelegate
+extension GoogleAuthManager: GIDSignInDelegate {
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error, let errorCode = GIDSignInErrorCode(rawValue: error._code) {
+            GIDSignIn.sharedInstance()?.signOut()
+            switch errorCode {
+            case .canceled:
+                delegate?.googleSignInDidCancel()
+            default:
+                delegate?.googleSignInDidFail(with: error)
+            }
+            return
+        }
+        
+        handleFirebaseAuth(with: user)
+    }
+}

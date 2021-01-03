@@ -1,0 +1,35 @@
+{
+  "configurations" : [
+    {
+      "id" : "25499125-8D80-40D0-A6B9-E48087A26A8B",
+      "name" : "English (US)",
+      "options" : {
+        "areLocalizationScreenshotsEnabled" : true,
+        "language" : "en",
+        "region" : "US"
+      }
+    },
+    {
+      "id" : "8C076949-0EE4-4B12-A38E-DDEAE4C58B9C",
+      "name" : "English (UK)",
+      "options" : {
+        "areLocalizationScreenshotsEnabled" : true,
+        "language" : "en-GB",
+        "region" : "GB"
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:myday.xcodeproj",
+        "identifier" : "F4975057258E035F00259DAC",
+        "name" : "mydayUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
