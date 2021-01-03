@@ -107,6 +107,7 @@
 		F49880CF258E1DD800C3EF2D /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880CE258E1DD800C3EF2D /* BaseNavigationController.swift */; };
 		F49880E1258E1ECE00C3EF2D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880E0258E1ECE00C3EF2D /* ApplicationCoordinator.swift */; };
 		F49E8DE025A195D900329027 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8DDF25A195D900329027 /* AppDelegateTests.swift */; };
+		F49E8DE925A1A38700329027 /* ConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8DE825A1A38700329027 /* ConstantsTests.swift */; };
 		F49F704C259F9C7100DDAF51 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F704B259F9C7100DDAF51 /* String+Extensions.swift */; };
 		F4AE2F42258E1996005E77AB /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */; };
 		F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4AE2F49258E1A7C005E77AB /* SnapKit */; };
@@ -258,6 +259,7 @@
 		F49880CE258E1DD800C3EF2D /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		F49880E0258E1ECE00C3EF2D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		F49E8DDF25A195D900329027 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
+		F49E8DE825A1A38700329027 /* ConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTests.swift; sourceTree = "<group>"; };
 		F49F704B259F9C7100DDAF51 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		F4AE2F30258E155F005E77AB /* Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Debug.plist"; sourceTree = "<group>"; };
 		F4AE2F31258E155F005E77AB /* Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Release.plist"; sourceTree = "<group>"; };
@@ -760,8 +762,17 @@
 			isa = PBXGroup;
 			children = (
 				F49E8DDF25A195D900329027 /* AppDelegateTests.swift */,
+				F49E8DE725A1A37900329027 /* Constants Tests */,
 			);
 			path = "Supporting Files Tests";
+			sourceTree = "<group>";
+		};
+		F49E8DE725A1A37900329027 /* Constants Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F49E8DE825A1A38700329027 /* ConstantsTests.swift */,
+			);
+			path = "Constants Tests";
 			sourceTree = "<group>";
 		};
 		F49F704A259F9C4500DDAF51 /* Extensions */ = {
@@ -1288,6 +1299,7 @@
 				F48E5FE625A04FA100328CFE /* ColorTests.swift in Sources */,
 				F48E610E25A0B2F200328CFE /* Encodable+Extensions.swift in Sources */,
 				F48E610325A0B23C00328CFE /* Notification+ExtensionsTests.swift in Sources */,
+				F49E8DE925A1A38700329027 /* ConstantsTests.swift in Sources */,
 				F48E603C25A05BC700328CFE /* ErrorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
