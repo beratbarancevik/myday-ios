@@ -63,6 +63,8 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         switch viewModel.settings[indexPath.section][indexPath.row] {
+        case .rate:
+            ExternalNavigationManager().openURL(Constants.Urls.appStoreUrl.rawValue)
         case .logOut:
             logOut()
         default:

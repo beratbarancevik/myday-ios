@@ -13,6 +13,7 @@ struct Goal: Codable {
     var target: Int?
     var achieved: Int?
     var color: String?
+    var created: String?
     
     private enum CodingKeys: String, CodingKey {
         case id
@@ -21,6 +22,7 @@ struct Goal: Codable {
         case target
         case achieved
         case color
+        case created
     }
     
     // MARK: - Init
@@ -32,15 +34,17 @@ struct Goal: Codable {
         target = try? container?.decode(Int.self, forKey: CodingKeys.target)
         achieved = try? container?.decode(Int.self, forKey: CodingKeys.achieved)
         color = try? container?.decode(String.self, forKey: CodingKeys.color)
+        created = try? container?.decode(String.self, forKey: CodingKeys.created)
     }
     
-    init(id: String? = nil, userId: String? = nil, title: String? = nil, target: Int? = nil, achieved: Int? = nil, color: String? = nil) {
+    init(id: String? = nil, userId: String? = nil, title: String? = nil, target: Int? = nil, achieved: Int? = nil, color: String? = nil, created: String? = nil) {
         self.id = id ?? ""
         self.userId = userId ?? AuthenticationManager.shared.userId
         self.title = title
         self.target = target
         self.achieved = achieved
         self.color = color ?? "green"
+        self.created = created
     }
     
     // MARK: - Functions

@@ -7,26 +7,34 @@
 
 class SettingsViewModel: BaseViewModel {
     // MARK: - Properties
-    var settings = [
-        [
-            SettingType.rate
-        ],
-        [
-            SettingType.share
-        ],
-        [
-            SettingType.feedback
-        ],
-        [
-            SettingType.privacy,
-            SettingType.terms
-        ],
-        [
-            SettingType.logOut,
-            SettingType.myData,
-            SettingType.deleteAccount
+    var settings = [[SettingType]]()
+    
+    // MARK: - Init
+    init() {
+        settings = [
+            [
+                SettingType.rate
+            ],
+//            [
+//                SettingType.share
+//            ],
+//            [
+//                SettingType.feedback
+//            ],
+//            [
+//                SettingType.privacy,
+//                SettingType.terms
+//            ]
         ]
-    ]
+        
+        if AuthenticationManager.shared.authState == .account {
+            settings.append([
+                SettingType.logOut,
+//                SettingType.myData,
+//                SettingType.deleteAccount
+            ])
+        }
+    }
 }
 
 enum SettingType: String, CaseIterable {
