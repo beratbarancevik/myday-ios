@@ -94,6 +94,7 @@
 		F48E60D425A0AFE800328CFE /* String+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48E60D325A0AFE800328CFE /* String+ExtensionsTests.swift */; };
 		F48E610325A0B23C00328CFE /* Notification+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48E610225A0B23C00328CFE /* Notification+ExtensionsTests.swift */; };
 		F48E610E25A0B2F200328CFE /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48E610D25A0B2F200328CFE /* Encodable+Extensions.swift */; };
+		F48E613D25A0B6D900328CFE /* Date+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48E613C25A0B6D900328CFE /* Date+ExtensionsTests.swift */; };
 		F497503B258E035E00259DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497503A258E035E00259DAC /* AppDelegate.swift */; };
 		F4975044258E035F00259DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4975043258E035F00259DAC /* Assets.xcassets */; };
 		F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4975045258E035F00259DAC /* LaunchScreen.storyboard */; };
@@ -238,6 +239,7 @@
 		F48E60D325A0AFE800328CFE /* String+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		F48E610225A0B23C00328CFE /* Notification+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		F48E610D25A0B2F200328CFE /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
+		F48E613C25A0B6D900328CFE /* Date+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		F4975037258E035E00259DAC /* My Day Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Day Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F497503A258E035E00259DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4975043258E035F00259DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -575,6 +577,7 @@
 		F48E609B25A09C2700328CFE /* Extension Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F48E613C25A0B6D900328CFE /* Date+ExtensionsTests.swift */,
 				F48E610D25A0B2F200328CFE /* Encodable+Extensions.swift */,
 				F48E610225A0B23C00328CFE /* Notification+ExtensionsTests.swift */,
 				F48E60D325A0AFE800328CFE /* String+ExtensionsTests.swift */,
@@ -1265,6 +1268,7 @@
 			files = (
 				F48E607025A099CE00328CFE /* UtilityTests.swift in Sources */,
 				F458434F259F925E004856E3 /* ImageTests.swift in Sources */,
+				F48E613D25A0B6D900328CFE /* Date+ExtensionsTests.swift in Sources */,
 				F48E609D25A09C4600328CFE /* UIView+ExtensionsTests.swift in Sources */,
 				F48E606B25A0985300328CFE /* ThemeTests.swift in Sources */,
 				F48E60D425A0AFE800328CFE /* String+ExtensionsTests.swift in Sources */,

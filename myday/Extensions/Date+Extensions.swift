@@ -10,16 +10,19 @@
 import Foundation
 
 extension Date {
-    // MARK: - Variables
-    var yesterday: Date {
+    // MARK: - Properties
+    static var yesterday: Date {
         return Date().dayBefore
     }
-    var tomorrow: Date {
+    
+    static var tomorrow: Date {
         return Date().dayAfter
     }
+    
     var dayBefore: Date {
         return Calendar.current.date(byAdding: .day, value: -1, to: self)!
     }
+    
     var dayAfter: Date {
         return Calendar.current.date(byAdding: .day, value: 1, to: self)!
     }
@@ -53,16 +56,6 @@ extension Date {
     }
     
     // MARK: - Functions
-    func getLast(number days: Int) -> [Date] {
-        var dates = [Date]()
-        var lastAddedDate = Date().tomorrow
-        for _ in 0..<days {
-            dates.insert(lastAddedDate.dayBefore, at: 0)
-            lastAddedDate = lastAddedDate.dayBefore
-        }
-        return dates
-    }
-    
     func dates(from startDate: Date) -> [Date] {
         var date = startDate
         var dates = [Date]()
@@ -89,6 +82,17 @@ extension Date {
     }
     
     // MARK: - Static Functions
+    static func getLast(number days: Int) -> [Date] {
+        var dates = [Date]()
+        var lastAddedDate = Date.tomorrow
+        for _ in 0..<days {
+            dates.insert(lastAddedDate.dayBefore, at: 0)
+            lastAddedDate = lastAddedDate.dayBefore
+        }
+        return dates
+    }
+    
+    /// result includes startDate but not endDate
     static func datesBetween(startDate: Date, endDate: Date) -> [Date] {
         var date = startDate
         var dates = [Date]()
@@ -101,7 +105,7 @@ extension Date {
     }
 }
 
-enum DayOfWeek: Int {
+enum DayOfWeek: Int, CaseIterable {
     case monday = 1
     case tuesday = 2
     case wednesday = 3
@@ -130,17 +134,8 @@ enum DayOfWeek: Int {
     }
     
     var initial: String {
-        switch self {
-        case .monday:
-            return "m"
-        case .tuesday, .thursday:
-            return "t"
-        case .wednesday:
-            return "w"
-        case .friday:
-            return "f"
-        case .saturday, .sunday:
-            return "s"
-        }
+        let initialLetter = self.name.first!
+        let initialString = String(initialLetter)
+        return initialString.lowercased()
     }
 }
