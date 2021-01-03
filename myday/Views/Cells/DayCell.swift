@@ -22,7 +22,7 @@ class DayCell: BaseCollectionCell {
             guard let viewModel = dayViewModel else { return }
             dayLabelCircleView.backgroundColor = viewModel.isSelected ? .red : .clear
             dayLabel.text = viewModel.dayText
-            dayOfWeekLabel.text = viewModel.dayOfWeek
+            dayOfWeekLabel.text = viewModel.dayOfWeekInitial
         }
     }
     

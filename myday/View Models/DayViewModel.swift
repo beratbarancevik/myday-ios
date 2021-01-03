@@ -20,7 +20,7 @@ class DayViewModel: BaseViewModel {
         return "\(date.day)"
     }
     
-    var dayOfWeek: String {
+    var dayOfWeekInitial: String {
         return date.dayOfWeekInitial
     }
     
