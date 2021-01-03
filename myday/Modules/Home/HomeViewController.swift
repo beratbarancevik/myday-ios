@@ -56,7 +56,7 @@ class HomeViewController: BaseViewController {
         addSubviews()
         addConstraints()
         addObservers()
-//        viewModel.getGoals()
+        viewModel.getGoals()
     }
 }
 
@@ -76,14 +76,24 @@ private extension HomeViewController {
     @objc func sortDidTap() {
 //        didTapSortSubject.send(true)
         
-        addChild(sortViewController)
-        bottomSheetContainerView.addSubview(sortViewController.view)
-        UIView.animate(withDuration: 2.0, delay: 0, options: [.curveEaseInOut]) { [weak self] in
-            guard let self = self else { return }
-            self.bottomSheetContainerView.snp.makeConstraints { maker in
-                maker.height.equalTo((48 * 6) + 24)
-            }
-        }
+//        addChild(sortViewController)
+//        bottomSheetContainerView.addSubview(sortViewController.view)
+//        UIView.animate(withDuration: 2.0, delay: 0, options: [.curveEaseInOut]) { [weak self] in
+//            guard let self = self else { return }
+//            self.bottomSheetContainerView.snp.makeConstraints { maker in
+//                maker.height.equalTo((48 * 6) + 24)
+//            }
+//        }
+        
+        let alertController = UIAlertController(title: "Sort", message: nil, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "A to Z", style: .default, handler: { [weak self] _ in
+            self?.viewModel.sort(by: .alphabeticAsc)
+        }))
+        alertController.addAction(UIAlertAction(title: "Z to A", style: .default, handler: { [weak self] _ in
+            self?.viewModel.sort(by: .alphabeticDesc)
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alertController, animated: true)
     }
     
     @objc func profileDidTap() {

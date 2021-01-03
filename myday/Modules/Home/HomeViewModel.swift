@@ -44,6 +44,35 @@ class HomeViewModel: BaseViewModel {
         GoalServices.deleteGoal(goal: goal) { _ in }
         goalsSubject.send(goals)
     }
+    
+    // MARK: - Sorting
+    func sort(by sortOption: SortOption) {
+        switch sortOption {
+        case .alphabeticAsc:
+            goals.sort {
+                guard let firstTitle = $0.title, let secondTitle = $1.title else {
+                    return false
+                }
+                if firstTitle < secondTitle {
+                    return true
+                }
+                return false
+            }
+        case .alphabeticDesc:
+            goals.sort {
+                guard let firstTitle = $0.title, let secondTitle = $1.title else {
+                    return false
+                }
+                if firstTitle > secondTitle {
+                    return true
+                }
+                return false
+            }
+        default:
+            return
+        }
+        goalsSubject.send(goals)
+    }
 }
 
 // MARK: - Private Functions
