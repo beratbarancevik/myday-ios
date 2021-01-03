@@ -108,6 +108,13 @@
 		F49880E1258E1ECE00C3EF2D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880E0258E1ECE00C3EF2D /* ApplicationCoordinator.swift */; };
 		F49E8DE025A195D900329027 /* AppDelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8DDF25A195D900329027 /* AppDelegateTests.swift */; };
 		F49E8DE925A1A38700329027 /* ConstantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8DE825A1A38700329027 /* ConstantsTests.swift */; };
+		F49E8E6725A1A7A400329027 /* AppleAuthManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8E6625A1A7A400329027 /* AppleAuthManagerTests.swift */; };
+		F49E8E6F25A1A83E00329027 /* AnalyticsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8E6E25A1A83E00329027 /* AnalyticsManagerTests.swift */; };
+		F49E8E7425A1A84700329027 /* AuthenticationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8E7325A1A84700329027 /* AuthenticationManagerTests.swift */; };
+		F49E8E7925A1A85100329027 /* ExternalNavigationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8E7825A1A85100329027 /* ExternalNavigationManagerTests.swift */; };
+		F49E8E7E25A1A85B00329027 /* FacebookAuthManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8E7D25A1A85B00329027 /* FacebookAuthManagerTests.swift */; };
+		F49E8E8325A1A86400329027 /* FirestoreManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8E8225A1A86400329027 /* FirestoreManagerTests.swift */; };
+		F49E8E8825A1A86C00329027 /* GoogleAuthManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8E8725A1A86C00329027 /* GoogleAuthManagerTests.swift */; };
 		F49F704C259F9C7100DDAF51 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F704B259F9C7100DDAF51 /* String+Extensions.swift */; };
 		F4AE2F42258E1996005E77AB /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */; };
 		F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4AE2F49258E1A7C005E77AB /* SnapKit */; };
@@ -260,6 +267,13 @@
 		F49880E0258E1ECE00C3EF2D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		F49E8DDF25A195D900329027 /* AppDelegateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateTests.swift; sourceTree = "<group>"; };
 		F49E8DE825A1A38700329027 /* ConstantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstantsTests.swift; sourceTree = "<group>"; };
+		F49E8E6625A1A7A400329027 /* AppleAuthManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthManagerTests.swift; sourceTree = "<group>"; };
+		F49E8E6E25A1A83E00329027 /* AnalyticsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManagerTests.swift; sourceTree = "<group>"; };
+		F49E8E7325A1A84700329027 /* AuthenticationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManagerTests.swift; sourceTree = "<group>"; };
+		F49E8E7825A1A85100329027 /* ExternalNavigationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalNavigationManagerTests.swift; sourceTree = "<group>"; };
+		F49E8E7D25A1A85B00329027 /* FacebookAuthManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthManagerTests.swift; sourceTree = "<group>"; };
+		F49E8E8225A1A86400329027 /* FirestoreManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManagerTests.swift; sourceTree = "<group>"; };
+		F49E8E8725A1A86C00329027 /* GoogleAuthManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthManagerTests.swift; sourceTree = "<group>"; };
 		F49F704B259F9C7100DDAF51 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		F4AE2F30258E155F005E77AB /* Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Debug.plist"; sourceTree = "<group>"; };
 		F4AE2F31258E155F005E77AB /* Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Release.plist"; sourceTree = "<group>"; };
@@ -635,6 +649,7 @@
 		F4975050258E035F00259DAC /* mydayTests */ = {
 			isa = PBXGroup;
 			children = (
+				F49E8E6525A1A78E00329027 /* Manager Tests */,
 				F48E609B25A09C2700328CFE /* Extension Tests */,
 				F458434D259F924C004856E3 /* Utilities Tests */,
 				F49E8DDE25A195C800329027 /* Supporting Files Tests */,
@@ -773,6 +788,20 @@
 				F49E8DE825A1A38700329027 /* ConstantsTests.swift */,
 			);
 			path = "Constants Tests";
+			sourceTree = "<group>";
+		};
+		F49E8E6525A1A78E00329027 /* Manager Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F49E8E6625A1A7A400329027 /* AppleAuthManagerTests.swift */,
+				F49E8E6E25A1A83E00329027 /* AnalyticsManagerTests.swift */,
+				F49E8E7325A1A84700329027 /* AuthenticationManagerTests.swift */,
+				F49E8E7825A1A85100329027 /* ExternalNavigationManagerTests.swift */,
+				F49E8E7D25A1A85B00329027 /* FacebookAuthManagerTests.swift */,
+				F49E8E8225A1A86400329027 /* FirestoreManagerTests.swift */,
+				F49E8E8725A1A86C00329027 /* GoogleAuthManagerTests.swift */,
+			);
+			path = "Manager Tests";
 			sourceTree = "<group>";
 		};
 		F49F704A259F9C4500DDAF51 /* Extensions */ = {
@@ -1290,13 +1319,20 @@
 			files = (
 				F48E607025A099CE00328CFE /* UtilityTests.swift in Sources */,
 				F458434F259F925E004856E3 /* ImageTests.swift in Sources */,
+				F49E8E7425A1A84700329027 /* AuthenticationManagerTests.swift in Sources */,
+				F49E8E7E25A1A85B00329027 /* FacebookAuthManagerTests.swift in Sources */,
 				F48E613D25A0B6D900328CFE /* Date+ExtensionsTests.swift in Sources */,
 				F48E609D25A09C4600328CFE /* UIView+ExtensionsTests.swift in Sources */,
+				F49E8E6725A1A7A400329027 /* AppleAuthManagerTests.swift in Sources */,
 				F49E8DE025A195D900329027 /* AppDelegateTests.swift in Sources */,
+				F49E8E8825A1A86C00329027 /* GoogleAuthManagerTests.swift in Sources */,
 				F48E606B25A0985300328CFE /* ThemeTests.swift in Sources */,
 				F48E60D425A0AFE800328CFE /* String+ExtensionsTests.swift in Sources */,
 				F48E60CC25A0AB2600328CFE /* UIColor+ExtensionsTests.swift in Sources */,
+				F49E8E7925A1A85100329027 /* ExternalNavigationManagerTests.swift in Sources */,
+				F49E8E8325A1A86400329027 /* FirestoreManagerTests.swift in Sources */,
 				F48E5FE625A04FA100328CFE /* ColorTests.swift in Sources */,
+				F49E8E6F25A1A83E00329027 /* AnalyticsManagerTests.swift in Sources */,
 				F48E610E25A0B2F200328CFE /* Encodable+Extensions.swift in Sources */,
 				F48E610325A0B23C00328CFE /* Notification+ExtensionsTests.swift in Sources */,
 				F49E8DE925A1A38700329027 /* ConstantsTests.swift in Sources */,

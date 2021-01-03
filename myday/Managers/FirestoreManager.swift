@@ -10,13 +10,15 @@ import FirebaseFirestoreSwift
 
 class FirestoreManager {
     // MARK: - Properties
-    static let db = Firestore.firestore()
+    static let shared = FirestoreManager()
+    
+    private let db = Firestore.firestore()
     
     // MARK: - Init
     private init() {}
     
     // MARK: - Requests
-    static func createDocument<Req: CreateRequest>(request: Req, completion: @escaping (Result<Void, Error>) -> Void) {
+    func createDocument<Req: CreateRequest>(request: Req, completion: @escaping (Result<Void, Error>) -> Void) {
         var body = request.body
         body[FirestoreField.created.rawValue] = FieldValue.serverTimestamp()
         body[FirestoreField.date.rawValue] = FieldValue.serverTimestamp()
@@ -30,7 +32,7 @@ class FirestoreManager {
         }
     }
     
-    static func deleteDocument<Req: DeleteRequest>(request: Req, completion: @escaping (Result<Void, Error>) -> Void) {
+    func deleteDocument<Req: DeleteRequest>(request: Req, completion: @escaping (Result<Void, Error>) -> Void) {
         db.collection(request.collection.rawValue).document(request.id).delete { error in
             if let error = error {
                 completion(Result.failure(error))
@@ -40,7 +42,7 @@ class FirestoreManager {
         }
     }
     
-    static func getSingleDocument<Req: SingleGetRequest, Res>(_ request: Req, completion: @escaping (Result<Res, Error>) -> Void) {
+    func getSingleDocument<Req: SingleGetRequest, Res>(_ request: Req, completion: @escaping (Result<Res, Error>) -> Void) {
         db.collection(request.collection.rawValue).document(request.id).getDocument { snapshot, error in
             if let error = error {
                 completion(Result.failure(error))
@@ -63,7 +65,7 @@ class FirestoreManager {
         }
     }
     
-    static func getDocuments<Req: GetRequest, Res>(_ request: Req, completion: @escaping (Result<Res, Error>) -> Void) {
+    func getDocuments<Req: GetRequest, Res>(_ request: Req, completion: @escaping (Result<Res, Error>) -> Void) {
         db.collection(request.collection.rawValue)
             .whereField(FirestoreField.userId.rawValue, isEqualTo: request.userId)
 //            .whereField(FirestoreField.date.rawValue, isLessThan: Date().tomorrow)
@@ -90,7 +92,7 @@ class FirestoreManager {
         }
     }
     
-    static func updateDocument<Req: UpdateRequest>(request: Req, completion: @escaping (Result<Void, Error>) -> Void) {
+    func updateDocument<Req: UpdateRequest>(request: Req, completion: @escaping (Result<Void, Error>) -> Void) {
         var body = request.body
         body[FirestoreField.updated.rawValue] = FieldValue.serverTimestamp()
         db.collection(request.collection.rawValue).document(request.id).setData(body, merge: true) { error in

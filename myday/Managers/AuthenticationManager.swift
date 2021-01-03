@@ -154,7 +154,7 @@ enum AuthState: CaseIterable {
 }
 
 // MARK: - Auth Type
-enum AuthType: String {
+enum AuthType: String, CaseIterable {
     case anonymous
     case apple
     case facebook

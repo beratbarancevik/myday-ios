@@ -11,10 +11,10 @@ class UserServices {
     
     // MARK: - Requests
     static func getUser(id: String, completion: @escaping (Result<GetUserResponse, Error>) -> Void) {
-        FirestoreManager.getSingleDocument(GetUserRequest(id: id), completion: completion)
+        FirestoreManager.shared.getSingleDocument(GetUserRequest(id: id), completion: completion)
     }
     
     static func updateUser(user: User, completion: @escaping (Result<Void, Error>) -> Void) {
-        FirestoreManager.updateDocument(request: UpdateUserRequest(user: user), completion: completion)
+        FirestoreManager.shared.updateDocument(request: UpdateUserRequest(user: user), completion: completion)
     }
 }
