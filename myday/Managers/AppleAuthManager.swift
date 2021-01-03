@@ -82,7 +82,7 @@ private extension AppleAuthManager {
         }
         
         let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString, rawNonce: nonce)
-        AuthenticationManager.shared.authenticate(with: credential, authType: .apple) { [weak self] error in
+        AuthenticationManager.shared.authenticate(with: credential, authType: .apple, shouldDirectAppleSignIn: appleIDCredential.email?.isEmpty ?? true) { [weak self] error in
             if let error = error {
                 self?.delegate?.appleSignInDidFail(with: error)
                 return

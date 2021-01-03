@@ -42,9 +42,16 @@ class AuthenticationManager {
     }
     
     // MARK: - Account Linking
-    func authenticate(with credential: AuthCredential, authType: AuthType, completion: @escaping (Error?) -> Void) {
+    func authenticate(with credential: AuthCredential, authType: AuthType, shouldDirectAppleSignIn: Bool = false, completion: @escaping (Error?) -> Void) {
         guard let user = Auth.auth().currentUser else {
             completion(GenericError.default)
+            return
+        }
+        
+        if shouldDirectAppleSignIn {
+            signIn(with: credential, authType: authType) { error in
+                completion(error)
+            }
             return
         }
         
