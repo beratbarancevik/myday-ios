@@ -13,7 +13,7 @@ class StringExtensionsTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        sut = "app_name"
+        sut = "application_name"
     }
     
     override func tearDown() {
@@ -22,10 +22,10 @@ class StringExtensionsTests: XCTestCase {
     }
     
     func testLocalized() {
-        XCTAssertEqual(sut.localized, "app_name")
+        XCTAssertEqual(sut.localized, "My Day")
     }
     
     func testFirstLetterCapitalized() {
-        XCTAssertEqual(sut.firstLetterCapitalized, "App_name")
+        XCTAssertEqual(sut.firstLetterCapitalized, "Application_name")
     }
 }

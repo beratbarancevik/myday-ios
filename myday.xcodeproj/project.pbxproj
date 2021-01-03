@@ -58,6 +58,8 @@
 		F41F2DE025951E1C004C0C54 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */; };
 		F41FDCFF259C39890005502F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41FDCFE259C39890005502F /* ProfileHeaderView.swift */; };
 		F41FDD07259C39F50005502F /* BaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41FDD06259C39F50005502F /* BaseCollectionReusableView.swift */; };
+		F4544BAF25A1EE4B00E86EC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4544BB125A1EE4B00E86EC0 /* Localizable.strings */; };
+		F4544BB525A1EE4E00E86EC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4544BB725A1EE4E00E86EC0 /* InfoPlist.strings */; };
 		F458434F259F925E004856E3 /* ImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458434E259F925E004856E3 /* ImageTests.swift */; };
 		F45843B3259F9535004856E3 /* SplashControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45843B2259F9535004856E3 /* SplashControllerUITests.swift */; };
 		F4584B9725A1DE01008D06E8 /* DayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4584B9625A1DE01008D06E8 /* DayViewModelTests.swift */; };
@@ -230,6 +232,10 @@
 		F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		F41FDCFE259C39890005502F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		F41FDD06259C39F50005502F /* BaseCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionReusableView.swift; sourceTree = "<group>"; };
+		F4544BB025A1EE4B00E86EC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F4544BB625A1EE4E00E86EC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F4544BBB25A1EE6100E86EC0 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		F4544BBF25A1EE6100E86EC0 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F458434E259F925E004856E3 /* ImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTests.swift; sourceTree = "<group>"; };
 		F45843B2259F9535004856E3 /* SplashControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashControllerUITests.swift; sourceTree = "<group>"; };
 		F4584B9625A1DE01008D06E8 /* DayViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModelTests.swift; sourceTree = "<group>"; };
@@ -507,9 +513,11 @@
 			isa = PBXGroup;
 			children = (
 				F497503A258E035E00259DAC /* AppDelegate.swift */,
-				F4975045258E035F00259DAC /* LaunchScreen.storyboard */,
 				F4AE2F30258E155F005E77AB /* Info-Debug.plist */,
 				F4AE2F31258E155F005E77AB /* Info-Release.plist */,
+				F4544BB725A1EE4E00E86EC0 /* InfoPlist.strings */,
+				F4975045258E035F00259DAC /* LaunchScreen.storyboard */,
+				F4544BB125A1EE4B00E86EC0 /* Localizable.strings */,
 				F444B7F3258E151D00AEFC85 /* Assets */,
 				F46F3575258E2B4D007CD3E4 /* Constants */,
 				F4AE2F40258E197D005E77AB /* Keys */,
@@ -545,6 +553,21 @@
 				F4584B9625A1DE01008D06E8 /* DayViewModelTests.swift */,
 			);
 			path = "View Model Tests";
+			sourceTree = "<group>";
+		};
+		F4584B9B25A1E198008D06E8 /* Module Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F4584B9C25A1E1A3008D06E8 /* Application Tests */,
+			);
+			path = "Module Tests";
+			sourceTree = "<group>";
+		};
+		F4584B9C25A1E1A3008D06E8 /* Application Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Application Tests";
 			sourceTree = "<group>";
 		};
 		F469CA042599964100A35FFB /* View Models */ = {
@@ -699,6 +722,7 @@
 			children = (
 				F49E8F9425A1C3A200329027 /* Models Tests */,
 				F4584B8C25A1DA02008D06E8 /* View Model Tests */,
+				F4584B9B25A1E198008D06E8 /* Module Tests */,
 				F49E8EB625A1B58700329027 /* Services Tests */,
 				F49E8E6525A1A78E00329027 /* Managers Tests */,
 				F48E609B25A09C2700328CFE /* Extensions Tests */,
@@ -1126,6 +1150,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"en-GB",
 			);
 			mainGroup = F497502E258E035E00259DAC;
 			packageReferences = (
@@ -1150,6 +1175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F400A4A8258E6DE00081CCD8 /* Montserrat-Light.ttf in Resources */,
+				F4544BB525A1EE4E00E86EC0 /* InfoPlist.strings in Resources */,
 				F400A4A3258E6DE00081CCD8 /* Montserrat-Thin.ttf in Resources */,
 				F400A4A6258E6DE00081CCD8 /* Montserrat-Black.ttf in Resources */,
 				F400A4A4258E6DE00081CCD8 /* Montserrat-ExtraLight.ttf in Resources */,
@@ -1159,6 +1185,7 @@
 				F400A4AA258E6DE00081CCD8 /* Montserrat-SemiBold.ttf in Resources */,
 				F400A495258E6D310081CCD8 /* Colors.xcassets in Resources */,
 				F400A4AB258E6DE00081CCD8 /* Montserrat-ExtraBold.ttf in Resources */,
+				F4544BAF25A1EE4B00E86EC0 /* Localizable.strings in Resources */,
 				F4975044258E035F00259DAC /* Assets.xcassets in Resources */,
 				F400A4A7258E6DE00081CCD8 /* Montserrat-Medium.ttf in Resources */,
 				F400A4A9258E6DE00081CCD8 /* Montserrat-Bold.ttf in Resources */,
@@ -1541,6 +1568,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F4544BB125A1EE4B00E86EC0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4544BB025A1EE4B00E86EC0 /* en */,
+				F4544BBF25A1EE6100E86EC0 /* en-GB */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F4544BB725A1EE4E00E86EC0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4544BB625A1EE4E00E86EC0 /* en */,
+				F4544BBB25A1EE6100E86EC0 /* en-GB */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		F4975045258E035F00259DAC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1556,6 +1601,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1617,6 +1663,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  myday
+
+  Created by Berat Cevik on 1/3/21.
+  
+*/
+
+// MARK: - Application
+application_name = "My Day";
