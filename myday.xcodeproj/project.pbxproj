@@ -46,7 +46,6 @@
 		F401589825945F3D006F3CF4 /* HorizontalProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401589725945F3D006F3CF4 /* HorizontalProgressBar.swift */; };
 		F40A03AF259B89CD00BE6F5D /* FacebookAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A03AE259B89CD00BE6F5D /* FacebookAuthManager.swift */; };
 		F40A03B8259B95D900BE6F5D /* ActiveLabel in Frameworks */ = {isa = PBXBuildFile; productRef = F40A03B7259B95D900BE6F5D /* ActiveLabel */; };
-		F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = F41845212593B3DA00E7F0A0 /* SwiftMessages */; };
 		F41845272593BE7D00E7F0A0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845262593BE7D00E7F0A0 /* Error.swift */; };
 		F41845302593D5BF00E7F0A0 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F418452F2593D5BF00E7F0A0 /* CalendarViewController.swift */; };
 		F41845352593D5CB00E7F0A0 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845342593D5CB00E7F0A0 /* CalendarViewModel.swift */; };
@@ -140,6 +139,7 @@
 		F49F704C259F9C7100DDAF51 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F704B259F9C7100DDAF51 /* String+Extensions.swift */; };
 		F4AE2F42258E1996005E77AB /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */; };
 		F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4AE2F49258E1A7C005E77AB /* SnapKit */; };
+		F4B1F48825A61883005E8B2B /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = F4B1F48725A61883005E8B2B /* SwiftMessages */; };
 		F4B6A994259F0DC10085B08E /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B6A993259F0DC10085B08E /* SortViewController.swift */; };
 		F4B6A99C259F0DCA0085B08E /* SortCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B6A99B259F0DCA0085B08E /* SortCoordinator.swift */; };
 		F4B6A9A1259F0DD70085B08E /* SortViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B6A9A0259F0DD70085B08E /* SortViewModel.swift */; };
@@ -350,8 +350,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */,
-				F41845222593B3DA00E7F0A0 /* SwiftMessages in Frameworks */,
 				F40A03B8259B95D900BE6F5D /* ActiveLabel in Frameworks */,
+				F4B1F48825A61883005E8B2B /* SwiftMessages in Frameworks */,
 				609BF1661A630C98B3274BF6 /* Pods_myday.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1072,8 +1072,8 @@
 			name = myday;
 			packageProductDependencies = (
 				F4AE2F49258E1A7C005E77AB /* SnapKit */,
-				F41845212593B3DA00E7F0A0 /* SwiftMessages */,
 				F40A03B7259B95D900BE6F5D /* ActiveLabel */,
+				F4B1F48725A61883005E8B2B /* SwiftMessages */,
 			);
 			productName = myday;
 			productReference = F4975037258E035E00259DAC /* My Day Dev.app */;
@@ -1155,8 +1155,8 @@
 			mainGroup = F497502E258E035E00259DAC;
 			packageReferences = (
 				F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */,
-				F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 				F40A03B6259B95D900BE6F5D /* XCRemoteSwiftPackageReference "ActiveLabel" */,
+				F4B1F48625A61883005E8B2B /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 			);
 			productRefGroup = F4975038258E035E00259DAC /* Products */;
 			projectDirPath = "";
@@ -1723,7 +1723,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = myday/myday.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 17;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3978A7VN36;
 				INFOPLIST_FILE = "$(SRCROOT)/myday/Supporting Files/Info-Debug.plist";
@@ -1750,7 +1750,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = myday/myday.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = 3978A7VN36;
 				INFOPLIST_FILE = "$(SRCROOT)/myday/Supporting Files/Info-Release.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1907,20 +1907,20 @@
 				version = 1.1.5;
 			};
 		};
-		F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
-			requirement = {
-				kind = exactVersion;
-				version = 8.0.5;
-			};
-		};
 		F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
 				kind = exactVersion;
 				version = 5.0.1;
+			};
+		};
+		F4B1F48625A61883005E8B2B /* XCRemoteSwiftPackageReference "SwiftMessages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
+			requirement = {
+				kind = exactVersion;
+				version = 8.0.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1931,15 +1931,15 @@
 			package = F40A03B6259B95D900BE6F5D /* XCRemoteSwiftPackageReference "ActiveLabel" */;
 			productName = ActiveLabel;
 		};
-		F41845212593B3DA00E7F0A0 /* SwiftMessages */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F41845202593B3DA00E7F0A0 /* XCRemoteSwiftPackageReference "SwiftMessages" */;
-			productName = SwiftMessages;
-		};
 		F4AE2F49258E1A7C005E77AB /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F4AE2F48258E1A7C005E77AB /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		F4B1F48725A61883005E8B2B /* SwiftMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4B1F48625A61883005E8B2B /* XCRemoteSwiftPackageReference "SwiftMessages" */;
+			productName = SwiftMessages;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
