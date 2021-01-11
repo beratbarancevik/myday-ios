@@ -8,6 +8,7 @@
 import FBSDKCoreKit
 import Firebase
 import GoogleSignIn
+import Kingfisher
 import SnapKit
 import UIKit
 
