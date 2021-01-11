@@ -97,6 +97,9 @@
 		F48E610325A0B23C00328CFE /* Notification+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48E610225A0B23C00328CFE /* Notification+ExtensionsTests.swift */; };
 		F48E610E25A0B2F200328CFE /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48E610D25A0B2F200328CFE /* Encodable+Extensions.swift */; };
 		F48E613D25A0B6D900328CFE /* Date+ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48E613C25A0B6D900328CFE /* Date+ExtensionsTests.swift */; };
+		F48E969E25ACB07A00784DC0 /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48E969D25ACB07A00784DC0 /* TabCoordinator.swift */; };
+		F48E96F425ACB98A00784DC0 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48E96F325ACB98A00784DC0 /* TabController.swift */; };
+		F48E96F925ACBA3F00784DC0 /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48E96F825ACBA3F00784DC0 /* TabViewModel.swift */; };
 		F497503B258E035E00259DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497503A258E035E00259DAC /* AppDelegate.swift */; };
 		F4975044258E035F00259DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4975043258E035F00259DAC /* Assets.xcassets */; };
 		F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4975045258E035F00259DAC /* LaunchScreen.storyboard */; };
@@ -277,6 +280,9 @@
 		F48E610225A0B23C00328CFE /* Notification+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+ExtensionsTests.swift"; sourceTree = "<group>"; };
 		F48E610D25A0B2F200328CFE /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
 		F48E613C25A0B6D900328CFE /* Date+ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ExtensionsTests.swift"; sourceTree = "<group>"; };
+		F48E969D25ACB07A00784DC0 /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
+		F48E96F325ACB98A00784DC0 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		F48E96F825ACBA3F00784DC0 /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
 		F4975037258E035E00259DAC /* My Day Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Day Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F497503A258E035E00259DAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4975043258E035F00259DAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -678,6 +684,16 @@
 			path = "Extensions Tests";
 			sourceTree = "<group>";
 		};
+		F48E969C25ACB06A00784DC0 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				F48E969D25ACB07A00784DC0 /* TabCoordinator.swift */,
+				F48E96F325ACB98A00784DC0 /* TabController.swift */,
+				F48E96F825ACBA3F00784DC0 /* TabViewModel.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
 		F497502E258E035E00259DAC = {
 			isa = PBXGroup;
 			children = (
@@ -818,6 +834,7 @@
 				F400A43A258E662E0081CCD8 /* Settings */,
 				F4B6A992259F0DB10085B08E /* Sort */,
 				F400A42A258E65580081CCD8 /* Splash */,
+				F48E969C25ACB06A00784DC0 /* Tab */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1414,6 +1431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F41845302593D5BF00E7F0A0 /* CalendarViewController.swift in Sources */,
+				F48E969E25ACB07A00784DC0 /* TabCoordinator.swift in Sources */,
 				F484BBD825950E180021E7DD /* ColorPickerViewModel.swift in Sources */,
 				F49880CF258E1DD800C3EF2D /* BaseNavigationController.swift in Sources */,
 				F400A43C258E663D0081CCD8 /* SettingsCoordinator.swift in Sources */,
@@ -1485,6 +1503,7 @@
 				F484BBD325950E0B0021E7DD /* ColorPickerViewController.swift in Sources */,
 				F49880CA258E1DC500C3EF2D /* BaseCoordinator.swift in Sources */,
 				F4F6640B2595A6560037F9E9 /* BaseTableHeaderFooterView.swift in Sources */,
+				F48E96F925ACBA3F00784DC0 /* TabViewModel.swift in Sources */,
 				F484BB942594F6E10021E7DD /* ProfileViewController.swift in Sources */,
 				F4F72D6C259AE65600CFA3D0 /* UserServices.swift in Sources */,
 				F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */,
@@ -1493,6 +1512,7 @@
 				F484BBB2259502090021E7DD /* AuthenticationViewController.swift in Sources */,
 				F400A45C258E699E0081CCD8 /* Encodable+Extensions.swift in Sources */,
 				F418456A2593DF4E00E7F0A0 /* BaseCollectionCell.swift in Sources */,
+				F48E96F425ACB98A00784DC0 /* TabController.swift in Sources */,
 				F400A449258E66520081CCD8 /* SettingsViewModel.swift in Sources */,
 				F49880BA258E1DA800C3EF2D /* HomeViewModel.swift in Sources */,
 				F4D5DEF6259F5DE400495AE2 /* SortOptionCell.swift in Sources */,

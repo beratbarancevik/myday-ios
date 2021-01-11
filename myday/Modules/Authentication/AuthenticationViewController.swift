@@ -204,7 +204,7 @@ extension AuthenticationViewController: AppleAuthManagerDelegate {
     func appleSignInDidCancel() {}
     
     func appleSignInDidSucceed() {
-        NotificationCenter.default.post(name: .didSignIn, object: nil)
+        
     }
     
     func appleSignInDidFail(with error: Error) {
@@ -217,7 +217,7 @@ extension AuthenticationViewController: FacebookAuthManagerDelegate {
     func facebookSignInDidCancel() {}
     
     func facebookSignInDidSucceed() {
-        NotificationCenter.default.post(name: .didSignIn, object: nil)
+        
     }
     
     func facebookSignInDidFail(with error: Error) {
@@ -230,7 +230,7 @@ extension AuthenticationViewController: GoogleAuthManagerDelegate {
     func googleSignInDidCancel() {}
     
     func googleSignInDidSucceed() {
-        NotificationCenter.default.post(name: .didSignIn, object: nil)
+        
     }
     
     func googleSignInDidFail(with error: Error) {

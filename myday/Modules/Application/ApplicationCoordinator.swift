@@ -10,19 +10,15 @@ import UIKit
 
 class ApplicationCoordinator: BaseCoordinator {
     // MARK: - Properties
-    var navigationController: BaseNavigationController
-    
     private let window: UIWindow
-    private let homeCoordinator: HomeCoordinator
     private var splashCoordinator: SplashCoordinator?
+    private var tabCoordinator: TabCoordinator?
     
     private var cancellable: AnyCancellable?
     
     // MARK: - Init
     init(window: UIWindow) {
         self.window = window
-        navigationController = BaseNavigationController()
-        homeCoordinator = HomeCoordinator(navigationController: navigationController)
         splashCoordinator = SplashCoordinator(window: window)
         addAuthenticationObserver()
     }
@@ -34,8 +30,8 @@ class ApplicationCoordinator: BaseCoordinator {
     }
     
     func showHome() {
-        window.rootViewController = navigationController
-        homeCoordinator.start()
+        tabCoordinator = TabCoordinator(window: window)
+        tabCoordinator?.start()
         splashCoordinator = nil
     }
 }

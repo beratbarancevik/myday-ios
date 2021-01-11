@@ -9,7 +9,6 @@ import Combine
 
 class ProfileCoordinator: BaseCoordinator {
     // MARK: - Properties
-    private var presentingNavigationController: BaseNavigationController
     var navigationController: BaseNavigationController
     
     private let profileViewController: ProfileViewController
@@ -20,8 +19,7 @@ class ProfileCoordinator: BaseCoordinator {
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Init
-    init(presentingNavigationController: BaseNavigationController, navigationController: BaseNavigationController) {
-        self.presentingNavigationController = presentingNavigationController
+    init(navigationController: BaseNavigationController) {
         self.navigationController = navigationController
         profileViewModel = ProfileViewModel()
         profileViewController = ProfileViewController(viewModel: profileViewModel)
@@ -31,7 +29,6 @@ class ProfileCoordinator: BaseCoordinator {
     // MARK: - Functions
     func start() {
         navigationController.pushViewController(profileViewController, animated: false)
-        presentingNavigationController.present(navigationController, animated: true)
     }
     
     func replace() {

@@ -93,7 +93,6 @@ class AuthenticationManager {
             try Auth.auth().signOut()
             LoginManager().logOut()
             GIDSignIn.sharedInstance()?.signOut()
-            NotificationCenter.default.post(name: .didLogOut, object: nil)
         } catch {
             Crashlytics.crashlytics().record(error: error)
         }

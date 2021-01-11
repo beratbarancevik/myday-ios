@@ -17,6 +17,7 @@ enum Image: String, CaseIterable {
     case deleteAccount = "delete-account"
     case email
     case facebook
+    case goals
     case google
     case logo
     case logOut = "log-out"

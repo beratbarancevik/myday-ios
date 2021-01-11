@@ -14,7 +14,7 @@ class HomeViewController: BaseViewController {
     private var sortViewController: SortViewController
     
     private let sortBarButtonItem = UIBarButtonItem(image: Image.sort.image, style: .plain, target: nil, action: nil)
-    private let profileBarButtonItem = UIBarButtonItem(image: Image.profile.image, style: .plain, target: nil, action: nil)
+    private let addBarButtonItem = UIBarButtonItem(image: Image.add.image, style: .plain, target: nil, action: nil)
     private let goalsTableView: UITableView = {
         $0.style(Theme.Table.primary)
         $0.register(GoalCell.self, forCellReuseIdentifier: GoalCell.identifier)
@@ -23,17 +23,16 @@ class HomeViewController: BaseViewController {
     }(UITableView())
     private let refreshControl = UIRefreshControl().style(Theme.RefreshControl.primary)
     private let zeroView = ZeroView(labelText: "You don't have any goals. Let's start by adding your first one.", buttonTitle: "Add Subscription")
-    private let addButton: UIButton = {
-        $0.setImage(Image.addLarge.image, for: .normal)
-        $0.tintColor = .systemBackground
-        $0.backgroundColor = .label
-        $0.layer.cornerRadius = 24
-        return $0
-    }(UIButton(type: .system))
+//    private let addButton: UIButton = {
+//        $0.setImage(Image.addLarge.image, for: .normal)
+//        $0.tintColor = .systemBackground
+//        $0.backgroundColor = .label
+//        $0.layer.cornerRadius = 24
+//        return $0
+//    }(UIButton(type: .system))
     private let bottomSheetContainerView = UIView()
     
     let didTapSortSubject = PassthroughSubject<Bool, Never>()
-    let didTapProfileSubject = PassthroughSubject<Bool, Never>()
     let didSelectGoalSubject = PassthroughSubject<Goal, Never>()
     let didTapAddGoalSubject = PassthroughSubject<Bool, Never>()
     
@@ -102,10 +101,6 @@ private extension HomeViewController {
         present(alertController, animated: true)
     }
     
-    @objc func profileDidTap() {
-        didTapProfileSubject.send(true)
-    }
-    
     @objc func addDidTap() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         didTapAddGoalSubject.send(true)
@@ -115,15 +110,15 @@ private extension HomeViewController {
 // MARK: - Setup
 extension HomeViewController: Setup {
     func setUpUI() {
-        navigationItem.title = "Home"
+        navigationItem.title = "Goals"
         
         sortBarButtonItem.target = self
         sortBarButtonItem.accessibilityLabel = "sort".localized
         navigationItem.leftBarButtonItem = sortBarButtonItem
         
-        profileBarButtonItem.target = self
-        profileBarButtonItem.accessibilityLabel = "profile".localized
-        navigationItem.rightBarButtonItem = profileBarButtonItem
+        addBarButtonItem.target = self
+        addBarButtonItem.accessibilityLabel = "add".localized
+        navigationItem.rightBarButtonItem = addBarButtonItem
         
         goalsTableView.delegate = self
         goalsTableView.dataSource = self
@@ -133,7 +128,7 @@ extension HomeViewController: Setup {
         view.addSubview(goalsTableView)
         goalsTableView.addSubview(refreshControl)
         view.addSubview(zeroView)
-        view.addSubview(addButton)
+//        view.addSubview(addButton)
         view.addSubview(bottomSheetContainerView)
     }
     
@@ -147,10 +142,10 @@ extension HomeViewController: Setup {
             maker.bottom.equalTo(safeArea.snp.centerY)
         }
         
-        addButton.snp.makeConstraints { maker in
-            maker.trailing.bottom.equalTo(safeArea).inset(24)
-            maker.width.height.equalTo(48)
-        }
+//        addButton.snp.makeConstraints { maker in
+//            maker.trailing.bottom.equalTo(safeArea).inset(24)
+//            maker.width.height.equalTo(48)
+//        }
         
         bottomSheetContainerView.snp.makeConstraints { maker in
             maker.leading.trailing.bottom.equalToSuperview()
@@ -159,7 +154,7 @@ extension HomeViewController: Setup {
     
     func addObservers() {
         sortBarButtonItem.action = #selector(sortDidTap)
-        profileBarButtonItem.action = #selector(profileDidTap)
+        addBarButtonItem.action = #selector(addDidTap)
         
         refreshControl.addTarget(self, action: #selector(didRefresh), for: .valueChanged)
         
@@ -167,7 +162,7 @@ extension HomeViewController: Setup {
             self?.addDidTap()
         }
         
-        addButton.addTarget(self, action: #selector(addDidTap), for: .touchUpInside)
+//        addButton.addTarget(self, action: #selector(addDidTap), for: .touchUpInside)
         
         cancellables.insert(viewModel.loadingSubject.sink { [weak self] value in
             value ? self?.refreshControl.beginRefreshing() : self?.refreshControl.endRefreshing()

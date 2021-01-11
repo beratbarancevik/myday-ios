@@ -9,7 +9,6 @@ import Combine
 
 class AuthenticationCoordinator: BaseCoordinator {
     // MARK: - Properties
-    private var presentingNavigationController: BaseNavigationController
     var navigationController: BaseNavigationController
     
     private let authenticationViewController: AuthenticationViewController
@@ -20,8 +19,7 @@ class AuthenticationCoordinator: BaseCoordinator {
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Init
-    init(presentingNavigationController: BaseNavigationController, navigationController: BaseNavigationController) {
-        self.presentingNavigationController = presentingNavigationController
+    init(navigationController: BaseNavigationController) {
         self.navigationController = navigationController
         authenticationViewModel = AuthenticationViewModel()
         authenticationViewController = AuthenticationViewController(viewModel: authenticationViewModel)
@@ -31,7 +29,6 @@ class AuthenticationCoordinator: BaseCoordinator {
     // MARK: - Functions
     func start() {
         navigationController.pushViewController(authenticationViewController, animated: false)
-        presentingNavigationController.present(navigationController, animated: true)
     }
     
     func observe() {

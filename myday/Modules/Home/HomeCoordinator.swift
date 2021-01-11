@@ -19,7 +19,6 @@ class HomeCoordinator: BaseCoordinator {
     private let sortViewModel: SortViewModel
     
     private var sortCoordinator: SortCoordinator?
-    private var profileCoordinator: ProfileCoordinator?
     private var authenticationCoordinator: AuthenticationCoordinator?
     private var goalDetailCoordinator: GoalDetailCoordinator?
     
@@ -49,18 +48,6 @@ class HomeCoordinator: BaseCoordinator {
             self.sortCoordinator?.start()
         })
         
-        cancellables.insert(homeViewController.didTapProfileSubject.sink { [weak self] _ in
-            guard let self = self else { return }
-            self.profileNavigationController = BaseNavigationController()
-            if AuthenticationManager.shared.authState == .account {
-                self.profileCoordinator = ProfileCoordinator(presentingNavigationController: self.navigationController, navigationController: self.profileNavigationController)
-                self.profileCoordinator?.start()
-            } else {
-                self.authenticationCoordinator = AuthenticationCoordinator(presentingNavigationController: self.navigationController, navigationController: self.profileNavigationController)
-                self.authenticationCoordinator?.start()
-            }
-        })
-        
         cancellables.insert(homeViewController.didSelectGoalSubject.sink { [weak self] goal in
             guard let self = self else { return }
             let goalDetailNavigationController = BaseNavigationController()
@@ -76,8 +63,6 @@ class HomeCoordinator: BaseCoordinator {
         })
         
         NotificationCenter.default.addObserver(self, selector: #selector(didSaveGoal), name: .didSaveGoal, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(didSignIn), name: .didSignIn, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(didLogOut), name: .didLogOut, object: nil)
     }
 }
 
@@ -86,14 +71,5 @@ private extension HomeCoordinator {
     @objc func didSaveGoal() {
         goalDetailCoordinator?.navigationController.dismiss(animated: true)
         goalDetailCoordinator = nil
-    }
-    
-    @objc func didSignIn() {
-        profileCoordinator = ProfileCoordinator(presentingNavigationController: navigationController, navigationController: profileNavigationController)
-        profileCoordinator?.replace()
-    }
-    
-    @objc func didLogOut() {
-        profileNavigationController.dismiss(animated: true)
     }
 }
