@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  GoalsViewController.swift
 //  myday
 //
 //  Created by Berat Cevik on 12/19/20.
@@ -8,9 +8,9 @@
 import Combine
 import UIKit
 
-class HomeViewController: BaseViewController {
+class GoalsViewController: BaseViewController {
     // MARK: - Properties
-    private var viewModel: HomeViewModel
+    private var viewModel: GoalsViewModel
     private var sortViewController: SortViewController
     
     private let sortBarButtonItem = UIBarButtonItem(image: Image.sort.image, style: .plain, target: nil, action: nil)
@@ -37,7 +37,7 @@ class HomeViewController: BaseViewController {
     let didTapAddGoalSubject = PassthroughSubject<Bool, Never>()
     
     // MARK: - Init
-    init(viewModel: HomeViewModel, sortViewController: SortViewController) {
+    init(viewModel: GoalsViewModel, sortViewController: SortViewController) {
         self.viewModel = viewModel
         self.sortViewController = sortViewController
         super.init(nibName: nil, bundle: nil)
@@ -60,7 +60,7 @@ class HomeViewController: BaseViewController {
 }
 
 // MARK: - Private Functions
-private extension HomeViewController {
+private extension GoalsViewController {
     func updateUI() {
         let isGoalsEmpty = viewModel.goals.isEmpty
         goalsTableView.setHidden(isGoalsEmpty)
@@ -108,7 +108,7 @@ private extension HomeViewController {
 }
 
 // MARK: - Setup
-extension HomeViewController: Setup {
+extension GoalsViewController: Setup {
     func setUpUI() {
         navigationItem.title = "Goals"
         
@@ -176,7 +176,7 @@ extension HomeViewController: Setup {
 }
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension GoalsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         UIImpactFeedbackGenerator(style: .light).impactOccurred()
         didSelectGoalSubject.send(viewModel.goals[indexPath.row])
@@ -211,7 +211,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 // MARK: - GoalCellDelegate
-extension HomeViewController: GoalProgressBarCellDelegate {
+extension GoalsViewController: GoalProgressBarCellDelegate {
     func targetDidTap(_ index: Int) {
         viewModel.goals[index].incrementAchieved()
         viewModel.updateGoal(goal: viewModel.goals[index])

@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  GoalsViewModel.swift
 //  myday
 //
 //  Created by Berat Cevik on 12/19/20.
@@ -8,7 +8,7 @@
 import Combine
 import Foundation
 
-class HomeViewModel: BaseViewModel {
+class GoalsViewModel: BaseViewModel {
     // MARK: - Properties
     let loadingSubject = PassthroughSubject<Bool, Never>()
     let goalsSubject = PassthroughSubject<[Goal], Error>()
@@ -76,7 +76,7 @@ class HomeViewModel: BaseViewModel {
 }
 
 // MARK: - Private Functions
-private extension HomeViewModel {
+private extension GoalsViewModel {
     func addObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(didSaveGoal), name: .didSaveGoal, object: nil)
     }

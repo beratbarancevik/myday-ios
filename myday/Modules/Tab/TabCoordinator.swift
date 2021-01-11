@@ -15,7 +15,7 @@ class TabCoordinator: BaseCoordinator {
     private var tabController: TabController?
     private let tabViewModel: TabViewModel
     
-    private var homeCoordinator: HomeCoordinator?
+    private var goalsCoordinator: GoalsCoordinator?
     private var calendarCoordinator: CalendarCoordinator?
     private var profileCoordinator: ProfileCoordinator?
     private var authenticationCoordinator: AuthenticationCoordinator?
@@ -30,11 +30,11 @@ class TabCoordinator: BaseCoordinator {
     
     // MARK: - Coordinator
     func start() {
-        let homeNavigationController = generateNavigationController(for: .goals)
+        let goalsNavigationController = generateNavigationController(for: .goals)
         let calendarNavigationController = generateNavigationController(for: .calendar)
         let profileNavigationController = generateNavigationController(for: .profile)
         
-        homeCoordinator = HomeCoordinator(navigationController: homeNavigationController)
+        goalsCoordinator = GoalsCoordinator(navigationController: goalsNavigationController)
         calendarCoordinator = CalendarCoordinator(navigationController: calendarNavigationController)
         if AuthenticationManager.shared.authState == .account {
             profileCoordinator = ProfileCoordinator(navigationController: profileNavigationController)
@@ -44,7 +44,7 @@ class TabCoordinator: BaseCoordinator {
         
         let navigationControllers = [
             calendarNavigationController,
-            homeNavigationController,
+            goalsNavigationController,
             profileNavigationController
         ]
         tabController = TabController(viewModel: tabViewModel, navigationControllers: navigationControllers)
@@ -63,7 +63,7 @@ private extension TabCoordinator {
     }
     
     func startCoordinators() {
-        homeCoordinator?.start()
+        goalsCoordinator?.start()
         calendarCoordinator?.start()
         profileCoordinator?.start()
         authenticationCoordinator?.start()

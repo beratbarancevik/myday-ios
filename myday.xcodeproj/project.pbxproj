@@ -103,9 +103,9 @@
 		F497503B258E035E00259DAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F497503A258E035E00259DAC /* AppDelegate.swift */; };
 		F4975044258E035F00259DAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4975043258E035F00259DAC /* Assets.xcassets */; };
 		F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4975045258E035F00259DAC /* LaunchScreen.storyboard */; };
-		F49880B0258E1D9800C3EF2D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880AF258E1D9800C3EF2D /* HomeViewController.swift */; };
-		F49880B5258E1DA000C3EF2D /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880B4258E1DA000C3EF2D /* HomeCoordinator.swift */; };
-		F49880BA258E1DA800C3EF2D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880B9258E1DA800C3EF2D /* HomeViewModel.swift */; };
+		F49880B0258E1D9800C3EF2D /* GoalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880AF258E1D9800C3EF2D /* GoalsViewController.swift */; };
+		F49880B5258E1DA000C3EF2D /* GoalsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880B4258E1DA000C3EF2D /* GoalsCoordinator.swift */; };
+		F49880BA258E1DA800C3EF2D /* GoalsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880B9258E1DA800C3EF2D /* GoalsViewModel.swift */; };
 		F49880C0258E1DB700C3EF2D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880BF258E1DB700C3EF2D /* BaseViewController.swift */; };
 		F49880C5258E1DBE00C3EF2D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880C4258E1DBE00C3EF2D /* BaseViewModel.swift */; };
 		F49880CA258E1DC500C3EF2D /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49880C9258E1DC500C3EF2D /* BaseCoordinator.swift */; };
@@ -291,9 +291,9 @@
 		F4975053258E035F00259DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4975058258E035F00259DAC /* mydayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mydayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F497505E258E035F00259DAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F49880AF258E1D9800C3EF2D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		F49880B4258E1DA000C3EF2D /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
-		F49880B9258E1DA800C3EF2D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F49880AF258E1D9800C3EF2D /* GoalsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewController.swift; sourceTree = "<group>"; };
+		F49880B4258E1DA000C3EF2D /* GoalsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsCoordinator.swift; sourceTree = "<group>"; };
+		F49880B9258E1DA800C3EF2D /* GoalsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsViewModel.swift; sourceTree = "<group>"; };
 		F49880BF258E1DB700C3EF2D /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F49880C4258E1DBE00C3EF2D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		F49880C9258E1DC500C3EF2D /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
@@ -829,7 +829,7 @@
 				F418452E2593D5AF00E7F0A0 /* Calendar */,
 				F484BBC925950DEA0021E7DD /* Color PIcker */,
 				F46F3545258E26C2007CD3E4 /* Goal Detail */,
-				F49880AB258E1D8B00C3EF2D /* Home */,
+				F49880AB258E1D8B00C3EF2D /* Goals */,
 				F484BB922594F6CF0021E7DD /* Profile */,
 				F400A43A258E662E0081CCD8 /* Settings */,
 				F4B6A992259F0DB10085B08E /* Sort */,
@@ -839,14 +839,14 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		F49880AB258E1D8B00C3EF2D /* Home */ = {
+		F49880AB258E1D8B00C3EF2D /* Goals */ = {
 			isa = PBXGroup;
 			children = (
-				F49880B4258E1DA000C3EF2D /* HomeCoordinator.swift */,
-				F49880AF258E1D9800C3EF2D /* HomeViewController.swift */,
-				F49880B9258E1DA800C3EF2D /* HomeViewModel.swift */,
+				F49880B4258E1DA000C3EF2D /* GoalsCoordinator.swift */,
+				F49880AF258E1D9800C3EF2D /* GoalsViewController.swift */,
+				F49880B9258E1DA800C3EF2D /* GoalsViewModel.swift */,
 			);
-			path = Home;
+			path = Goals;
 			sourceTree = "<group>";
 		};
 		F49880BE258E1DAF00C3EF2D /* Base */ = {
@@ -1451,7 +1451,7 @@
 				F4F72D90259AFAF400CFA3D0 /* GoogleAuthManager.swift in Sources */,
 				F41FDD07259C39F50005502F /* BaseCollectionReusableView.swift in Sources */,
 				F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */,
-				F49880B0258E1D9800C3EF2D /* HomeViewController.swift in Sources */,
+				F49880B0258E1D9800C3EF2D /* GoalsViewController.swift in Sources */,
 				F41845352593D5CB00E7F0A0 /* CalendarViewModel.swift in Sources */,
 				F484BBB7259502330021E7DD /* AuthenticationViewModel.swift in Sources */,
 				F41FDCFF259C39890005502F /* ProfileHeaderView.swift in Sources */,
@@ -1486,7 +1486,7 @@
 				F46F3566258E2907007CD3E4 /* BaseService.swift in Sources */,
 				F4F72D8B259AEA9300CFA3D0 /* GetUserResponse.swift in Sources */,
 				F469CA062599965500A35FFB /* DayViewModel.swift in Sources */,
-				F49880B5258E1DA000C3EF2D /* HomeCoordinator.swift in Sources */,
+				F49880B5258E1DA000C3EF2D /* GoalsCoordinator.swift in Sources */,
 				F4B6A994259F0DC10085B08E /* SortViewController.swift in Sources */,
 				F484BB9C2594F6EC0021E7DD /* ProfileViewModel.swift in Sources */,
 				F4B6A9A1259F0DD70085B08E /* SortViewModel.swift in Sources */,
@@ -1514,7 +1514,7 @@
 				F418456A2593DF4E00E7F0A0 /* BaseCollectionCell.swift in Sources */,
 				F48E96F425ACB98A00784DC0 /* TabController.swift in Sources */,
 				F400A449258E66520081CCD8 /* SettingsViewModel.swift in Sources */,
-				F49880BA258E1DA800C3EF2D /* HomeViewModel.swift in Sources */,
+				F49880BA258E1DA800C3EF2D /* GoalsViewModel.swift in Sources */,
 				F4D5DEF6259F5DE400495AE2 /* SortOptionCell.swift in Sources */,
 				F49880C5258E1DBE00C3EF2D /* BaseViewModel.swift in Sources */,
 				F400A436258E65F70081CCD8 /* SplashViewModel.swift in Sources */,

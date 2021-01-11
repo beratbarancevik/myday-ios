@@ -29,7 +29,7 @@ class ApplicationCoordinator: BaseCoordinator {
         window.makeKeyAndVisible()
     }
     
-    func showHome() {
+    func showMain() {
         tabCoordinator = TabCoordinator(window: window)
         tabCoordinator?.start()
         splashCoordinator = nil
@@ -47,7 +47,7 @@ private extension ApplicationCoordinator {
                 return
             }
             #endif
-            self?.showHome()
+            self?.showMain()
             self?.cancellable?.cancel()
         }
     }
