@@ -53,10 +53,10 @@
 		F418455A2593DBDF00E7F0A0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845592593DBDF00E7F0A0 /* Date+Extensions.swift */; };
 		F41845622593DEDF00E7F0A0 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845612593DEDF00E7F0A0 /* DayCell.swift */; };
 		F418456A2593DF4E00E7F0A0 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845692593DF4E00E7F0A0 /* BaseCollectionCell.swift */; };
-		F41CE19C258E74B800D0F36E /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */; };
 		F41F2DE025951E1C004C0C54 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */; };
 		F41FDCFF259C39890005502F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41FDCFE259C39890005502F /* ProfileHeaderView.swift */; };
 		F41FDD07259C39F50005502F /* BaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41FDD06259C39F50005502F /* BaseCollectionReusableView.swift */; };
+		F4457CA325A8273F00028333 /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4457CA225A8273F00028333 /* GoogleService-Info-Release.plist */; };
 		F4544BAF25A1EE4B00E86EC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4544BB125A1EE4B00E86EC0 /* Localizable.strings */; };
 		F4544BB525A1EE4E00E86EC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4544BB725A1EE4E00E86EC0 /* InfoPlist.strings */; };
 		F458434F259F925E004856E3 /* ImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458434E259F925E004856E3 /* ImageTests.swift */; };
@@ -228,10 +228,10 @@
 		F41845592593DBDF00E7F0A0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		F41845612593DEDF00E7F0A0 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		F41845692593DF4E00E7F0A0 /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
-		F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Release.plist"; sourceTree = "<group>"; };
 		F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		F41FDCFE259C39890005502F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		F41FDD06259C39F50005502F /* BaseCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionReusableView.swift; sourceTree = "<group>"; };
+		F4457CA225A8273F00028333 /* GoogleService-Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Release.plist"; sourceTree = "<group>"; };
 		F4544BB025A1EE4B00E86EC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F4544BB625A1EE4E00E86EC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F4544BBB25A1EE6100E86EC0 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -996,7 +996,7 @@
 			isa = PBXGroup;
 			children = (
 				F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */,
-				F41CE19B258E74B800D0F36E /* GoogleService-Info-Release.plist */,
+				F4457CA225A8273F00028333 /* GoogleService-Info-Release.plist */,
 			);
 			path = Keys;
 			sourceTree = "<group>";
@@ -1181,7 +1181,6 @@
 				F400A4A4258E6DE00081CCD8 /* Montserrat-ExtraLight.ttf in Resources */,
 				F400A4A5258E6DE00081CCD8 /* Montserrat-Regular.ttf in Resources */,
 				F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */,
-				F41CE19C258E74B800D0F36E /* GoogleService-Info-Release.plist in Resources */,
 				F400A4AA258E6DE00081CCD8 /* Montserrat-SemiBold.ttf in Resources */,
 				F400A495258E6D310081CCD8 /* Colors.xcassets in Resources */,
 				F400A4AB258E6DE00081CCD8 /* Montserrat-ExtraBold.ttf in Resources */,
@@ -1189,6 +1188,7 @@
 				F4975044258E035F00259DAC /* Assets.xcassets in Resources */,
 				F400A4A7258E6DE00081CCD8 /* Montserrat-Medium.ttf in Resources */,
 				F400A4A9258E6DE00081CCD8 /* Montserrat-Bold.ttf in Resources */,
+				F4457CA325A8273F00028333 /* GoogleService-Info-Release.plist in Resources */,
 				F4AE2F42258E1996005E77AB /* GoogleService-Info-Debug.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1723,7 +1723,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = myday/myday.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3978A7VN36;
 				INFOPLIST_FILE = "$(SRCROOT)/myday/Supporting Files/Info-Debug.plist";
@@ -1750,7 +1750,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_ENTITLEMENTS = myday/myday.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 3978A7VN36;
 				INFOPLIST_FILE = "$(SRCROOT)/myday/Supporting Files/Info-Release.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
