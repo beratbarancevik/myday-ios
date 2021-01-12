@@ -6,6 +6,8 @@ target 'myday' do
   use_frameworks!
 
   # Pods for myday
+  pod 'MaterialComponents/FeatureHighlight', '119.5.0'
+  
   pod 'Firebase/Analytics', '7.3.0'
   pod 'Firebase/Auth', '7.3.0'
   pod 'Firebase/Crashlytics', '7.3.0'
