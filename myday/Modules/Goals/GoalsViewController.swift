@@ -6,6 +6,7 @@
 //
 
 import Combine
+import MaterialComponents.MaterialFeatureHighlight
 import UIKit
 
 class GoalsViewController: BaseViewController {
@@ -104,6 +105,19 @@ private extension GoalsViewController {
     @objc func addDidTap() {
         UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         didTapAddGoalSubject.send(true)
+    }
+    
+    func showTutorial() {
+        let displayedButton = UIButton(type: .system)
+        displayedButton.setTitle("Got it", for: .normal)
+        displayedButton.setTitleColor(.tintColor, for: .normal)
+        displayedButton.backgroundColor = .label
+        let highlightController = MDCFeatureHighlightViewController(highlightedView: goalsTableView, andShow: displayedButton) { _ in }
+        highlightController.titleText = "Just how you want it"
+        highlightController.bodyText = "Tap the menu button to switch accounts, change settings & more."
+        highlightController.outerHighlightColor = UIColor.tintColor.withAlphaComponent(kMDCFeatureHighlightOuterHighlightAlpha)
+        highlightController.innerHighlightColor = .clear
+        present(highlightController, animated: true)
     }
 }
 
