@@ -152,6 +152,8 @@
 		F4BEE74F258F8C4E0027028E /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE74E258F8C4E0027028E /* TextFieldCell.swift */; };
 		F4BEE763258F97A80027028E /* Notification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE762258F97A80027028E /* Notification+Extensions.swift */; };
 		F4D5DEF6259F5DE400495AE2 /* SortOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D5DEF5259F5DE400495AE2 /* SortOptionCell.swift */; };
+		F4DC45CB25B2F75D00FB6355 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4DC45CA25B2F75D00FB6355 /* Alamofire */; };
+		F4DC45D125B2F7D400FB6355 /* AlamofireNetworkActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = F4DC45D025B2F7D400FB6355 /* AlamofireNetworkActivityIndicator */; };
 		F4F664032595A48F0037F9E9 /* VersionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F664022595A48F0037F9E9 /* VersionFooterView.swift */; };
 		F4F6640B2595A6560037F9E9 /* BaseTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F6640A2595A6560037F9E9 /* BaseTableHeaderFooterView.swift */; };
 		F4F72D6C259AE65600CFA3D0 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F72D6B259AE65600CFA3D0 /* UserServices.swift */; };
@@ -358,8 +360,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */,
+				F4DC45D125B2F7D400FB6355 /* AlamofireNetworkActivityIndicator in Frameworks */,
 				F40A03B8259B95D900BE6F5D /* ActiveLabel in Frameworks */,
 				F4B1F48825A61883005E8B2B /* SwiftMessages in Frameworks */,
+				F4DC45CB25B2F75D00FB6355 /* Alamofire in Frameworks */,
 				609BF1661A630C98B3274BF6 /* Pods_myday.framework in Frameworks */,
 				F4B85BC925AC1A78002691AB /* Kingfisher in Frameworks */,
 			);
@@ -1096,6 +1100,8 @@
 				F40A03B7259B95D900BE6F5D /* ActiveLabel */,
 				F4B1F48725A61883005E8B2B /* SwiftMessages */,
 				F4B85BC825AC1A78002691AB /* Kingfisher */,
+				F4DC45CA25B2F75D00FB6355 /* Alamofire */,
+				F4DC45D025B2F7D400FB6355 /* AlamofireNetworkActivityIndicator */,
 			);
 			productName = myday;
 			productReference = F4975037258E035E00259DAC /* My Day Dev.app */;
@@ -1180,6 +1186,8 @@
 				F40A03B6259B95D900BE6F5D /* XCRemoteSwiftPackageReference "ActiveLabel" */,
 				F4B1F48625A61883005E8B2B /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 				F4B85BC725AC1A78002691AB /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				F4DC45C925B2F75D00FB6355 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F4DC45CF25B2F7D400FB6355 /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityIndicator" */,
 			);
 			productRefGroup = F4975038258E035E00259DAC /* Products */;
 			projectDirPath = "";
@@ -1957,6 +1965,22 @@
 				version = 6.0.1;
 			};
 		};
+		F4DC45C925B2F75D00FB6355 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.4.1;
+			};
+		};
+		F4DC45CF25B2F7D400FB6355 /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityIndicator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireNetworkActivityIndicator";
+			requirement = {
+				kind = exactVersion;
+				version = 3.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1979,6 +2003,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F4B85BC725AC1A78002691AB /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		F4DC45CA25B2F75D00FB6355 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4DC45C925B2F75D00FB6355 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		F4DC45D025B2F7D400FB6355 /* AlamofireNetworkActivityIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F4DC45CF25B2F7D400FB6355 /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityIndicator" */;
+			productName = AlamofireNetworkActivityIndicator;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

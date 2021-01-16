@@ -11,6 +11,24 @@
         }
       },
       {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": null,
+          "revision": "eaf6e622dd41b07b251d8f01752eab31bc811493",
+          "version": "5.4.1"
+        }
+      },
+      {
+        "package": "AlamofireNetworkActivityIndicator",
+        "repositoryURL": "https://github.com/Alamofire/AlamofireNetworkActivityIndicator",
+        "state": {
+          "branch": null,
+          "revision": "392bed083e8d193aca16bfa684ee24e4bcff0510",
+          "version": "3.1.0"
+        }
+      },
+      {
         "package": "Kingfisher",
         "repositoryURL": "https://github.com/onevcat/Kingfisher",
         "state": {

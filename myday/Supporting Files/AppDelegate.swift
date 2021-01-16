@@ -5,6 +5,7 @@
 //  Created by Berat Cevik on 12/19/20.
 //
 
+import AlamofireNetworkActivityIndicator
 import FBSDKCoreKit
 import Firebase
 import GoogleSignIn
@@ -56,6 +57,9 @@ private extension AppDelegate {
         
         // Theme
         Theme.configureTheme()
+        
+        // AlamofireNetworkActivityIndicator
+        NetworkActivityIndicatorManager.shared.isEnabled = true
     }
     
     func startApp() {
