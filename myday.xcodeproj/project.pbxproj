@@ -154,6 +154,7 @@
 		F4D5DEF6259F5DE400495AE2 /* SortOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D5DEF5259F5DE400495AE2 /* SortOptionCell.swift */; };
 		F4DC45CB25B2F75D00FB6355 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F4DC45CA25B2F75D00FB6355 /* Alamofire */; };
 		F4DC45D125B2F7D400FB6355 /* AlamofireNetworkActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = F4DC45D025B2F7D400FB6355 /* AlamofireNetworkActivityIndicator */; };
+		F4DC45D925B2FD8500FB6355 /* AuthenticationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DC45D825B2FD8500FB6355 /* AuthenticationServices.framework */; };
 		F4F664032595A48F0037F9E9 /* VersionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F664022595A48F0037F9E9 /* VersionFooterView.swift */; };
 		F4F6640B2595A6560037F9E9 /* BaseTableHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F6640A2595A6560037F9E9 /* BaseTableHeaderFooterView.swift */; };
 		F4F72D6C259AE65600CFA3D0 /* UserServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F72D6B259AE65600CFA3D0 /* UserServices.swift */; };
@@ -341,6 +342,7 @@
 		F4BEE74E258F8C4E0027028E /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		F4BEE762258F97A80027028E /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
 		F4D5DEF5259F5DE400495AE2 /* SortOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOptionCell.swift; sourceTree = "<group>"; };
+		F4DC45D825B2FD8500FB6355 /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
 		F4F664022595A48F0037F9E9 /* VersionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionFooterView.swift; sourceTree = "<group>"; };
 		F4F6640A2595A6560037F9E9 /* BaseTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableHeaderFooterView.swift; sourceTree = "<group>"; };
 		F4F72D6B259AE65600CFA3D0 /* UserServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServices.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4DC45D925B2FD8500FB6355 /* AuthenticationServices.framework in Frameworks */,
 				F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */,
 				F4DC45D125B2F7D400FB6355 /* AlamofireNetworkActivityIndicator in Frameworks */,
 				F40A03B8259B95D900BE6F5D /* ActiveLabel in Frameworks */,
@@ -391,6 +394,7 @@
 		300C91E7A21A4CB20641526E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F4DC45D825B2FD8500FB6355 /* AuthenticationServices.framework */,
 				F963C95BFFC6F87A88CE6732 /* Pods_myday.framework */,
 				1E137BA18A37B3B1506E958A /* Pods_myday_mydayUITests.framework */,
 				6B6B29447E01BA36477AD421 /* Pods_mydayTests.framework */,
