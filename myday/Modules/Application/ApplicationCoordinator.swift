@@ -41,7 +41,7 @@ private extension ApplicationCoordinator {
     func addAuthenticationObserver() {
         cancellable = AuthenticationManager.shared.authDidCompleteSubject.sink { [weak self] _ in
             #if DEBUG
-            // ensures that splash screen's UI gets tested
+            // makes sure that splash screen's UI gets tested
             if ProcessInfo.processInfo.environment["ShouldStopAtSplash"] == "YES" {
                 print("UI tests are running for Splash screen")
                 return

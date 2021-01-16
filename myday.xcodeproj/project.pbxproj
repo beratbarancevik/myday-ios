@@ -338,7 +338,6 @@
 		F4BD290F258E5DD800691D68 /* DeleteGoalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGoalResponse.swift; sourceTree = "<group>"; };
 		F4BEE74E258F8C4E0027028E /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
 		F4BEE762258F97A80027028E /* Notification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extensions.swift"; sourceTree = "<group>"; };
-		F4D5291E2598EEFD00AB79CF /* myday.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = myday.entitlements; sourceTree = "<group>"; };
 		F4D5DEF5259F5DE400495AE2 /* SortOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOptionCell.swift; sourceTree = "<group>"; };
 		F4F664022595A48F0037F9E9 /* VersionFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VersionFooterView.swift; sourceTree = "<group>"; };
 		F4F6640A2595A6560037F9E9 /* BaseTableHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableHeaderFooterView.swift; sourceTree = "<group>"; };
@@ -348,6 +347,8 @@
 		F4F72D82259AEA8B00CFA3D0 /* GetUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserRequest.swift; sourceTree = "<group>"; };
 		F4F72D8A259AEA9300CFA3D0 /* GetUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserResponse.swift; sourceTree = "<group>"; };
 		F4F72D8F259AFAF400CFA3D0 /* GoogleAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthManager.swift; sourceTree = "<group>"; };
+		F4FB54A225B2D748006F2471 /* myday-debug.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "myday-debug.entitlements"; sourceTree = "<group>"; };
+		F4FB54A325B2D748006F2471 /* myday-release.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "myday-release.entitlements"; sourceTree = "<group>"; };
 		F963C95BFFC6F87A88CE6732 /* Pods_myday.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_myday.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -721,7 +722,8 @@
 		F4975039258E035E00259DAC /* myday */ = {
 			isa = PBXGroup;
 			children = (
-				F4D5291E2598EEFD00AB79CF /* myday.entitlements */,
+				F4FB54A225B2D748006F2471 /* myday-debug.entitlements */,
+				F4FB54A325B2D748006F2471 /* myday-release.entitlements */,
 				F49880A5258E1C8D00C3EF2D /* Models */,
 				F469CA042599964100A35FFB /* View Models */,
 				F400A4FD258E6F680081CCD8 /* Views */,
@@ -1745,7 +1747,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Debug";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
-				CODE_SIGN_ENTITLEMENTS = myday/myday.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "myday/myday-debug.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 23;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1772,7 +1774,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Release";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
-				CODE_SIGN_ENTITLEMENTS = myday/myday.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "myday/myday-release.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 23;
 				DEVELOPMENT_TEAM = 3978A7VN36;

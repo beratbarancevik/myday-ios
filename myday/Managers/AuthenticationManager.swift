@@ -17,6 +17,7 @@ class AuthenticationManager {
     private var authStateDidChangeListenerHandle: AuthStateDidChangeListenerHandle?
     
     let authDidCompleteSubject = PassthroughSubject<Bool, Never>()
+    let authStateDidChangeSubject = PassthroughSubject<AuthState, Never>()
     
     var authState: AuthState {
         guard let user = Auth.auth().currentUser else {
@@ -108,6 +109,7 @@ private extension AuthenticationManager {
             if let user = user {
                 print("\nUser ID: \(user.uid)\nEmail: \(user.email ?? "No email found")\n")
                 self?.authDidCompleteSubject.send(true)
+                self?.authStateDidChangeSubject.send(.account)
             } else {
                 print("\nSigning in anonymously\n")
                 AuthenticationManager.shared.signInAnonymously()
@@ -123,9 +125,10 @@ private extension AuthenticationManager {
     
     // MARK: - Anonymous Auth
     func signInAnonymously() {
-        Auth.auth().signInAnonymously { authResult, error in
+        Auth.auth().signInAnonymously { [weak self] authResult, error in
             if let result = authResult {
                 print("\nSigned in anonymously with user ID: \(result.user.uid)\n")
+                self?.authStateDidChangeSubject.send(.anonymous)
             }
             
             if let error = error {

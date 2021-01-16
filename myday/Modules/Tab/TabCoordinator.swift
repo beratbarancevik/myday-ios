@@ -15,6 +15,8 @@ class TabCoordinator: BaseCoordinator {
     private var tabController: TabController?
     private let tabViewModel: TabViewModel
     
+    private var navigationControllers = [BaseNavigationController]()
+    
     private var goalsCoordinator: GoalsCoordinator?
     private var calendarCoordinator: CalendarCoordinator?
     private var profileCoordinator: ProfileCoordinator?
@@ -42,7 +44,7 @@ class TabCoordinator: BaseCoordinator {
             authenticationCoordinator = AuthenticationCoordinator(navigationController: profileNavigationController)
         }
         
-        let navigationControllers = [
+        navigationControllers = [
             calendarNavigationController,
             goalsNavigationController,
             profileNavigationController
@@ -65,8 +67,27 @@ private extension TabCoordinator {
     func startCoordinators() {
         goalsCoordinator?.start()
         calendarCoordinator?.start()
-        profileCoordinator?.start()
-        authenticationCoordinator?.start()
+        if AuthenticationManager.shared.authState == .account {
+            profileCoordinator?.start()
+        } else {
+            authenticationCoordinator?.start()
+        }
+    }
+    
+    func addAuthenticationObserver() {
+        cancellable = AuthenticationManager.shared.authStateDidChangeSubject.sink { [weak self] authState in
+            guard let navigationController = self?.generateNavigationController(for: .profile) else { return }
+            
+            if authState == .account {
+                self?.profileCoordinator = ProfileCoordinator(navigationController: navigationController)
+                self?.navigationControllers[2] = navigationController
+                self?.profileCoordinator?.start()
+            } else if authState == .anonymous {
+                self?.authenticationCoordinator = AuthenticationCoordinator(navigationController: navigationController)
+                self?.navigationControllers[2] = navigationController
+                self?.authenticationCoordinator?.start()
+            }
+        }
     }
 }
 
