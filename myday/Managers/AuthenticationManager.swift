@@ -15,6 +15,7 @@ class AuthenticationManager {
     static let shared = AuthenticationManager()
     
     private var authStateDidChangeListenerHandle: AuthStateDidChangeListenerHandle?
+    private var idTokenStateDidChangeListenerHandle: IDTokenDidChangeListenerHandle?
     
     let authDidCompleteSubject = PassthroughSubject<Bool, Never>()
     let authStateDidChangeSubject = PassthroughSubject<AuthState, Never>()
@@ -113,6 +114,19 @@ private extension AuthenticationManager {
             } else {
                 print("\nSigning in anonymously\n")
                 AuthenticationManager.shared.signInAnonymously()
+            }
+        }
+        
+        idTokenStateDidChangeListenerHandle = Auth.auth().addIDTokenDidChangeListener { _, user in
+            user?.getIDToken { token, error in
+                if let error = error {
+                    print("ID token error: \(error.localizedDescription)")
+                    return
+                }
+                
+                if let token = token {
+                    print("ID token:\n\n\(token)\n\n")
+                }
             }
         }
     }
