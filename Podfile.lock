@@ -424,7 +424,7 @@ DEPENDENCIES:
   - Firebase/Performance (= 7.4.0)
   - Firebase/Storage (= 7.4.0)
   - FirebaseFirestoreSwift (= 7.4.0-beta)
-  - GoogleSignIn
+  - GoogleSignIn (= 5.0.2)
   - MaterialComponents/FeatureHighlight (= 120.0.0)
 
 SPEC REPOS:
@@ -498,6 +498,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Protobuf: 0cde852566359049847168e51bd1c690e0f70056
 
-PODFILE CHECKSUM: ab1541b8d6dc7d54d0e3b747263a9205381db1af
+PODFILE CHECKSUM: cdd3f62b69d45d73d9adb0ff6c863774878079f4
 
 COCOAPODS: 1.10.1

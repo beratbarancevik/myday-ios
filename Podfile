@@ -16,7 +16,7 @@ target 'myday' do
   pod 'Firebase/Performance', '7.4.0'
   pod 'Firebase/Storage', '7.4.0'
 
-  pod 'GoogleSignIn'
+  pod 'GoogleSignIn', '5.0.2'
 
   pod 'FBSDKCoreKit', '9.0.0'
   pod 'FBSDKLoginKit', '9.0.0'
