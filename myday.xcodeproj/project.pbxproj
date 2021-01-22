@@ -1958,7 +1958,7 @@
 			repositoryURL = "https://github.com/SwiftKickMobile/SwiftMessages";
 			requirement = {
 				kind = exactVersion;
-				version = 8.0.5;
+				version = 9.0.0;
 			};
 		};
 		F4B85BC725AC1A78002691AB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
