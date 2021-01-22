@@ -18,9 +18,9 @@ target 'myday' do
 
   pod 'GoogleSignIn'
 
-  pod 'FBSDKCoreKit', '8.2.0'
-  pod 'FBSDKLoginKit', '8.2.0'
-  pod 'FBSDKShareKit', '8.2.0'
+  pod 'FBSDKCoreKit', '9.0.0'
+  pod 'FBSDKLoginKit', '9.0.0'
+  pod 'FBSDKShareKit', '9.0.0'
 
   target 'mydayTests' do
     inherit! :search_paths
