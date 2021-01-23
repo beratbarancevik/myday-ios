@@ -1,5 +1,5 @@
 //
-//  ProfileViewController.swift
+//  ProfileController.swift
 //  myday
 //
 //  Created by Berat Cevik on 12/24/20.
@@ -8,7 +8,7 @@
 import Combine
 import UIKit
 
-class ProfileViewController: BaseViewController {
+class ProfileController: BaseViewController {
     // MARK: - Properties
     private var viewModel: ProfileViewModel
     
@@ -19,8 +19,6 @@ class ProfileViewController: BaseViewController {
         return $0
     }(UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()))
     private let refreshControl = UIRefreshControl().style(Theme.RefreshControl.primary)
-    
-    let didTapSettingsSubject = PassthroughSubject<Bool, Never>()
     
     // MARK: - Init
     init(viewModel: ProfileViewModel) {
@@ -44,9 +42,9 @@ class ProfileViewController: BaseViewController {
 }
 
 // MARK: - Private Functions
-private extension ProfileViewController {
+private extension ProfileController {
     @objc func settingsDidTap() {
-        didTapSettingsSubject.send(true)
+        navigationController?.pushViewController(SettingsViewController(viewModel: SettingsViewModel()), animated: true)
     }
     
     func updateUI() {
@@ -55,7 +53,7 @@ private extension ProfileViewController {
 }
 
 // MARK: - Setup
-extension ProfileViewController: Setup {
+extension ProfileController: Setup {
     func setUpUI() {
         navigationItem.title = "Profile"
         
@@ -93,7 +91,7 @@ extension ProfileViewController: Setup {
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
-extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension ProfileController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 0
     }

@@ -25,6 +25,7 @@ class TabController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+        registerAuthChanges()
     }
 }
 
@@ -33,18 +34,15 @@ extension TabController: Setup {
     func setUpUI() {
         let calendar = generateNavigationController(viewController: CalendarViewController(viewModel: CalendarViewModel()), for: .calendar)
         let goals = generateNavigationController(viewController: GoalsViewController(viewModel: GoalsViewModel()), for: .goals)
-        let account: BaseNavigationController
-        if AuthenticationManager.shared.authState == .account {
-            account = generateNavigationController(viewController: ProfileViewController(viewModel: ProfileViewModel()), for: .profile)
-        } else {
-            account = generateNavigationController(viewController: AuthenticationViewController(viewModel: AuthenticationViewModel()), for: .profile)
-        }
+        let account = generateAccountNavigationController(for: AuthenticationManager.shared.authState)
         
         viewControllers = [
             calendar,
             goals,
             account
         ]
+        
+        selectedIndex = 1
         
         tabBar.style(Theme.TabBar.regular)
     }
@@ -56,6 +54,23 @@ private extension TabController {
         let navigationController = BaseNavigationController(rootViewController: viewController)
         navigationController.tabBarItem.image = tabType.image.image
         return navigationController
+    }
+    
+    func generateAccountNavigationController(for authState: AuthState) -> BaseNavigationController {
+        if authState == .anonymous {
+            return generateNavigationController(viewController: AuthenticationController(viewModel: AuthenticationViewModel()), for: .profile)
+        } else {
+            return generateNavigationController(viewController: ProfileController(viewModel: ProfileViewModel()), for: .profile)
+        }
+    }
+    
+    func registerAuthChanges() {
+        NotificationCenter.default.addObserver(self, selector: #selector(updateAccountTab), name: .authStateDidChange, object: nil)
+    }
+    
+    @objc func updateAccountTab(for authState: AuthState) {
+        let account = generateAccountNavigationController(for: authState)
+        viewControllers![viewControllers!.count - 1] = account
     }
 }
 

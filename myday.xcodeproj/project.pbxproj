@@ -75,11 +75,9 @@
 		F46F356C258E29CF007CD3E4 /* GetGoalsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F356B258E29CF007CD3E4 /* GetGoalsRequest.swift */; };
 		F46F3571258E29E2007CD3E4 /* GetGoalsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46F3570258E29E2007CD3E4 /* GetGoalsResponse.swift */; };
 		F473E535258F4DD600FB36F8 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F473E534258F4DD600FB36F8 /* AuthenticationManager.swift */; };
-		F484BB942594F6E10021E7DD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BB932594F6E10021E7DD /* ProfileViewController.swift */; };
+		F484BB942594F6E10021E7DD /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BB932594F6E10021E7DD /* ProfileController.swift */; };
 		F484BB9C2594F6EC0021E7DD /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BB9B2594F6EC0021E7DD /* ProfileViewModel.swift */; };
-		F484BBA12594F6FB0021E7DD /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBA02594F6FB0021E7DD /* ProfileCoordinator.swift */; };
-		F484BBAA259501B10021E7DD /* AuthenticationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBA9259501B10021E7DD /* AuthenticationCoordinator.swift */; };
-		F484BBB2259502090021E7DD /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBB1259502090021E7DD /* AuthenticationViewController.swift */; };
+		F484BBB2259502090021E7DD /* AuthenticationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBB1259502090021E7DD /* AuthenticationController.swift */; };
 		F484BBB7259502330021E7DD /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBB6259502330021E7DD /* AuthenticationViewModel.swift */; };
 		F484BBBC259506560021E7DD /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBBB259506560021E7DD /* Color.swift */; };
 		F484BBCB25950E000021E7DD /* ColorPickerCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F484BBCA25950E000021E7DD /* ColorPickerCoordinator.swift */; };
@@ -144,6 +142,10 @@
 		F4B6A99C259F0DCA0085B08E /* SortCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B6A99B259F0DCA0085B08E /* SortCoordinator.swift */; };
 		F4B6A9A1259F0DD70085B08E /* SortViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B6A9A0259F0DD70085B08E /* SortViewModel.swift */; };
 		F4B85BC925AC1A78002691AB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F4B85BC825AC1A78002691AB /* Kingfisher */; };
+		F4BA198B25BBFFDB008EC2CD /* SplashViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA198A25BBFFDB008EC2CD /* SplashViewModelTests.swift */; };
+		F4BA199325BBFFE4008EC2CD /* TabViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA199225BBFFE4008EC2CD /* TabViewModelTests.swift */; };
+		F4BA199F25BC020D008EC2CD /* ProfileViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA199E25BC020D008EC2CD /* ProfileViewModelTests.swift */; };
+		F4BA19B125BC033E008EC2CD /* AuthenticationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BA19B025BC033E008EC2CD /* AuthenticationViewModelTests.swift */; };
 		F4BD2908258E5DD000691D68 /* DeleteGoalRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD2907258E5DD000691D68 /* DeleteGoalRequest.swift */; };
 		F4BD2910258E5DD800691D68 /* DeleteGoalResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BD290F258E5DD800691D68 /* DeleteGoalResponse.swift */; };
 		F4BEE74F258F8C4E0027028E /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BEE74E258F8C4E0027028E /* TextFieldCell.swift */; };
@@ -256,11 +258,9 @@
 		F46F356B258E29CF007CD3E4 /* GetGoalsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoalsRequest.swift; sourceTree = "<group>"; };
 		F46F3570258E29E2007CD3E4 /* GetGoalsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGoalsResponse.swift; sourceTree = "<group>"; };
 		F473E534258F4DD600FB36F8 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
-		F484BB932594F6E10021E7DD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F484BB932594F6E10021E7DD /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		F484BB9B2594F6EC0021E7DD /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
-		F484BBA02594F6FB0021E7DD /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
-		F484BBA9259501B10021E7DD /* AuthenticationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationCoordinator.swift; sourceTree = "<group>"; };
-		F484BBB1259502090021E7DD /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		F484BBB1259502090021E7DD /* AuthenticationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationController.swift; sourceTree = "<group>"; };
 		F484BBB6259502330021E7DD /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		F484BBBB259506560021E7DD /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		F484BBCA25950E000021E7DD /* ColorPickerCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerCoordinator.swift; sourceTree = "<group>"; };
@@ -331,6 +331,10 @@
 		F4B6A993259F0DC10085B08E /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
 		F4B6A99B259F0DCA0085B08E /* SortCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortCoordinator.swift; sourceTree = "<group>"; };
 		F4B6A9A0259F0DD70085B08E /* SortViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewModel.swift; sourceTree = "<group>"; };
+		F4BA198A25BBFFDB008EC2CD /* SplashViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModelTests.swift; sourceTree = "<group>"; };
+		F4BA199225BBFFE4008EC2CD /* TabViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModelTests.swift; sourceTree = "<group>"; };
+		F4BA199E25BC020D008EC2CD /* ProfileViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModelTests.swift; sourceTree = "<group>"; };
+		F4BA19B025BC033E008EC2CD /* AuthenticationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModelTests.swift; sourceTree = "<group>"; };
 		F4BD2907258E5DD000691D68 /* DeleteGoalRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGoalRequest.swift; sourceTree = "<group>"; };
 		F4BD290F258E5DD800691D68 /* DeleteGoalResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteGoalResponse.swift; sourceTree = "<group>"; };
 		F4BEE74E258F8C4E0027028E /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
@@ -568,7 +572,10 @@
 		F4584B9B25A1E198008D06E8 /* Module Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F4BA19AC25BC032C008EC2CD /* Authentication Tests */,
+				F4BA199D25BC0201008EC2CD /* Profile Tests */,
 				F4584B9C25A1E1A3008D06E8 /* Splash Tests */,
+				F4BA198925BBFFCA008EC2CD /* Tab Tests */,
 			);
 			path = "Module Tests";
 			sourceTree = "<group>";
@@ -576,6 +583,7 @@
 		F4584B9C25A1E1A3008D06E8 /* Splash Tests */ = {
 			isa = PBXGroup;
 			children = (
+				F4BA198A25BBFFDB008EC2CD /* SplashViewModelTests.swift */,
 			);
 			path = "Splash Tests";
 			sourceTree = "<group>";
@@ -630,8 +638,7 @@
 		F484BB922594F6CF0021E7DD /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				F484BBA02594F6FB0021E7DD /* ProfileCoordinator.swift */,
-				F484BB932594F6E10021E7DD /* ProfileViewController.swift */,
+				F484BB932594F6E10021E7DD /* ProfileController.swift */,
 				F484BB9B2594F6EC0021E7DD /* ProfileViewModel.swift */,
 			);
 			path = Profile;
@@ -640,8 +647,7 @@
 		F484BBA82595019E0021E7DD /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				F484BBA9259501B10021E7DD /* AuthenticationCoordinator.swift */,
-				F484BBB1259502090021E7DD /* AuthenticationViewController.swift */,
+				F484BBB1259502090021E7DD /* AuthenticationController.swift */,
 				F484BBB6259502330021E7DD /* AuthenticationViewModel.swift */,
 			);
 			path = Authentication;
@@ -1021,6 +1027,30 @@
 				F4B6A9A0259F0DD70085B08E /* SortViewModel.swift */,
 			);
 			path = Sort;
+			sourceTree = "<group>";
+		};
+		F4BA198925BBFFCA008EC2CD /* Tab Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F4BA199225BBFFE4008EC2CD /* TabViewModelTests.swift */,
+			);
+			path = "Tab Tests";
+			sourceTree = "<group>";
+		};
+		F4BA199D25BC0201008EC2CD /* Profile Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F4BA199E25BC020D008EC2CD /* ProfileViewModelTests.swift */,
+			);
+			path = "Profile Tests";
+			sourceTree = "<group>";
+		};
+		F4BA19AC25BC032C008EC2CD /* Authentication Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F4BA19B025BC033E008EC2CD /* AuthenticationViewModelTests.swift */,
+			);
+			path = "Authentication Tests";
 			sourceTree = "<group>";
 		};
 		F4BD2906258E5DBD00691D68 /* Delete Goal */ = {
@@ -1439,7 +1469,6 @@
 				F400A46C258E6C160081CCD8 /* String+Extensions.swift in Sources */,
 				F46F3571258E29E2007CD3E4 /* GetGoalsResponse.swift in Sources */,
 				F484BBE025950F270021E7DD /* ColorCell.swift in Sources */,
-				F484BBA12594F6FB0021E7DD /* ProfileCoordinator.swift in Sources */,
 				F418455A2593DBDF00E7F0A0 /* Date+Extensions.swift in Sources */,
 				F400A490258E6D080081CCD8 /* Utility.swift in Sources */,
 				F400A457258E67E70081CCD8 /* CreateGoalResponse.swift in Sources */,
@@ -1499,11 +1528,10 @@
 				F49880CA258E1DC500C3EF2D /* BaseCoordinator.swift in Sources */,
 				F4F6640B2595A6560037F9E9 /* BaseTableHeaderFooterView.swift in Sources */,
 				F48E96F925ACBA3F00784DC0 /* TabViewModel.swift in Sources */,
-				F484BB942594F6E10021E7DD /* ProfileViewController.swift in Sources */,
+				F484BB942594F6E10021E7DD /* ProfileController.swift in Sources */,
 				F4F72D6C259AE65600CFA3D0 /* UserServices.swift in Sources */,
 				F46F354C258E26F1007CD3E4 /* GoalDetailViewController.swift in Sources */,
-				F484BBAA259501B10021E7DD /* AuthenticationCoordinator.swift in Sources */,
-				F484BBB2259502090021E7DD /* AuthenticationViewController.swift in Sources */,
+				F484BBB2259502090021E7DD /* AuthenticationController.swift in Sources */,
 				F400A45C258E699E0081CCD8 /* Encodable+Extensions.swift in Sources */,
 				F418456A2593DF4E00E7F0A0 /* BaseCollectionCell.swift in Sources */,
 				F48E96F425ACB98A00784DC0 /* TabController.swift in Sources */,
@@ -1524,6 +1552,7 @@
 				F458434F259F925E004856E3 /* ImageTests.swift in Sources */,
 				F49E8F6925A1BB4800329027 /* UpdateGoalResponseTests.swift in Sources */,
 				F49E8F4825A1BAEA00329027 /* CreateGoalResponseTests.swift in Sources */,
+				F4BA199F25BC020D008EC2CD /* ProfileViewModelTests.swift in Sources */,
 				F49E8F3E25A1BA2400329027 /* UpdateUserResponseTests.swift in Sources */,
 				F49E8F5F25A1BB3100329027 /* GetGoalsResponseTests.swift in Sources */,
 				F49E8E7425A1A84700329027 /* AuthenticationManagerTests.swift in Sources */,
@@ -1535,6 +1564,7 @@
 				F49E8EC125A1B5A700329027 /* BaseServiceTests.swift in Sources */,
 				F48E613D25A0B6D900328CFE /* Date+ExtensionsTests.swift in Sources */,
 				F48E609D25A09C4600328CFE /* UIView+ExtensionsTests.swift in Sources */,
+				F4BA198B25BBFFDB008EC2CD /* SplashViewModelTests.swift in Sources */,
 				F4584B9725A1DE01008D06E8 /* DayViewModelTests.swift in Sources */,
 				F49E8E6725A1A7A400329027 /* AppleAuthManagerTests.swift in Sources */,
 				F49E8DE025A195D900329027 /* AppDelegateTests.swift in Sources */,
@@ -1542,6 +1572,7 @@
 				F49E8E8825A1A86C00329027 /* GoogleAuthManagerTests.swift in Sources */,
 				F48E606B25A0985300328CFE /* ThemeTests.swift in Sources */,
 				F48E60D425A0AFE800328CFE /* String+ExtensionsTests.swift in Sources */,
+				F4BA19B125BC033E008EC2CD /* AuthenticationViewModelTests.swift in Sources */,
 				F49E8F5225A1BB1200329027 /* DeleteGoalResponseTests.swift in Sources */,
 				F48E60CC25A0AB2600328CFE /* UIColor+ExtensionsTests.swift in Sources */,
 				F49E8F6425A1BB3C00329027 /* UpdateGoalRequestTests.swift in Sources */,
@@ -1551,6 +1582,7 @@
 				F49E8E7925A1A85100329027 /* ExternalNavigationManagerTests.swift in Sources */,
 				F49E8F3425A1B9E900329027 /* GetUserResponseTests.swift in Sources */,
 				F49E8F9625A1C3AE00329027 /* GoalTests.swift in Sources */,
+				F4BA199325BBFFE4008EC2CD /* TabViewModelTests.swift in Sources */,
 				F49E8E8325A1A86400329027 /* FirestoreManagerTests.swift in Sources */,
 				F48E5FE625A04FA100328CFE /* ColorTests.swift in Sources */,
 				F49E8E6F25A1A83E00329027 /* AnalyticsManagerTests.swift in Sources */,

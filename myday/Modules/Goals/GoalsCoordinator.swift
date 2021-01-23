@@ -19,7 +19,6 @@ class GoalsCoordinator: BaseCoordinator {
     private let sortViewModel: SortViewModel
     
     private var sortCoordinator: SortCoordinator?
-    private var authenticationCoordinator: AuthenticationCoordinator?
     private var goalDetailCoordinator: GoalDetailCoordinator?
     
     var profileNavigationController = BaseNavigationController()
