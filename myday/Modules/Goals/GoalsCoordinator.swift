@@ -32,7 +32,7 @@ class GoalsCoordinator: BaseCoordinator {
         goalsViewModel = GoalsViewModel()
         sortViewModel = SortViewModel()
         sortViewController = SortViewController(viewModel: sortViewModel)
-        goalsViewController = GoalsViewController(viewModel: goalsViewModel, sortViewController: sortViewController)
+        goalsViewController = GoalsViewController(viewModel: goalsViewModel)
         observe()
     }
     

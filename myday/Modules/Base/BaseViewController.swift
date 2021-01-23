@@ -11,8 +11,8 @@ import UIKit
 
 @objc protocol Setup {
     @objc optional func setUpUI()
-    func addSubviews()
-    func addConstraints()
+    @objc optional func addSubviews()
+    @objc optional func addConstraints()
     @objc optional func addObservers()
 }
 

@@ -5,6 +5,4 @@
 //  Created by Berat Cevik on 1/11/21.
 //
 
-class TabViewModel: BaseViewModel {
-    
-}
+class TabViewModel: BaseViewModel {}

@@ -20,8 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     static var isGoogleSignIn = false  // to detect if callback is for Google
     
-    private var applicationCoordinator: ApplicationCoordinator?
-    
     // MARK: - UIApplicationDelegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureApp(application, with: launchOptions)
@@ -63,9 +61,8 @@ private extension AppDelegate {
     }
     
     func startApp() {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        self.window = window
-        applicationCoordinator = ApplicationCoordinator(window: window)
-        applicationCoordinator?.start()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = SplashController(viewModel: SplashViewModel())
+        window?.makeKeyAndVisible()
     }
 }

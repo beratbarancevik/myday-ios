@@ -12,7 +12,7 @@ import UIKit
 class GoalsViewController: BaseViewController {
     // MARK: - Properties
     private var viewModel: GoalsViewModel
-    private var sortViewController: SortViewController
+    private var sortViewController: SortViewController?
     
     private let sortBarButtonItem = UIBarButtonItem(image: Image.sort.image, style: .plain, target: nil, action: nil)
     private let addBarButtonItem = UIBarButtonItem(image: Image.add.image, style: .plain, target: nil, action: nil)
@@ -38,9 +38,8 @@ class GoalsViewController: BaseViewController {
     let didTapAddGoalSubject = PassthroughSubject<Bool, Never>()
     
     // MARK: - Init
-    init(viewModel: GoalsViewModel, sortViewController: SortViewController) {
+    init(viewModel: GoalsViewModel) {
         self.viewModel = viewModel
-        self.sortViewController = sortViewController
         super.init(nibName: nil, bundle: nil)
     }
     
