@@ -5,9 +5,11 @@
 //  Created by Berat Cevik on 12/19/20.
 //
 
+import AlamofireNetworkActivityIndicator
 import FBSDKCoreKit
 import Firebase
 import GoogleSignIn
+import Kingfisher
 import SnapKit
 import UIKit
 
@@ -17,8 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     static var isGoogleSignIn = false  // to detect if callback is for Google
-    
-    private var applicationCoordinator: ApplicationCoordinator?
     
     // MARK: - UIApplicationDelegate
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -55,12 +55,14 @@ private extension AppDelegate {
         
         // Theme
         Theme.configureTheme()
+        
+        // AlamofireNetworkActivityIndicator
+        NetworkActivityIndicatorManager.shared.isEnabled = true
     }
     
     func startApp() {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        self.window = window
-        applicationCoordinator = ApplicationCoordinator(window: window)
-        applicationCoordinator?.start()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = SplashController(viewModel: SplashViewModel())
+        window?.makeKeyAndVisible()
     }
 }

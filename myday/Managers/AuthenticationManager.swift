@@ -15,8 +15,10 @@ class AuthenticationManager {
     static let shared = AuthenticationManager()
     
     private var authStateDidChangeListenerHandle: AuthStateDidChangeListenerHandle?
+    private var idTokenStateDidChangeListenerHandle: IDTokenDidChangeListenerHandle?
     
     let authDidCompleteSubject = PassthroughSubject<Bool, Never>()
+    let authStateDidChangeSubject = PassthroughSubject<AuthState, Never>()
     
     var authState: AuthState {
         guard let user = Auth.auth().currentUser else {
@@ -93,7 +95,6 @@ class AuthenticationManager {
             try Auth.auth().signOut()
             LoginManager().logOut()
             GIDSignIn.sharedInstance()?.signOut()
-            NotificationCenter.default.post(name: .didLogOut, object: nil)
         } catch {
             Crashlytics.crashlytics().record(error: error)
         }
@@ -109,9 +110,23 @@ private extension AuthenticationManager {
             if let user = user {
                 print("\nUser ID: \(user.uid)\nEmail: \(user.email ?? "No email found")\n")
                 self?.authDidCompleteSubject.send(true)
+                self?.authStateDidChangeSubject.send(.account)
             } else {
                 print("\nSigning in anonymously\n")
                 AuthenticationManager.shared.signInAnonymously()
+            }
+        }
+        
+        idTokenStateDidChangeListenerHandle = Auth.auth().addIDTokenDidChangeListener { _, user in
+            user?.getIDToken { token, error in
+                if let error = error {
+                    print("ID token error: \(error.localizedDescription)")
+                    return
+                }
+                
+                if let token = token {
+                    print("ID token:\n\n\(token)\n\n")
+                }
             }
         }
     }
@@ -124,9 +139,10 @@ private extension AuthenticationManager {
     
     // MARK: - Anonymous Auth
     func signInAnonymously() {
-        Auth.auth().signInAnonymously { authResult, error in
+        Auth.auth().signInAnonymously { [weak self] authResult, error in
             if let result = authResult {
                 print("\nSigned in anonymously with user ID: \(result.user.uid)\n")
+                self?.authStateDidChangeSubject.send(.anonymous)
             }
             
             if let error = error {

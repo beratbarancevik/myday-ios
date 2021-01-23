@@ -1,5 +1,5 @@
 //
-//  AuthenticationViewController.swift
+//  AuthenticationController.swift
 //  myday
 //
 //  Created by Berat Cevik on 12/24/20.
@@ -10,7 +10,7 @@ import AuthenticationServices
 import Combine
 import UIKit
 
-class AuthenticationViewController: BaseViewController {
+class AuthenticationController: BaseViewController {
     // MARK: - Properties
     private var viewModel: AuthenticationViewModel
     
@@ -100,7 +100,7 @@ class AuthenticationViewController: BaseViewController {
 }
 
 // MARK: - Private Functions
-private extension AuthenticationViewController {
+private extension AuthenticationController {
     @objc func settingsDidTap() {
         didTapSettingsSubject.send(true)
     }
@@ -133,7 +133,7 @@ private extension AuthenticationViewController {
 }
 
 // MARK: - Setup
-extension AuthenticationViewController: Setup {
+extension AuthenticationController: Setup {
     func setUpUI() {
         navigationItem.title = "Register / Login"
         
@@ -200,11 +200,11 @@ extension AuthenticationViewController: Setup {
 }
 
 // MARK: - AppleAuthManagerDelegate
-extension AuthenticationViewController: AppleAuthManagerDelegate {
+extension AuthenticationController: AppleAuthManagerDelegate {
     func appleSignInDidCancel() {}
     
     func appleSignInDidSucceed() {
-        NotificationCenter.default.post(name: .didSignIn, object: nil)
+        
     }
     
     func appleSignInDidFail(with error: Error) {
@@ -213,11 +213,11 @@ extension AuthenticationViewController: AppleAuthManagerDelegate {
 }
 
 // MARK: - FacebookAuthManagerDelegate
-extension AuthenticationViewController: FacebookAuthManagerDelegate {
+extension AuthenticationController: FacebookAuthManagerDelegate {
     func facebookSignInDidCancel() {}
     
     func facebookSignInDidSucceed() {
-        NotificationCenter.default.post(name: .didSignIn, object: nil)
+        
     }
     
     func facebookSignInDidFail(with error: Error) {
@@ -226,11 +226,11 @@ extension AuthenticationViewController: FacebookAuthManagerDelegate {
 }
 
 // MARK: - GoogleAuthManagerDelegate
-extension AuthenticationViewController: GoogleAuthManagerDelegate {
+extension AuthenticationController: GoogleAuthManagerDelegate {
     func googleSignInDidCancel() {}
     
     func googleSignInDidSucceed() {
-        NotificationCenter.default.post(name: .didSignIn, object: nil)
+        
     }
     
     func googleSignInDidFail(with error: Error) {

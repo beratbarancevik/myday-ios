@@ -65,7 +65,7 @@ private extension TextFieldCell {
         switch type {
         case .title:
             textField.keyboardType = .default
-        case .target:
+        case .achieved, .target:
             textField.keyboardType = .numberPad
         default:
             break

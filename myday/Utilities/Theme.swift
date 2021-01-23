@@ -125,6 +125,17 @@ enum Theme {
         }
     }
     
+    enum TabBar {
+        static let regular = Style<UITabBar> {
+            $0.barStyle = .default
+            $0.tintColor = .label
+            $0.barTintColor = .systemBackground
+            for item in $0.items ?? [] {
+                item.imageInsets = UIEdgeInsets(top: 5.5, left: 0, bottom: -5.5, right: 0)
+            }
+        }
+    }
+    
     enum View {
         static let primary = Style<UIView> {
             $0.backgroundColor = .systemBackground

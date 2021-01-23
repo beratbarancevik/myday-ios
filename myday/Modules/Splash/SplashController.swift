@@ -1,21 +1,24 @@
 //
-//  SplashViewController.swift
+//  SplashController.swift
 //  myday
 //
 //  Created by Berat Cevik on 12/19/20.
 //
 
+import Combine
 import UIKit
 
-class SplashViewController: BaseViewController {
+class SplashController: BaseViewController {
     // MARK: - Properties
-    private var viewModel: SplashViewModel
+    private var viewModel = SplashViewModel()
     
     private let logoImageView: UIImageView = {
         $0.image = Image.logo.image
         $0.accessibilityLabel = "splash_logo_image_view".localized
         return $0
     }(UIImageView().style(Theme.Image.primary))
+    
+    private var cancellable: AnyCancellable?
     
     // MARK: - Init
     init(viewModel: SplashViewModel) {
@@ -37,12 +40,13 @@ class SplashViewController: BaseViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         // Authentication is configured here, so that splash controller appears on the screen
+        addAuthenticationObserver()
         AuthenticationManager.shared.setUpAuthentication()
     }
 }
 
 // MARK: - Setup
-extension SplashViewController: Setup {
+extension SplashController: Setup {
     func addSubviews() {
         view.addSubview(logoImageView)
     }
@@ -52,5 +56,27 @@ extension SplashViewController: Setup {
             maker.center.equalTo(safeArea)
             maker.width.height.equalTo(128)
         }
+    }
+}
+
+// MARK: - Private Functions
+private extension SplashController {
+    func addAuthenticationObserver() {
+        cancellable = AuthenticationManager.shared.authDidCompleteSubject.sink { [weak self] _ in
+            #if DEBUG
+            // makes sure that splash screen's UI gets tested
+            if ProcessInfo.processInfo.environment["ShouldStopAtSplash"] == "YES" {
+                print("UI tests are running for Splash screen")
+                return
+            }
+            #endif
+            self?.cancellable?.cancel()
+            self?.showMain()
+        }
+    }
+
+    func showMain() {
+        UIApplication.shared.windows.first?.rootViewController = TabController(viewModel: TabViewModel())
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
 }

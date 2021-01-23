@@ -1,5 +1,5 @@
 //
-//  HomeCoordinator.swift
+//  GoalsCoordinator.swift
 //  myday
 //
 //  Created by Berat Cevik on 12/19/20.
@@ -8,19 +8,17 @@
 import Combine
 import Foundation
 
-class HomeCoordinator: BaseCoordinator {
+class GoalsCoordinator: BaseCoordinator {
     // MARK: - Properties
     var navigationController: BaseNavigationController
     
-    private let homeViewController: HomeViewController
-    private let homeViewModel: HomeViewModel
+    private let goalsViewController: GoalsViewController
+    private let goalsViewModel: GoalsViewModel
     
     private let sortViewController: SortViewController
     private let sortViewModel: SortViewModel
     
     private var sortCoordinator: SortCoordinator?
-    private var profileCoordinator: ProfileCoordinator?
-    private var authenticationCoordinator: AuthenticationCoordinator?
     private var goalDetailCoordinator: GoalDetailCoordinator?
     
     var profileNavigationController = BaseNavigationController()
@@ -30,45 +28,33 @@ class HomeCoordinator: BaseCoordinator {
     // MARK: - Init
     init(navigationController: BaseNavigationController) {
         self.navigationController = navigationController
-        homeViewModel = HomeViewModel()
+        goalsViewModel = GoalsViewModel()
         sortViewModel = SortViewModel()
         sortViewController = SortViewController(viewModel: sortViewModel)
-        homeViewController = HomeViewController(viewModel: homeViewModel, sortViewController: sortViewController)
+        goalsViewController = GoalsViewController(viewModel: goalsViewModel)
         observe()
     }
     
     // MARK: - Coordinator
     func start() {
-        navigationController.pushViewController(homeViewController, animated: true)
+        navigationController.pushViewController(goalsViewController, animated: true)
     }
     
     func observe() {
-        cancellables.insert(homeViewController.didTapSortSubject.sink { [weak self] _ in
+        cancellables.insert(goalsViewController.didTapSortSubject.sink { [weak self] _ in
             guard let self = self else { return }
             self.sortCoordinator = SortCoordinator(navigationController: self.navigationController, viewController: self.sortViewController, viewModel: self.sortViewModel)
             self.sortCoordinator?.start()
         })
         
-        cancellables.insert(homeViewController.didTapProfileSubject.sink { [weak self] _ in
-            guard let self = self else { return }
-            self.profileNavigationController = BaseNavigationController()
-            if AuthenticationManager.shared.authState == .account {
-                self.profileCoordinator = ProfileCoordinator(presentingNavigationController: self.navigationController, navigationController: self.profileNavigationController)
-                self.profileCoordinator?.start()
-            } else {
-                self.authenticationCoordinator = AuthenticationCoordinator(presentingNavigationController: self.navigationController, navigationController: self.profileNavigationController)
-                self.authenticationCoordinator?.start()
-            }
-        })
-        
-        cancellables.insert(homeViewController.didSelectGoalSubject.sink { [weak self] goal in
+        cancellables.insert(goalsViewController.didSelectGoalSubject.sink { [weak self] goal in
             guard let self = self else { return }
             let goalDetailNavigationController = BaseNavigationController()
             self.goalDetailCoordinator = GoalDetailCoordinator(presentingNavigationController: self.navigationController, navigationController: goalDetailNavigationController, goal: goal)
             self.goalDetailCoordinator?.start()
         })
         
-        cancellables.insert(homeViewController.didTapAddGoalSubject.sink { [weak self] _ in
+        cancellables.insert(goalsViewController.didTapAddGoalSubject.sink { [weak self] _ in
             guard let self = self else { return }
             let goalDetailNavigationController = BaseNavigationController()
             self.goalDetailCoordinator = GoalDetailCoordinator(presentingNavigationController: self.navigationController, navigationController: goalDetailNavigationController)
@@ -76,24 +62,13 @@ class HomeCoordinator: BaseCoordinator {
         })
         
         NotificationCenter.default.addObserver(self, selector: #selector(didSaveGoal), name: .didSaveGoal, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(didSignIn), name: .didSignIn, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(didLogOut), name: .didLogOut, object: nil)
     }
 }
 
 // MARK: - Private Functions
-private extension HomeCoordinator {
+private extension GoalsCoordinator {
     @objc func didSaveGoal() {
         goalDetailCoordinator?.navigationController.dismiss(animated: true)
         goalDetailCoordinator = nil
-    }
-    
-    @objc func didSignIn() {
-        profileCoordinator = ProfileCoordinator(presentingNavigationController: navigationController, navigationController: profileNavigationController)
-        profileCoordinator?.replace()
-    }
-    
-    @objc func didLogOut() {
-        profileNavigationController.dismiss(animated: true)
     }
 }

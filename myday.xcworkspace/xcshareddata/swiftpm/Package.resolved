@@ -11,6 +11,33 @@
         }
       },
       {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": null,
+          "revision": "eaf6e622dd41b07b251d8f01752eab31bc811493",
+          "version": "5.4.1"
+        }
+      },
+      {
+        "package": "AlamofireNetworkActivityIndicator",
+        "repositoryURL": "https://github.com/Alamofire/AlamofireNetworkActivityIndicator",
+        "state": {
+          "branch": null,
+          "revision": "392bed083e8d193aca16bfa684ee24e4bcff0510",
+          "version": "3.1.0"
+        }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher",
+        "state": {
+          "branch": null,
+          "revision": "0be276f6a7fd54af4c3eb03f2d12e12d8c8a1a1d",
+          "version": "6.0.1"
+        }
+      },
+      {
         "package": "SnapKit",
         "repositoryURL": "https://github.com/SnapKit/SnapKit.git",
         "state": {
@@ -24,8 +51,8 @@
         "repositoryURL": "https://github.com/SwiftKickMobile/SwiftMessages",
         "state": {
           "branch": null,
-          "revision": "243fa7596818e3a96a7f0563453b3f35a674a5fb",
-          "version": "8.0.5"
+          "revision": "74de8becfd5b77bcdfa87da4eedac7f03e7d243a",
+          "version": "9.0.0"
         }
       }
     ]
