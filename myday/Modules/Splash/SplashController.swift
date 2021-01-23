@@ -33,14 +33,12 @@ class SplashController: BaseViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("\(#function)")
         addSubviews()
         addConstraints()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("\(#function)")
         // Authentication is configured here, so that splash controller appears on the screen
         addAuthenticationObserver()
         AuthenticationManager.shared.setUpAuthentication()
@@ -78,7 +76,7 @@ private extension SplashController {
     }
 
     func showMain() {
-        UIApplication.shared.keyWindow?.rootViewController = TabController(viewModel: TabViewModel())
-        UIApplication.shared.keyWindow?.makeKeyAndVisible()
+        UIApplication.shared.windows.first?.rootViewController = TabController(viewModel: TabViewModel())
+        UIApplication.shared.windows.first?.makeKeyAndVisible()
     }
 }

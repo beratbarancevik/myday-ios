@@ -22,7 +22,7 @@ class FacebookAuthManager {
     
     // MARK: - Functions
     func handleFacebookAuth(from viewController: BaseViewController) {
-        loginManager.logIn(permissions: ["publicProfile", "email"], from: viewController) { [weak self] result, error in
+        loginManager.logIn(permissions: ["public_profile", "email"], from: viewController) { [weak self] result, error in
             if result?.isCancelled ?? false {
                 self?.loginManager.logOut()
                 self?.delegate?.facebookSignInDidCancel()
