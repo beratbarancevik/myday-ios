@@ -1978,7 +1978,7 @@
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
 				kind = exactVersion;
-				version = 6.0.1;
+				version = 6.1.0;
 			};
 		};
 		F4DC45C925B2F75D00FB6355 /* XCRemoteSwiftPackageReference "Alamofire" */ = {

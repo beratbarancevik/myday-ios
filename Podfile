@@ -6,15 +6,15 @@ target 'myday' do
   use_frameworks!
 
   # Pods for myday
-  pod 'MaterialComponents/FeatureHighlight', '120.0.0'
+  pod 'MaterialComponents/FeatureHighlight', '121.0.0'
   
-  pod 'Firebase/Analytics', '7.4.0'
-  pod 'Firebase/Auth', '7.4.0'
-  pod 'Firebase/Crashlytics', '7.4.0'
-  pod 'Firebase/Firestore', '7.4.0'
-  pod 'FirebaseFirestoreSwift', '7.4.0-beta'
-  pod 'Firebase/Performance', '7.4.0'
-  pod 'Firebase/Storage', '7.4.0'
+  pod 'Firebase/Analytics', '7.5.0'
+  pod 'Firebase/Auth', '7.5.0'
+  pod 'Firebase/Crashlytics', '7.5.0'
+  pod 'Firebase/Firestore', '7.5.0'
+  pod 'FirebaseFirestoreSwift', '7.5.0-beta'
+  pod 'Firebase/Performance', '7.5.0'
+  pod 'Firebase/Storage', '7.5.0'
 
   pod 'GoogleSignIn', '5.0.2'
 
