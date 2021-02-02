@@ -65,13 +65,13 @@ private extension TabController {
     }
     
     func registerAuthChanges() {
-        NotificationCenter.default.addObserver(self, selector: #selector(updateAccountTab), name: .authStateDidChange, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(updateAccountTab), name: .authStateDidChange, object: nil)
     }
     
-    @objc func updateAccountTab(for authState: AuthState) {
-        let account = generateAccountNavigationController(for: authState)
-        viewControllers![viewControllers!.count - 1] = account
-    }
+//    @objc func updateAccountTab(for authState: AuthState) {
+//        let account = generateAccountNavigationController(for: authState)
+//        viewControllers![viewControllers!.count - 1] = account
+//    }
 }
 
 // MARK: - TabType

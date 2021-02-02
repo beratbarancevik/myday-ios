@@ -43,6 +43,7 @@
 		F400A514258E71440081CCD8 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F400A513258E71440081CCD8 /* GoalCell.swift */; };
 		F401588F25945E3A006F3CF4 /* GoalProgressBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401588E25945E3A006F3CF4 /* GoalProgressBarCell.swift */; };
 		F401589825945F3D006F3CF4 /* HorizontalProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F401589725945F3D006F3CF4 /* HorizontalProgressBar.swift */; };
+		F4073BBD25C9A30100432933 /* Keys in Resources */ = {isa = PBXBuildFile; fileRef = F4073BBC25C9A30100432933 /* Keys */; };
 		F40A03AF259B89CD00BE6F5D /* FacebookAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A03AE259B89CD00BE6F5D /* FacebookAuthManager.swift */; };
 		F40A03B8259B95D900BE6F5D /* ActiveLabel in Frameworks */ = {isa = PBXBuildFile; productRef = F40A03B7259B95D900BE6F5D /* ActiveLabel */; };
 		F41845272593BE7D00E7F0A0 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41845262593BE7D00E7F0A0 /* Error.swift */; };
@@ -55,7 +56,6 @@
 		F41F2DE025951E1C004C0C54 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */; };
 		F41FDCFF259C39890005502F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41FDCFE259C39890005502F /* ProfileHeaderView.swift */; };
 		F41FDD07259C39F50005502F /* BaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41FDD06259C39F50005502F /* BaseCollectionReusableView.swift */; };
-		F4457CA325A8273F00028333 /* GoogleService-Info-Release.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4457CA225A8273F00028333 /* GoogleService-Info-Release.plist */; };
 		F4544BAF25A1EE4B00E86EC0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4544BB125A1EE4B00E86EC0 /* Localizable.strings */; };
 		F4544BB525A1EE4E00E86EC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4544BB725A1EE4E00E86EC0 /* InfoPlist.strings */; };
 		F458434F259F925E004856E3 /* ImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458434E259F925E004856E3 /* ImageTests.swift */; };
@@ -135,7 +135,6 @@
 		F49E8FA725A1C5A000329027 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49E8FA625A1C5A000329027 /* UserTests.swift */; };
 		F49E8FAF25A1C5CF00329027 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = F49E8FAE25A1C5CF00329027 /* user.json */; };
 		F49F704C259F9C7100DDAF51 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49F704B259F9C7100DDAF51 /* String+Extensions.swift */; };
-		F4AE2F42258E1996005E77AB /* GoogleService-Info-Debug.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */; };
 		F4AE2F4A258E1A7C005E77AB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F4AE2F49258E1A7C005E77AB /* SnapKit */; };
 		F4B1F48825A61883005E8B2B /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = F4B1F48725A61883005E8B2B /* SwiftMessages */; };
 		F4B6A994259F0DC10085B08E /* SortViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4B6A993259F0DC10085B08E /* SortViewController.swift */; };
@@ -225,6 +224,7 @@
 		F400A513258E71440081CCD8 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		F401588E25945E3A006F3CF4 /* GoalProgressBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalProgressBarCell.swift; sourceTree = "<group>"; };
 		F401589725945F3D006F3CF4 /* HorizontalProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalProgressBar.swift; sourceTree = "<group>"; };
+		F4073BBC25C9A30100432933 /* Keys */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Keys; sourceTree = "<group>"; };
 		F40A03AE259B89CD00BE6F5D /* FacebookAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthManager.swift; sourceTree = "<group>"; };
 		F41845262593BE7D00E7F0A0 /* Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
 		F418452F2593D5BF00E7F0A0 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -236,7 +236,6 @@
 		F41F2DDF25951E1C004C0C54 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		F41FDCFE259C39890005502F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		F41FDD06259C39F50005502F /* BaseCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionReusableView.swift; sourceTree = "<group>"; };
-		F4457CA225A8273F00028333 /* GoogleService-Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Release.plist"; sourceTree = "<group>"; };
 		F4544BB025A1EE4B00E86EC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F4544BB625A1EE4E00E86EC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F4544BBB25A1EE6100E86EC0 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -327,7 +326,6 @@
 		F49F704B259F9C7100DDAF51 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		F4AE2F30258E155F005E77AB /* Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Debug.plist"; sourceTree = "<group>"; };
 		F4AE2F31258E155F005E77AB /* Info-Release.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-Release.plist"; sourceTree = "<group>"; };
-		F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Debug.plist"; sourceTree = "<group>"; };
 		F4B6A993259F0DC10085B08E /* SortViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewController.swift; sourceTree = "<group>"; };
 		F4B6A99B259F0DCA0085B08E /* SortCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortCoordinator.swift; sourceTree = "<group>"; };
 		F4B6A9A0259F0DD70085B08E /* SortViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortViewModel.swift; sourceTree = "<group>"; };
@@ -534,7 +532,7 @@
 				F4544BB125A1EE4B00E86EC0 /* Localizable.strings */,
 				F444B7F3258E151D00AEFC85 /* Assets */,
 				F46F3575258E2B4D007CD3E4 /* Constants */,
-				F4AE2F40258E197D005E77AB /* Keys */,
+				F4073BBC25C9A30100432933 /* Keys */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -1010,15 +1008,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		F4AE2F40258E197D005E77AB /* Keys */ = {
-			isa = PBXGroup;
-			children = (
-				F4AE2F41258E1996005E77AB /* GoogleService-Info-Debug.plist */,
-				F4457CA225A8273F00028333 /* GoogleService-Info-Release.plist */,
-			);
-			path = Keys;
-			sourceTree = "<group>";
-		};
 		F4B6A992259F0DB10085B08E /* Sort */ = {
 			isa = PBXGroup;
 			children = (
@@ -1229,6 +1218,7 @@
 				F400A4A4258E6DE00081CCD8 /* Montserrat-ExtraLight.ttf in Resources */,
 				F400A4A5258E6DE00081CCD8 /* Montserrat-Regular.ttf in Resources */,
 				F4975047258E035F00259DAC /* LaunchScreen.storyboard in Resources */,
+				F4073BBD25C9A30100432933 /* Keys in Resources */,
 				F400A4AA258E6DE00081CCD8 /* Montserrat-SemiBold.ttf in Resources */,
 				F400A495258E6D310081CCD8 /* Colors.xcassets in Resources */,
 				F400A4AB258E6DE00081CCD8 /* Montserrat-ExtraBold.ttf in Resources */,
@@ -1236,8 +1226,6 @@
 				F4975044258E035F00259DAC /* Assets.xcassets in Resources */,
 				F400A4A7258E6DE00081CCD8 /* Montserrat-Medium.ttf in Resources */,
 				F400A4A9258E6DE00081CCD8 /* Montserrat-Bold.ttf in Resources */,
-				F4457CA325A8273F00028333 /* GoogleService-Info-Release.plist in Resources */,
-				F4AE2F42258E1996005E77AB /* GoogleService-Info-Debug.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
